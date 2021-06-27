@@ -13,6 +13,26 @@
 		8EC607512688AFD1006ED3C1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC607412688AFCF006ED3C1 /* ContentView.swift */; };
 		8EC607522688AFD1006ED3C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EC607422688AFD1006ED3C1 /* Assets.xcassets */; };
 		8EC607532688AFD1006ED3C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EC607422688AFD1006ED3C1 /* Assets.xcassets */; };
+		8EC607612688B6B6006ED3C1 /* ParseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8EC607602688B6B6006ED3C1 /* ParseSwift */; };
+		8EC607642688B6C2006ED3C1 /* ParseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8EC607632688B6C2006ED3C1 /* ParseSwift */; };
+		8EC607672688B86B006ED3C1 /* SwiftDux in Frameworks */ = {isa = PBXBuildFile; productRef = 8EC607662688B86B006ED3C1 /* SwiftDux */; };
+		8EC6076A2688B952006ED3C1 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC607692688B952006ED3C1 /* AppState.swift */; };
+		8EC6076B2688B952006ED3C1 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC607692688B952006ED3C1 /* AppState.swift */; };
+		8EC6076E2688B993006ED3C1 /* StateType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC6076D2688B993006ED3C1 /* StateType.swift */; };
+		8EC6076F2688B993006ED3C1 /* StateType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC6076D2688B993006ED3C1 /* StateType.swift */; };
+		8EC607712688BA3A006ED3C1 /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC607702688BA3A006ED3C1 /* AppReducer.swift */; };
+		8EC607722688BA3A006ED3C1 /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC607702688BA3A006ED3C1 /* AppReducer.swift */; };
+		8EC607752688BAD4006ED3C1 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC607742688BAD4006ED3C1 /* Item.swift */; };
+		8EC607762688BAD4006ED3C1 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC607742688BAD4006ED3C1 /* Item.swift */; };
+		8EC607782688BB3E006ED3C1 /* ItemsReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC607772688BB3E006ED3C1 /* ItemsReducer.swift */; };
+		8EC607792688BB3E006ED3C1 /* ItemsReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC607772688BB3E006ED3C1 /* ItemsReducer.swift */; };
+		8EC6077B2688BB5B006ED3C1 /* ItemsAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC6077A2688BB5B006ED3C1 /* ItemsAction.swift */; };
+		8EC6077C2688BB5B006ED3C1 /* ItemsAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC6077A2688BB5B006ED3C1 /* ItemsAction.swift */; };
+		8EC6077F2688BBFF006ED3C1 /* URL+PersistFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC6077E2688BBFF006ED3C1 /* URL+PersistFile.swift */; };
+		8EC607802688BBFF006ED3C1 /* URL+PersistFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC6077E2688BBFF006ED3C1 /* URL+PersistFile.swift */; };
+		8EC607862688BED5006ED3C1 /* SwiftyBeaver in Frameworks */ = {isa = PBXBuildFile; productRef = 8EC607852688BED5006ED3C1 /* SwiftyBeaver */; };
+		8EC607882688BEE0006ED3C1 /* SwiftDux in Frameworks */ = {isa = PBXBuildFile; productRef = 8EC607872688BEE0006ED3C1 /* SwiftDux */; };
+		8EC6078A2688BEE4006ED3C1 /* SwiftyBeaver in Frameworks */ = {isa = PBXBuildFile; productRef = 8EC607892688BEE4006ED3C1 /* SwiftyBeaver */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +41,15 @@
 		8EC607422688AFD1006ED3C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8EC607472688AFD1006ED3C1 /* Setbee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Setbee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EC6074D2688AFD1006ED3C1 /* Setbee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Setbee.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EC6075C2688B10F006ED3C1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		8EC607692688B952006ED3C1 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		8EC6076D2688B993006ED3C1 /* StateType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateType.swift; sourceTree = "<group>"; };
+		8EC607702688BA3A006ED3C1 /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
+		8EC607742688BAD4006ED3C1 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		8EC607772688BB3E006ED3C1 /* ItemsReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsReducer.swift; sourceTree = "<group>"; };
+		8EC6077A2688BB5B006ED3C1 /* ItemsAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsAction.swift; sourceTree = "<group>"; };
+		8EC6077E2688BBFF006ED3C1 /* URL+PersistFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+PersistFile.swift"; sourceTree = "<group>"; };
+		8EC607812688BD92006ED3C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,6 +57,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EC607672688B86B006ED3C1 /* SwiftDux in Frameworks */,
+				8EC607612688B6B6006ED3C1 /* ParseSwift in Frameworks */,
+				8EC607862688BED5006ED3C1 /* SwiftyBeaver in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -35,6 +67,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EC607882688BEE0006ED3C1 /* SwiftDux in Frameworks */,
+				8EC607642688B6C2006ED3C1 /* ParseSwift in Frameworks */,
+				8EC6078A2688BEE4006ED3C1 /* SwiftyBeaver in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,8 +79,11 @@
 		8EC6073A2688AFCF006ED3C1 = {
 			isa = PBXGroup;
 			children = (
+				8EC6075C2688B10F006ED3C1 /* README.md */,
 				8EC6073F2688AFCF006ED3C1 /* Shared */,
+				8EC607822688BD9A006ED3C1 /* iOS */,
 				8EC607482688AFD1006ED3C1 /* Products */,
+				8EC607622688B6C2006ED3C1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -53,7 +91,10 @@
 			isa = PBXGroup;
 			children = (
 				8EC607402688AFCF006ED3C1 /* SetbeeApp.swift */,
-				8EC607412688AFCF006ED3C1 /* ContentView.swift */,
+				8EC6078B2688C029006ED3C1 /* Views */,
+				8EC6076C2688B982006ED3C1 /* Models */,
+				8EC607682688B93B006ED3C1 /* SwiftDux */,
+				8EC6077D2688BBDF006ED3C1 /* Extensions */,
 				8EC607422688AFD1006ED3C1 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -66,6 +107,65 @@
 				8EC6074D2688AFD1006ED3C1 /* Setbee.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		8EC607622688B6C2006ED3C1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8EC607682688B93B006ED3C1 /* SwiftDux */ = {
+			isa = PBXGroup;
+			children = (
+				8EC607732688BA80006ED3C1 /* Items */,
+				8EC607692688B952006ED3C1 /* AppState.swift */,
+				8EC607702688BA3A006ED3C1 /* AppReducer.swift */,
+			);
+			path = SwiftDux;
+			sourceTree = "<group>";
+		};
+		8EC6076C2688B982006ED3C1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8EC6076D2688B993006ED3C1 /* StateType.swift */,
+				8EC607742688BAD4006ED3C1 /* Item.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8EC607732688BA80006ED3C1 /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				8EC607772688BB3E006ED3C1 /* ItemsReducer.swift */,
+				8EC6077A2688BB5B006ED3C1 /* ItemsAction.swift */,
+			);
+			path = Items;
+			sourceTree = "<group>";
+		};
+		8EC6077D2688BBDF006ED3C1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8EC6077E2688BBFF006ED3C1 /* URL+PersistFile.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8EC607822688BD9A006ED3C1 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				8EC607812688BD92006ED3C1 /* Info.plist */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		8EC6078B2688C029006ED3C1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8EC607412688AFCF006ED3C1 /* ContentView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -84,6 +184,11 @@
 			dependencies = (
 			);
 			name = "Setbee (iOS)";
+			packageProductDependencies = (
+				8EC607602688B6B6006ED3C1 /* ParseSwift */,
+				8EC607662688B86B006ED3C1 /* SwiftDux */,
+				8EC607852688BED5006ED3C1 /* SwiftyBeaver */,
+			);
 			productName = "Setbee (iOS)";
 			productReference = 8EC607472688AFD1006ED3C1 /* Setbee.app */;
 			productType = "com.apple.product-type.application";
@@ -101,6 +206,11 @@
 			dependencies = (
 			);
 			name = "Setbee (macOS)";
+			packageProductDependencies = (
+				8EC607632688B6C2006ED3C1 /* ParseSwift */,
+				8EC607872688BEE0006ED3C1 /* SwiftDux */,
+				8EC607892688BEE4006ED3C1 /* SwiftyBeaver */,
+			);
 			productName = "Setbee (macOS)";
 			productReference = 8EC6074D2688AFD1006ED3C1 /* Setbee.app */;
 			productType = "com.apple.product-type.application";
@@ -132,6 +242,11 @@
 				Base,
 			);
 			mainGroup = 8EC6073A2688AFCF006ED3C1;
+			packageReferences = (
+				8EC6075F2688B6B6006ED3C1 /* XCRemoteSwiftPackageReference "Parse-Swift" */,
+				8EC607652688B86B006ED3C1 /* XCRemoteSwiftPackageReference "SwiftDux" */,
+				8EC607842688BED5006ED3C1 /* XCRemoteSwiftPackageReference "SwiftyBeaver" */,
+			);
 			productRefGroup = 8EC607482688AFD1006ED3C1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -166,8 +281,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EC6076A2688B952006ED3C1 /* AppState.swift in Sources */,
+				8EC6076E2688B993006ED3C1 /* StateType.swift in Sources */,
 				8EC607502688AFD1006ED3C1 /* ContentView.swift in Sources */,
+				8EC6077F2688BBFF006ED3C1 /* URL+PersistFile.swift in Sources */,
 				8EC6074E2688AFD1006ED3C1 /* SetbeeApp.swift in Sources */,
+				8EC6077B2688BB5B006ED3C1 /* ItemsAction.swift in Sources */,
+				8EC607752688BAD4006ED3C1 /* Item.swift in Sources */,
+				8EC607782688BB3E006ED3C1 /* ItemsReducer.swift in Sources */,
+				8EC607712688BA3A006ED3C1 /* AppReducer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,8 +297,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EC6076B2688B952006ED3C1 /* AppState.swift in Sources */,
+				8EC6076F2688B993006ED3C1 /* StateType.swift in Sources */,
 				8EC607512688AFD1006ED3C1 /* ContentView.swift in Sources */,
+				8EC607802688BBFF006ED3C1 /* URL+PersistFile.swift in Sources */,
 				8EC6074F2688AFD1006ED3C1 /* SetbeeApp.swift in Sources */,
+				8EC6077C2688BB5B006ED3C1 /* ItemsAction.swift in Sources */,
+				8EC607762688BAD4006ED3C1 /* Item.swift in Sources */,
+				8EC607792688BB3E006ED3C1 /* ItemsReducer.swift in Sources */,
+				8EC607722688BA3A006ED3C1 /* AppReducer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,6 +366,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "-DDebug";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -303,17 +433,22 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = iOS/Info.plist;
+				INFOPLIST_KEY_CFBundleExecutable = Setbee;
+				INFOPLIST_KEY_CFBundleName = Setbee;
+				INFOPLIST_KEY_CFBundleVersion = 1;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.0.1;
+				OTHER_SWIFT_FLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.setbee.Setbee;
 				PRODUCT_NAME = Setbee;
 				SDKROOT = iphoneos;
@@ -332,17 +467,22 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = iOS/Info.plist;
+				INFOPLIST_KEY_CFBundleExecutable = Setbee;
+				INFOPLIST_KEY_CFBundleName = Setbee;
+				INFOPLIST_KEY_CFBundleVersion = 1;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.0.1;
+				OTHER_SWIFT_FLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.setbee.Setbee;
 				PRODUCT_NAME = Setbee;
 				SDKROOT = iphoneos;
@@ -365,13 +505,17 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleExecutable = Setbee;
+				INFOPLIST_KEY_CFBundleName = Setbee;
+				INFOPLIST_KEY_CFBundleVersion = 1;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 1.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 0.0.1;
+				OTHER_SWIFT_FLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.setbee.Setbee;
 				PRODUCT_NAME = Setbee;
 				SDKROOT = macosx;
@@ -392,13 +536,17 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleExecutable = Setbee;
+				INFOPLIST_KEY_CFBundleName = Setbee;
+				INFOPLIST_KEY_CFBundleVersion = 1;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 1.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 0.0.1;
+				OTHER_SWIFT_FLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.setbee.Setbee;
 				PRODUCT_NAME = Setbee;
 				SDKROOT = macosx;
@@ -438,6 +586,66 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8EC6075F2688B6B6006ED3C1 /* XCRemoteSwiftPackageReference "Parse-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/parse-community/Parse-Swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		8EC607652688B86B006ED3C1 /* XCRemoteSwiftPackageReference "SwiftDux" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/StevenLambion/SwiftDux";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+		8EC607842688BED5006ED3C1 /* XCRemoteSwiftPackageReference "SwiftyBeaver" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyBeaver/SwiftyBeaver";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.9.5;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8EC607602688B6B6006ED3C1 /* ParseSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8EC6075F2688B6B6006ED3C1 /* XCRemoteSwiftPackageReference "Parse-Swift" */;
+			productName = ParseSwift;
+		};
+		8EC607632688B6C2006ED3C1 /* ParseSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8EC6075F2688B6B6006ED3C1 /* XCRemoteSwiftPackageReference "Parse-Swift" */;
+			productName = ParseSwift;
+		};
+		8EC607662688B86B006ED3C1 /* SwiftDux */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8EC607652688B86B006ED3C1 /* XCRemoteSwiftPackageReference "SwiftDux" */;
+			productName = SwiftDux;
+		};
+		8EC607852688BED5006ED3C1 /* SwiftyBeaver */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8EC607842688BED5006ED3C1 /* XCRemoteSwiftPackageReference "SwiftyBeaver" */;
+			productName = SwiftyBeaver;
+		};
+		8EC607872688BEE0006ED3C1 /* SwiftDux */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8EC607652688B86B006ED3C1 /* XCRemoteSwiftPackageReference "SwiftDux" */;
+			productName = SwiftDux;
+		};
+		8EC607892688BEE4006ED3C1 /* SwiftyBeaver */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8EC607842688BED5006ED3C1 /* XCRemoteSwiftPackageReference "SwiftyBeaver" */;
+			productName = SwiftyBeaver;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8EC6073B2688AFCF006ED3C1 /* Project object */;
 }

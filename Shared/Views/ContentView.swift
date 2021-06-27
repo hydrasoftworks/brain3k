@@ -1,7 +1,4 @@
 //
-//  ContentView.swift
-//  Shared
-//
 //  Created by Kamil Powałowski on 27/06/2021.
 //
 
