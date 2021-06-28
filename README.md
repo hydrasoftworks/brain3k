@@ -35,3 +35,19 @@ Reformat all swift files with:
 ```bash
 ./swiftformat.sh
 ```
+
+### Fastlane Match
+
+Use bundler and fastlane match to download provisioning profiles.
+
+Install ruby gems (only once)
+
+```bash
+bundle install
+```
+
+```bash
+bundle exec fastlane match development --readonly
+bundle exec fastlane match adhoc --readonly
+bundle exec fastlane match appstore --readonly
+```

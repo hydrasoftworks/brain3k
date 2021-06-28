@@ -1,0 +1,6 @@
+storage_mode("git")
+git_url("https://github.com/kamilpowalowski/setbee.git")
+git_branch("certificates")
+
+app_identifier(["com.setbee.Setbee"])
+username("kamil.powalowski@gmail.com")
