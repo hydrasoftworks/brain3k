@@ -4,4 +4,4 @@
 
 import Foundation
 
-typealias StateType = Equatable & Codable
+typealias StateType = Equatable

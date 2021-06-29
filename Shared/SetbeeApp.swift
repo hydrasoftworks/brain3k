@@ -15,31 +15,28 @@ struct SetbeeApp: App {
     let store: Store<AppState>
 
     init() {
-        let fileUrl = URL.persistFileUrl
-        let jsonPersistor = JSONStatePersistor<AppState>(fileUrl: fileUrl)
-
         store = Store(
             state: AppState(),
             reducer: AppReducer(),
             middleware: PrintActionMiddleware<AppState>()
-                + PersistStateMiddleware(jsonPersistor)
         )
 
         initSwiftyBeaver()
 
-        log.info("SwiftDux persist file \(fileUrl)")
-
-        let configuration = ParseConfiguration(
-            applicationId: "B2Yxw2u4L1ikcz13dVKVvltuv3HfSbGZn3lIhCj5",
-            clientKey: "HUZaHgZSg2rKQ4rcwYsm8p9yDZP267GaRSJxEw0U",
-            serverURL: URL(string: "https://parseapi.back4app.com")!
-        )
-        ParseSwift.initialize(configuration: configuration)
+        if let serverURL = URL(string: "https://parseapi.back4app.com") {
+            let configuration = ParseConfiguration(
+                applicationId: "B2Yxw2u4L1ikcz13dVKVvltuv3HfSbGZn3lIhCj5",
+                clientKey: "HUZaHgZSg2rKQ4rcwYsm8p9yDZP267GaRSJxEw0U",
+                serverURL: serverURL
+            )
+            ParseSwift.initialize(configuration: configuration)
+        }
     }
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SignInView()
+                .provideStore(store)
         }
     }
 

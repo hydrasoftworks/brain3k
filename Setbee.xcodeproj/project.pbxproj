@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		8EC6074E2688AFD1006ED3C1 /* SetbeeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC607402688AFCF006ED3C1 /* SetbeeApp.swift */; };
 		8EC6074F2688AFD1006ED3C1 /* SetbeeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC607402688AFCF006ED3C1 /* SetbeeApp.swift */; };
-		8EC607502688AFD1006ED3C1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC607412688AFCF006ED3C1 /* ContentView.swift */; };
-		8EC607512688AFD1006ED3C1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC607412688AFCF006ED3C1 /* ContentView.swift */; };
+		8EC607502688AFD1006ED3C1 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC607412688AFCF006ED3C1 /* SignInView.swift */; };
+		8EC607512688AFD1006ED3C1 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC607412688AFCF006ED3C1 /* SignInView.swift */; };
 		8EC607522688AFD1006ED3C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EC607422688AFD1006ED3C1 /* Assets.xcassets */; };
 		8EC607532688AFD1006ED3C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EC607422688AFD1006ED3C1 /* Assets.xcassets */; };
 		8EC607612688B6B6006ED3C1 /* ParseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8EC607602688B6B6006ED3C1 /* ParseSwift */; };
@@ -28,16 +28,22 @@
 		8EC607792688BB3E006ED3C1 /* ItemsReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC607772688BB3E006ED3C1 /* ItemsReducer.swift */; };
 		8EC6077B2688BB5B006ED3C1 /* ItemsAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC6077A2688BB5B006ED3C1 /* ItemsAction.swift */; };
 		8EC6077C2688BB5B006ED3C1 /* ItemsAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC6077A2688BB5B006ED3C1 /* ItemsAction.swift */; };
-		8EC6077F2688BBFF006ED3C1 /* URL+PersistFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC6077E2688BBFF006ED3C1 /* URL+PersistFile.swift */; };
-		8EC607802688BBFF006ED3C1 /* URL+PersistFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC6077E2688BBFF006ED3C1 /* URL+PersistFile.swift */; };
 		8EC607862688BED5006ED3C1 /* SwiftyBeaver in Frameworks */ = {isa = PBXBuildFile; productRef = 8EC607852688BED5006ED3C1 /* SwiftyBeaver */; };
 		8EC607882688BEE0006ED3C1 /* SwiftDux in Frameworks */ = {isa = PBXBuildFile; productRef = 8EC607872688BEE0006ED3C1 /* SwiftDux */; };
 		8EC6078A2688BEE4006ED3C1 /* SwiftyBeaver in Frameworks */ = {isa = PBXBuildFile; productRef = 8EC607892688BEE4006ED3C1 /* SwiftyBeaver */; };
+		8EEDD78A268BC05D00F670D2 /* AccountState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEDD789268BC05D00F670D2 /* AccountState.swift */; };
+		8EEDD78B268BC05D00F670D2 /* AccountState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEDD789268BC05D00F670D2 /* AccountState.swift */; };
+		8EEDD78D268BC1F600F670D2 /* AccountReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEDD78C268BC1F600F670D2 /* AccountReducer.swift */; };
+		8EEDD78E268BC1F600F670D2 /* AccountReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEDD78C268BC1F600F670D2 /* AccountReducer.swift */; };
+		8EEDD790268BC2AF00F670D2 /* AccountAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEDD78F268BC2AF00F670D2 /* AccountAction.swift */; };
+		8EEDD791268BC2AF00F670D2 /* AccountAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEDD78F268BC2AF00F670D2 /* AccountAction.swift */; };
+		8EEDD793268BCD9200F670D2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEDD792268BCD9200F670D2 /* User.swift */; };
+		8EEDD794268BCD9200F670D2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEDD792268BCD9200F670D2 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8EC607402688AFCF006ED3C1 /* SetbeeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetbeeApp.swift; sourceTree = "<group>"; };
-		8EC607412688AFCF006ED3C1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8EC607412688AFCF006ED3C1 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		8EC607422688AFD1006ED3C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8EC607472688AFD1006ED3C1 /* Setbee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Setbee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EC6074D2688AFD1006ED3C1 /* Setbee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Setbee.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,9 +54,12 @@
 		8EC607742688BAD4006ED3C1 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		8EC607772688BB3E006ED3C1 /* ItemsReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsReducer.swift; sourceTree = "<group>"; };
 		8EC6077A2688BB5B006ED3C1 /* ItemsAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsAction.swift; sourceTree = "<group>"; };
-		8EC6077E2688BBFF006ED3C1 /* URL+PersistFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+PersistFile.swift"; sourceTree = "<group>"; };
 		8EC607812688BD92006ED3C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8EC6078C268A7ED9006ED3C1 /* Setbee.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Setbee.entitlements; sourceTree = "<group>"; };
+		8EEDD789268BC05D00F670D2 /* AccountState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountState.swift; sourceTree = "<group>"; };
+		8EEDD78C268BC1F600F670D2 /* AccountReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountReducer.swift; sourceTree = "<group>"; };
+		8EEDD78F268BC2AF00F670D2 /* AccountAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountAction.swift; sourceTree = "<group>"; };
+		8EEDD792268BCD9200F670D2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +130,7 @@
 		8EC607682688B93B006ED3C1 /* SwiftDux */ = {
 			isa = PBXGroup;
 			children = (
+				8EEDD788268BC03100F670D2 /* Account */,
 				8EC607732688BA80006ED3C1 /* Items */,
 				8EC607692688B952006ED3C1 /* AppState.swift */,
 				8EC607702688BA3A006ED3C1 /* AppReducer.swift */,
@@ -133,6 +143,7 @@
 			children = (
 				8EC6076D2688B993006ED3C1 /* StateType.swift */,
 				8EC607742688BAD4006ED3C1 /* Item.swift */,
+				8EEDD792268BCD9200F670D2 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -149,7 +160,6 @@
 		8EC6077D2688BBDF006ED3C1 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				8EC6077E2688BBFF006ED3C1 /* URL+PersistFile.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -165,9 +175,19 @@
 		8EC6078B2688C029006ED3C1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				8EC607412688AFCF006ED3C1 /* ContentView.swift */,
+				8EC607412688AFCF006ED3C1 /* SignInView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		8EEDD788268BC03100F670D2 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				8EEDD789268BC05D00F670D2 /* AccountState.swift */,
+				8EEDD78C268BC1F600F670D2 /* AccountReducer.swift */,
+				8EEDD78F268BC2AF00F670D2 /* AccountAction.swift */,
+			);
+			path = Account;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,11 +304,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EC6076A2688B952006ED3C1 /* AppState.swift in Sources */,
+				8EEDD78A268BC05D00F670D2 /* AccountState.swift in Sources */,
+				8EEDD790268BC2AF00F670D2 /* AccountAction.swift in Sources */,
+				8EEDD78D268BC1F600F670D2 /* AccountReducer.swift in Sources */,
 				8EC6076E2688B993006ED3C1 /* StateType.swift in Sources */,
-				8EC607502688AFD1006ED3C1 /* ContentView.swift in Sources */,
-				8EC6077F2688BBFF006ED3C1 /* URL+PersistFile.swift in Sources */,
+				8EC607502688AFD1006ED3C1 /* SignInView.swift in Sources */,
 				8EC6074E2688AFD1006ED3C1 /* SetbeeApp.swift in Sources */,
 				8EC6077B2688BB5B006ED3C1 /* ItemsAction.swift in Sources */,
+				8EEDD793268BCD9200F670D2 /* User.swift in Sources */,
 				8EC607752688BAD4006ED3C1 /* Item.swift in Sources */,
 				8EC607782688BB3E006ED3C1 /* ItemsReducer.swift in Sources */,
 				8EC607712688BA3A006ED3C1 /* AppReducer.swift in Sources */,
@@ -300,11 +323,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EC6076B2688B952006ED3C1 /* AppState.swift in Sources */,
+				8EEDD78B268BC05D00F670D2 /* AccountState.swift in Sources */,
+				8EEDD791268BC2AF00F670D2 /* AccountAction.swift in Sources */,
+				8EEDD78E268BC1F600F670D2 /* AccountReducer.swift in Sources */,
 				8EC6076F2688B993006ED3C1 /* StateType.swift in Sources */,
-				8EC607512688AFD1006ED3C1 /* ContentView.swift in Sources */,
-				8EC607802688BBFF006ED3C1 /* URL+PersistFile.swift in Sources */,
+				8EC607512688AFD1006ED3C1 /* SignInView.swift in Sources */,
 				8EC6074F2688AFD1006ED3C1 /* SetbeeApp.swift in Sources */,
 				8EC6077C2688BB5B006ED3C1 /* ItemsAction.swift in Sources */,
+				8EEDD794268BCD9200F670D2 /* User.swift in Sources */,
 				8EC607762688BAD4006ED3C1 /* Item.swift in Sources */,
 				8EC607792688BB3E006ED3C1 /* ItemsReducer.swift in Sources */,
 				8EC607722688BA3A006ED3C1 /* AppReducer.swift in Sources */,
