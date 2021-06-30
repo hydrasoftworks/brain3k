@@ -8,7 +8,19 @@ import ParseSwift
 import SwiftDux
 
 enum AccountAction: Action {
-    case setUser(User?)
+    case setStatus(AccountStatus)
+}
+
+extension AccountAction {
+    static func checkAccountStatus() -> ActionPlan<AppState> {
+        ActionPlan<AppState> { store in
+            if let user = User.current {
+                store.send(AccountAction.setStatus(.authenticated(user)))
+            } else {
+                store.send(AccountAction.setStatus(.unauthenticated))
+            }
+        }
+    }
 
     static func signIn(
         _ authorization: ASAuthorization
@@ -21,9 +33,9 @@ enum AccountAction: Action {
                 completion: { result in
                     switch result {
                     case let .success(user):
-                        store.send(AccountAction.setUser(user))
+                        store.send(AccountAction.setStatus(.authenticated(user)))
                     case let .failure(error):
-                        store.send(AccountAction.setUser(nil))
+                        store.send(AccountAction.setStatus(.unauthenticated))
                         log.error(error)
                     }
                 }

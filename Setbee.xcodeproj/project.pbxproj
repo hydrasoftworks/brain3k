@@ -39,6 +39,12 @@
 		8EEDD791268BC2AF00F670D2 /* AccountAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEDD78F268BC2AF00F670D2 /* AccountAction.swift */; };
 		8EEDD793268BCD9200F670D2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEDD792268BCD9200F670D2 /* User.swift */; };
 		8EEDD794268BCD9200F670D2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEDD792268BCD9200F670D2 /* User.swift */; };
+		8EEF35DB268CE9F40068DB58 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEF35DA268CE9F40068DB58 /* ContentView.swift */; };
+		8EEF35DC268CE9F40068DB58 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEF35DA268CE9F40068DB58 /* ContentView.swift */; };
+		8EEF35DE268CEA500068DB58 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEF35DD268CEA500068DB58 /* SplashScreen.swift */; };
+		8EEF35DF268CEA500068DB58 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEF35DD268CEA500068DB58 /* SplashScreen.swift */; };
+		8EEF35E1268CED570068DB58 /* AccountStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEF35E0268CED570068DB58 /* AccountStatus.swift */; };
+		8EEF35E2268CED570068DB58 /* AccountStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEF35E0268CED570068DB58 /* AccountStatus.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +66,9 @@
 		8EEDD78C268BC1F600F670D2 /* AccountReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountReducer.swift; sourceTree = "<group>"; };
 		8EEDD78F268BC2AF00F670D2 /* AccountAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountAction.swift; sourceTree = "<group>"; };
 		8EEDD792268BCD9200F670D2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		8EEF35DA268CE9F40068DB58 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8EEF35DD268CEA500068DB58 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
+		8EEF35E0268CED570068DB58 /* AccountStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountStatus.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +153,7 @@
 				8EC6076D2688B993006ED3C1 /* StateType.swift */,
 				8EC607742688BAD4006ED3C1 /* Item.swift */,
 				8EEDD792268BCD9200F670D2 /* User.swift */,
+				8EEF35E0268CED570068DB58 /* AccountStatus.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -175,7 +185,9 @@
 		8EC6078B2688C029006ED3C1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8EEF35DD268CEA500068DB58 /* SplashScreen.swift */,
 				8EC607412688AFCF006ED3C1 /* SignInView.swift */,
+				8EEF35DA268CE9F40068DB58 /* ContentView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -305,14 +317,17 @@
 			files = (
 				8EC6076A2688B952006ED3C1 /* AppState.swift in Sources */,
 				8EEDD78A268BC05D00F670D2 /* AccountState.swift in Sources */,
+				8EEF35DE268CEA500068DB58 /* SplashScreen.swift in Sources */,
 				8EEDD790268BC2AF00F670D2 /* AccountAction.swift in Sources */,
 				8EEDD78D268BC1F600F670D2 /* AccountReducer.swift in Sources */,
+				8EEF35E1268CED570068DB58 /* AccountStatus.swift in Sources */,
 				8EC6076E2688B993006ED3C1 /* StateType.swift in Sources */,
 				8EC607502688AFD1006ED3C1 /* SignInView.swift in Sources */,
 				8EC6074E2688AFD1006ED3C1 /* SetbeeApp.swift in Sources */,
 				8EC6077B2688BB5B006ED3C1 /* ItemsAction.swift in Sources */,
 				8EEDD793268BCD9200F670D2 /* User.swift in Sources */,
 				8EC607752688BAD4006ED3C1 /* Item.swift in Sources */,
+				8EEF35DB268CE9F40068DB58 /* ContentView.swift in Sources */,
 				8EC607782688BB3E006ED3C1 /* ItemsReducer.swift in Sources */,
 				8EC607712688BA3A006ED3C1 /* AppReducer.swift in Sources */,
 			);
@@ -324,14 +339,17 @@
 			files = (
 				8EC6076B2688B952006ED3C1 /* AppState.swift in Sources */,
 				8EEDD78B268BC05D00F670D2 /* AccountState.swift in Sources */,
+				8EEF35DF268CEA500068DB58 /* SplashScreen.swift in Sources */,
 				8EEDD791268BC2AF00F670D2 /* AccountAction.swift in Sources */,
 				8EEDD78E268BC1F600F670D2 /* AccountReducer.swift in Sources */,
+				8EEF35E2268CED570068DB58 /* AccountStatus.swift in Sources */,
 				8EC6076F2688B993006ED3C1 /* StateType.swift in Sources */,
 				8EC607512688AFD1006ED3C1 /* SignInView.swift in Sources */,
 				8EC6074F2688AFD1006ED3C1 /* SetbeeApp.swift in Sources */,
 				8EC6077C2688BB5B006ED3C1 /* ItemsAction.swift in Sources */,
 				8EEDD794268BCD9200F670D2 /* User.swift in Sources */,
 				8EC607762688BAD4006ED3C1 /* Item.swift in Sources */,
+				8EEF35DC268CE9F40068DB58 /* ContentView.swift in Sources */,
 				8EC607792688BB3E006ED3C1 /* ItemsReducer.swift in Sources */,
 				8EC607722688BA3A006ED3C1 /* AppReducer.swift in Sources */,
 			);

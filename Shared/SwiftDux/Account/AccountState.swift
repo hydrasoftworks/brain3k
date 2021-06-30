@@ -5,17 +5,17 @@
 import Foundation
 
 struct AccountState: StateType {
-    let user: User?
+    let status: AccountStatus
 
-    init(user: User? = nil) {
-        self.user = user
+    init(status: AccountStatus = .undetermined) {
+        self.status = status
     }
 
     func copyWith(
-        user: User? = nil
+        status: AccountStatus? = nil
     ) -> AccountState {
         AccountState(
-            user: user ?? self.user
+            status: status ?? self.status
         )
     }
 }

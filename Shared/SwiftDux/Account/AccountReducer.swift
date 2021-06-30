@@ -10,8 +10,8 @@ final class AccountReducer: Reducer {
         action: AccountAction
     ) -> AccountState {
         switch action {
-        case let .setUser(user):
-            return state.copyWith(user: user)
+        case let .setStatus(status):
+            return state.copyWith(status: status)
         }
     }
 }
