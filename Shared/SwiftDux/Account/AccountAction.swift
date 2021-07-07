@@ -29,17 +29,50 @@ extension AccountAction {
             guard let credential = authorization.credential as? ASAuthorizationAppleIDCredential else { return }
             User.apple.login(
                 user: credential.user,
-                identityToken: credential.identityToken ?? Data(),
-                completion: { result in
-                    switch result {
-                    case let .success(user):
-                        store.send(AccountAction.setStatus(.authenticated(user)))
-                    case let .failure(error):
-                        store.send(AccountAction.setStatus(.unauthenticated))
-                        log.error(error)
-                    }
+                identityToken: credential.identityToken ?? Data()
+            ) { result in
+                switch result {
+                case let .success(user):
+                    store.send(AccountAction.setStatus(.authenticated(user)))
+                case let .failure(error):
+                    store.send(AccountAction.setStatus(.unauthenticated))
+                    log.error(error)
                 }
-            )
+            }
+        }
+    }
+
+    static func signIn(
+        withEmail email: String,
+        andPassword password: String
+    ) -> ActionPlan<AppState> {
+        ActionPlan<AppState> { store in
+            User.login(username: email, password: password) { result in
+                switch result {
+                case let .success(user):
+                    store.send(AccountAction.setStatus(.authenticated(user)))
+                case let .failure(error):
+                    store.send(AccountAction.setStatus(.unauthenticated))
+                    log.error(error)
+                }
+            }
+        }
+    }
+
+    static func signUp(
+        withEmail email: String,
+        andPassword password: String
+    ) -> ActionPlan<AppState> {
+        ActionPlan<AppState> { store in
+            User.signup(username: email, password: password) { result in
+                switch result {
+                case let .success(user):
+                    store.send(AccountAction.setStatus(.authenticated(user)))
+                case let .failure(error):
+                    store.send(AccountAction.setStatus(.unauthenticated))
+                    log.error(error)
+                }
+            }
         }
     }
 }

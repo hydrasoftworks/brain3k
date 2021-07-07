@@ -5,7 +5,7 @@
 import SwiftDux
 import SwiftUI
 
-struct SplashScreen: ConnectableView {
+struct SplashPage: ConnectableView {
     func map(state: AppState) -> ViewModel? {
         ViewModel(status: state.account.status)
     }
@@ -13,8 +13,8 @@ struct SplashScreen: ConnectableView {
     @ViewBuilder
     func body(props viewModel: ViewModel) -> some View {
         switch viewModel.status {
-        case .authenticated: ContentView()
-        case .unauthenticated: SignInView()
+        case .authenticated: ContentPage()
+        case .unauthenticated: JoinPage()
         case .undetermined: Text("splash screen")
             .onAppear(dispatch: AccountAction.checkAccountStatus())
         }
@@ -27,6 +27,6 @@ struct SplashScreen: ConnectableView {
 
 struct SplashScreen_Previews: PreviewProvider {
     static var previews: some View {
-        SplashScreen()
+        SplashPage()
     }
 }

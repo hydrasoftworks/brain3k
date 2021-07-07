@@ -7,10 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E79C13526961891002D2A8B /* MGFlipView in Frameworks */ = {isa = PBXBuildFile; productRef = 8E79C13426961891002D2A8B /* MGFlipView */; };
+		8E79C13726961898002D2A8B /* MGFlipView in Frameworks */ = {isa = PBXBuildFile; productRef = 8E79C13626961898002D2A8B /* MGFlipView */; };
+		8E79C139269618BE002D2A8B /* JoinPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E79C138269618BE002D2A8B /* JoinPage.swift */; };
+		8E79C13A269618BE002D2A8B /* JoinPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E79C138269618BE002D2A8B /* JoinPage.swift */; };
+		8E79C13C269619C0002D2A8B /* SignInWithAppleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E79C13B269619C0002D2A8B /* SignInWithAppleButton.swift */; };
+		8E79C13D269619C0002D2A8B /* SignInWithAppleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E79C13B269619C0002D2A8B /* SignInWithAppleButton.swift */; };
+		8EA4D27D26938D1000C0A037 /* TextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA4D27C26938D1000C0A037 /* TextFieldStyle.swift */; };
+		8EA4D27E26938D1100C0A037 /* TextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA4D27C26938D1000C0A037 /* TextFieldStyle.swift */; };
+		8EA4D28126939DE100C0A037 /* EmailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA4D28026939DE100C0A037 /* EmailTextField.swift */; };
+		8EA4D28226939DE100C0A037 /* EmailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA4D28026939DE100C0A037 /* EmailTextField.swift */; };
+		8EA4D28426939E6400C0A037 /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA4D28326939E6400C0A037 /* PasswordTextField.swift */; };
+		8EA4D28526939E6400C0A037 /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA4D28326939E6400C0A037 /* PasswordTextField.swift */; };
+		8EA4D2872693A22A00C0A037 /* SignUpPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA4D2862693A22A00C0A037 /* SignUpPage.swift */; };
+		8EA4D2882693A22A00C0A037 /* SignUpPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA4D2862693A22A00C0A037 /* SignUpPage.swift */; };
 		8EC6074E2688AFD1006ED3C1 /* SetbeeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC607402688AFCF006ED3C1 /* SetbeeApp.swift */; };
 		8EC6074F2688AFD1006ED3C1 /* SetbeeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC607402688AFCF006ED3C1 /* SetbeeApp.swift */; };
-		8EC607502688AFD1006ED3C1 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC607412688AFCF006ED3C1 /* SignInView.swift */; };
-		8EC607512688AFD1006ED3C1 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC607412688AFCF006ED3C1 /* SignInView.swift */; };
+		8EC607502688AFD1006ED3C1 /* SignInPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC607412688AFCF006ED3C1 /* SignInPage.swift */; };
+		8EC607512688AFD1006ED3C1 /* SignInPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC607412688AFCF006ED3C1 /* SignInPage.swift */; };
 		8EC607522688AFD1006ED3C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EC607422688AFD1006ED3C1 /* Assets.xcassets */; };
 		8EC607532688AFD1006ED3C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EC607422688AFD1006ED3C1 /* Assets.xcassets */; };
 		8EC607612688B6B6006ED3C1 /* ParseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8EC607602688B6B6006ED3C1 /* ParseSwift */; };
@@ -39,17 +53,23 @@
 		8EEDD791268BC2AF00F670D2 /* AccountAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEDD78F268BC2AF00F670D2 /* AccountAction.swift */; };
 		8EEDD793268BCD9200F670D2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEDD792268BCD9200F670D2 /* User.swift */; };
 		8EEDD794268BCD9200F670D2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEDD792268BCD9200F670D2 /* User.swift */; };
-		8EEF35DB268CE9F40068DB58 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEF35DA268CE9F40068DB58 /* ContentView.swift */; };
-		8EEF35DC268CE9F40068DB58 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEF35DA268CE9F40068DB58 /* ContentView.swift */; };
-		8EEF35DE268CEA500068DB58 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEF35DD268CEA500068DB58 /* SplashScreen.swift */; };
-		8EEF35DF268CEA500068DB58 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEF35DD268CEA500068DB58 /* SplashScreen.swift */; };
+		8EEF35DB268CE9F40068DB58 /* ContentPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEF35DA268CE9F40068DB58 /* ContentPage.swift */; };
+		8EEF35DC268CE9F40068DB58 /* ContentPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEF35DA268CE9F40068DB58 /* ContentPage.swift */; };
+		8EEF35DE268CEA500068DB58 /* SplashPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEF35DD268CEA500068DB58 /* SplashPage.swift */; };
+		8EEF35DF268CEA500068DB58 /* SplashPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEF35DD268CEA500068DB58 /* SplashPage.swift */; };
 		8EEF35E1268CED570068DB58 /* AccountStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEF35E0268CED570068DB58 /* AccountStatus.swift */; };
 		8EEF35E2268CED570068DB58 /* AccountStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEF35E0268CED570068DB58 /* AccountStatus.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8E79C138269618BE002D2A8B /* JoinPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinPage.swift; sourceTree = "<group>"; };
+		8E79C13B269619C0002D2A8B /* SignInWithAppleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleButton.swift; sourceTree = "<group>"; };
+		8EA4D27C26938D1000C0A037 /* TextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldStyle.swift; sourceTree = "<group>"; };
+		8EA4D28026939DE100C0A037 /* EmailTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailTextField.swift; sourceTree = "<group>"; };
+		8EA4D28326939E6400C0A037 /* PasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
+		8EA4D2862693A22A00C0A037 /* SignUpPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPage.swift; sourceTree = "<group>"; };
 		8EC607402688AFCF006ED3C1 /* SetbeeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetbeeApp.swift; sourceTree = "<group>"; };
-		8EC607412688AFCF006ED3C1 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		8EC607412688AFCF006ED3C1 /* SignInPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPage.swift; sourceTree = "<group>"; };
 		8EC607422688AFD1006ED3C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8EC607472688AFD1006ED3C1 /* Setbee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Setbee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EC6074D2688AFD1006ED3C1 /* Setbee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Setbee.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,8 +86,8 @@
 		8EEDD78C268BC1F600F670D2 /* AccountReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountReducer.swift; sourceTree = "<group>"; };
 		8EEDD78F268BC2AF00F670D2 /* AccountAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountAction.swift; sourceTree = "<group>"; };
 		8EEDD792268BCD9200F670D2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		8EEF35DA268CE9F40068DB58 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		8EEF35DD268CEA500068DB58 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
+		8EEF35DA268CE9F40068DB58 /* ContentPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentPage.swift; sourceTree = "<group>"; };
+		8EEF35DD268CEA500068DB58 /* SplashPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPage.swift; sourceTree = "<group>"; };
 		8EEF35E0268CED570068DB58 /* AccountStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountStatus.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E79C13526961891002D2A8B /* MGFlipView in Frameworks */,
 				8EC607672688B86B006ED3C1 /* SwiftDux in Frameworks */,
 				8EC607612688B6B6006ED3C1 /* ParseSwift in Frameworks */,
 				8EC607862688BED5006ED3C1 /* SwiftyBeaver in Frameworks */,
@@ -86,6 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E79C13726961898002D2A8B /* MGFlipView in Frameworks */,
 				8EC607882688BEE0006ED3C1 /* SwiftDux in Frameworks */,
 				8EC607642688B6C2006ED3C1 /* ParseSwift in Frameworks */,
 				8EC6078A2688BEE4006ED3C1 /* SwiftyBeaver in Frameworks */,
@@ -95,6 +117,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8EA4D27B26938CED00C0A037 /* View Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				8EA4D27C26938D1000C0A037 /* TextFieldStyle.swift */,
+			);
+			path = "View Modifiers";
+			sourceTree = "<group>";
+		};
+		8EA4D27F26939DA600C0A037 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				8EEF35DD268CEA500068DB58 /* SplashPage.swift */,
+				8E79C138269618BE002D2A8B /* JoinPage.swift */,
+				8EC607412688AFCF006ED3C1 /* SignInPage.swift */,
+				8EA4D2862693A22A00C0A037 /* SignUpPage.swift */,
+				8EEF35DA268CE9F40068DB58 /* ContentPage.swift */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
 		8EC6073A2688AFCF006ED3C1 = {
 			isa = PBXGroup;
 			children = (
@@ -111,7 +153,9 @@
 			children = (
 				8EC6078C268A7ED9006ED3C1 /* Setbee.entitlements */,
 				8EC607402688AFCF006ED3C1 /* SetbeeApp.swift */,
+				8EA4D27F26939DA600C0A037 /* Pages */,
 				8EC6078B2688C029006ED3C1 /* Views */,
+				8EA4D27B26938CED00C0A037 /* View Modifiers */,
 				8EC6076C2688B982006ED3C1 /* Models */,
 				8EC607682688B93B006ED3C1 /* SwiftDux */,
 				8EC6077D2688BBDF006ED3C1 /* Extensions */,
@@ -185,9 +229,9 @@
 		8EC6078B2688C029006ED3C1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				8EEF35DD268CEA500068DB58 /* SplashScreen.swift */,
-				8EC607412688AFCF006ED3C1 /* SignInView.swift */,
-				8EEF35DA268CE9F40068DB58 /* ContentView.swift */,
+				8EA4D28026939DE100C0A037 /* EmailTextField.swift */,
+				8EA4D28326939E6400C0A037 /* PasswordTextField.swift */,
+				8E79C13B269619C0002D2A8B /* SignInWithAppleButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -222,6 +266,7 @@
 				8EC607602688B6B6006ED3C1 /* ParseSwift */,
 				8EC607662688B86B006ED3C1 /* SwiftDux */,
 				8EC607852688BED5006ED3C1 /* SwiftyBeaver */,
+				8E79C13426961891002D2A8B /* MGFlipView */,
 			);
 			productName = "Setbee (iOS)";
 			productReference = 8EC607472688AFD1006ED3C1 /* Setbee.app */;
@@ -244,6 +289,7 @@
 				8EC607632688B6C2006ED3C1 /* ParseSwift */,
 				8EC607872688BEE0006ED3C1 /* SwiftDux */,
 				8EC607892688BEE4006ED3C1 /* SwiftyBeaver */,
+				8E79C13626961898002D2A8B /* MGFlipView */,
 			);
 			productName = "Setbee (macOS)";
 			productReference = 8EC6074D2688AFD1006ED3C1 /* Setbee.app */;
@@ -280,6 +326,7 @@
 				8EC6075F2688B6B6006ED3C1 /* XCRemoteSwiftPackageReference "Parse-Swift" */,
 				8EC607652688B86B006ED3C1 /* XCRemoteSwiftPackageReference "SwiftDux" */,
 				8EC607842688BED5006ED3C1 /* XCRemoteSwiftPackageReference "SwiftyBeaver" */,
+				8E79C13326961891002D2A8B /* XCRemoteSwiftPackageReference "MGFlipView" */,
 			);
 			productRefGroup = 8EC607482688AFD1006ED3C1 /* Products */;
 			projectDirPath = "";
@@ -315,19 +362,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EA4D28126939DE100C0A037 /* EmailTextField.swift in Sources */,
 				8EC6076A2688B952006ED3C1 /* AppState.swift in Sources */,
+				8EA4D28426939E6400C0A037 /* PasswordTextField.swift in Sources */,
 				8EEDD78A268BC05D00F670D2 /* AccountState.swift in Sources */,
-				8EEF35DE268CEA500068DB58 /* SplashScreen.swift in Sources */,
+				8EEF35DE268CEA500068DB58 /* SplashPage.swift in Sources */,
 				8EEDD790268BC2AF00F670D2 /* AccountAction.swift in Sources */,
 				8EEDD78D268BC1F600F670D2 /* AccountReducer.swift in Sources */,
 				8EEF35E1268CED570068DB58 /* AccountStatus.swift in Sources */,
 				8EC6076E2688B993006ED3C1 /* StateType.swift in Sources */,
-				8EC607502688AFD1006ED3C1 /* SignInView.swift in Sources */,
+				8EC607502688AFD1006ED3C1 /* SignInPage.swift in Sources */,
+				8E79C139269618BE002D2A8B /* JoinPage.swift in Sources */,
 				8EC6074E2688AFD1006ED3C1 /* SetbeeApp.swift in Sources */,
+				8EA4D27D26938D1000C0A037 /* TextFieldStyle.swift in Sources */,
+				8E79C13C269619C0002D2A8B /* SignInWithAppleButton.swift in Sources */,
 				8EC6077B2688BB5B006ED3C1 /* ItemsAction.swift in Sources */,
 				8EEDD793268BCD9200F670D2 /* User.swift in Sources */,
+				8EA4D2872693A22A00C0A037 /* SignUpPage.swift in Sources */,
 				8EC607752688BAD4006ED3C1 /* Item.swift in Sources */,
-				8EEF35DB268CE9F40068DB58 /* ContentView.swift in Sources */,
+				8EEF35DB268CE9F40068DB58 /* ContentPage.swift in Sources */,
 				8EC607782688BB3E006ED3C1 /* ItemsReducer.swift in Sources */,
 				8EC607712688BA3A006ED3C1 /* AppReducer.swift in Sources */,
 			);
@@ -337,19 +390,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EA4D28226939DE100C0A037 /* EmailTextField.swift in Sources */,
 				8EC6076B2688B952006ED3C1 /* AppState.swift in Sources */,
+				8EA4D28526939E6400C0A037 /* PasswordTextField.swift in Sources */,
 				8EEDD78B268BC05D00F670D2 /* AccountState.swift in Sources */,
-				8EEF35DF268CEA500068DB58 /* SplashScreen.swift in Sources */,
+				8EEF35DF268CEA500068DB58 /* SplashPage.swift in Sources */,
 				8EEDD791268BC2AF00F670D2 /* AccountAction.swift in Sources */,
 				8EEDD78E268BC1F600F670D2 /* AccountReducer.swift in Sources */,
 				8EEF35E2268CED570068DB58 /* AccountStatus.swift in Sources */,
 				8EC6076F2688B993006ED3C1 /* StateType.swift in Sources */,
-				8EC607512688AFD1006ED3C1 /* SignInView.swift in Sources */,
+				8EC607512688AFD1006ED3C1 /* SignInPage.swift in Sources */,
+				8E79C13A269618BE002D2A8B /* JoinPage.swift in Sources */,
 				8EC6074F2688AFD1006ED3C1 /* SetbeeApp.swift in Sources */,
+				8EA4D27E26938D1100C0A037 /* TextFieldStyle.swift in Sources */,
+				8E79C13D269619C0002D2A8B /* SignInWithAppleButton.swift in Sources */,
 				8EC6077C2688BB5B006ED3C1 /* ItemsAction.swift in Sources */,
 				8EEDD794268BCD9200F670D2 /* User.swift in Sources */,
+				8EA4D2882693A22A00C0A037 /* SignUpPage.swift in Sources */,
 				8EC607762688BAD4006ED3C1 /* Item.swift in Sources */,
-				8EEF35DC268CE9F40068DB58 /* ContentView.swift in Sources */,
+				8EEF35DC268CE9F40068DB58 /* ContentPage.swift in Sources */,
 				8EC607792688BB3E006ED3C1 /* ItemsReducer.swift in Sources */,
 				8EC607722688BA3A006ED3C1 /* AppReducer.swift in Sources */,
 			);
@@ -650,6 +709,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		8E79C13326961891002D2A8B /* XCRemoteSwiftPackageReference "MGFlipView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Zaprogramiacz/MGFlipView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		8EC6075F2688B6B6006ED3C1 /* XCRemoteSwiftPackageReference "Parse-Swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/parse-community/Parse-Swift";
@@ -677,6 +744,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		8E79C13426961891002D2A8B /* MGFlipView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8E79C13326961891002D2A8B /* XCRemoteSwiftPackageReference "MGFlipView" */;
+			productName = MGFlipView;
+		};
+		8E79C13626961898002D2A8B /* MGFlipView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8E79C13326961891002D2A8B /* XCRemoteSwiftPackageReference "MGFlipView" */;
+			productName = MGFlipView;
+		};
 		8EC607602688B6B6006ED3C1 /* ParseSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 8EC6075F2688B6B6006ED3C1 /* XCRemoteSwiftPackageReference "Parse-Swift" */;

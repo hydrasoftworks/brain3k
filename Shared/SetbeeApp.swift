@@ -35,7 +35,7 @@ struct SetbeeApp: App {
 
     var body: some Scene {
         WindowGroup {
-            SplashScreen()
+            SplashPage()
                 .provideStore(store)
         }
     }
