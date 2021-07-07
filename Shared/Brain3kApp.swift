@@ -11,7 +11,7 @@ import SwiftyBeaver
 let log = SwiftyBeaver.self
 
 @main
-struct SetbeeApp: App {
+struct Brain3kApp: App {
     let store: Store<AppState>
 
     init() {

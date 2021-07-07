@@ -21,8 +21,8 @@
 		8EA4D28526939E6400C0A037 /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA4D28326939E6400C0A037 /* PasswordTextField.swift */; };
 		8EA4D2872693A22A00C0A037 /* SignUpPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA4D2862693A22A00C0A037 /* SignUpPage.swift */; };
 		8EA4D2882693A22A00C0A037 /* SignUpPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA4D2862693A22A00C0A037 /* SignUpPage.swift */; };
-		8EC6074E2688AFD1006ED3C1 /* SetbeeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC607402688AFCF006ED3C1 /* SetbeeApp.swift */; };
-		8EC6074F2688AFD1006ED3C1 /* SetbeeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC607402688AFCF006ED3C1 /* SetbeeApp.swift */; };
+		8EC6074E2688AFD1006ED3C1 /* Brain3kApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC607402688AFCF006ED3C1 /* Brain3kApp.swift */; };
+		8EC6074F2688AFD1006ED3C1 /* Brain3kApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC607402688AFCF006ED3C1 /* Brain3kApp.swift */; };
 		8EC607502688AFD1006ED3C1 /* SignInPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC607412688AFCF006ED3C1 /* SignInPage.swift */; };
 		8EC607512688AFD1006ED3C1 /* SignInPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC607412688AFCF006ED3C1 /* SignInPage.swift */; };
 		8EC607522688AFD1006ED3C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EC607422688AFD1006ED3C1 /* Assets.xcassets */; };
@@ -68,11 +68,11 @@
 		8EA4D28026939DE100C0A037 /* EmailTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailTextField.swift; sourceTree = "<group>"; };
 		8EA4D28326939E6400C0A037 /* PasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
 		8EA4D2862693A22A00C0A037 /* SignUpPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPage.swift; sourceTree = "<group>"; };
-		8EC607402688AFCF006ED3C1 /* SetbeeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetbeeApp.swift; sourceTree = "<group>"; };
+		8EC607402688AFCF006ED3C1 /* Brain3kApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brain3kApp.swift; sourceTree = "<group>"; };
 		8EC607412688AFCF006ED3C1 /* SignInPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPage.swift; sourceTree = "<group>"; };
 		8EC607422688AFD1006ED3C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8EC607472688AFD1006ED3C1 /* Setbee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Setbee.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8EC6074D2688AFD1006ED3C1 /* Setbee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Setbee.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EC607472688AFD1006ED3C1 /* Brain3k.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Brain3k.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EC6074D2688AFD1006ED3C1 /* Brain3k.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Brain3k.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EC6075C2688B10F006ED3C1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		8EC607692688B952006ED3C1 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		8EC6076D2688B993006ED3C1 /* StateType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateType.swift; sourceTree = "<group>"; };
@@ -81,7 +81,7 @@
 		8EC607772688BB3E006ED3C1 /* ItemsReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsReducer.swift; sourceTree = "<group>"; };
 		8EC6077A2688BB5B006ED3C1 /* ItemsAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsAction.swift; sourceTree = "<group>"; };
 		8EC607812688BD92006ED3C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8EC6078C268A7ED9006ED3C1 /* Setbee.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Setbee.entitlements; sourceTree = "<group>"; };
+		8EC6078C268A7ED9006ED3C1 /* Brain3k.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Brain3k.entitlements; sourceTree = "<group>"; };
 		8EEDD789268BC05D00F670D2 /* AccountState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountState.swift; sourceTree = "<group>"; };
 		8EEDD78C268BC1F600F670D2 /* AccountReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountReducer.swift; sourceTree = "<group>"; };
 		8EEDD78F268BC2AF00F670D2 /* AccountAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountAction.swift; sourceTree = "<group>"; };
@@ -151,8 +151,8 @@
 		8EC6073F2688AFCF006ED3C1 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				8EC6078C268A7ED9006ED3C1 /* Setbee.entitlements */,
-				8EC607402688AFCF006ED3C1 /* SetbeeApp.swift */,
+				8EC6078C268A7ED9006ED3C1 /* Brain3k.entitlements */,
+				8EC607402688AFCF006ED3C1 /* Brain3kApp.swift */,
 				8EA4D27F26939DA600C0A037 /* Pages */,
 				8EC6078B2688C029006ED3C1 /* Views */,
 				8EA4D27B26938CED00C0A037 /* View Modifiers */,
@@ -167,8 +167,8 @@
 		8EC607482688AFD1006ED3C1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8EC607472688AFD1006ED3C1 /* Setbee.app */,
-				8EC6074D2688AFD1006ED3C1 /* Setbee.app */,
+				8EC607472688AFD1006ED3C1 /* Brain3k.app */,
+				8EC6074D2688AFD1006ED3C1 /* Brain3k.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -249,9 +249,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8EC607462688AFD1006ED3C1 /* Setbee (iOS) */ = {
+		8EC607462688AFD1006ED3C1 /* Brain3k (iOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8EC607562688AFD1006ED3C1 /* Build configuration list for PBXNativeTarget "Setbee (iOS)" */;
+			buildConfigurationList = 8EC607562688AFD1006ED3C1 /* Build configuration list for PBXNativeTarget "Brain3k (iOS)" */;
 			buildPhases = (
 				8EC607432688AFD1006ED3C1 /* Sources */,
 				8EC607442688AFD1006ED3C1 /* Frameworks */,
@@ -261,20 +261,20 @@
 			);
 			dependencies = (
 			);
-			name = "Setbee (iOS)";
+			name = "Brain3k (iOS)";
 			packageProductDependencies = (
 				8EC607602688B6B6006ED3C1 /* ParseSwift */,
 				8EC607662688B86B006ED3C1 /* SwiftDux */,
 				8EC607852688BED5006ED3C1 /* SwiftyBeaver */,
 				8E79C13426961891002D2A8B /* MGFlipView */,
 			);
-			productName = "Setbee (iOS)";
-			productReference = 8EC607472688AFD1006ED3C1 /* Setbee.app */;
+			productName = "Brain3k (iOS)";
+			productReference = 8EC607472688AFD1006ED3C1 /* Brain3k.app */;
 			productType = "com.apple.product-type.application";
 		};
-		8EC6074C2688AFD1006ED3C1 /* Setbee (macOS) */ = {
+		8EC6074C2688AFD1006ED3C1 /* Brain3k (macOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8EC607592688AFD1006ED3C1 /* Build configuration list for PBXNativeTarget "Setbee (macOS)" */;
+			buildConfigurationList = 8EC607592688AFD1006ED3C1 /* Build configuration list for PBXNativeTarget "Brain3k (macOS)" */;
 			buildPhases = (
 				8EC607492688AFD1006ED3C1 /* Sources */,
 				8EC6074A2688AFD1006ED3C1 /* Frameworks */,
@@ -284,15 +284,15 @@
 			);
 			dependencies = (
 			);
-			name = "Setbee (macOS)";
+			name = "Brain3k (macOS)";
 			packageProductDependencies = (
 				8EC607632688B6C2006ED3C1 /* ParseSwift */,
 				8EC607872688BEE0006ED3C1 /* SwiftDux */,
 				8EC607892688BEE4006ED3C1 /* SwiftyBeaver */,
 				8E79C13626961898002D2A8B /* MGFlipView */,
 			);
-			productName = "Setbee (macOS)";
-			productReference = 8EC6074D2688AFD1006ED3C1 /* Setbee.app */;
+			productName = "Brain3k (macOS)";
+			productReference = 8EC6074D2688AFD1006ED3C1 /* Brain3k.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -313,7 +313,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8EC6073E2688AFCF006ED3C1 /* Build configuration list for PBXProject "Setbee" */;
+			buildConfigurationList = 8EC6073E2688AFCF006ED3C1 /* Build configuration list for PBXProject "Brain3k" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -332,8 +332,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8EC607462688AFD1006ED3C1 /* Setbee (iOS) */,
-				8EC6074C2688AFD1006ED3C1 /* Setbee (macOS) */,
+				8EC607462688AFD1006ED3C1 /* Brain3k (iOS) */,
+				8EC6074C2688AFD1006ED3C1 /* Brain3k (macOS) */,
 			);
 		};
 /* End PBXProject section */
@@ -373,7 +373,7 @@
 				8EC6076E2688B993006ED3C1 /* StateType.swift in Sources */,
 				8EC607502688AFD1006ED3C1 /* SignInPage.swift in Sources */,
 				8E79C139269618BE002D2A8B /* JoinPage.swift in Sources */,
-				8EC6074E2688AFD1006ED3C1 /* SetbeeApp.swift in Sources */,
+				8EC6074E2688AFD1006ED3C1 /* Brain3kApp.swift in Sources */,
 				8EA4D27D26938D1000C0A037 /* TextFieldStyle.swift in Sources */,
 				8E79C13C269619C0002D2A8B /* SignInWithAppleButton.swift in Sources */,
 				8EC6077B2688BB5B006ED3C1 /* ItemsAction.swift in Sources */,
@@ -401,7 +401,7 @@
 				8EC6076F2688B993006ED3C1 /* StateType.swift in Sources */,
 				8EC607512688AFD1006ED3C1 /* SignInPage.swift in Sources */,
 				8E79C13A269618BE002D2A8B /* JoinPage.swift in Sources */,
-				8EC6074F2688AFD1006ED3C1 /* SetbeeApp.swift in Sources */,
+				8EC6074F2688AFD1006ED3C1 /* Brain3kApp.swift in Sources */,
 				8EA4D27E26938D1100C0A037 /* TextFieldStyle.swift in Sources */,
 				8E79C13D269619C0002D2A8B /* SignInWithAppleButton.swift in Sources */,
 				8EC6077C2688BB5B006ED3C1 /* ItemsAction.swift in Sources */,
@@ -534,7 +534,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Shared/Setbee.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Shared/Brain3k.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
@@ -542,8 +542,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iOS/Info.plist;
-				INFOPLIST_KEY_CFBundleExecutable = Setbee;
-				INFOPLIST_KEY_CFBundleName = Setbee;
+				INFOPLIST_KEY_CFBundleExecutable = Brain3k;
+				INFOPLIST_KEY_CFBundleName = Brain3k;
 				INFOPLIST_KEY_CFBundleVersion = 1;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -557,9 +557,9 @@
 				);
 				MARKETING_VERSION = 0.0.1;
 				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.setbee.Setbee;
-				PRODUCT_NAME = Setbee;
-				PROVISIONING_PROFILE_SPECIFIER = "match Development com.setbee.Setbee";
+				PRODUCT_BUNDLE_IDENTIFIER = com.brain3k.Brain3k;
+				PRODUCT_NAME = Brain3k;
+				PROVISIONING_PROFILE_SPECIFIER = "match Development com.brain3k.Brain3k";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -572,7 +572,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Shared/Setbee.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Shared/Brain3k.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Distribution";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
@@ -580,8 +580,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iOS/Info.plist;
-				INFOPLIST_KEY_CFBundleExecutable = Setbee;
-				INFOPLIST_KEY_CFBundleName = Setbee;
+				INFOPLIST_KEY_CFBundleExecutable = Brain3k;
+				INFOPLIST_KEY_CFBundleName = Brain3k;
 				INFOPLIST_KEY_CFBundleVersion = 1;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -595,9 +595,9 @@
 				);
 				MARKETING_VERSION = 0.0.1;
 				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.setbee.Setbee;
-				PRODUCT_NAME = Setbee;
-				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.setbee.Setbee";
+				PRODUCT_BUNDLE_IDENTIFIER = com.brain3k.Brain3k;
+				PRODUCT_NAME = Brain3k;
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.brain3k.Brain3k";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -611,7 +611,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Shared/Setbee.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Shared/Brain3k.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -621,8 +621,8 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleExecutable = Setbee;
-				INFOPLIST_KEY_CFBundleName = Setbee;
+				INFOPLIST_KEY_CFBundleExecutable = Brain3k;
+				INFOPLIST_KEY_CFBundleName = Brain3k;
 				INFOPLIST_KEY_CFBundleVersion = 1;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -632,8 +632,8 @@
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 0.0.1;
 				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.setbee.Setbee;
-				PRODUCT_NAME = Setbee;
+				PRODUCT_BUNDLE_IDENTIFIER = com.brain3k.Brain3k;
+				PRODUCT_NAME = Brain3k;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -646,7 +646,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Shared/Setbee.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Shared/Brain3k.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Distribution";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -656,8 +656,8 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleExecutable = Setbee;
-				INFOPLIST_KEY_CFBundleName = Setbee;
+				INFOPLIST_KEY_CFBundleExecutable = Brain3k;
+				INFOPLIST_KEY_CFBundleName = Brain3k;
 				INFOPLIST_KEY_CFBundleVersion = 1;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -667,8 +667,8 @@
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 0.0.1;
 				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.setbee.Setbee;
-				PRODUCT_NAME = Setbee;
+				PRODUCT_BUNDLE_IDENTIFIER = com.brain3k.Brain3k;
+				PRODUCT_NAME = Brain3k;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -679,7 +679,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8EC6073E2688AFCF006ED3C1 /* Build configuration list for PBXProject "Setbee" */ = {
+		8EC6073E2688AFCF006ED3C1 /* Build configuration list for PBXProject "Brain3k" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8EC607542688AFD1006ED3C1 /* Debug */,
@@ -688,7 +688,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8EC607562688AFD1006ED3C1 /* Build configuration list for PBXNativeTarget "Setbee (iOS)" */ = {
+		8EC607562688AFD1006ED3C1 /* Build configuration list for PBXNativeTarget "Brain3k (iOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8EC607572688AFD1006ED3C1 /* Debug */,
@@ -697,7 +697,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8EC607592688AFD1006ED3C1 /* Build configuration list for PBXNativeTarget "Setbee (macOS)" */ = {
+		8EC607592688AFD1006ED3C1 /* Build configuration list for PBXNativeTarget "Brain3k (macOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8EC6075A2688AFD1006ED3C1 /* Debug */,

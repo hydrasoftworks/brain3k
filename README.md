@@ -1,4 +1,4 @@
-# Setbee - your digital brain
+# Brain3k - your digital brain
 
 Store information and search for them without the need for manual management.
 
