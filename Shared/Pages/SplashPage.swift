@@ -15,6 +15,7 @@ struct SplashPage: ConnectableView {
         switch viewModel.status {
         case .authenticated: ContentPage()
         case .unauthenticated: JoinPage()
+        case .emailVerificationNeeded: Text("email verification")
         case .undetermined: Text("splash screen")
             .onAppear(dispatch: AccountAction.checkAccountStatus())
         }

@@ -13,6 +13,16 @@
 		8E79C13A269618BE002D2A8B /* JoinPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E79C138269618BE002D2A8B /* JoinPage.swift */; };
 		8E79C13C269619C0002D2A8B /* SignInWithAppleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E79C13B269619C0002D2A8B /* SignInWithAppleButton.swift */; };
 		8E79C13D269619C0002D2A8B /* SignInWithAppleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E79C13B269619C0002D2A8B /* SignInWithAppleButton.swift */; };
+		8E79C140269786F9002D2A8B /* MessageState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E79C13F269786F9002D2A8B /* MessageState.swift */; };
+		8E79C141269786F9002D2A8B /* MessageState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E79C13F269786F9002D2A8B /* MessageState.swift */; };
+		8E79C14326978778002D2A8B /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E79C14226978778002D2A8B /* Message.swift */; };
+		8E79C14426978778002D2A8B /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E79C14226978778002D2A8B /* Message.swift */; };
+		8E79C14626978828002D2A8B /* MessageReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E79C14526978828002D2A8B /* MessageReducer.swift */; };
+		8E79C14726978828002D2A8B /* MessageReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E79C14526978828002D2A8B /* MessageReducer.swift */; };
+		8E79C14926978898002D2A8B /* MessageAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E79C14826978898002D2A8B /* MessageAction.swift */; };
+		8E79C14A26978898002D2A8B /* MessageAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E79C14826978898002D2A8B /* MessageAction.swift */; };
+		8E79C14D269791EA002D2A8B /* ValidatedPropertyKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8E79C14C269791EA002D2A8B /* ValidatedPropertyKit */; };
+		8E79C14F269791F4002D2A8B /* ValidatedPropertyKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8E79C14E269791F4002D2A8B /* ValidatedPropertyKit */; };
 		8EA4D27D26938D1000C0A037 /* TextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA4D27C26938D1000C0A037 /* TextFieldStyle.swift */; };
 		8EA4D27E26938D1100C0A037 /* TextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA4D27C26938D1000C0A037 /* TextFieldStyle.swift */; };
 		8EA4D28126939DE100C0A037 /* EmailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA4D28026939DE100C0A037 /* EmailTextField.swift */; };
@@ -64,6 +74,10 @@
 /* Begin PBXFileReference section */
 		8E79C138269618BE002D2A8B /* JoinPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinPage.swift; sourceTree = "<group>"; };
 		8E79C13B269619C0002D2A8B /* SignInWithAppleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleButton.swift; sourceTree = "<group>"; };
+		8E79C13F269786F9002D2A8B /* MessageState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageState.swift; sourceTree = "<group>"; };
+		8E79C14226978778002D2A8B /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		8E79C14526978828002D2A8B /* MessageReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageReducer.swift; sourceTree = "<group>"; };
+		8E79C14826978898002D2A8B /* MessageAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageAction.swift; sourceTree = "<group>"; };
 		8EA4D27C26938D1000C0A037 /* TextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldStyle.swift; sourceTree = "<group>"; };
 		8EA4D28026939DE100C0A037 /* EmailTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailTextField.swift; sourceTree = "<group>"; };
 		8EA4D28326939E6400C0A037 /* PasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
@@ -99,6 +113,7 @@
 				8E79C13526961891002D2A8B /* MGFlipView in Frameworks */,
 				8EC607672688B86B006ED3C1 /* SwiftDux in Frameworks */,
 				8EC607612688B6B6006ED3C1 /* ParseSwift in Frameworks */,
+				8E79C14D269791EA002D2A8B /* ValidatedPropertyKit in Frameworks */,
 				8EC607862688BED5006ED3C1 /* SwiftyBeaver in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -110,6 +125,7 @@
 				8E79C13726961898002D2A8B /* MGFlipView in Frameworks */,
 				8EC607882688BEE0006ED3C1 /* SwiftDux in Frameworks */,
 				8EC607642688B6C2006ED3C1 /* ParseSwift in Frameworks */,
+				8E79C14F269791F4002D2A8B /* ValidatedPropertyKit in Frameworks */,
 				8EC6078A2688BEE4006ED3C1 /* SwiftyBeaver in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -117,6 +133,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8E79C13E269786A0002D2A8B /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				8E79C13F269786F9002D2A8B /* MessageState.swift */,
+				8E79C14526978828002D2A8B /* MessageReducer.swift */,
+				8E79C14826978898002D2A8B /* MessageAction.swift */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		8E79C15026979409002D2A8B /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				8E79C138269618BE002D2A8B /* JoinPage.swift */,
+				8EC607412688AFCF006ED3C1 /* SignInPage.swift */,
+				8EA4D2862693A22A00C0A037 /* SignUpPage.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
 		8EA4D27B26938CED00C0A037 /* View Modifiers */ = {
 			isa = PBXGroup;
 			children = (
@@ -129,9 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				8EEF35DD268CEA500068DB58 /* SplashPage.swift */,
-				8E79C138269618BE002D2A8B /* JoinPage.swift */,
-				8EC607412688AFCF006ED3C1 /* SignInPage.swift */,
-				8EA4D2862693A22A00C0A037 /* SignUpPage.swift */,
+				8E79C15026979409002D2A8B /* Authentication */,
 				8EEF35DA268CE9F40068DB58 /* ContentPage.swift */,
 			);
 			path = Pages;
@@ -183,6 +217,7 @@
 		8EC607682688B93B006ED3C1 /* SwiftDux */ = {
 			isa = PBXGroup;
 			children = (
+				8E79C13E269786A0002D2A8B /* Message */,
 				8EEDD788268BC03100F670D2 /* Account */,
 				8EC607732688BA80006ED3C1 /* Items */,
 				8EC607692688B952006ED3C1 /* AppState.swift */,
@@ -198,6 +233,7 @@
 				8EC607742688BAD4006ED3C1 /* Item.swift */,
 				8EEDD792268BCD9200F670D2 /* User.swift */,
 				8EEF35E0268CED570068DB58 /* AccountStatus.swift */,
+				8E79C14226978778002D2A8B /* Message.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -267,6 +303,7 @@
 				8EC607662688B86B006ED3C1 /* SwiftDux */,
 				8EC607852688BED5006ED3C1 /* SwiftyBeaver */,
 				8E79C13426961891002D2A8B /* MGFlipView */,
+				8E79C14C269791EA002D2A8B /* ValidatedPropertyKit */,
 			);
 			productName = "Brain3k (iOS)";
 			productReference = 8EC607472688AFD1006ED3C1 /* Brain3k.app */;
@@ -290,6 +327,7 @@
 				8EC607872688BEE0006ED3C1 /* SwiftDux */,
 				8EC607892688BEE4006ED3C1 /* SwiftyBeaver */,
 				8E79C13626961898002D2A8B /* MGFlipView */,
+				8E79C14E269791F4002D2A8B /* ValidatedPropertyKit */,
 			);
 			productName = "Brain3k (macOS)";
 			productReference = 8EC6074D2688AFD1006ED3C1 /* Brain3k.app */;
@@ -327,6 +365,7 @@
 				8EC607652688B86B006ED3C1 /* XCRemoteSwiftPackageReference "SwiftDux" */,
 				8EC607842688BED5006ED3C1 /* XCRemoteSwiftPackageReference "SwiftyBeaver" */,
 				8E79C13326961891002D2A8B /* XCRemoteSwiftPackageReference "MGFlipView" */,
+				8E79C14B269791EA002D2A8B /* XCRemoteSwiftPackageReference "ValidatedPropertyKit" */,
 			);
 			productRefGroup = 8EC607482688AFD1006ED3C1 /* Products */;
 			projectDirPath = "";
@@ -375,11 +414,15 @@
 				8E79C139269618BE002D2A8B /* JoinPage.swift in Sources */,
 				8EC6074E2688AFD1006ED3C1 /* Brain3kApp.swift in Sources */,
 				8EA4D27D26938D1000C0A037 /* TextFieldStyle.swift in Sources */,
+				8E79C140269786F9002D2A8B /* MessageState.swift in Sources */,
+				8E79C14626978828002D2A8B /* MessageReducer.swift in Sources */,
 				8E79C13C269619C0002D2A8B /* SignInWithAppleButton.swift in Sources */,
 				8EC6077B2688BB5B006ED3C1 /* ItemsAction.swift in Sources */,
 				8EEDD793268BCD9200F670D2 /* User.swift in Sources */,
+				8E79C14326978778002D2A8B /* Message.swift in Sources */,
 				8EA4D2872693A22A00C0A037 /* SignUpPage.swift in Sources */,
 				8EC607752688BAD4006ED3C1 /* Item.swift in Sources */,
+				8E79C14926978898002D2A8B /* MessageAction.swift in Sources */,
 				8EEF35DB268CE9F40068DB58 /* ContentPage.swift in Sources */,
 				8EC607782688BB3E006ED3C1 /* ItemsReducer.swift in Sources */,
 				8EC607712688BA3A006ED3C1 /* AppReducer.swift in Sources */,
@@ -403,11 +446,15 @@
 				8E79C13A269618BE002D2A8B /* JoinPage.swift in Sources */,
 				8EC6074F2688AFD1006ED3C1 /* Brain3kApp.swift in Sources */,
 				8EA4D27E26938D1100C0A037 /* TextFieldStyle.swift in Sources */,
+				8E79C141269786F9002D2A8B /* MessageState.swift in Sources */,
+				8E79C14726978828002D2A8B /* MessageReducer.swift in Sources */,
 				8E79C13D269619C0002D2A8B /* SignInWithAppleButton.swift in Sources */,
 				8EC6077C2688BB5B006ED3C1 /* ItemsAction.swift in Sources */,
 				8EEDD794268BCD9200F670D2 /* User.swift in Sources */,
+				8E79C14426978778002D2A8B /* Message.swift in Sources */,
 				8EA4D2882693A22A00C0A037 /* SignUpPage.swift in Sources */,
 				8EC607762688BAD4006ED3C1 /* Item.swift in Sources */,
+				8E79C14A26978898002D2A8B /* MessageAction.swift in Sources */,
 				8EEF35DC268CE9F40068DB58 /* ContentPage.swift in Sources */,
 				8EC607792688BB3E006ED3C1 /* ItemsReducer.swift in Sources */,
 				8EC607722688BA3A006ED3C1 /* AppReducer.swift in Sources */,
@@ -717,6 +764,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		8E79C14B269791EA002D2A8B /* XCRemoteSwiftPackageReference "ValidatedPropertyKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SvenTiigi/ValidatedPropertyKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.5;
+			};
+		};
 		8EC6075F2688B6B6006ED3C1 /* XCRemoteSwiftPackageReference "Parse-Swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/parse-community/Parse-Swift";
@@ -753,6 +808,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8E79C13326961891002D2A8B /* XCRemoteSwiftPackageReference "MGFlipView" */;
 			productName = MGFlipView;
+		};
+		8E79C14C269791EA002D2A8B /* ValidatedPropertyKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8E79C14B269791EA002D2A8B /* XCRemoteSwiftPackageReference "ValidatedPropertyKit" */;
+			productName = ValidatedPropertyKit;
+		};
+		8E79C14E269791F4002D2A8B /* ValidatedPropertyKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8E79C14B269791EA002D2A8B /* XCRemoteSwiftPackageReference "ValidatedPropertyKit" */;
+			productName = ValidatedPropertyKit;
 		};
 		8EC607602688B6B6006ED3C1 /* ParseSwift */ = {
 			isa = XCSwiftPackageProductDependency;

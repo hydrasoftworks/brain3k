@@ -5,11 +5,12 @@
 import SwiftUI
 
 struct PasswordTextField: View {
-    @Binding var password: String
+    let title: String
     let textContentType: UITextContentType
+    @Binding var password: String
 
     var body: some View {
-        SecureField("password", text: $password)
+        SecureField(title, text: $password)
             .styleTextField()
             .textContentType(textContentType)
     }

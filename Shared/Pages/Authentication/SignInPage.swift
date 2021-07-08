@@ -33,8 +33,9 @@ struct SignInPage: ConnectableView {
                 .multilineTextAlignment(.center)
             EmailTextField(email: $email)
             PasswordTextField(
-                password: $password,
-                textContentType: .password
+                title: "password",
+                textContentType: .password,
+                password: $password
             )
             signInButton
             signUpLink

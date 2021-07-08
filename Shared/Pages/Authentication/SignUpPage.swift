@@ -5,6 +5,7 @@
 import AuthenticationServices
 import SwiftDux
 import SwiftUI
+import ValidatedPropertyKit
 
 struct SignUpPage: ConnectableView {
     @Environment(\.dismiss) var dismiss
@@ -12,8 +13,10 @@ struct SignUpPage: ConnectableView {
 
     let flip: () -> Void
 
-    @SwiftUI.State private var email: String = ""
-    @SwiftUI.State private var password: String = ""
+    @Validated(!.isEmpty && .isEmail)
+    private var email: String = ""
+    @Validated(.range(8...))
+    private var password: String = ""
 
     func map(state _: AppState) -> ViewModel? {
         ViewModel()
@@ -34,8 +37,9 @@ struct SignUpPage: ConnectableView {
                 .multilineTextAlignment(.center)
             EmailTextField(email: $email)
             PasswordTextField(
-                password: $password,
-                textContentType: .newPassword
+                title: "password (min. 8 characters)",
+                textContentType: .newPassword,
+                password: $password
             )
             signUpButton
             signInLink
@@ -68,6 +72,7 @@ struct SignUpPage: ConnectableView {
         .frame(height: 56)
         .background(Color("PrimaryColor"))
         .cornerRadius(8)
+        .validated(_email, _password)
     }
 
     private var signInLink: some View {
