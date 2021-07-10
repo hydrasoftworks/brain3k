@@ -4,4 +4,4 @@
 
 import SwiftDux
 
-enum ItemsAction: Action {}
+enum MemoriesAction: Action {}

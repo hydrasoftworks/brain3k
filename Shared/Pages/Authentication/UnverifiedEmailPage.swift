@@ -9,7 +9,7 @@ struct UnverifiedEmailPage: ConnectableView {
     @Environment(\.actionDispatcher) private var dispatch
 
     func map(state: AppState) -> ViewModel? {
-        ViewModel(email: state.account.user?.email)
+        ViewModel(email: state.accountState.user?.email)
     }
 
     func body(props viewModel: ViewModel) -> some View {
@@ -44,17 +44,15 @@ struct UnverifiedEmailPage: ConnectableView {
     }
 
     private var sendVerificationEmailButton: some View {
-        Button("Send verification email") {
+        SecondaryButton(title: "Send verification email") {
             dispatch.send(AccountAction.sendVerificationEmail())
         }
-        .foregroundColor(Color("PrimaryColor"))
     }
 
     private var signOutButton: some View {
-        Button("Sign out") {
+        SecondaryButton(title: "Sign out") {
             dispatch.send(AccountAction.signOut())
         }
-        .foregroundColor(Color("PrimaryColor"))
     }
 
     struct ViewModel: Equatable {

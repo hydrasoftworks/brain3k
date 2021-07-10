@@ -13,5 +13,6 @@ struct PasswordTextField: View {
         SecureField(title, text: $password)
             .styleTextField()
             .textContentType(textContentType)
+            .multilineTextAlignment(.leading)
     }
 }

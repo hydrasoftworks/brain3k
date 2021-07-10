@@ -4,6 +4,6 @@
 
 import Foundation
 
-struct Item: Identifiable, Hashable, Codable {
+struct Memory: Identifiable, Hashable, Codable {
     let id: String
 }

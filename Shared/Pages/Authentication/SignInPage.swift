@@ -59,8 +59,10 @@ struct SignInPage: ConnectableView {
     }
 
     private var goToSignUpButton: some View {
-        Button("You are new? Create an account.", action: flip)
-            .foregroundColor(Color("PrimaryColor"))
+        SecondaryButton(
+            title: "You are new? Create an account.",
+            action: flip
+        )
     }
 
     struct ViewModel: Equatable {}

@@ -7,13 +7,13 @@ import SwiftDux
 final class AppReducer: Reducer {
     private let messageReducer = MessageReducer()
     private let accountReducer = AccountReducer()
-    private let itemsReducer = ItemsReducer()
+    private let memoriesReducer = MemoriesReducer()
 
     func reduceAny(state: AppState, action: Action) -> AppState {
         AppState(
-            message: messageReducer.reduceAny(state: state.message, action: action),
-            account: accountReducer.reduceAny(state: state.account, action: action),
-            items: itemsReducer.reduceAny(state: state.items, action: action)
+            messageState: messageReducer.reduceAny(state: state.messageState, action: action),
+            accountState: accountReducer.reduceAny(state: state.accountState, action: action),
+            memoriesState: memoriesReducer.reduceAny(state: state.memoriesState, action: action)
         )
     }
 }

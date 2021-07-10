@@ -93,7 +93,7 @@ extension AccountAction {
 
     static func refresh() -> ActionPlan<AppState> {
         ActionPlan<AppState> { store -> AnyPublisher<Action, Never> in
-            guard let user = store.state.account.user else {
+            guard let user = store.state.accountState.user else {
                 return .empty
             }
 
@@ -112,7 +112,7 @@ extension AccountAction {
 
     static func sendVerificationEmail() -> ActionPlan<AppState> {
         ActionPlan<AppState> { store -> AnyPublisher<Action, Never> in
-            guard let email = store.state.account.user?.email else {
+            guard let email = store.state.accountState.user?.email else {
                 return .empty
             }
 

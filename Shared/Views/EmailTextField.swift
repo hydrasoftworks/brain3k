@@ -13,5 +13,6 @@ struct EmailTextField: View {
             .textContentType(.emailAddress)
             .autocapitalization(.none)
             .disableAutocorrection(true)
+            .multilineTextAlignment(.leading)
     }
 }

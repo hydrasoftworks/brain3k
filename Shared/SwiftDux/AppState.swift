@@ -6,17 +6,17 @@ import Foundation
 import SwiftDux
 
 struct AppState: StateType {
-    let message: MessageState
-    let account: AccountState
-    let items: OrderedState<Item>
+    let messageState: MessageState
+    let accountState: AccountState
+    let memoriesState: OrderedState<Memory>
 
     init(
-        message: MessageState = MessageState(),
-        account: AccountState = AccountState(),
-        items: OrderedState<Item> = OrderedState()
+        messageState: MessageState = MessageState(),
+        accountState: AccountState = AccountState(),
+        memoriesState: OrderedState<Memory> = OrderedState()
     ) {
-        self.message = message
-        self.account = account
-        self.items = items
+        self.messageState = messageState
+        self.accountState = accountState
+        self.memoriesState = memoriesState
     }
 }

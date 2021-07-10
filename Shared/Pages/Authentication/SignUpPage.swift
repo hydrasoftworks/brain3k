@@ -8,7 +8,6 @@ import SwiftUI
 import ValidatedPropertyKit
 
 struct SignUpPage: ConnectableView {
-    @Environment(\.dismiss) var dismiss
     @Environment(\.actionDispatcher) private var dispatch
 
     let flip: () -> Void
@@ -61,8 +60,10 @@ struct SignUpPage: ConnectableView {
     }
 
     private var goToSignInButton: some View {
-        Button("Already have an account? Sign in now.", action: flip)
-            .foregroundColor(Color("PrimaryColor"))
+        SecondaryButton(
+            title: "Already have an account? Sign in now.",
+            action: flip
+        )
     }
 
     struct ViewModel: Equatable {}
