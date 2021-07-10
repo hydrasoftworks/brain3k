@@ -5,13 +5,15 @@
 import AuthenticationServices
 import SwiftDux
 import SwiftUI
+import ValidatedPropertyKit
 
 struct SignInPage: ConnectableView {
     @Environment(\.actionDispatcher) private var dispatch
 
     let flip: () -> Void
 
-    @SwiftUI.State private var email: String = ""
+    @Validated(!.isEmpty && .isEmail)
+    private var email: String = ""
     @SwiftUI.State private var password: String = ""
 
     func map(state _: AppState) -> ViewModel? {
@@ -26,11 +28,9 @@ struct SignInPage: ConnectableView {
                 .foregroundStyle(Color("PrimaryColor"))
             Text("Start using your new digital brain.")
                 .font(.body)
-                .multilineTextAlignment(.center)
             AppSignInWithAppleButton()
             Text("or sign in using email and password")
                 .font(.body)
-                .multilineTextAlignment(.center)
             EmailTextField(email: $email)
             PasswordTextField(
                 title: "password",
@@ -38,39 +38,27 @@ struct SignInPage: ConnectableView {
                 password: $password
             )
             signInButton
-            signUpLink
+            goToSignUpButton
         }
+        .multilineTextAlignment(.center)
         .padding()
-        .background(
-            .ultraThinMaterial,
-            in: RoundedRectangle(
-                cornerRadius: 16,
-                style: .continuous
-            )
-        )
+        .materialBackground()
         .padding()
     }
 
     private var signInButton: some View {
-        Button(action: {
+        PrimaryButton(title: "Sign in with e-mail") {
             dispatch.send(
                 AccountAction.signIn(
                     withEmail: email,
                     andPassword: password
                 )
             )
-        }) {
-            Text("Sign in with e-mail")
-                .font(.title2)
-                .foregroundColor(.white)
         }
-        .frame(minWidth: 0, maxWidth: .infinity)
-        .frame(height: 56)
-        .background(Color("PrimaryColor"))
-        .cornerRadius(8)
+        .validated(_email)
     }
 
-    private var signUpLink: some View {
+    private var goToSignUpButton: some View {
         Button("You are new? Create an account.", action: flip)
             .foregroundColor(Color("PrimaryColor"))
     }

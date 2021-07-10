@@ -30,11 +30,9 @@ struct SignUpPage: ConnectableView {
                 .foregroundStyle(Color("PrimaryColor"))
             Text("Start using your new digital brain.")
                 .font(.body)
-                .multilineTextAlignment(.center)
             AppSignInWithAppleButton()
             Text("or sign up using email and password")
                 .font(.body)
-                .multilineTextAlignment(.center)
             EmailTextField(email: $email)
             PasswordTextField(
                 title: "password (min. 8 characters)",
@@ -42,41 +40,28 @@ struct SignUpPage: ConnectableView {
                 password: $password
             )
             signUpButton
-            signInLink
+            goToSignInButton
         }
+        .multilineTextAlignment(.center)
         .padding()
-        .background(
-            .ultraThinMaterial,
-            in: RoundedRectangle(
-                cornerRadius: 16,
-                style: .continuous
-            )
-        )
+        .materialBackground()
         .padding()
     }
 
     private var signUpButton: some View {
-        Button(action: {
+        PrimaryButton(title: "Sign up with e-mail") {
             dispatch.send(
                 AccountAction.signUp(
                     withEmail: email,
                     andPassword: password
                 )
             )
-        }) {
-            Text("Sign up with e-mail")
-                .font(.title2)
-                .foregroundColor(.white)
         }
-        .frame(minWidth: 0, maxWidth: .infinity)
-        .frame(height: 56)
-        .background(Color("PrimaryColor"))
-        .cornerRadius(8)
         .validated(_email, _password)
     }
 
-    private var signInLink: some View {
-        Button("Alredy have an account? Sign in now.", action: flip)
+    private var goToSignInButton: some View {
+        Button("Already have an account? Sign in now.", action: flip)
             .foregroundColor(Color("PrimaryColor"))
     }
 

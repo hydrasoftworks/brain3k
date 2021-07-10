@@ -7,6 +7,15 @@ import Foundation
 struct AccountState: StateType {
     let status: AccountStatus
 
+    var user: User? {
+        switch status {
+        case let .authenticated(user),
+             let .unverifiedEmail(user): return user
+        case .unauthenticated,
+             .undetermined: return nil
+        }
+    }
+
     init(status: AccountStatus = .undetermined) {
         self.status = status
     }

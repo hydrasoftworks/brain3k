@@ -31,6 +31,18 @@
 		8EA4D28526939E6400C0A037 /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA4D28326939E6400C0A037 /* PasswordTextField.swift */; };
 		8EA4D2872693A22A00C0A037 /* SignUpPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA4D2862693A22A00C0A037 /* SignUpPage.swift */; };
 		8EA4D2882693A22A00C0A037 /* SignUpPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA4D2862693A22A00C0A037 /* SignUpPage.swift */; };
+		8EBC051B2699C065008B2478 /* AnyPublisher+Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBC051A2699C065008B2478 /* AnyPublisher+Empty.swift */; };
+		8EBC051C2699C065008B2478 /* AnyPublisher+Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBC051A2699C065008B2478 /* AnyPublisher+Empty.swift */; };
+		8EBC051E2699C10C008B2478 /* UnverifiedEmailPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBC051D2699C10C008B2478 /* UnverifiedEmailPage.swift */; };
+		8EBC051F2699C10C008B2478 /* UnverifiedEmailPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBC051D2699C10C008B2478 /* UnverifiedEmailPage.swift */; };
+		8EBC05212699C55C008B2478 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBC05202699C55C008B2478 /* Background.swift */; };
+		8EBC05222699C55C008B2478 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBC05202699C55C008B2478 /* Background.swift */; };
+		8EBC05242699C926008B2478 /* MaterialBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBC05232699C926008B2478 /* MaterialBackground.swift */; };
+		8EBC05252699C926008B2478 /* MaterialBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBC05232699C926008B2478 /* MaterialBackground.swift */; };
+		8EBC052D2699CB52008B2478 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBC052C2699CB52008B2478 /* PrimaryButton.swift */; };
+		8EBC052E2699CB52008B2478 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBC052C2699CB52008B2478 /* PrimaryButton.swift */; };
+		8EBC05302699D25D008B2478 /* Publisher+MapToEmptyResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBC052F2699D25C008B2478 /* Publisher+MapToEmptyResult.swift */; };
+		8EBC05312699D25D008B2478 /* Publisher+MapToEmptyResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBC052F2699D25C008B2478 /* Publisher+MapToEmptyResult.swift */; };
 		8EC6074E2688AFD1006ED3C1 /* Brain3kApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC607402688AFCF006ED3C1 /* Brain3kApp.swift */; };
 		8EC6074F2688AFD1006ED3C1 /* Brain3kApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC607402688AFCF006ED3C1 /* Brain3kApp.swift */; };
 		8EC607502688AFD1006ED3C1 /* SignInPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC607412688AFCF006ED3C1 /* SignInPage.swift */; };
@@ -82,6 +94,12 @@
 		8EA4D28026939DE100C0A037 /* EmailTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailTextField.swift; sourceTree = "<group>"; };
 		8EA4D28326939E6400C0A037 /* PasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
 		8EA4D2862693A22A00C0A037 /* SignUpPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPage.swift; sourceTree = "<group>"; };
+		8EBC051A2699C065008B2478 /* AnyPublisher+Empty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnyPublisher+Empty.swift"; sourceTree = "<group>"; };
+		8EBC051D2699C10C008B2478 /* UnverifiedEmailPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnverifiedEmailPage.swift; sourceTree = "<group>"; };
+		8EBC05202699C55C008B2478 /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
+		8EBC05232699C926008B2478 /* MaterialBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialBackground.swift; sourceTree = "<group>"; };
+		8EBC052C2699CB52008B2478 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		8EBC052F2699D25C008B2478 /* Publisher+MapToEmptyResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher+MapToEmptyResult.swift"; sourceTree = "<group>"; };
 		8EC607402688AFCF006ED3C1 /* Brain3kApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brain3kApp.swift; sourceTree = "<group>"; };
 		8EC607412688AFCF006ED3C1 /* SignInPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPage.swift; sourceTree = "<group>"; };
 		8EC607422688AFD1006ED3C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -149,6 +167,7 @@
 				8E79C138269618BE002D2A8B /* JoinPage.swift */,
 				8EC607412688AFCF006ED3C1 /* SignInPage.swift */,
 				8EA4D2862693A22A00C0A037 /* SignUpPage.swift */,
+				8EBC051D2699C10C008B2478 /* UnverifiedEmailPage.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -157,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				8EA4D27C26938D1000C0A037 /* TextFieldStyle.swift */,
+				8EBC05232699C926008B2478 /* MaterialBackground.swift */,
 			);
 			path = "View Modifiers";
 			sourceTree = "<group>";
@@ -250,6 +270,8 @@
 		8EC6077D2688BBDF006ED3C1 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				8EBC051A2699C065008B2478 /* AnyPublisher+Empty.swift */,
+				8EBC052F2699D25C008B2478 /* Publisher+MapToEmptyResult.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -268,6 +290,8 @@
 				8EA4D28026939DE100C0A037 /* EmailTextField.swift */,
 				8EA4D28326939E6400C0A037 /* PasswordTextField.swift */,
 				8E79C13B269619C0002D2A8B /* SignInWithAppleButton.swift */,
+				8EBC05202699C55C008B2478 /* Background.swift */,
+				8EBC052C2699CB52008B2478 /* PrimaryButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -402,6 +426,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EA4D28126939DE100C0A037 /* EmailTextField.swift in Sources */,
+				8EBC051B2699C065008B2478 /* AnyPublisher+Empty.swift in Sources */,
 				8EC6076A2688B952006ED3C1 /* AppState.swift in Sources */,
 				8EA4D28426939E6400C0A037 /* PasswordTextField.swift in Sources */,
 				8EEDD78A268BC05D00F670D2 /* AccountState.swift in Sources */,
@@ -412,9 +437,12 @@
 				8EC6076E2688B993006ED3C1 /* StateType.swift in Sources */,
 				8EC607502688AFD1006ED3C1 /* SignInPage.swift in Sources */,
 				8E79C139269618BE002D2A8B /* JoinPage.swift in Sources */,
+				8EBC052D2699CB52008B2478 /* PrimaryButton.swift in Sources */,
 				8EC6074E2688AFD1006ED3C1 /* Brain3kApp.swift in Sources */,
+				8EBC05302699D25D008B2478 /* Publisher+MapToEmptyResult.swift in Sources */,
 				8EA4D27D26938D1000C0A037 /* TextFieldStyle.swift in Sources */,
 				8E79C140269786F9002D2A8B /* MessageState.swift in Sources */,
+				8EBC05212699C55C008B2478 /* Background.swift in Sources */,
 				8E79C14626978828002D2A8B /* MessageReducer.swift in Sources */,
 				8E79C13C269619C0002D2A8B /* SignInWithAppleButton.swift in Sources */,
 				8EC6077B2688BB5B006ED3C1 /* ItemsAction.swift in Sources */,
@@ -424,6 +452,8 @@
 				8EC607752688BAD4006ED3C1 /* Item.swift in Sources */,
 				8E79C14926978898002D2A8B /* MessageAction.swift in Sources */,
 				8EEF35DB268CE9F40068DB58 /* ContentPage.swift in Sources */,
+				8EBC051E2699C10C008B2478 /* UnverifiedEmailPage.swift in Sources */,
+				8EBC05242699C926008B2478 /* MaterialBackground.swift in Sources */,
 				8EC607782688BB3E006ED3C1 /* ItemsReducer.swift in Sources */,
 				8EC607712688BA3A006ED3C1 /* AppReducer.swift in Sources */,
 			);
@@ -434,6 +464,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EA4D28226939DE100C0A037 /* EmailTextField.swift in Sources */,
+				8EBC051C2699C065008B2478 /* AnyPublisher+Empty.swift in Sources */,
 				8EC6076B2688B952006ED3C1 /* AppState.swift in Sources */,
 				8EA4D28526939E6400C0A037 /* PasswordTextField.swift in Sources */,
 				8EEDD78B268BC05D00F670D2 /* AccountState.swift in Sources */,
@@ -444,9 +475,12 @@
 				8EC6076F2688B993006ED3C1 /* StateType.swift in Sources */,
 				8EC607512688AFD1006ED3C1 /* SignInPage.swift in Sources */,
 				8E79C13A269618BE002D2A8B /* JoinPage.swift in Sources */,
+				8EBC052E2699CB52008B2478 /* PrimaryButton.swift in Sources */,
 				8EC6074F2688AFD1006ED3C1 /* Brain3kApp.swift in Sources */,
+				8EBC05312699D25D008B2478 /* Publisher+MapToEmptyResult.swift in Sources */,
 				8EA4D27E26938D1100C0A037 /* TextFieldStyle.swift in Sources */,
 				8E79C141269786F9002D2A8B /* MessageState.swift in Sources */,
+				8EBC05222699C55C008B2478 /* Background.swift in Sources */,
 				8E79C14726978828002D2A8B /* MessageReducer.swift in Sources */,
 				8E79C13D269619C0002D2A8B /* SignInWithAppleButton.swift in Sources */,
 				8EC6077C2688BB5B006ED3C1 /* ItemsAction.swift in Sources */,
@@ -456,6 +490,8 @@
 				8EC607762688BAD4006ED3C1 /* Item.swift in Sources */,
 				8E79C14A26978898002D2A8B /* MessageAction.swift in Sources */,
 				8EEF35DC268CE9F40068DB58 /* ContentPage.swift in Sources */,
+				8EBC051F2699C10C008B2478 /* UnverifiedEmailPage.swift in Sources */,
+				8EBC05252699C926008B2478 /* MaterialBackground.swift in Sources */,
 				8EC607792688BB3E006ED3C1 /* ItemsReducer.swift in Sources */,
 				8EC607722688BA3A006ED3C1 /* AppReducer.swift in Sources */,
 			);

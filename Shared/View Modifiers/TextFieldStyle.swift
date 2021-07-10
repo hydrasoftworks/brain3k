@@ -23,10 +23,7 @@ private struct TextFieldStyle: ViewModifier {
             .frame(height: 56)
             .background(
                 .thinMaterial,
-                in: RoundedRectangle(
-                    cornerRadius: 8,
-                    style: .continuous
-                )
+                in: RoundedRectangle(cornerRadius: 8, style: .continuous)
             )
     }
 }

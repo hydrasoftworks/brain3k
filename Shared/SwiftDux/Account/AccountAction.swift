@@ -19,7 +19,7 @@ extension AccountAction {
                 if user.emailVerified ?? false {
                     status = .authenticated(user)
                 } else {
-                    status = .emailVerificationNeeded(user)
+                    status = .unverifiedEmail(user)
                 }
             } else {
                 status = .unauthenticated
@@ -33,7 +33,7 @@ extension AccountAction {
     ) -> ActionPlan<AppState> {
         ActionPlan<AppState> { _ -> AnyPublisher<Action, Never> in
             guard let credential = authorization.credential as? ASAuthorizationAppleIDCredential else {
-                return Empty().eraseToAnyPublisher()
+                return .empty
             }
 
             return User.apple.loginPublisher(
@@ -41,9 +41,7 @@ extension AccountAction {
                 identityToken: credential.identityToken ?? Data()
             )
             .map { user in AccountAction.setStatus(.authenticated(user)) }
-            .catch { error in
-                Just(MessageAction.set(Message.error(error.message)))
-            }
+            .catch { Just(MessageAction.set(Message.error($0.message))) }
             .eraseToAnyPublisher()
         }
     }
@@ -58,11 +56,9 @@ extension AccountAction {
                     if user.emailVerified ?? false {
                         return AccountAction.setStatus(.authenticated(user))
                     }
-                    return AccountAction.setStatus(.emailVerificationNeeded(user))
+                    return AccountAction.setStatus(.unverifiedEmail(user))
                 }
-                .catch { error in
-                    Just(MessageAction.set(Message.error(error.message)))
-                }
+                .catch { Just(MessageAction.set(Message.error($0.message))) }
                 .eraseToAnyPublisher()
         }
     }
@@ -80,10 +76,49 @@ extension AccountAction {
                         .map { _ in user }
                         .eraseToAnyPublisher()
                 }
-                .map { user in AccountAction.setStatus(.emailVerificationNeeded(user)) }
-                .catch { error in
-                    Just(MessageAction.set(Message.error(error.message)))
+                .map { user in AccountAction.setStatus(.unverifiedEmail(user)) }
+                .catch { Just(MessageAction.set(Message.error($0.message))) }
+                .eraseToAnyPublisher()
+        }
+    }
+
+    static func signOut() -> ActionPlan<AppState> {
+        ActionPlan<AppState> { _ -> AnyPublisher<Action, Never> in
+            User.logoutPublisher()
+                .map { AccountAction.setStatus(.unauthenticated) }
+                .catch { Just(MessageAction.set(Message.error($0.message))) }
+                .eraseToAnyPublisher()
+        }
+    }
+
+    static func refresh() -> ActionPlan<AppState> {
+        ActionPlan<AppState> { store -> AnyPublisher<Action, Never> in
+            guard let user = store.state.account.user else {
+                return .empty
+            }
+
+            return user
+                .fetchPublisher(includeKeys: ["*"])
+                .map { user in
+                    if user.emailVerified ?? false {
+                        return AccountAction.setStatus(.authenticated(user))
+                    }
+                    return AccountAction.setStatus(.unverifiedEmail(user))
                 }
+                .catch { Just(MessageAction.set(Message.error($0.message))) }
+                .eraseToAnyPublisher()
+        }
+    }
+
+    static func sendVerificationEmail() -> ActionPlan<AppState> {
+        ActionPlan<AppState> { store -> AnyPublisher<Action, Never> in
+            guard let email = store.state.account.user?.email else {
+                return .empty
+            }
+
+            return User.verificationEmailPublisher(email: email)
+                .mapToEmptyResult(ofType: Action.self)
+                .catch { Just(MessageAction.set(Message.error($0.message))) }
                 .eraseToAnyPublisher()
         }
     }

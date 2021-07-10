@@ -15,7 +15,7 @@ struct SplashPage: ConnectableView {
         switch viewModel.status {
         case .authenticated: ContentPage()
         case .unauthenticated: JoinPage()
-        case .emailVerificationNeeded: Text("email verification")
+        case .unverifiedEmail: UnverifiedEmailPage()
         case .undetermined: Text("splash screen")
             .onAppear(dispatch: AccountAction.checkAccountStatus())
         }
@@ -27,7 +27,15 @@ struct SplashPage: ConnectableView {
 }
 
 struct SplashScreen_Previews: PreviewProvider {
+    private static var store: Store<AppState> {
+        Store(
+            state: AppState(),
+            reducer: AppReducer()
+        )
+    }
+
     static var previews: some View {
         SplashPage()
+            .provideStore(store)
     }
 }

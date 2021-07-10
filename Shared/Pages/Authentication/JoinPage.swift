@@ -10,7 +10,7 @@ struct JoinPage: View {
 
     var body: some View {
         ZStack {
-            background
+            Background()
             FlipView(
                 frontView: { SignInPage(flip: { flipped = true }) },
                 backView: { SignUpPage(flip: { flipped = false }) },
@@ -18,14 +18,6 @@ struct JoinPage: View {
                 flipAxis: .y
             )
         }
-    }
-
-    private var background: some View {
-        Image("background")
-            .resizable()
-            .scaledToFill()
-            .ignoresSafeArea()
-            .frame(minWidth: 0, maxWidth: .infinity)
     }
 }
 
