@@ -3,7 +3,13 @@
 //
 
 import Foundation
+import ParseSwift
 
-struct Memory: Identifiable, Hashable, Codable {
-    let id: String
+struct Memory: ParseObject, Identifiable {
+    var objectId: String?
+    var createdAt: Date?
+    var updatedAt: Date?
+    var ACL: ParseACL?
+
+    var id: String? { objectId }
 }

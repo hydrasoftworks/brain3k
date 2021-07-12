@@ -1,25 +1,13 @@
 # Brain3k - your digital brain
 
+[![Maintainability](https://api.codeclimate.com/v1/badges/6cdd7e8c029042453390/maintainability)](https://codeclimate.com/repos/60ec87f682e01601b700c48c/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/6cdd7e8c029042453390/test_coverage)](https://codeclimate.com/repos/60ec87f682e01601b700c48c/test_coverage)
+
 Store information and search for them without the need for manual management.
 
 ## Dependencies
 
 This project is using Swift Package Manager to handle code dependencies.
-
-### swiftgen
-
-This project is using swiftgen to generate resourse classes.
-Install swiftgen via brew:
-
-```bash
-brew install swiftgen
-```
-
-Regenerate resource classes with:
-
-```bash
-./swiftgen.sh
-```
 
 ### swiftformat
 

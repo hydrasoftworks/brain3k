@@ -14,17 +14,13 @@ enum AccountAction: Action {
 extension AccountAction {
     static func checkAccountStatus() -> ActionPlan<AppState> {
         ActionPlan<AppState> { store in
-            let status: AccountStatus
+            let action: Action
             if let user = User.current {
-                if user.emailVerified ?? false {
-                    status = .authenticated(user)
-                } else {
-                    status = .unverifiedEmail(user)
-                }
+                action = accountAction(for: user)
             } else {
-                status = .unauthenticated
+                action = AccountAction.setStatus(.unauthenticated)
             }
-            store.send(AccountAction.setStatus(status))
+            store.send(action)
         }
     }
 
@@ -41,7 +37,7 @@ extension AccountAction {
                 identityToken: credential.identityToken ?? Data()
             )
             .map { user in AccountAction.setStatus(.authenticated(user)) }
-            .catch { Just(MessageAction.set(Message.error($0.message))) }
+            .catch { Just(MessageAction.set(.error($0.message))) }
             .eraseToAnyPublisher()
         }
     }
@@ -52,13 +48,8 @@ extension AccountAction {
     ) -> ActionPlan<AppState> {
         ActionPlan<AppState> { _ -> AnyPublisher<Action, Never> in
             User.loginPublisher(username: email, password: password)
-                .map { user in
-                    if user.emailVerified ?? false {
-                        return AccountAction.setStatus(.authenticated(user))
-                    }
-                    return AccountAction.setStatus(.unverifiedEmail(user))
-                }
-                .catch { Just(MessageAction.set(Message.error($0.message))) }
+                .map(accountAction(for:))
+                .catch { Just(MessageAction.set(.error($0.message))) }
                 .eraseToAnyPublisher()
         }
     }
@@ -77,7 +68,7 @@ extension AccountAction {
                         .eraseToAnyPublisher()
                 }
                 .map { user in AccountAction.setStatus(.unverifiedEmail(user)) }
-                .catch { Just(MessageAction.set(Message.error($0.message))) }
+                .catch { Just(MessageAction.set(.error($0.message))) }
                 .eraseToAnyPublisher()
         }
     }
@@ -86,7 +77,7 @@ extension AccountAction {
         ActionPlan<AppState> { _ -> AnyPublisher<Action, Never> in
             User.logoutPublisher()
                 .map { AccountAction.setStatus(.unauthenticated) }
-                .catch { Just(MessageAction.set(Message.error($0.message))) }
+                .catch { Just(MessageAction.set(.error($0.message))) }
                 .eraseToAnyPublisher()
         }
     }
@@ -99,13 +90,8 @@ extension AccountAction {
 
             return user
                 .fetchPublisher(includeKeys: ["*"])
-                .map { user in
-                    if user.emailVerified ?? false {
-                        return AccountAction.setStatus(.authenticated(user))
-                    }
-                    return AccountAction.setStatus(.unverifiedEmail(user))
-                }
-                .catch { Just(MessageAction.set(Message.error($0.message))) }
+                .map(accountAction(for:))
+                .catch { Just(MessageAction.set(.error($0.message))) }
                 .eraseToAnyPublisher()
         }
     }
@@ -118,8 +104,15 @@ extension AccountAction {
 
             return User.verificationEmailPublisher(email: email)
                 .mapToEmptyResult(ofType: Action.self)
-                .catch { Just(MessageAction.set(Message.error($0.message))) }
+                .catch { Just(MessageAction.set(.error($0.message))) }
                 .eraseToAnyPublisher()
         }
+    }
+
+    private static func accountAction(for user: User) -> Action {
+        if user.emailVerified ?? false {
+            return AccountAction.setStatus(.authenticated(user))
+        }
+        return AccountAction.setStatus(.unverifiedEmail(user))
     }
 }
