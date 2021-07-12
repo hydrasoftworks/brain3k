@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E3810E4269CCF5800ED3851 /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = 8E3810E3269CCF5800ED3851 /* Quick */; };
+		8E3810E7269CCF8D00ED3851 /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = 8E3810E6269CCF8D00ED3851 /* Nimble */; };
+		8E3810EC269CD00700ED3851 /* MessageReducerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3810EB269CD00700ED3851 /* MessageReducerSpec.swift */; };
+		8E3810EE269CD59300ED3851 /* MessageStateSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3810ED269CD59300ED3851 /* MessageStateSpec.swift */; };
+		8E3810F1269CD67500ED3851 /* AccountReducerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3810F0269CD67500ED3851 /* AccountReducerSpec.swift */; };
+		8E3810F3269CD72500ED3851 /* AccountStateSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3810F2269CD72500ED3851 /* AccountStateSpec.swift */; };
 		8E79C13526961891002D2A8B /* MGFlipView in Frameworks */ = {isa = PBXBuildFile; productRef = 8E79C13426961891002D2A8B /* MGFlipView */; };
 		8E79C13726961898002D2A8B /* MGFlipView in Frameworks */ = {isa = PBXBuildFile; productRef = 8E79C13626961898002D2A8B /* MGFlipView */; };
 		8E79C139269618BE002D2A8B /* JoinPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E79C138269618BE002D2A8B /* JoinPage.swift */; };
@@ -93,7 +99,22 @@
 		8EEF35E2268CED570068DB58 /* AccountStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEF35E0268CED570068DB58 /* AccountStatus.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		8E3810DD269CCDC800ED3851 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8EC6073B2688AFCF006ED3C1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8EC607462688AFD1006ED3C1;
+			remoteInfo = "Brain3k (iOS)";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		8E3810D9269CCDC800ED3851 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E3810EB269CD00700ED3851 /* MessageReducerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageReducerSpec.swift; sourceTree = "<group>"; };
+		8E3810ED269CD59300ED3851 /* MessageStateSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageStateSpec.swift; sourceTree = "<group>"; };
+		8E3810F0269CD67500ED3851 /* AccountReducerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountReducerSpec.swift; sourceTree = "<group>"; };
+		8E3810F2269CD72500ED3851 /* AccountStateSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountStateSpec.swift; sourceTree = "<group>"; };
 		8E79C138269618BE002D2A8B /* JoinPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinPage.swift; sourceTree = "<group>"; };
 		8E79C13B269619C0002D2A8B /* SignInWithAppleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleButton.swift; sourceTree = "<group>"; };
 		8E79C13F269786F9002D2A8B /* MessageState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageState.swift; sourceTree = "<group>"; };
@@ -139,6 +160,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		8E3810D6269CCDC800ED3851 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E3810E4269CCF5800ED3851 /* Quick in Frameworks */,
+				8E3810E7269CCF8D00ED3851 /* Nimble in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8EC607442688AFD1006ED3C1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -166,6 +196,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8E3810DA269CCDC800ED3851 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				8E3810E8269CCFDA00ED3851 /* Shared */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		8E3810E8269CCFDA00ED3851 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				8E3810E9269CCFE400ED3851 /* SwiftDux */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		8E3810E9269CCFE400ED3851 /* SwiftDux */ = {
+			isa = PBXGroup;
+			children = (
+				8E3810EF269CD65200ED3851 /* Account */,
+				8E3810EA269CCFF100ED3851 /* Message */,
+			);
+			path = SwiftDux;
+			sourceTree = "<group>";
+		};
+		8E3810EA269CCFF100ED3851 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				8E3810EB269CD00700ED3851 /* MessageReducerSpec.swift */,
+				8E3810ED269CD59300ED3851 /* MessageStateSpec.swift */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		8E3810EF269CD65200ED3851 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				8E3810F0269CD67500ED3851 /* AccountReducerSpec.swift */,
+				8E3810F2269CD72500ED3851 /* AccountStateSpec.swift */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
 		8E79C13E269786A0002D2A8B /* Message */ = {
 			isa = PBXGroup;
 			children = (
@@ -223,6 +296,7 @@
 				8EC6075C2688B10F006ED3C1 /* README.md */,
 				8EC6073F2688AFCF006ED3C1 /* Shared */,
 				8EC607822688BD9A006ED3C1 /* iOS */,
+				8E3810DA269CCDC800ED3851 /* Tests */,
 				8EC607482688AFD1006ED3C1 /* Products */,
 				8EC607622688B6C2006ED3C1 /* Frameworks */,
 			);
@@ -249,6 +323,7 @@
 			children = (
 				8EC607472688AFD1006ED3C1 /* Brain3k.app */,
 				8EC6074D2688AFD1006ED3C1 /* Brain3k.app */,
+				8E3810D9269CCDC800ED3851 /* Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -337,6 +412,28 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		8E3810D8269CCDC800ED3851 /* Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8E3810E1269CCDC800ED3851 /* Build configuration list for PBXNativeTarget "Tests" */;
+			buildPhases = (
+				8E3810D5269CCDC800ED3851 /* Sources */,
+				8E3810D6269CCDC800ED3851 /* Frameworks */,
+				8E3810D7269CCDC800ED3851 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8E3810DE269CCDC800ED3851 /* PBXTargetDependency */,
+			);
+			name = Tests;
+			packageProductDependencies = (
+				8E3810E3269CCF5800ED3851 /* Quick */,
+				8E3810E6269CCF8D00ED3851 /* Nimble */,
+			);
+			productName = Brain3kTests;
+			productReference = 8E3810D9269CCDC800ED3851 /* Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		8EC607462688AFD1006ED3C1 /* Brain3k (iOS) */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8EC607562688AFD1006ED3C1 /* Build configuration list for PBXNativeTarget "Brain3k (iOS)" */;
@@ -395,6 +492,10 @@
 				LastSwiftUpdateCheck = 1300;
 				LastUpgradeCheck = 1300;
 				TargetAttributes = {
+					8E3810D8269CCDC800ED3851 = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = 8EC607462688AFD1006ED3C1;
+					};
 					8EC607462688AFD1006ED3C1 = {
 						CreatedOnToolsVersion = 13.0;
 					};
@@ -418,6 +519,8 @@
 				8EC607842688BED5006ED3C1 /* XCRemoteSwiftPackageReference "SwiftyBeaver" */,
 				8E79C13326961891002D2A8B /* XCRemoteSwiftPackageReference "MGFlipView" */,
 				8E79C14B269791EA002D2A8B /* XCRemoteSwiftPackageReference "ValidatedPropertyKit" */,
+				8E3810E2269CCF5800ED3851 /* XCRemoteSwiftPackageReference "Quick" */,
+				8E3810E5269CCF8D00ED3851 /* XCRemoteSwiftPackageReference "Nimble" */,
 			);
 			productRefGroup = 8EC607482688AFD1006ED3C1 /* Products */;
 			projectDirPath = "";
@@ -425,11 +528,19 @@
 			targets = (
 				8EC607462688AFD1006ED3C1 /* Brain3k (iOS) */,
 				8EC6074C2688AFD1006ED3C1 /* Brain3k (macOS) */,
+				8E3810D8269CCDC800ED3851 /* Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		8E3810D7269CCDC800ED3851 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8EC607452688AFD1006ED3C1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -449,6 +560,17 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		8E3810D5269CCDC800ED3851 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E3810EE269CD59300ED3851 /* MessageStateSpec.swift in Sources */,
+				8E3810F1269CD67500ED3851 /* AccountReducerSpec.swift in Sources */,
+				8E3810F3269CD72500ED3851 /* AccountStateSpec.swift in Sources */,
+				8E3810EC269CD00700ED3851 /* MessageReducerSpec.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8EC607432688AFD1006ED3C1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -537,7 +659,64 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		8E3810DE269CCDC800ED3851 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8EC607462688AFD1006ED3C1 /* Brain3k (iOS) */;
+			targetProxy = 8E3810DD269CCDC800ED3851 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		8E3810DF269CCDC800ED3851 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.brain3k.Brain3kTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Brain3k.app/Brain3k";
+			};
+			name = Debug;
+		};
+		8E3810E0269CCDC800ED3851 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.brain3k.Brain3kTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Brain3k.app/Brain3k";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		8EC607542688AFD1006ED3C1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -800,6 +979,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		8E3810E1269CCDC800ED3851 /* Build configuration list for PBXNativeTarget "Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8E3810DF269CCDC800ED3851 /* Debug */,
+				8E3810E0269CCDC800ED3851 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		8EC6073E2688AFCF006ED3C1 /* Build configuration list for PBXProject "Brain3k" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -830,6 +1018,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		8E3810E2269CCF5800ED3851 /* XCRemoteSwiftPackageReference "Quick" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Quick";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+		8E3810E5269CCF8D00ED3851 /* XCRemoteSwiftPackageReference "Nimble" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Nimble";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
 		8E79C13326961891002D2A8B /* XCRemoteSwiftPackageReference "MGFlipView" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Zaprogramiacz/MGFlipView";
@@ -873,6 +1077,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		8E3810E3269CCF5800ED3851 /* Quick */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8E3810E2269CCF5800ED3851 /* XCRemoteSwiftPackageReference "Quick" */;
+			productName = Quick;
+		};
+		8E3810E6269CCF8D00ED3851 /* Nimble */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8E3810E5269CCF8D00ED3851 /* XCRemoteSwiftPackageReference "Nimble" */;
+			productName = Nimble;
+		};
 		8E79C13426961891002D2A8B /* MGFlipView */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 8E79C13326961891002D2A8B /* XCRemoteSwiftPackageReference "MGFlipView" */;
