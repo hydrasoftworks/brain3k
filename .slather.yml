@@ -1,0 +1,5 @@
+coverage_service: cobertura_xml
+xcodeproj: Brain3k.xcodeproj
+scheme: Brain3k (iOS)
+source_directory: Shared
+output_directory: Coverage
