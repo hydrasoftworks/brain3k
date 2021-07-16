@@ -4,7 +4,7 @@
 
 import SwiftDux
 
-enum MessageAction: Action {
+enum MessageAction: Action, Equatable {
     case set(Message)
     case clear
 }

@@ -21,7 +21,21 @@ brew install swiftformat
 Reformat all swift files with:
 
 ```bash
-./swiftformat.sh
+./scripts/swiftformat.sh
+```
+
+### Mocks
+
+Test mocks are generated using Cuckoo library. To generate them call.
+
+```bash
+./scripts/cuckoo.sh
+```
+
+you can update Cuckoo runner script by calling
+
+```bash
+./scripts/updatecuckoo.sh
 ```
 
 ### Fastlane Match
