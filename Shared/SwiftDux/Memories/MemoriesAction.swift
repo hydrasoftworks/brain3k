@@ -6,7 +6,7 @@ import Combine
 import ParseSwift
 import SwiftDux
 
-enum MemoriesAction: Action {
+enum MemoriesAction: Action, Equatable {
     case set([Memory])
 }
 

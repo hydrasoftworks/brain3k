@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "Cuckoo",
+        "repositoryURL": "https://github.com/Brightify/Cuckoo",
+        "state": {
+          "branch": null,
+          "revision": "39e05cdf563f90be1652483ce7731d5be45c7153",
+          "version": "1.5.1"
+        }
+      },
+      {
         "package": "CwlCatchException",
         "repositoryURL": "https://github.com/mattgallagher/CwlCatchException.git",
         "state": {
