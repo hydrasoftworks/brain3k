@@ -14,7 +14,7 @@ extension AccountAction {
     ) -> ActionPlan<AppState> {
         ActionPlan<AppState> { _ -> AnyPublisher<Action, Never> in
             accountService.signUp(email: email, password: password)
-                .flatMap { user -> AnyPublisher<User, ParseError> in
+                .flatMap { user -> AnyPublisher<User, AppError> in
                     var user = user
                     user.email = email
                     return accountService.save(user)

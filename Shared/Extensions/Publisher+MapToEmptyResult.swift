@@ -6,6 +6,7 @@ import Combine
 
 extension Publisher {
     func mapToEmptyResult<T>(ofType _: T.Type) -> AnyPublisher<T, Failure> {
-        AnyPublisher<T, Failure>.empty
+        flatMap { _ in AnyPublisher<T, Failure>.empty }
+            .eraseToAnyPublisher()
     }
 }

@@ -21,7 +21,7 @@ final class SignOutSpec: QuickSpec {
                 mock = MockAccountService()
                 stub(mock) { stub in
                     when(stub.signOut())
-                        .thenReturn(makeParseFuture(()))
+                        .thenReturn(makeCombineResult(()))
                 }
             }
 
@@ -36,6 +36,23 @@ final class SignOutSpec: QuickSpec {
                 cancellable = actionPlan.run(store: storeProxy())
                     .sink(receiveValue: { action = $0 as? AccountAction })
                 expect(action).toEventually(equal(AccountAction.setStatus(.unauthenticated)))
+            }
+
+            context("when request returns error") {
+                beforeEach {
+                    stub(mock) { stub in
+                        when(stub.signOut())
+                            .thenReturn(makeCombineError(Void.self))
+                    }
+                }
+
+                it("should call setStatus .unauthenticated action as well") {
+                    let actionPlan = AccountAction.signOut(mock)
+
+                    cancellable = actionPlan.run(store: storeProxy())
+                        .sink(receiveValue: { action = $0 as? AccountAction })
+                    expect(action).toEventually(equal(AccountAction.setStatus(.unauthenticated)))
+                }
             }
         }
     }

@@ -8,7 +8,7 @@ import Quick
 
 final class MessageReducerSpec: QuickSpec {
     override func spec() {
-        describe("\(MessageReducer.self) should handle") {
+        describe("\(MessageReducer.self)") {
             var sut: MessageReducer!
 
             beforeEach {

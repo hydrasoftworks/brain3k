@@ -12,34 +12,41 @@ class AccountService {
         User.current
     }
 
-    func signUp(email: String, password: String) -> Future<User, ParseError> {
+    func signUp(email: String, password: String) -> AnyPublisher<User, AppError> {
         User.signupPublisher(username: email, password: password)
+            .mapToAppError()
     }
 
-    func login(credential: ASAuthorizationAppleIDCredential) -> Future<User, ParseError> {
+    func login(credential: ASAuthorizationAppleIDCredential) -> AnyPublisher<User, AppError> {
         User.apple.loginPublisher(
             user: credential.user,
             identityToken: credential.identityToken ?? Data()
         )
+        .mapToAppError()
     }
 
-    func login(email: String, password: String) -> Future<User, ParseError> {
+    func login(email: String, password: String) -> AnyPublisher<User, AppError> {
         User.loginPublisher(username: email, password: password)
+            .mapToAppError()
     }
 
-    func signOut() -> Future<Void, ParseError> {
+    func signOut() -> AnyPublisher<Void, AppError> {
         User.logoutPublisher()
+            .mapToAppError()
     }
 
-    func save(_ user: User) -> Future<User, ParseError> {
+    func save(_ user: User) -> AnyPublisher<User, AppError> {
         user.savePublisher()
+            .mapToAppError()
     }
 
-    func refresh(_ user: User) -> Future<User, ParseError> {
+    func refresh(_ user: User) -> AnyPublisher<User, AppError> {
         user.fetchPublisher(includeKeys: ["*"])
+            .mapToAppError()
     }
 
-    func sendVerificationEmail(_ email: String) -> Future<Void, ParseError> {
+    func sendVerificationEmail(_ email: String) -> AnyPublisher<Void, AppError> {
         User.verificationEmailPublisher(email: email)
+            .mapToAppError()
     }
 }

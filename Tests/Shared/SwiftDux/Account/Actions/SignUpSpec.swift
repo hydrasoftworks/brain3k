@@ -21,12 +21,6 @@ final class SignUpSpec: QuickSpec {
             beforeEach {
                 user = User(emailVerified: false)
                 mock = MockAccountService()
-                stub(mock) { stub in
-                    when(stub.signUp(email: anyString(), password: anyString()))
-                        .thenReturn(makeParseFuture(user))
-                    when(stub.save(any()))
-                        .thenReturn(makeParseFuture(user))
-                }
             }
 
             afterEach {
@@ -35,6 +29,15 @@ final class SignUpSpec: QuickSpec {
             }
 
             context("sign up with email and password") {
+                beforeEach {
+                    stub(mock) { stub in
+                        when(stub.signUp(email: anyString(), password: anyString()))
+                            .thenReturn(makeCombineResult(user))
+                        when(stub.save(any()))
+                            .thenReturn(makeCombineResult(user))
+                    }
+                }
+
                 it("should call setStatus .unverifiedEmail action") {
                     let actionPlan = AccountAction.signUp(
                         withEmail: "test@example.com",
@@ -45,6 +48,30 @@ final class SignUpSpec: QuickSpec {
                     cancellable = actionPlan.run(store: storeProxy())
                         .sink(receiveValue: { action = $0 as? AccountAction })
                     expect(action).toEventually(equal(AccountAction.setStatus(.unverifiedEmail(user))))
+                }
+            }
+
+            context("when request returns error") {
+                var action: Action?
+
+                beforeEach {
+                    stub(mock) { stub in
+                        when(stub.signUp(email: anyString(), password: anyString()))
+                            .thenReturn(makeCombineError(User.self))
+                    }
+                }
+
+                it("should call message action") {
+                    let actionPlan = AccountAction.signUp(
+                        withEmail: "test@example.com",
+                        andPassword: "password123",
+                        mock
+                    )
+
+                    cancellable = actionPlan.run(store: storeProxy())
+                        .sink(receiveValue: { action = $0 })
+
+                    expect(action).toEventually(beAKindOf(MessageAction.self))
                 }
             }
         }
