@@ -6,9 +6,12 @@ import SwiftDux
 
 final class MemoriesReducer: Reducer {
     func reduce(
-        state: OrderedState<Memory>,
-        action _: MemoriesAction
+        state _: OrderedState<Memory>,
+        action: MemoriesAction
     ) -> OrderedState<Memory> {
-        state
+        switch action {
+        case let .set(memories):
+            return OrderedState(memories)
+        }
     }
 }

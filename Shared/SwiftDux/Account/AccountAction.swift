@@ -2,9 +2,6 @@
 //  Created by Kamil Powałowski on 29/06/2021.
 //
 
-import AuthenticationServices
-import Combine
-import ParseSwift
 import SwiftDux
 
 enum AccountAction: Action, Equatable {

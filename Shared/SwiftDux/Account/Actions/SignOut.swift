@@ -12,7 +12,7 @@ extension AccountAction {
         ActionPlan<AppState> { _ -> AnyPublisher<Action, Never> in
             accountService.signOut()
                 .map { AccountAction.setStatus(.unauthenticated) }
-                .catch { Just(MessageAction.set(.error($0.message))) }
+                .catch { _ in Just(AccountAction.setStatus(.unauthenticated)) }
                 .eraseToAnyPublisher()
         }
     }

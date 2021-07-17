@@ -8,7 +8,7 @@ import Quick
 
 final class AccountReducerSpec: QuickSpec {
     override func spec() {
-        describe("\(AccountReducer.self) should handle") {
+        describe("\(AccountReducer.self)") {
             var sut: AccountReducer!
 
             beforeEach {

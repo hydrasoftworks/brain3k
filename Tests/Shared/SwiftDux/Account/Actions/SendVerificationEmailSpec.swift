@@ -12,7 +12,7 @@ import SwiftDux
 
 final class SendVerificationEmailSpec: QuickSpec {
     override func spec() {
-        describe("\(AccountAction.self) sendVerificationEmailSpec actions") {
+        describe("\(AccountAction.self) sendVerificationEmail actions") {
             var mock: MockAccountService!
             var cancellable: AnyCancellable?
 
@@ -36,15 +36,10 @@ final class SendVerificationEmailSpec: QuickSpec {
             }
 
             context("user in state") {
-                beforeEach {
-                    stub(mock) { stub in
-                        when(stub.sendVerificationEmail(any()))
-                            .thenReturn(makeParseFuture(()))
-                    }
-                }
+                var state: AppState!
 
-                it("should call sendVerificationEmail in service") {
-                    let state = AppState(
+                beforeEach {
+                    state = AppState(
                         accountState: AccountState(
                             status: .unverifiedEmail(
                                 User(
@@ -54,11 +49,43 @@ final class SendVerificationEmailSpec: QuickSpec {
                             )
                         )
                     )
-                    let actionPlan = AccountAction.sendVerificationEmail(mock)
+                }
 
-                    cancellable = actionPlan.run(store: storeProxy(state))
-                        .sink(receiveValue: { _ in })
-                    verify(mock, times(1)).sendVerificationEmail(anyString())
+                context("when operation returns success") {
+                    beforeEach {
+                        stub(mock) { stub in
+                            when(stub.sendVerificationEmail(anyString()))
+                                .thenReturn(makeCombineResult(()))
+                        }
+                    }
+
+                    it("should call sendVerificationEmail in service") {
+                        let actionPlan = AccountAction.sendVerificationEmail(mock)
+
+                        cancellable = actionPlan.run(store: storeProxy(state))
+                            .sink(receiveValue: { _ in })
+                        verify(mock, times(1)).sendVerificationEmail(anyString())
+                    }
+                }
+
+                context("when request returns error") {
+                    var action: Action?
+
+                    beforeEach {
+                        stub(mock) { stub in
+                            when(stub.sendVerificationEmail(anyString()))
+                                .thenReturn(makeCombineError(Void.self))
+                        }
+                    }
+
+                    it("should call message action") {
+                        let actionPlan = AccountAction.sendVerificationEmail(mock)
+
+                        cancellable = actionPlan.run(store: storeProxy(state))
+                            .sink(receiveValue: { action = $0 })
+
+                        expect(action).toEventually(beAKindOf(MessageAction.self))
+                    }
                 }
             }
         }
