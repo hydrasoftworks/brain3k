@@ -30,9 +30,9 @@ final class GetAllSpec: QuickSpec {
 
                 beforeEach {
                     memories = [
-                        Memory(objectId: "1"),
-                        Memory(objectId: "2"),
-                        Memory(objectId: "3"),
+                        Memory(objectId: "1", type: .url, value: "https://example.com"),
+                        Memory(objectId: "2", type: .image, value: "https://example.com/file.png"),
+                        Memory(objectId: "3", type: .url, value: "https://example.com"),
                     ]
                     stub(mock) { stub in
                         when(stub.getAll()).thenReturn(makeCombineResult(memories))

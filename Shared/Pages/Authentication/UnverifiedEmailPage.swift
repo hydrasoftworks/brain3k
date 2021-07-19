@@ -19,7 +19,7 @@ struct UnverifiedEmailPage: ConnectableView {
                 Text("Email address verification needed")
                     .font(.title)
                     .bold()
-                    .foregroundStyle(Color("PrimaryColor"))
+                    .foregroundStyle(Color.primary)
                 Text("Go to your \(viewModel.email ?? "") inbox and confirm message from Brain3k. After that, press button below.")
                     .font(.body)
                 emailVerifiedButton

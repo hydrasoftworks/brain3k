@@ -28,14 +28,13 @@ struct SplashPage: ConnectableView {
             }
         }
         .alert(
-            "An error occurred. \(viewModel.messageText ?? "")".trim(),
+            "An error occurred.",
             isPresented: viewModel.$hasMessage,
             presenting: viewModel.message,
             actions: { _ in
                 Button("OK", role: .cancel, action: {})
             },
             message: { message in
-                // TODO: This block is not called
                 switch message {
                 case let .error(text): Text(text)
                 }

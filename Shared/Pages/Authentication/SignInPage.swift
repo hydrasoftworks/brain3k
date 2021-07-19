@@ -25,7 +25,7 @@ struct SignInPage: ConnectableView {
             Text("Welcome back")
                 .font(.title)
                 .bold()
-                .foregroundStyle(Color("PrimaryColor"))
+                .foregroundStyle(Color.primary)
             Text("Start using your new digital brain.")
                 .font(.body)
             AppSignInWithAppleButton()

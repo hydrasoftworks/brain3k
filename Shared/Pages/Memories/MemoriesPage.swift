@@ -2,11 +2,35 @@
 //  Created by Kamil Powałowski on 10/07/2021.
 //
 
+import SwiftDux
 import SwiftUI
 
-struct MemoriesPage: View {
-    var body: some View {
-        Text("Main")
+struct MemoriesPage: ConnectableView {
+    @Environment(\.actionDispatcher) private var dispatch
+
+    func map(state: AppState) -> ViewModel? {
+        ViewModel(memories: state.memoriesState.values)
+    }
+
+    @ViewBuilder
+    func body(props viewModel: ViewModel) -> some View {
+        ScrollView {
+            LazyVGrid(
+                columns: [
+                    GridItem(.adaptive(minimum: 150)),
+                ]
+            ) {
+                ForEach(viewModel.memories) { memory in
+                    MemoryCell(memory: memory)
+                }
+            }
+        }
+        .refreshable { dispatch.send(MemoriesAction.getAll()) }
+        .onAppear(dispatch: MemoriesAction.getAll())
+    }
+
+    struct ViewModel: Equatable {
+        let memories: [Memory]
     }
 }
 

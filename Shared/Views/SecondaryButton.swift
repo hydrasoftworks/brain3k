@@ -10,7 +10,7 @@ struct SecondaryButton: View {
 
     var body: some View {
         Button(title, action: action)
-            .foregroundColor(Color("PrimaryColor"))
+            .foregroundColor(Color.primary)
     }
 }
 
