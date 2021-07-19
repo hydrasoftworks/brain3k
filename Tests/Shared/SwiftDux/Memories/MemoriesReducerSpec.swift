@@ -19,9 +19,9 @@ final class MemoriesReducerSpec: QuickSpec {
             context("\(MemoriesAction.self) set") {
                 it("should set memories in state") {
                     let memories = [
-                        Memory(objectId: "1"),
-                        Memory(objectId: "2"),
-                        Memory(objectId: "3"),
+                        Memory(objectId: "1", type: .url, value: "https://example.com"),
+                        Memory(objectId: "2", type: .image, value: "https://example.com/file.png"),
+                        Memory(objectId: "3", type: .url, value: "https://example.com"),
                     ]
                     let state = OrderedState<Memory>()
                     let result = sut.reduce(

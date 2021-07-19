@@ -9,6 +9,7 @@ struct HomePage: View {
         TabView {
             NavigationView {
                 MemoriesPage()
+                    .navigationTitle("Memories")
                 MemoryPage()
             }
             .tabItem {
@@ -21,7 +22,7 @@ struct HomePage: View {
                 Label("Profile", systemImage: "person")
             }
         }
-        .accentColor(Color("PrimaryColor"))
+        .accentColor(Color.primary)
         .materialBackground()
     }
 }
