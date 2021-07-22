@@ -15,6 +15,10 @@
 		8E3810F3269CD72500ED3851 /* AccountStateSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3810F2269CD72500ED3851 /* AccountStateSpec.swift */; };
 		8E66FEA926A8B5E400838C70 /* MemoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E66FEA826A8B5E400838C70 /* MemoryCell.swift */; };
 		8E66FEAA26A8B5E400838C70 /* MemoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E66FEA826A8B5E400838C70 /* MemoryCell.swift */; };
+		8E6821B726A9E43800B2DACB /* PlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6821B626A9E43800B2DACB /* PlaceholderView.swift */; };
+		8E6821B826A9E43800B2DACB /* PlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6821B626A9E43800B2DACB /* PlaceholderView.swift */; };
+		8E6821BA26A9E6F200B2DACB /* URLMemoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6821B926A9E6F200B2DACB /* URLMemoryCell.swift */; };
+		8E6821BB26A9E6F200B2DACB /* URLMemoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6821B926A9E6F200B2DACB /* URLMemoryCell.swift */; };
 		8E776FF126A2311200D97F52 /* SendVerificationEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E776FF026A2311200D97F52 /* SendVerificationEmail.swift */; };
 		8E776FF226A2311200D97F52 /* SendVerificationEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E776FF026A2311200D97F52 /* SendVerificationEmail.swift */; };
 		8E776FF426A231F000D97F52 /* RefreshSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E776FF326A231F000D97F52 /* RefreshSpec.swift */; };
@@ -155,6 +159,8 @@
 		8E3810F0269CD67500ED3851 /* AccountReducerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountReducerSpec.swift; sourceTree = "<group>"; };
 		8E3810F2269CD72500ED3851 /* AccountStateSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountStateSpec.swift; sourceTree = "<group>"; };
 		8E66FEA826A8B5E400838C70 /* MemoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryCell.swift; sourceTree = "<group>"; };
+		8E6821B626A9E43800B2DACB /* PlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderView.swift; sourceTree = "<group>"; };
+		8E6821B926A9E6F200B2DACB /* URLMemoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLMemoryCell.swift; sourceTree = "<group>"; };
 		8E776FF026A2311200D97F52 /* SendVerificationEmail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendVerificationEmail.swift; sourceTree = "<group>"; };
 		8E776FF326A231F000D97F52 /* RefreshSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshSpec.swift; sourceTree = "<group>"; };
 		8E776FF526A236F600D97F52 /* SendVerificationEmailSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendVerificationEmailSpec.swift; sourceTree = "<group>"; };
@@ -312,6 +318,8 @@
 			isa = PBXGroup;
 			children = (
 				8E66FEA826A8B5E400838C70 /* MemoryCell.swift */,
+				8E6821B626A9E43800B2DACB /* PlaceholderView.swift */,
+				8E6821B926A9E6F200B2DACB /* URLMemoryCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -788,6 +796,7 @@
 				8E889CEB26A22A4300F7C47C /* SignUp.swift in Sources */,
 				8E79C14326978778002D2A8B /* Message.swift in Sources */,
 				8EA4D2872693A22A00C0A037 /* SignUpPage.swift in Sources */,
+				8E6821B726A9E43800B2DACB /* PlaceholderView.swift in Sources */,
 				8E66FEA926A8B5E400838C70 /* MemoryCell.swift in Sources */,
 				8E77700D26A6026A00D97F52 /* Color+Asset.swift in Sources */,
 				8E77700326A32C6B00D97F52 /* AppError.swift in Sources */,
@@ -795,6 +804,7 @@
 				8E79C14926978898002D2A8B /* MessageAction.swift in Sources */,
 				8E92A7E126A0CD2500BAED7F /* CheckAccountStatus.swift in Sources */,
 				8EEF35DB268CE9F40068DB58 /* HomePage.swift in Sources */,
+				8E6821BA26A9E6F200B2DACB /* URLMemoryCell.swift in Sources */,
 				8EBC051E2699C10C008B2478 /* UnverifiedEmailPage.swift in Sources */,
 				8EBC05242699C926008B2478 /* MaterialBackground.swift in Sources */,
 				8EC607782688BB3E006ED3C1 /* MemoriesReducer.swift in Sources */,
@@ -844,6 +854,7 @@
 				8E889CEC26A22A4300F7C47C /* SignUp.swift in Sources */,
 				8E79C14426978778002D2A8B /* Message.swift in Sources */,
 				8EA4D2882693A22A00C0A037 /* SignUpPage.swift in Sources */,
+				8E6821B826A9E43800B2DACB /* PlaceholderView.swift in Sources */,
 				8E66FEAA26A8B5E400838C70 /* MemoryCell.swift in Sources */,
 				8E77700E26A6026A00D97F52 /* Color+Asset.swift in Sources */,
 				8E77700426A32C6B00D97F52 /* AppError.swift in Sources */,
@@ -851,6 +862,7 @@
 				8E79C14A26978898002D2A8B /* MessageAction.swift in Sources */,
 				8E92A7E226A0CD2500BAED7F /* CheckAccountStatus.swift in Sources */,
 				8EEF35DC268CE9F40068DB58 /* HomePage.swift in Sources */,
+				8E6821BB26A9E6F200B2DACB /* URLMemoryCell.swift in Sources */,
 				8EBC051F2699C10C008B2478 /* UnverifiedEmailPage.swift in Sources */,
 				8EBC05252699C926008B2478 /* MaterialBackground.swift in Sources */,
 				8EC607792688BB3E006ED3C1 /* MemoriesReducer.swift in Sources */,

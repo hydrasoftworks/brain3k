@@ -30,4 +30,8 @@ struct Memory: ParseObject, Identifiable {
         guard let thumbnail = thumbnail else { return nil }
         return URL(string: thumbnail)
     }
+
+    var valueURL: URL? {
+        URL(string: value)
+    }
 }

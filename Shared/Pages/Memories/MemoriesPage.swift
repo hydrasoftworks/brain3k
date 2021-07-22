@@ -16,15 +16,15 @@ struct MemoriesPage: ConnectableView {
     func body(props viewModel: ViewModel) -> some View {
         ScrollView {
             LazyVGrid(
-                columns: [
-                    GridItem(.adaptive(minimum: 150)),
-                ]
+                columns: [GridItem(.adaptive(minimum: 150), spacing: 16)],
+                spacing: 16
             ) {
                 ForEach(viewModel.memories) { memory in
                     MemoryCell(memory: memory)
                 }
             }
         }
+        .padding(.horizontal)
         .refreshable { dispatch.send(MemoriesAction.getAll()) }
         .onAppear(dispatch: MemoriesAction.getAll())
     }
