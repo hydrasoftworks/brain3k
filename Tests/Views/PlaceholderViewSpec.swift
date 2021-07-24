@@ -5,7 +5,6 @@
 @testable import Brain3k
 import Nimble
 import Quick
-import SwiftDux
 import SwiftUI
 import ViewInspector
 

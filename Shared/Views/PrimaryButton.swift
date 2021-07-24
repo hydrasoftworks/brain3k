@@ -14,12 +14,6 @@ struct PrimaryButton: View {
     }
 }
 
-struct PrimaryButton_Previews: PreviewProvider {
-    static var previews: some View {
-        PrimaryButton(title: "Primary button", action: {})
-    }
-}
-
 private struct PrimaryButtonStyle: ButtonStyle {
     func makeBody(configuration: Self.Configuration) -> some View {
         PrimaryButtonStyleView(configuration: configuration)
@@ -41,5 +35,11 @@ private struct PrimaryButtonStyle: ButtonStyle {
                 .opacity(configuration.isPressed ? 0.9 : 1.0)
                 .scaleEffect(configuration.isPressed ? 0.98 : 1.0)
         }
+    }
+}
+
+struct PrimaryButton_Previews: PreviewProvider {
+    static var previews: some View {
+        PrimaryButton(title: "Primary button", action: {})
     }
 }

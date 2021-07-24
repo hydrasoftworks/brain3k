@@ -8,7 +8,9 @@ import Foundation
 extension Memory {
     static func test(
         type: MemoryType,
-        value: String
+        value: String,
+        thumbnail: String? = nil,
+        title: String? = nil
     ) -> Memory {
         Memory(
             id: UUID().uuidString,
@@ -16,8 +18,8 @@ extension Memory {
             updatedAt: Date(),
             type: type,
             value: value,
-            thumbnail: nil,
-            title: nil,
+            thumbnail: thumbnail,
+            title: title,
             notes: nil,
             description: nil,
             tags: nil,

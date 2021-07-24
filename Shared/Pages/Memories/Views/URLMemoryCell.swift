@@ -18,9 +18,6 @@ struct URLMemoryCell: View {
                 title(text)
             }
         }
-        .frame(minWidth: 0, maxWidth: .infinity)
-        .aspectRatio(1, contentMode: .fill)
-        .cornerRadius(16)
     }
 
     private func image(_ url: URL) -> some View {

@@ -72,6 +72,8 @@
 		8E92A7E826A0D04100BAED7F /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E92A7E626A0D04100BAED7F /* SignIn.swift */; };
 		8E92A7EA26A0D27A00BAED7F /* SignInSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E92A7E926A0D27A00BAED7F /* SignInSpec.swift */; };
 		8E92A7EC26A0D4D300BAED7F /* CombineResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E92A7EB26A0D4D300BAED7F /* CombineResult.swift */; };
+		8EA1006826AC564F007AFAA9 /* MemoryCellSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA1006726AC564F007AFAA9 /* MemoryCellSpec.swift */; };
+		8EA1006A26AC572D007AFAA9 /* URLMemoryCellSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA1006926AC572D007AFAA9 /* URLMemoryCellSpec.swift */; };
 		8EA4D27D26938D1000C0A037 /* TextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA4D27C26938D1000C0A037 /* TextFieldStyle.swift */; };
 		8EA4D27E26938D1100C0A037 /* TextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA4D27C26938D1000C0A037 /* TextFieldStyle.swift */; };
 		8EA4D28126939DE100C0A037 /* EmailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA4D28026939DE100C0A037 /* EmailTextField.swift */; };
@@ -204,6 +206,8 @@
 		8E92A7E626A0D04100BAED7F /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
 		8E92A7E926A0D27A00BAED7F /* SignInSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInSpec.swift; sourceTree = "<group>"; };
 		8E92A7EB26A0D4D300BAED7F /* CombineResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineResult.swift; sourceTree = "<group>"; };
+		8EA1006726AC564F007AFAA9 /* MemoryCellSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryCellSpec.swift; sourceTree = "<group>"; };
+		8EA1006926AC572D007AFAA9 /* URLMemoryCellSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLMemoryCellSpec.swift; sourceTree = "<group>"; };
 		8EA4D27C26938D1000C0A037 /* TextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldStyle.swift; sourceTree = "<group>"; };
 		8EA4D28026939DE100C0A037 /* EmailTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailTextField.swift; sourceTree = "<group>"; };
 		8EA4D28326939E6400C0A037 /* PasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
@@ -293,6 +297,7 @@
 		8E3810DA269CCDC800ED3851 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				8EA1006426AC55F4007AFAA9 /* Pages */,
 				8E92A7DC26A0BB7800BAED7F /* Helpers */,
 				8EF9353D26AC46B700176AF4 /* Views */,
 				8E3810E8269CCFDA00ED3851 /* Shared */,
@@ -452,6 +457,31 @@
 				8E776FF526A236F600D97F52 /* SendVerificationEmailSpec.swift */,
 			);
 			path = Actions;
+			sourceTree = "<group>";
+		};
+		8EA1006426AC55F4007AFAA9 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				8EA1006526AC563A007AFAA9 /* Memories */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		8EA1006526AC563A007AFAA9 /* Memories */ = {
+			isa = PBXGroup;
+			children = (
+				8EA1006626AC5641007AFAA9 /* Views */,
+			);
+			path = Memories;
+			sourceTree = "<group>";
+		};
+		8EA1006626AC5641007AFAA9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8EA1006726AC564F007AFAA9 /* MemoryCellSpec.swift */,
+				8EA1006926AC572D007AFAA9 /* URLMemoryCellSpec.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		8EA4D27B26938CED00C0A037 /* View Modifiers */ = {
@@ -781,6 +811,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EF9353F26AC46ED00176AF4 /* PlaceholderViewSpec.swift in Sources */,
+				8EA1006826AC564F007AFAA9 /* MemoryCellSpec.swift in Sources */,
 				8E3810EE269CD59300ED3851 /* MessageStateSpec.swift in Sources */,
 				8EF9354326AC4A3100176AF4 /* SecondaryButtonSpec.swift in Sources */,
 				8E77700126A3283A00D97F52 /* GetAllSpec.swift in Sources */,
@@ -799,6 +830,7 @@
 				8E889CF326A22DE200F7C47C /* SignOutSpec.swift in Sources */,
 				8E92A7EC26A0D4D300BAED7F /* CombineResult.swift in Sources */,
 				8E3810EC269CD00700ED3851 /* MessageReducerSpec.swift in Sources */,
+				8EA1006A26AC572D007AFAA9 /* URLMemoryCellSpec.swift in Sources */,
 				8E776FF626A236F600D97F52 /* SendVerificationEmailSpec.swift in Sources */,
 				8E92A7D926A0B63500BAED7F /* GeneratedMocks.swift in Sources */,
 			);

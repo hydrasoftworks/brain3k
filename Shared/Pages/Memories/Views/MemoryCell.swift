@@ -8,6 +8,13 @@ struct MemoryCell: View {
     let memory: Memory
 
     var body: some View {
+        view
+            .frame(minWidth: 0, maxWidth: .infinity)
+            .aspectRatio(1, contentMode: .fill)
+            .cornerRadius(16)
+    }
+
+    private var view: some View {
         switch memory.type {
         case .url: return URLMemoryCell(memory: memory)
         case .image: fatalError()
