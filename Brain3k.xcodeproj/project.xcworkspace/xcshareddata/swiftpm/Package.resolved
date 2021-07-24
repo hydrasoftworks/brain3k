@@ -2,6 +2,24 @@
   "object": {
     "pins": [
       {
+        "package": "abseil-cpp-SwiftPM",
+        "repositoryURL": "https://github.com/firebase/abseil-cpp-SwiftPM.git",
+        "state": {
+          "branch": null,
+          "revision": "fffc3c2729be5747390ad02d5100291a0d9ad26a",
+          "version": "0.20200225.4"
+        }
+      },
+      {
+        "package": "boringssl-SwiftPM",
+        "repositoryURL": "https://github.com/firebase/boringssl-SwiftPM.git",
+        "state": {
+          "branch": null,
+          "revision": "734a8247442fde37df4364c21f6a0085b6a36728",
+          "version": "0.7.2"
+        }
+      },
+      {
         "package": "Cuckoo",
         "repositoryURL": "https://github.com/Brightify/Cuckoo",
         "state": {
@@ -29,12 +47,84 @@
         }
       },
       {
+        "package": "firebase-ios-sdk",
+        "repositoryURL": "https://github.com/firebase/firebase-ios-sdk.git",
+        "state": {
+          "branch": null,
+          "revision": "b97bfcd2e5eecc7aa7e1aeb27d097d610876cf93",
+          "version": "7.11.1"
+        }
+      },
+      {
+        "package": "GoogleAppMeasurement",
+        "repositoryURL": "https://github.com/google/GoogleAppMeasurement.git",
+        "state": {
+          "branch": null,
+          "revision": "22cb3ab5588200b210ae01e42665f52ac4e8ad28",
+          "version": "7.11.1"
+        }
+      },
+      {
+        "package": "GoogleDataTransport",
+        "repositoryURL": "https://github.com/google/GoogleDataTransport.git",
+        "state": {
+          "branch": null,
+          "revision": "369716b8d7518a530ce3c3a251436d72546debd8",
+          "version": "8.4.0"
+        }
+      },
+      {
+        "package": "GoogleUtilities",
+        "repositoryURL": "https://github.com/google/GoogleUtilities.git",
+        "state": {
+          "branch": null,
+          "revision": "beb713a16b50a4df3162b3f3ecdeffa16b74b773",
+          "version": "7.5.0"
+        }
+      },
+      {
+        "package": "grpc-SwiftPM",
+        "repositoryURL": "https://github.com/firebase/grpc-SwiftPM.git",
+        "state": {
+          "branch": null,
+          "revision": "fb405dd2c7901485f7e158b24e3a0a47e4efd8b5",
+          "version": "1.28.4"
+        }
+      },
+      {
+        "package": "gtm-session-fetcher",
+        "repositoryURL": "https://github.com/google/gtm-session-fetcher.git",
+        "state": {
+          "branch": null,
+          "revision": "424886f9336a71891aa81852d0c2c08d807d21aa",
+          "version": "1.6.1"
+        }
+      },
+      {
+        "package": "leveldb",
+        "repositoryURL": "https://github.com/firebase/leveldb.git",
+        "state": {
+          "branch": null,
+          "revision": "0706abcc6b0bd9cedfbb015ba840e4a780b5159b",
+          "version": "1.22.2"
+        }
+      },
+      {
         "package": "MGFlipView",
         "repositoryURL": "https://github.com/Zaprogramiacz/MGFlipView",
         "state": {
           "branch": null,
           "revision": "12e9f23696541b71b2fca9b3fae207867baef9e2",
           "version": "1.1.0"
+        }
+      },
+      {
+        "package": "nanopb",
+        "repositoryURL": "https://github.com/firebase/nanopb.git",
+        "state": {
+          "branch": null,
+          "revision": "7ee9ef9f627d85cbe1b8c4f49a3ed26eed216c77",
+          "version": "2.30908.0"
         }
       },
       {
@@ -47,12 +137,12 @@
         }
       },
       {
-        "package": "Parse-Swift",
-        "repositoryURL": "https://github.com/parse-community/Parse-Swift",
+        "package": "promises",
+        "repositoryURL": "https://github.com/google/promises.git",
         "state": {
           "branch": null,
-          "revision": "f6330ac803803e2ff3f266245311fa1795593c32",
-          "version": "1.8.4"
+          "revision": "afa9a1ace74e116848d4f743599ab83e584ff8cb",
+          "version": "1.2.12"
         }
       },
       {
@@ -62,6 +152,15 @@
           "branch": null,
           "revision": "bd86ca0141e3cfb333546de5a11ede63f0c4a0e6",
           "version": "4.0.0"
+        }
+      },
+      {
+        "package": "swift-protobuf",
+        "repositoryURL": "https://github.com/apple/swift-protobuf.git",
+        "state": {
+          "branch": null,
+          "revision": "1f62db409f2c9b0223a3f68567b4a01333aae778",
+          "version": "1.17.0"
         }
       },
       {
@@ -89,6 +188,15 @@
           "branch": null,
           "revision": "1fc8adb98ce016700645ef17161c4583a8200cee",
           "version": "0.0.5"
+        }
+      },
+      {
+        "package": "ViewInspector",
+        "repositoryURL": "https://github.com/nalexn/ViewInspector",
+        "state": {
+          "branch": null,
+          "revision": "a9b0d2af51b8afbbcb6a3e1005aabf8726852a77",
+          "version": "0.8.1"
         }
       }
     ]

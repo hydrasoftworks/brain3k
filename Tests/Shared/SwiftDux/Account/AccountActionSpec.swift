@@ -11,17 +11,17 @@ final class AccountActionSpec: QuickSpec {
         describe("\(AccountAction.self) accountAction") {
             context("gets verified user") {
                 it("should return setStatus .authenticated action") {
-                    let user = User(emailVerified: true)
-                    let action = AccountAction.accountAction(for: user)
-                    expect(action).to(equal(AccountAction.setStatus(.authenticated(user))))
+                    let account = Account.test()
+                    let action = AccountAction.accountAction(for: account)
+                    expect(action).to(equal(AccountAction.setStatus(.authenticated(account))))
                 }
             }
 
             context("gets unverified user") {
                 it("should return setStatus .unverifiedEmail action") {
-                    let user = User(emailVerified: false)
-                    let action = AccountAction.accountAction(for: user)
-                    expect(action).to(equal(AccountAction.setStatus(.unverifiedEmail(user))))
+                    let account = Account.test(emailVerified: false)
+                    let action = AccountAction.accountAction(for: account)
+                    expect(action).to(equal(AccountAction.setStatus(.unverifiedEmail(account))))
                 }
             }
         }

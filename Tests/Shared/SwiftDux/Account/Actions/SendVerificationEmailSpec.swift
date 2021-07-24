@@ -6,7 +6,6 @@
 import Combine
 import Cuckoo
 import Nimble
-import ParseSwift
 import Quick
 import SwiftDux
 
@@ -31,7 +30,7 @@ final class SendVerificationEmailSpec: QuickSpec {
 
                     cancellable = actionPlan.run(store: storeProxy())
                         .sink(receiveValue: { _ in })
-                    verify(mock, never()).sendVerificationEmail(anyString())
+                    verify(mock, never()).sendVerificationEmail()
                 }
             }
 
@@ -42,10 +41,7 @@ final class SendVerificationEmailSpec: QuickSpec {
                     state = AppState(
                         accountState: AccountState(
                             status: .unverifiedEmail(
-                                User(
-                                    email: "test@example.com",
-                                    emailVerified: false
-                                )
+                                Account.test(emailVerified: false)
                             )
                         )
                     )
@@ -54,7 +50,7 @@ final class SendVerificationEmailSpec: QuickSpec {
                 context("when operation returns success") {
                     beforeEach {
                         stub(mock) { stub in
-                            when(stub.sendVerificationEmail(anyString()))
+                            when(stub.sendVerificationEmail())
                                 .thenReturn(makeCombineResult(()))
                         }
                     }
@@ -64,7 +60,7 @@ final class SendVerificationEmailSpec: QuickSpec {
 
                         cancellable = actionPlan.run(store: storeProxy(state))
                             .sink(receiveValue: { _ in })
-                        verify(mock, times(1)).sendVerificationEmail(anyString())
+                        verify(mock, times(1)).sendVerificationEmail()
                     }
                 }
 
@@ -73,7 +69,7 @@ final class SendVerificationEmailSpec: QuickSpec {
 
                     beforeEach {
                         stub(mock) { stub in
-                            when(stub.sendVerificationEmail(anyString()))
+                            when(stub.sendVerificationEmail())
                                 .thenReturn(makeCombineError(Void.self))
                         }
                     }

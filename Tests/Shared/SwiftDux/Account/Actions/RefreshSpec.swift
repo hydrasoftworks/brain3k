@@ -6,7 +6,6 @@
 import Combine
 import Cuckoo
 import Nimble
-import ParseSwift
 import Quick
 import SwiftDux
 
@@ -31,25 +30,25 @@ final class RefreshSpec: QuickSpec {
 
                     cancellable = actionPlan.run(store: storeProxy())
                         .sink(receiveValue: { _ in })
-                    verify(mock, never()).refresh(any())
+                    verify(mock, never()).refresh()
                 }
             }
 
             context("user in state") {
                 var action: AccountAction?
-                var user: User!
+                var account: Account!
                 var state: AppState!
 
                 beforeEach {
-                    user = User(emailVerified: true)
+                    account = Account.test()
                     state = AppState(
                         accountState: AccountState(
-                            status: .unverifiedEmail(User(emailVerified: false))
+                            status: .unverifiedEmail(Account.test(emailVerified: false))
                         )
                     )
                     stub(mock) { stub in
-                        when(stub.refresh(any()))
-                            .thenReturn(makeCombineResult(user))
+                        when(stub.refresh())
+                            .thenReturn(makeCombineResult(account))
                     }
                 }
 
@@ -58,7 +57,7 @@ final class RefreshSpec: QuickSpec {
 
                     cancellable = actionPlan.run(store: storeProxy(state))
                         .sink(receiveValue: { action = $0 as? AccountAction })
-                    expect(action).toEventually(equal(AccountAction.setStatus(.authenticated(user))))
+                    expect(action).toEventually(equal(AccountAction.setStatus(.authenticated(account))))
                 }
 
                 context("when request returns error") {
@@ -66,8 +65,8 @@ final class RefreshSpec: QuickSpec {
 
                     beforeEach {
                         stub(mock) { stub in
-                            when(stub.refresh(any()))
-                                .thenReturn(makeCombineError(User.self))
+                            when(stub.refresh())
+                                .thenReturn(makeCombineError(Account.self))
                         }
                     }
 

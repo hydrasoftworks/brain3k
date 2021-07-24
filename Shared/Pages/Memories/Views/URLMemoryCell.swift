@@ -60,23 +60,10 @@ struct URLMemoryCell: View {
 struct URLMemoryCell_Previews: PreviewProvider {
     static var previews: some View {
         Group {
+            MemoryCell(memory: Memory.exampleURL)
+                .previewLayout(.fixed(width: 200, height: 200))
             MemoryCell(
-                memory: Memory(
-                    objectId: "1",
-                    type: .url,
-                    value: "https://swiftwombat.com",
-                    thumbnail: "https://swiftwombat.com/content/images/2020/12/cover.png",
-                    title: "Swift Wombat - Swift & SwiftUI knowledge base"
-                )
-            )
-            .previewLayout(.fixed(width: 200, height: 200))
-            MemoryCell(
-                memory: Memory(
-                    objectId: "1",
-                    type: .url,
-                    value: "https://swiftwombat.com",
-                    title: "Swift Wombat - Swift & SwiftUI knowledge base"
-                )
+                memory: Memory.exampleURL.copyWithNil(thumbnail: true)
             )
             .previewLayout(.fixed(width: 200, height: 200))
         }

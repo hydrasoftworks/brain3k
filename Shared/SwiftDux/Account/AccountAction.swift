@@ -7,10 +7,10 @@ import SwiftDux
 enum AccountAction: Action, Equatable {
     case setStatus(AccountStatus)
 
-    static func accountAction(for user: User) -> AccountAction {
-        if user.emailVerified ?? false {
-            return AccountAction.setStatus(.authenticated(user))
+    static func accountAction(for account: Account) -> AccountAction {
+        if account.emailVerified {
+            return AccountAction.setStatus(.authenticated(account))
         }
-        return AccountAction.setStatus(.unverifiedEmail(user))
+        return AccountAction.setStatus(.unverifiedEmail(account))
     }
 }

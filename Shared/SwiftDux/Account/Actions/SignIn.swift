@@ -17,7 +17,7 @@ extension AccountAction {
             }
 
             return accountService.login(credential: credential)
-                .map { user in AccountAction.setStatus(.authenticated(user)) }
+                .map { account in AccountAction.setStatus(.authenticated(account)) }
                 .catch { Just(MessageAction.set(.error($0.message))) }
                 .eraseToAnyPublisher()
         }

@@ -7,10 +7,10 @@ import Foundation
 struct AccountState: StateType {
     let status: AccountStatus
 
-    var user: User? {
+    var account: Account? {
         switch status {
-        case let .authenticated(user),
-             let .unverifiedEmail(user): return user
+        case let .authenticated(account),
+             let .unverifiedEmail(account): return account
         case .unauthenticated,
              .undetermined: return nil
         }

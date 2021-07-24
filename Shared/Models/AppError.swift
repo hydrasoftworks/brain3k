@@ -2,8 +2,8 @@
 //  Created by Kamil Powałowski on 17/07/2021.
 //
 
+import FirebaseAuth
 import Foundation
-import ParseSwift
 
 struct AppError: Error {
     let message: String
@@ -12,7 +12,9 @@ struct AppError: Error {
         self.message = message
     }
 
-    init(parseError: ParseError) {
-        message = parseError.message
+    static func fromError(_ error: Error) -> AppError {
+        if let error = error as? AppError { return error }
+        let nsError = error as NSError
+        return AppError(message: nsError.localizedDescription)
     }
 }
