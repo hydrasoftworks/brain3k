@@ -5,7 +5,6 @@
 @testable import Brain3k
 import Combine
 import Foundation
-import ParseSwift
 
 func makeCombineResult<T>(_ object: T) -> AnyPublisher<T, AppError> {
     Future<T, AppError> { promise in promise(.success(object)) }

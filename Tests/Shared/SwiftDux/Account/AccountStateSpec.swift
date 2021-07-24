@@ -20,19 +20,19 @@ final class AccountStateSpec: QuickSpec {
             }
         }
 
-        describe("\(AccountState.self) user") {
+        describe("\(AccountState.self) account") {
             it("should be returned when available") {
-                var sut = AccountState(status: .authenticated(User()))
-                expect(sut.user).toNot(beNil())
-                sut = AccountState(status: .unverifiedEmail(User()))
-                expect(sut.user).toNot(beNil())
+                var sut = AccountState(status: .authenticated(Account.test()))
+                expect(sut.account).toNot(beNil())
+                sut = AccountState(status: .unverifiedEmail(Account.test(emailVerified: false)))
+                expect(sut.account).toNot(beNil())
             }
 
             it("nil should be returned otherwise") {
                 var sut = AccountState(status: .undetermined)
-                expect(sut.user).to(beNil())
+                expect(sut.account).to(beNil())
                 sut = AccountState(status: .unauthenticated)
-                expect(sut.user).to(beNil())
+                expect(sut.account).to(beNil())
             }
         }
     }

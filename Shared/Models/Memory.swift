@@ -3,28 +3,23 @@
 //
 
 import Foundation
-import ParseSwift
 
 enum MemoryType: String, Codable {
     case url, image
 }
 
-struct Memory: ParseObject, Identifiable {
-    var id: String? { objectId }
-
-    var objectId: String?
-    var createdAt: Date?
-    var updatedAt: Date?
-    var ACL: ParseACL?
-
-    var type: MemoryType
-    var value: String
-    var thumbnail: String?
-    var title: String?
-    var notes: String?
-    var description: String?
-    var tags: [String]?
-    var additionalInfo: [String: String]?
+struct Memory: Identifiable, Codable, Equatable {
+    let id: String?
+    let createdAt: Date?
+    let updatedAt: Date?
+    let type: MemoryType
+    let value: String
+    let thumbnail: String?
+    let title: String?
+    let notes: String?
+    let description: String?
+    let tags: [String]?
+    let additionalInfo: [String: String]?
 
     var thumbnailURL: URL? {
         guard let thumbnail = thumbnail else { return nil }
@@ -33,5 +28,39 @@ struct Memory: ParseObject, Identifiable {
 
     var valueURL: URL? {
         URL(string: value)
+    }
+
+    func copyWithNil(thumbnail: Bool = false) -> Memory {
+        Memory(
+            id: id,
+            createdAt: createdAt,
+            updatedAt: updatedAt,
+            type: type,
+            value: value,
+            thumbnail: thumbnail ? nil : self.thumbnail,
+            title: title,
+            notes: notes,
+            description: description,
+            tags: tags,
+            additionalInfo: additionalInfo
+        )
+    }
+}
+
+extension Memory {
+    static var exampleURL: Memory {
+        Memory(
+            id: "1",
+            createdAt: Date(),
+            updatedAt: Date(),
+            type: .url,
+            value: "https://swiftwombat.com",
+            thumbnail: "https://swiftwombat.com/content/images/2020/12/cover.png",
+            title: "Swift Wombat - Swift & SwiftUI knowledge base",
+            notes: nil,
+            description: nil,
+            tags: nil,
+            additionalInfo: nil
+        )
     }
 }

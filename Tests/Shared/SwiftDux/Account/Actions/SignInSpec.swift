@@ -6,7 +6,6 @@
 import Combine
 import Cuckoo
 import Nimble
-import ParseSwift
 import Quick
 import SwiftDux
 
@@ -14,12 +13,12 @@ final class SignInSpec: QuickSpec {
     override func spec() {
         describe("\(AccountAction.self) signIn actions") {
             var mock: MockAccountService!
-            var user: User!
+            var account: Account!
             var action: AccountAction?
             var cancellable: AnyCancellable?
 
             beforeEach {
-                user = User(emailVerified: true)
+                account = Account.test()
                 mock = MockAccountService()
             }
 
@@ -32,7 +31,7 @@ final class SignInSpec: QuickSpec {
                 beforeEach {
                     stub(mock) { stub in
                         when(stub.login(email: anyString(), password: anyString()))
-                            .thenReturn(makeCombineResult(user))
+                            .thenReturn(makeCombineResult(account))
                     }
                 }
 
@@ -45,7 +44,7 @@ final class SignInSpec: QuickSpec {
 
                     cancellable = actionPlan.run(store: storeProxy())
                         .sink(receiveValue: { action = $0 as? AccountAction })
-                    expect(action).toEventually(equal(AccountAction.setStatus(.authenticated(user))))
+                    expect(action).toEventually(equal(AccountAction.setStatus(.authenticated(account))))
                 }
             }
 
@@ -55,7 +54,7 @@ final class SignInSpec: QuickSpec {
                 beforeEach {
                     stub(mock) { stub in
                         when(stub.login(email: anyString(), password: anyString()))
-                            .thenReturn(makeCombineError(User.self))
+                            .thenReturn(makeCombineError(Account.self))
                     }
                 }
 

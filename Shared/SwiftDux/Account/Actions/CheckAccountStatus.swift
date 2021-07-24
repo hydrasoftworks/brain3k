@@ -10,8 +10,8 @@ extension AccountAction {
     ) -> ActionPlan<AppState> {
         ActionPlan<AppState> { store in
             let action: Action
-            if let user = accountService.getCurrentUser() {
-                action = accountAction(for: user)
+            if let account = accountService.getCurrentAccount() {
+                action = accountAction(for: account)
             } else {
                 action = AccountAction.setStatus(.unauthenticated)
             }

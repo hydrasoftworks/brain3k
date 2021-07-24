@@ -10,11 +10,11 @@ extension AccountAction {
         _ accountService: AccountService = AccountService()
     ) -> ActionPlan<AppState> {
         ActionPlan<AppState> { store -> AnyPublisher<Action, Never> in
-            guard let email = store.state.accountState.user?.email else {
+            guard store.state.accountState.account != nil else {
                 return .empty
             }
 
-            return accountService.sendVerificationEmail(email)
+            return accountService.sendVerificationEmail()
                 .mapToEmptyResult(ofType: Action.self)
                 .catch { Just(MessageAction.set(.error($0.message))) }
                 .eraseToAnyPublisher()

@@ -2,7 +2,7 @@
 //  Created by Kamil Powałowski on 27/06/2021.
 //
 
-import ParseSwift
+import Firebase
 import SwiftDux
 import SwiftDuxExtras
 import SwiftUI
@@ -22,15 +22,7 @@ struct Brain3kApp: App {
         )
 
         initSwiftyBeaver()
-
-        if let serverURL = URL(string: "https://parseapi.back4app.com") {
-            let configuration = ParseConfiguration(
-                applicationId: "B2Yxw2u4L1ikcz13dVKVvltuv3HfSbGZn3lIhCj5",
-                clientKey: "HUZaHgZSg2rKQ4rcwYsm8p9yDZP267GaRSJxEw0U",
-                serverURL: serverURL
-            )
-            ParseSwift.initialize(configuration: configuration)
-        }
+        FirebaseApp.configure()
     }
 
     var body: some Scene {

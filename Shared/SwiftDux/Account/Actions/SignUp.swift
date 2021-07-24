@@ -3,7 +3,6 @@
 //
 
 import Combine
-import ParseSwift
 import SwiftDux
 
 extension AccountAction {
@@ -14,13 +13,7 @@ extension AccountAction {
     ) -> ActionPlan<AppState> {
         ActionPlan<AppState> { _ -> AnyPublisher<Action, Never> in
             accountService.signUp(email: email, password: password)
-                .flatMap { user -> AnyPublisher<User, AppError> in
-                    var user = user
-                    user.email = email
-                    return accountService.save(user)
-                        .eraseToAnyPublisher()
-                }
-                .map { user in AccountAction.setStatus(.unverifiedEmail(user)) }
+                .map { account in AccountAction.setStatus(.unverifiedEmail(account)) }
                 .catch { Just(MessageAction.set(.error($0.message))) }
                 .eraseToAnyPublisher()
         }

@@ -3,11 +3,10 @@
 //
 
 import Combine
-import ParseSwift
 
-extension Future where Failure == ParseError {
+extension Publisher where Failure == Error {
     func mapToAppError() -> AnyPublisher<Output, AppError> {
-        mapError(AppError.init(parseError:))
+        mapError(AppError.fromError)
             .eraseToAnyPublisher()
     }
 }

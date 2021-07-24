@@ -5,8 +5,8 @@
 import Foundation
 
 enum AccountStatus: Equatable {
-    case authenticated(User)
-    case unverifiedEmail(User)
+    case authenticated(Account)
+    case unverifiedEmail(Account)
     case unauthenticated
     case undetermined
 }

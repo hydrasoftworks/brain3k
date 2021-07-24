@@ -9,7 +9,7 @@ struct UnverifiedEmailPage: ConnectableView {
     @Environment(\.actionDispatcher) private var dispatch
 
     func map(state: AppState) -> ViewModel? {
-        ViewModel(email: state.accountState.user?.email)
+        ViewModel(email: state.accountState.account?.email)
     }
 
     func body(props viewModel: ViewModel) -> some View {
@@ -34,6 +34,7 @@ struct UnverifiedEmailPage: ConnectableView {
             .padding()
             .materialBackground()
             .padding()
+            .onAppear(dispatch: AccountAction.sendVerificationEmail())
         }
     }
 

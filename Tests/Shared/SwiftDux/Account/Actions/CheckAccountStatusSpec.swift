@@ -22,7 +22,7 @@ final class CheckAccountStatusSpec: QuickSpec {
             context("user not exists") {
                 it("should call setStatus .unauthenticated action") {
                     stub(mock) { stub in
-                        when(stub.getCurrentUser()).thenReturn(nil)
+                        when(stub.getCurrentAccount()).thenReturn(nil)
                     }
                     let actionPlan = AccountAction.checkAccountStatus(mock)
                     _ = actionPlan.run(store: storeProxy(send: { action = $0 as? AccountAction }))
@@ -32,14 +32,14 @@ final class CheckAccountStatusSpec: QuickSpec {
 
             context("user exists") {
                 it("should return setStatus .authenticated action") {
-                    let user = User(emailVerified: true)
+                    let account = Account.test()
                     stub(mock) { stub in
-                        when(stub.getCurrentUser()).thenReturn(user)
+                        when(stub.getCurrentAccount()).thenReturn(account)
                     }
 
                     let actionPlan = AccountAction.checkAccountStatus(mock)
                     _ = actionPlan.run(store: storeProxy(send: { action = $0 as? AccountAction }))
-                    expect(action).toEventually(equal(AccountAction.setStatus(.authenticated(user))))
+                    expect(action).toEventually(equal(AccountAction.setStatus(.authenticated(account))))
                 }
             }
         }
