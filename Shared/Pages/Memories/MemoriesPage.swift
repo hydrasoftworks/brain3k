@@ -9,10 +9,9 @@ struct MemoriesPage: ConnectableView {
     @Environment(\.actionDispatcher) private var dispatch
 
     func map(state: AppState) -> ViewModel? {
-        ViewModel(memories: state.memoriesState.values)
+        ViewModel(memories: state.memoriesState)
     }
 
-    @ViewBuilder
     func body(props viewModel: ViewModel) -> some View {
         ScrollView {
             LazyVGrid(
@@ -26,7 +25,6 @@ struct MemoriesPage: ConnectableView {
         }
         .padding(.horizontal)
         .refreshable { dispatch.send(MemoriesAction.getAll()) }
-        .onAppear(dispatch: MemoriesAction.getAll())
     }
 
     struct ViewModel: Equatable {

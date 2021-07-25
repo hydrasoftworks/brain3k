@@ -6,4 +6,5 @@ import SwiftDux
 
 enum MemoriesAction: Action, Equatable {
     case set([Memory])
+    case add(Memory)
 }
