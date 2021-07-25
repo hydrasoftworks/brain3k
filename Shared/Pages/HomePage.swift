@@ -2,10 +2,13 @@
 //  Created by Kamil Powałowski on 30/06/2021.
 //
 
+import SwiftDux
 import SwiftUI
 
-struct HomePage: View {
-    var body: some View {
+struct HomePage: ConnectableView {
+    func map(state _: AppState) -> ViewModel? { ViewModel() }
+
+    func body(props _: ViewModel) -> some View {
         TabView {
             NavigationView {
                 MemoriesPage()
@@ -24,7 +27,10 @@ struct HomePage: View {
         }
         .accentColor(Color.primary)
         .materialBackground()
+        .onAppear(dispatch: MemoriesAction.getAll())
     }
+
+    struct ViewModel: Equatable {}
 }
 
 struct HomePage_Previews: PreviewProvider {

@@ -74,6 +74,9 @@
 		8E92A7EC26A0D4D300BAED7F /* CombineResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E92A7EB26A0D4D300BAED7F /* CombineResult.swift */; };
 		8EA1006826AC564F007AFAA9 /* MemoryCellSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA1006726AC564F007AFAA9 /* MemoryCellSpec.swift */; };
 		8EA1006A26AC572D007AFAA9 /* URLMemoryCellSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA1006926AC572D007AFAA9 /* URLMemoryCellSpec.swift */; };
+		8EA1006C26ADB348007AFAA9 /* AddURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA1006B26ADB348007AFAA9 /* AddURL.swift */; };
+		8EA1006D26ADB348007AFAA9 /* AddURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA1006B26ADB348007AFAA9 /* AddURL.swift */; };
+		8EA1006F26ADBDE6007AFAA9 /* AddURLSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA1006E26ADBDE6007AFAA9 /* AddURLSpec.swift */; };
 		8EA4D27D26938D1000C0A037 /* TextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA4D27C26938D1000C0A037 /* TextFieldStyle.swift */; };
 		8EA4D27E26938D1100C0A037 /* TextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA4D27C26938D1000C0A037 /* TextFieldStyle.swift */; };
 		8EA4D28126939DE100C0A037 /* EmailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA4D28026939DE100C0A037 /* EmailTextField.swift */; };
@@ -208,6 +211,8 @@
 		8E92A7EB26A0D4D300BAED7F /* CombineResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineResult.swift; sourceTree = "<group>"; };
 		8EA1006726AC564F007AFAA9 /* MemoryCellSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryCellSpec.swift; sourceTree = "<group>"; };
 		8EA1006926AC572D007AFAA9 /* URLMemoryCellSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLMemoryCellSpec.swift; sourceTree = "<group>"; };
+		8EA1006B26ADB348007AFAA9 /* AddURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddURL.swift; sourceTree = "<group>"; };
+		8EA1006E26ADBDE6007AFAA9 /* AddURLSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddURLSpec.swift; sourceTree = "<group>"; };
 		8EA4D27C26938D1000C0A037 /* TextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldStyle.swift; sourceTree = "<group>"; };
 		8EA4D28026939DE100C0A037 /* EmailTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailTextField.swift; sourceTree = "<group>"; };
 		8EA4D28326939E6400C0A037 /* PasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
@@ -297,9 +302,7 @@
 		8E3810DA269CCDC800ED3851 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				8EA1006426AC55F4007AFAA9 /* Pages */,
 				8E92A7DC26A0BB7800BAED7F /* Helpers */,
-				8EF9353D26AC46B700176AF4 /* Views */,
 				8E3810E8269CCFDA00ED3851 /* Shared */,
 			);
 			path = Tests;
@@ -308,6 +311,8 @@
 		8E3810E8269CCFDA00ED3851 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				8EA1006426AC55F4007AFAA9 /* Pages */,
+				8EF9353D26AC46B700176AF4 /* Views */,
 				8E3810E9269CCFE400ED3851 /* SwiftDux */,
 			);
 			path = Shared;
@@ -356,6 +361,7 @@
 			isa = PBXGroup;
 			children = (
 				8E776FF826A3257B00D97F52 /* GetAll.swift */,
+				8EA1006B26ADB348007AFAA9 /* AddURL.swift */,
 			);
 			path = Actions;
 			sourceTree = "<group>";
@@ -373,6 +379,7 @@
 			isa = PBXGroup;
 			children = (
 				8E77700026A3283A00D97F52 /* GetAllSpec.swift */,
+				8EA1006E26ADBDE6007AFAA9 /* AddURLSpec.swift */,
 			);
 			path = Actions;
 			sourceTree = "<group>";
@@ -812,6 +819,7 @@
 			files = (
 				8EF9353F26AC46ED00176AF4 /* PlaceholderViewSpec.swift in Sources */,
 				8EA1006826AC564F007AFAA9 /* MemoryCellSpec.swift in Sources */,
+				8EA1006F26ADBDE6007AFAA9 /* AddURLSpec.swift in Sources */,
 				8E3810EE269CD59300ED3851 /* MessageStateSpec.swift in Sources */,
 				8EF9354326AC4A3100176AF4 /* SecondaryButtonSpec.swift in Sources */,
 				8E77700126A3283A00D97F52 /* GetAllSpec.swift in Sources */,
@@ -849,6 +857,7 @@
 				8E77700626A32D5600D97F52 /* Future+MapError.swift in Sources */,
 				8EA4D28426939E6400C0A037 /* PasswordTextField.swift in Sources */,
 				8EEDD78A268BC05D00F670D2 /* AccountState.swift in Sources */,
+				8EA1006C26ADB348007AFAA9 /* AddURL.swift in Sources */,
 				8EEF35DE268CEA500068DB58 /* SplashPage.swift in Sources */,
 				8EEDD790268BC2AF00F670D2 /* AccountAction.swift in Sources */,
 				8EEDD78D268BC1F600F670D2 /* AccountReducer.swift in Sources */,
@@ -909,6 +918,7 @@
 				8E77700726A32D5600D97F52 /* Future+MapError.swift in Sources */,
 				8EA4D28526939E6400C0A037 /* PasswordTextField.swift in Sources */,
 				8EEDD78B268BC05D00F670D2 /* AccountState.swift in Sources */,
+				8EA1006D26ADB348007AFAA9 /* AddURL.swift in Sources */,
 				8EEF35DF268CEA500068DB58 /* SplashPage.swift in Sources */,
 				8EEDD791268BC2AF00F670D2 /* AccountAction.swift in Sources */,
 				8EEDD78E268BC1F600F670D2 /* AccountReducer.swift in Sources */,
@@ -1378,7 +1388,7 @@
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 7.0.0;
+				minimumVersion = 8.0.0;
 			};
 		};
 		8EF9353A26AC464200176AF4 /* XCRemoteSwiftPackageReference "ViewInspector" */ = {
