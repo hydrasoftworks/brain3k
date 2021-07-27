@@ -8,6 +8,9 @@ import SwiftUI
 struct MemoriesPage: ConnectableView {
     @Environment(\.actionDispatcher) private var dispatch
 
+    @SwiftUI.State private var searchQuery: String = ""
+    @SwiftUI.State private var isAddMemoryPresented: Bool = false
+
     func map(state: AppState) -> ViewModel? {
         ViewModel(memories: state.memoriesState)
     }
@@ -25,6 +28,19 @@ struct MemoriesPage: ConnectableView {
         }
         .padding(.horizontal)
         .refreshable { dispatch.send(MemoriesAction.getAll()) }
+        .searchable(text: $searchQuery)
+        .navigationTitle("Memories")
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button(action: { isAddMemoryPresented = true }) {
+                    Label("Add Memory", systemImage: "plus")
+                }
+            }
+        }
+        .sheet(
+            isPresented: $isAddMemoryPresented,
+            content: { AddMemoryPage() }
+        )
     }
 
     struct ViewModel: Equatable {

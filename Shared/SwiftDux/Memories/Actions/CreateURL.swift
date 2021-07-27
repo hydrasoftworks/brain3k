@@ -6,7 +6,7 @@ import Combine
 import SwiftDux
 
 extension MemoriesAction {
-    static func addURL(
+    static func createURL(
         url: String,
         _ memoriesService: MemoriesService = MemoriesService()
     ) -> ActionPlan<AppState> {
