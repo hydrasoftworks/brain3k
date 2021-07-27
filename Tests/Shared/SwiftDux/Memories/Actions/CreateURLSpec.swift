@@ -9,9 +9,9 @@ import Nimble
 import Quick
 import SwiftDux
 
-final class AddURLSpec: QuickSpec {
+final class CreateURLSpec: QuickSpec {
     override func spec() {
-        describe("\(MemoriesAction.self) addURL action") {
+        describe("\(MemoriesAction.self) createURL action") {
             var mock: MockMemoriesService!
             var cancellable: AnyCancellable?
             var state: AppState!
@@ -32,7 +32,7 @@ final class AddURLSpec: QuickSpec {
 
             context("when there is no account in state") {
                 it("service shouldn't be called") {
-                    let actionPlan = MemoriesAction.addURL(url: "https://example.com", mock)
+                    let actionPlan = MemoriesAction.createURL(url: "https://example.com", mock)
 
                     cancellable = actionPlan.run(store: storeProxy())
                         .sink(receiveValue: { _ in })
@@ -54,7 +54,7 @@ final class AddURLSpec: QuickSpec {
                 }
 
                 it("should call add action") {
-                    let actionPlan = MemoriesAction.addURL(url: memory.value, mock)
+                    let actionPlan = MemoriesAction.createURL(url: memory.value, mock)
 
                     cancellable = actionPlan.run(store: storeProxy(state))
                         .sink(receiveValue: { action = $0 as? MemoriesAction })
@@ -74,7 +74,7 @@ final class AddURLSpec: QuickSpec {
                 }
 
                 it("should call message action") {
-                    let actionPlan = MemoriesAction.addURL(url: "https://example.com", mock)
+                    let actionPlan = MemoriesAction.createURL(url: "https://example.com", mock)
 
                     cancellable = actionPlan.run(store: storeProxy(state))
                         .sink(receiveValue: { action = $0 })

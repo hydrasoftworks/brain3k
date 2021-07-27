@@ -51,6 +51,10 @@
 		8E79C14A26978898002D2A8B /* MessageAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E79C14826978898002D2A8B /* MessageAction.swift */; };
 		8E79C14D269791EA002D2A8B /* ValidatedPropertyKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8E79C14C269791EA002D2A8B /* ValidatedPropertyKit */; };
 		8E79C14F269791F4002D2A8B /* ValidatedPropertyKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8E79C14E269791F4002D2A8B /* ValidatedPropertyKit */; };
+		8E8835B926B08DCF00EE0234 /* AddMemoryPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8835B826B08DCF00EE0234 /* AddMemoryPage.swift */; };
+		8E8835BA26B08DCF00EE0234 /* AddMemoryPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8835B826B08DCF00EE0234 /* AddMemoryPage.swift */; };
+		8E8835BC26B0928E00EE0234 /* Validation+URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8835BB26B0928E00EE0234 /* Validation+URL.swift */; };
+		8E8835BD26B0928E00EE0234 /* Validation+URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8835BB26B0928E00EE0234 /* Validation+URL.swift */; };
 		8E889CEB26A22A4300F7C47C /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E889CEA26A22A4300F7C47C /* SignUp.swift */; };
 		8E889CEC26A22A4300F7C47C /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E889CEA26A22A4300F7C47C /* SignUp.swift */; };
 		8E889CEE26A22BDC00F7C47C /* SignUpSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E889CED26A22BDB00F7C47C /* SignUpSpec.swift */; };
@@ -74,9 +78,9 @@
 		8E92A7EC26A0D4D300BAED7F /* CombineResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E92A7EB26A0D4D300BAED7F /* CombineResult.swift */; };
 		8EA1006826AC564F007AFAA9 /* MemoryCellSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA1006726AC564F007AFAA9 /* MemoryCellSpec.swift */; };
 		8EA1006A26AC572D007AFAA9 /* URLMemoryCellSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA1006926AC572D007AFAA9 /* URLMemoryCellSpec.swift */; };
-		8EA1006C26ADB348007AFAA9 /* AddURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA1006B26ADB348007AFAA9 /* AddURL.swift */; };
-		8EA1006D26ADB348007AFAA9 /* AddURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA1006B26ADB348007AFAA9 /* AddURL.swift */; };
-		8EA1006F26ADBDE6007AFAA9 /* AddURLSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA1006E26ADBDE6007AFAA9 /* AddURLSpec.swift */; };
+		8EA1006C26ADB348007AFAA9 /* CreateURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA1006B26ADB348007AFAA9 /* CreateURL.swift */; };
+		8EA1006D26ADB348007AFAA9 /* CreateURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA1006B26ADB348007AFAA9 /* CreateURL.swift */; };
+		8EA1006F26ADBDE6007AFAA9 /* CreateURLSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA1006E26ADBDE6007AFAA9 /* CreateURLSpec.swift */; };
 		8EA4D27D26938D1000C0A037 /* TextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA4D27C26938D1000C0A037 /* TextFieldStyle.swift */; };
 		8EA4D27E26938D1100C0A037 /* TextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA4D27C26938D1000C0A037 /* TextFieldStyle.swift */; };
 		8EA4D28126939DE100C0A037 /* EmailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA4D28026939DE100C0A037 /* EmailTextField.swift */; };
@@ -195,6 +199,8 @@
 		8E79C14226978778002D2A8B /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		8E79C14526978828002D2A8B /* MessageReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageReducer.swift; sourceTree = "<group>"; };
 		8E79C14826978898002D2A8B /* MessageAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageAction.swift; sourceTree = "<group>"; };
+		8E8835B826B08DCF00EE0234 /* AddMemoryPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMemoryPage.swift; sourceTree = "<group>"; };
+		8E8835BB26B0928E00EE0234 /* Validation+URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Validation+URL.swift"; sourceTree = "<group>"; };
 		8E889CEA26A22A4300F7C47C /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		8E889CED26A22BDB00F7C47C /* SignUpSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSpec.swift; sourceTree = "<group>"; };
 		8E889CEF26A22D4F00F7C47C /* SignOut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOut.swift; sourceTree = "<group>"; };
@@ -211,8 +217,8 @@
 		8E92A7EB26A0D4D300BAED7F /* CombineResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineResult.swift; sourceTree = "<group>"; };
 		8EA1006726AC564F007AFAA9 /* MemoryCellSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryCellSpec.swift; sourceTree = "<group>"; };
 		8EA1006926AC572D007AFAA9 /* URLMemoryCellSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLMemoryCellSpec.swift; sourceTree = "<group>"; };
-		8EA1006B26ADB348007AFAA9 /* AddURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddURL.swift; sourceTree = "<group>"; };
-		8EA1006E26ADBDE6007AFAA9 /* AddURLSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddURLSpec.swift; sourceTree = "<group>"; };
+		8EA1006B26ADB348007AFAA9 /* CreateURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateURL.swift; sourceTree = "<group>"; };
+		8EA1006E26ADBDE6007AFAA9 /* CreateURLSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateURLSpec.swift; sourceTree = "<group>"; };
 		8EA4D27C26938D1000C0A037 /* TextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldStyle.swift; sourceTree = "<group>"; };
 		8EA4D28026939DE100C0A037 /* EmailTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailTextField.swift; sourceTree = "<group>"; };
 		8EA4D28326939E6400C0A037 /* PasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
@@ -361,7 +367,7 @@
 			isa = PBXGroup;
 			children = (
 				8E776FF826A3257B00D97F52 /* GetAll.swift */,
-				8EA1006B26ADB348007AFAA9 /* AddURL.swift */,
+				8EA1006B26ADB348007AFAA9 /* CreateURL.swift */,
 			);
 			path = Actions;
 			sourceTree = "<group>";
@@ -379,7 +385,7 @@
 			isa = PBXGroup;
 			children = (
 				8E77700026A3283A00D97F52 /* GetAllSpec.swift */,
-				8EA1006E26ADBDE6007AFAA9 /* AddURLSpec.swift */,
+				8EA1006E26ADBDE6007AFAA9 /* CreateURLSpec.swift */,
 			);
 			path = Actions;
 			sourceTree = "<group>";
@@ -518,6 +524,7 @@
 				8E66FEA726A8B5C500838C70 /* Views */,
 				8EBC0539269A0A7E008B2478 /* MemoriesPage.swift */,
 				8EBC053C269A0A8A008B2478 /* MemoryPage.swift */,
+				8E8835B826B08DCF00EE0234 /* AddMemoryPage.swift */,
 			);
 			path = Memories;
 			sourceTree = "<group>";
@@ -612,6 +619,7 @@
 				8EBC052F2699D25C008B2478 /* Publisher+MapToEmptyResult.swift */,
 				8EBC0542269A1B76008B2478 /* String+Trim.swift */,
 				8E77700C26A6026A00D97F52 /* Color+Asset.swift */,
+				8E8835BB26B0928E00EE0234 /* Validation+URL.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -819,7 +827,7 @@
 			files = (
 				8EF9353F26AC46ED00176AF4 /* PlaceholderViewSpec.swift in Sources */,
 				8EA1006826AC564F007AFAA9 /* MemoryCellSpec.swift in Sources */,
-				8EA1006F26ADBDE6007AFAA9 /* AddURLSpec.swift in Sources */,
+				8EA1006F26ADBDE6007AFAA9 /* CreateURLSpec.swift in Sources */,
 				8E3810EE269CD59300ED3851 /* MessageStateSpec.swift in Sources */,
 				8EF9354326AC4A3100176AF4 /* SecondaryButtonSpec.swift in Sources */,
 				8E77700126A3283A00D97F52 /* GetAllSpec.swift in Sources */,
@@ -857,7 +865,7 @@
 				8E77700626A32D5600D97F52 /* Future+MapError.swift in Sources */,
 				8EA4D28426939E6400C0A037 /* PasswordTextField.swift in Sources */,
 				8EEDD78A268BC05D00F670D2 /* AccountState.swift in Sources */,
-				8EA1006C26ADB348007AFAA9 /* AddURL.swift in Sources */,
+				8EA1006C26ADB348007AFAA9 /* CreateURL.swift in Sources */,
 				8EEF35DE268CEA500068DB58 /* SplashPage.swift in Sources */,
 				8EEDD790268BC2AF00F670D2 /* AccountAction.swift in Sources */,
 				8EEDD78D268BC1F600F670D2 /* AccountReducer.swift in Sources */,
@@ -880,6 +888,7 @@
 				8E776FF126A2311200D97F52 /* SendVerificationEmail.swift in Sources */,
 				8E79C13C269619C0002D2A8B /* SignInWithAppleButton.swift in Sources */,
 				8EC6077B2688BB5B006ED3C1 /* MemoriesAction.swift in Sources */,
+				8E8835BC26B0928E00EE0234 /* Validation+URL.swift in Sources */,
 				8E889CF526A22F9500F7C47C /* Refresh.swift in Sources */,
 				8EF9353126AC30B700176AF4 /* DictionaryDecoder.swift in Sources */,
 				8EBC053A269A0A7E008B2478 /* MemoriesPage.swift in Sources */,
@@ -896,6 +905,7 @@
 				8E79C14926978898002D2A8B /* MessageAction.swift in Sources */,
 				8E92A7E126A0CD2500BAED7F /* CheckAccountStatus.swift in Sources */,
 				8EEF35DB268CE9F40068DB58 /* HomePage.swift in Sources */,
+				8E8835B926B08DCF00EE0234 /* AddMemoryPage.swift in Sources */,
 				8E6821BA26A9E6F200B2DACB /* URLMemoryCell.swift in Sources */,
 				8EBC051E2699C10C008B2478 /* UnverifiedEmailPage.swift in Sources */,
 				8EBC05242699C926008B2478 /* MaterialBackground.swift in Sources */,
@@ -918,7 +928,7 @@
 				8E77700726A32D5600D97F52 /* Future+MapError.swift in Sources */,
 				8EA4D28526939E6400C0A037 /* PasswordTextField.swift in Sources */,
 				8EEDD78B268BC05D00F670D2 /* AccountState.swift in Sources */,
-				8EA1006D26ADB348007AFAA9 /* AddURL.swift in Sources */,
+				8EA1006D26ADB348007AFAA9 /* CreateURL.swift in Sources */,
 				8EEF35DF268CEA500068DB58 /* SplashPage.swift in Sources */,
 				8EEDD791268BC2AF00F670D2 /* AccountAction.swift in Sources */,
 				8EEDD78E268BC1F600F670D2 /* AccountReducer.swift in Sources */,
@@ -941,6 +951,7 @@
 				8E776FF226A2311200D97F52 /* SendVerificationEmail.swift in Sources */,
 				8E79C13D269619C0002D2A8B /* SignInWithAppleButton.swift in Sources */,
 				8EC6077C2688BB5B006ED3C1 /* MemoriesAction.swift in Sources */,
+				8E8835BD26B0928E00EE0234 /* Validation+URL.swift in Sources */,
 				8E889CF626A22F9500F7C47C /* Refresh.swift in Sources */,
 				8EF9353226AC30B700176AF4 /* DictionaryDecoder.swift in Sources */,
 				8EBC053B269A0A7E008B2478 /* MemoriesPage.swift in Sources */,
@@ -957,6 +968,7 @@
 				8E79C14A26978898002D2A8B /* MessageAction.swift in Sources */,
 				8E92A7E226A0CD2500BAED7F /* CheckAccountStatus.swift in Sources */,
 				8EEF35DC268CE9F40068DB58 /* HomePage.swift in Sources */,
+				8E8835BA26B08DCF00EE0234 /* AddMemoryPage.swift in Sources */,
 				8E6821BB26A9E6F200B2DACB /* URLMemoryCell.swift in Sources */,
 				8EBC051F2699C10C008B2478 /* UnverifiedEmailPage.swift in Sources */,
 				8EBC05252699C926008B2478 /* MaterialBackground.swift in Sources */,
