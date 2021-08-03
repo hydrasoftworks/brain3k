@@ -15,10 +15,13 @@ extension MemoriesAction {
                 return .empty
             }
 
-            return memoriesService.add(type: .url, andValue: url, to: account.id)
-                .map { MemoriesAction.add($0) }
-                .catch { Just(MessageAction.set(.error($0.message))) }
-                .eraseToAnyPublisher()
+            return memoriesService.add(
+                memory: Memory(type: .url, value: url),
+                to: account.id
+            )
+            .map { MemoriesAction.add($0) }
+            .catch { Just(MessageAction.set(.error($0.message))) }
+            .eraseToAnyPublisher()
         }
     }
 }
