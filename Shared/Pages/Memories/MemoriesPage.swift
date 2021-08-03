@@ -32,7 +32,7 @@ struct MemoriesPage: ConnectableView {
         .navigationTitle("Memories")
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
-                Button(action: { isAddMemoryPresented = true }) {
+                Button(action: { isAddMemoryPresented.toggle() }) {
                     Label("Add Memory", systemImage: "plus")
                 }
             }

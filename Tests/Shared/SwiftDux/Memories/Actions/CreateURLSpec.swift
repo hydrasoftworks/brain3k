@@ -48,7 +48,7 @@ final class CreateURLSpec: QuickSpec {
                 beforeEach {
                     memory = Memory.test(type: .url, value: "https://example.com")
                     stub(mock) { stub in
-                        when(stub.add(type: any(), andValue: anyString(), to: anyString()))
+                        when(stub.add(memory: any(), to: anyString()))
                             .thenReturn(makeCombineResult(memory))
                     }
                 }
@@ -68,7 +68,7 @@ final class CreateURLSpec: QuickSpec {
 
                 beforeEach {
                     stub(mock) { stub in
-                        when(stub.add(type: any(), andValue: anyString(), to: anyString()))
+                        when(stub.add(memory: any(), to: anyString()))
                             .thenReturn(makeCombineError(Memory.self))
                     }
                 }

@@ -12,7 +12,7 @@ let log = SwiftyBeaver.self
 
 @main
 struct Brain3kApp: App {
-    let store: Store<AppState>
+    private let store: Store<AppState>
 
     init() {
         store = Store(

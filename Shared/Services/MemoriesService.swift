@@ -4,6 +4,7 @@
 
 import Combine
 import FirebaseFirestore
+import FirebaseFirestoreSwift
 
 class MemoriesService {
     func getAll(for accountId: String) -> AnyPublisher<[Memory], AppError> {
@@ -13,9 +14,7 @@ class MemoriesService {
         }
         .map { snapshot -> [Memory] in
             snapshot.documents.compactMap { document in
-                var data = document.data()
-                data["id"] = document.documentID
-                return try? DictionaryDecoder().decode(Memory.self, from: data)
+                try? document.data(as: Memory.self)
             }
         }
         .eraseToAnyPublisher()
@@ -23,25 +22,17 @@ class MemoriesService {
     }
 
     func add(
-        type: MemoryType,
-        andValue value: String,
+        memory: Memory,
         to accountId: String
     ) -> AnyPublisher<Memory, AppError> {
-        Future<DocumentReference, Error> { [weak self] promise in
-            let documentReference = self?.collection(of: accountId)
-                .addDocument(
-                    data: [
-                        "value": value,
-                        "type": type.rawValue,
-                        "createdAt": FieldValue.serverTimestamp(),
-                        "updatedAt": FieldValue.serverTimestamp(),
-                    ],
-                    completion: { error in
-                        if let error = error { promise(.failure(error)) }
-                    }
-                )
-            if let documentReference = documentReference {
+        let collection = collection(of: accountId)
+        return Future<DocumentReference, Error> { promise in
+            do {
+                let documentReference = try collection
+                    .addDocument(from: memory)
                 promise(.success(documentReference))
+            } catch {
+                promise(.failure(error))
             }
         }
         .flatMap(getMemory)
@@ -54,11 +45,10 @@ class MemoriesService {
             reference.getDocument(completion: self.handleResponse(promise))
         }
         .tryMap { document -> Memory in
-            guard var data = document.data() else {
+            guard let memory = try document.data(as: Memory.self) else {
                 throw AppError(message: "Memory data not found.")
             }
-            data["id"] = document.documentID
-            return try DictionaryDecoder().decode(Memory.self, from: data)
+            return memory
         }
         .eraseToAnyPublisher()
     }
