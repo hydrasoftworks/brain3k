@@ -2,12 +2,13 @@
 //  Created by Kamil Powałowski on 27/07/2021.
 //
 
+import PartialSheet
 import SwiftDux
 import SwiftUI
 import ValidatedPropertyKit
 
 struct AddMemoryPage: ConnectableView {
-    @Environment(\.presentationMode) var presentationMode
+    @EnvironmentObject var sheetManager: PartialSheetManager
     @Environment(\.actionDispatcher) private var dispatch
 
     @Validated(.isURL)
@@ -18,24 +19,24 @@ struct AddMemoryPage: ConnectableView {
     }
 
     func body(props _: ViewModel) -> some View {
-        VStack {
+        VStack(spacing: 16) {
             TextField("Paste URL here", text: $value)
                 .styleTextField()
                 .keyboardType(.URL)
                 .autocapitalization(.none)
                 .disableAutocorrection(true)
-            Spacer()
             PrimaryButton(title: "Add") {
                 dispatch.send(MemoriesAction.createURL(url: value))
-                presentationMode.wrappedValue.dismiss()
+                sheetManager.closePartialSheet()
             }
             .validated(_value)
             .padding(.bottom)
             SecondaryButton(title: "Cancel") {
-                presentationMode.wrappedValue.dismiss()
+                sheetManager.closePartialSheet()
             }
         }
         .padding()
+        .padding(.bottom, 32)
     }
 
     struct ViewModel: Equatable {}

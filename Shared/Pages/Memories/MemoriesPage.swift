@@ -2,6 +2,7 @@
 //  Created by Kamil Powałowski on 10/07/2021.
 //
 
+import PartialSheet
 import SwiftDux
 import SwiftUI
 
@@ -37,7 +38,7 @@ struct MemoriesPage: ConnectableView {
                 }
             }
         }
-        .sheet(
+        .partialSheet(
             isPresented: $isAddMemoryPresented,
             content: { AddMemoryPage() }
         )

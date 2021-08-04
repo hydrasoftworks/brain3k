@@ -101,6 +101,15 @@
         }
       },
       {
+        "package": "IrregularGradient",
+        "repositoryURL": "https://github.com/joogps/IrregularGradient",
+        "state": {
+          "branch": null,
+          "revision": "0e61dddde5d42806fab3b6254217fe05a4c551aa",
+          "version": "1.1.0"
+        }
+      },
+      {
         "package": "leveldb",
         "repositoryURL": "https://github.com/firebase/leveldb.git",
         "state": {
@@ -134,6 +143,15 @@
           "branch": null,
           "revision": "af1730dde4e6c0d45bf01b99f8a41713ce536790",
           "version": "9.2.0"
+        }
+      },
+      {
+        "package": "PartialSheet",
+        "repositoryURL": "https://github.com/AndreaMiotto/PartialSheet",
+        "state": {
+          "branch": "master",
+          "revision": "3ddaa02fe54f8083e5bf0ab83257b9df65bf8107",
+          "version": null
         }
       },
       {

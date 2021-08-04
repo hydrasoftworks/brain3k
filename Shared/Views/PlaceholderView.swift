@@ -5,8 +5,14 @@
 import SwiftUI
 
 struct PlaceholderView: View {
+    let title: String
+
+    init(title: String = "Loading...") {
+        self.title = title
+    }
+
     var body: some View {
-        ProgressView("Loading...")
+        ProgressView(title)
             .frame(
                 minWidth: 0, maxWidth: .infinity,
                 minHeight: 0, maxHeight: .infinity

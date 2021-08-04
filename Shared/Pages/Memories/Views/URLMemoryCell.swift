@@ -57,10 +57,10 @@ struct URLMemoryCell: View {
 struct URLMemoryCell_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            MemoryCell(memory: Memory.exampleURL)
+            MemoryCell(memory: Memory.exampleURL())
                 .previewLayout(.fixed(width: 200, height: 200))
             MemoryCell(
-                memory: Memory.exampleURL.copyWithNil(thumbnail: true)
+                memory: Memory.exampleURL(thumbnail: false)
             )
             .previewLayout(.fixed(width: 200, height: 200))
         }

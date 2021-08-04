@@ -29,6 +29,8 @@ struct Memory: Identifiable, Codable, Equatable {
 
     var valueURL: URL? { URL(string: value) }
 
+    var processed: Bool { tags != nil }
+
     init(
         id: String? = nil,
         createdAt: Date? = nil,
@@ -54,33 +56,17 @@ struct Memory: Identifiable, Codable, Equatable {
         self.tags = tags
         self.additionalInfo = additionalInfo
     }
-
-    func copyWithNil(thumbnail: Bool = false) -> Memory {
-        Memory(
-            id: id,
-            createdAt: createdAt,
-            updatedAt: updatedAt,
-            type: type,
-            value: value,
-            thumbnail: thumbnail ? nil : self.thumbnail,
-            title: title,
-            notes: notes,
-            description: description,
-            tags: tags,
-            additionalInfo: additionalInfo
-        )
-    }
 }
 
 extension Memory {
-    static var exampleURL: Memory {
+    static func exampleURL(thumbnail: Bool = true) -> Memory {
         Memory(
             id: "1",
             createdAt: Date(),
             updatedAt: Date(),
             type: .url,
             value: "https://swiftwombat.com",
-            thumbnail: "https://swiftwombat.com/content/images/2020/12/cover.png",
+            thumbnail: thumbnail ? "https://swiftwombat.com/content/images/2020/12/cover.png" : nil,
             title: "Swift Wombat - Swift & SwiftUI knowledge base",
             notes: nil,
             description: nil,
