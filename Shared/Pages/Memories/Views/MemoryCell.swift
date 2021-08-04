@@ -14,17 +14,21 @@ struct MemoryCell: View {
             .cornerRadius(16)
     }
 
+    @ViewBuilder
     private var view: some View {
-        switch memory.type {
-        case .url: return URLMemoryCell(memory: memory)
-        case .image: fatalError()
+        if memory.processed {
+            switch memory.type {
+            case .url: URLMemoryCell(memory: memory)
+            case .image: fatalError()
+            }
         }
+        ProcessingCell()
     }
 }
 
 struct MemoryCell_Previews: PreviewProvider {
     static var previews: some View {
-        MemoryCell(memory: Memory.exampleURL)
+        MemoryCell(memory: Memory.exampleURL())
             .previewLayout(.fixed(width: 200, height: 200))
     }
 }

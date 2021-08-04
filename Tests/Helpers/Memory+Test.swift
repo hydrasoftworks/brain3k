@@ -10,7 +10,8 @@ extension Memory {
         type: MemoryType,
         value: String,
         thumbnail: String? = nil,
-        title: String? = nil
+        title: String? = nil,
+        processed: Bool = true
     ) -> Memory {
         Memory(
             id: UUID().uuidString,
@@ -22,7 +23,7 @@ extension Memory {
             title: title,
             notes: nil,
             description: nil,
-            tags: nil,
+            tags: processed ? [] : nil,
             additionalInfo: nil
         )
     }

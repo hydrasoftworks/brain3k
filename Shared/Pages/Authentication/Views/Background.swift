@@ -9,7 +9,7 @@ struct Background: View {
 
     var body: some View {
         ZStack {
-            Image("background")
+            Image("Background")
                 .resizable()
                 .scaledToFill()
                 .frame(minWidth: 0, maxWidth: .infinity)

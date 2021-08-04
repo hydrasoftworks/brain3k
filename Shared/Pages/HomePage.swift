@@ -2,6 +2,7 @@
 //  Created by Kamil Powałowski on 30/06/2021.
 //
 
+import PartialSheet
 import SwiftDux
 import SwiftUI
 
@@ -26,6 +27,7 @@ struct HomePage: ConnectableView {
         }
         .accentColor(Color.primary)
         .materialBackground()
+        .addPartialSheet()
         .onAppear(dispatch: MemoriesAction.getAll())
     }
 
