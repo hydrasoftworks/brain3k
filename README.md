@@ -9,19 +9,31 @@ Store information and search for them without the need for manual management.
 
 This project is using Swift Package Manager to handle code dependencies.
 
+### Mint
+
+This project is using Mint to manage Swift code generator dependencies.
+Instal mint via brew:
+
+```bash
+brew install mint
+```
+
 ### swiftformat
 
 This project is using swiftformat to format code.
-Instal swiftformat via brew:
-
-```bash
-brew install swiftformat
-```
-
 Reformat all swift files with:
 
 ```bash
 ./scripts/swiftformat.sh
+```
+
+### SwiftGen
+
+This project is using SwiftGen to generate resource code.
+Reformat all swift files with:
+
+```bash
+./scripts/swiftgen.sh
 ```
 
 ### Mocks

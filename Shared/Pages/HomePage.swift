@@ -25,7 +25,7 @@ struct HomePage: ConnectableView {
                 Label("Profile", systemImage: "person")
             }
         }
-        .accentColor(Color.primary)
+        .accentColor(Color.brand)
         .materialBackground()
         .addPartialSheet()
         .onAppear(dispatch: MemoriesAction.getAll())

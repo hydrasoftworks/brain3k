@@ -12,7 +12,7 @@ struct ProcessingCell: View {
         ZStack {
             IrregularGradient(
                 colors: colors,
-                backgroundColor: Color.primary,
+                backgroundColor: Color.brand,
                 shouldAnimate: .constant(true)
             )
             PlaceholderView(title: "Processing...")

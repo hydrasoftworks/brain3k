@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-# Install swiftget via brew first with `brew install swiftformat`
+# Install mint via brew first with `brew install mint`
 
-swiftformat . --swiftversion 5.5 --exclude Shared/Resources
+mint run swiftformat . --swiftversion 5.5 --exclude Shared/Resources

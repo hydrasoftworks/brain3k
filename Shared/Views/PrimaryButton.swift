@@ -30,7 +30,7 @@ private struct PrimaryButtonStyle: ButtonStyle {
                 .foregroundColor(isEnabled ? .white : .white.opacity(0.5))
                 .frame(minWidth: 0, maxWidth: .infinity)
                 .frame(height: 56)
-                .background(Color.primary.opacity(isEnabled ? 1 : 0.5))
+                .background(Color.brand.opacity(isEnabled ? 1 : 0.5))
                 .cornerRadius(8)
                 .opacity(configuration.isPressed ? 0.9 : 1.0)
                 .scaleEffect(configuration.isPressed ? 0.98 : 1.0)

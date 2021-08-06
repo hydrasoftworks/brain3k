@@ -26,7 +26,7 @@ struct SignUpPage: ConnectableView {
             Text("Create an account")
                 .font(.title)
                 .bold()
-                .foregroundStyle(Color.primary)
+                .foregroundStyle(Color.brand)
             Text("Start using your new digital brain.")
                 .font(.body)
             AppSignInWithAppleButton()
