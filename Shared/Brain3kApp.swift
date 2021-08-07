@@ -3,7 +3,6 @@
 //
 
 import Firebase
-import PartialSheet
 import SwiftDux
 import SwiftDuxExtras
 import SwiftUI
@@ -14,7 +13,6 @@ let log = SwiftyBeaver.self
 @main
 struct Brain3kApp: App {
     private let store: Store<AppState>
-    private let sheetManager = PartialSheetManager()
 
     init() {
         store = Store(
@@ -30,7 +28,6 @@ struct Brain3kApp: App {
     var body: some Scene {
         WindowGroup {
             SplashPage()
-                .environmentObject(sheetManager)
                 .provideStore(store)
         }
     }

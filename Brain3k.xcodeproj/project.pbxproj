@@ -16,8 +16,6 @@
 		8E3C0D7926B9E24500EB82E8 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 8E3C0D7826B9E24500EB82E8 /* FirebaseAuth */; };
 		8E3C0D7B26B9E25500EB82E8 /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 8E3C0D7A26B9E25500EB82E8 /* FirebaseFirestoreSwift-Beta */; };
 		8E3C0D7D26B9E26500EB82E8 /* FirebaseStorageSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 8E3C0D7C26B9E26500EB82E8 /* FirebaseStorageSwift-Beta */; };
-		8E50D86826BB2A1F0075C08C /* PartialSheet in Frameworks */ = {isa = PBXBuildFile; productRef = 8E50D86726BB2A1F0075C08C /* PartialSheet */; };
-		8E50D86A26BB2A2C0075C08C /* PartialSheet in Frameworks */ = {isa = PBXBuildFile; productRef = 8E50D86926BB2A2C0075C08C /* PartialSheet */; };
 		8E50D86C26BB30280075C08C /* ProcessingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E50D86B26BB30280075C08C /* ProcessingCell.swift */; };
 		8E50D86D26BB30280075C08C /* ProcessingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E50D86B26BB30280075C08C /* ProcessingCell.swift */; };
 		8E50D87026BB33E30075C08C /* IrregularGradient in Frameworks */ = {isa = PBXBuildFile; productRef = 8E50D86F26BB33E30075C08C /* IrregularGradient */; };
@@ -295,7 +293,6 @@
 			files = (
 				8E79C13526961891002D2A8B /* MGFlipView in Frameworks */,
 				8EF9352826AC1B7300176AF4 /* FirebaseAuth in Frameworks */,
-				8E50D86826BB2A1F0075C08C /* PartialSheet in Frameworks */,
 				8EC607672688B86B006ED3C1 /* SwiftDux in Frameworks */,
 				8EF9352A26AC1B7300176AF4 /* FirebaseFirestoreSwift-Beta in Frameworks */,
 				8E79C14D269791EA002D2A8B /* ValidatedPropertyKit in Frameworks */,
@@ -311,7 +308,6 @@
 			files = (
 				8E3C0D7926B9E24500EB82E8 /* FirebaseAuth in Frameworks */,
 				8E3C0D7B26B9E25500EB82E8 /* FirebaseFirestoreSwift-Beta in Frameworks */,
-				8E50D86A26BB2A2C0075C08C /* PartialSheet in Frameworks */,
 				8E79C13726961898002D2A8B /* MGFlipView in Frameworks */,
 				8EC607882688BEE0006ED3C1 /* SwiftDux in Frameworks */,
 				8E3C0D7D26B9E26500EB82E8 /* FirebaseStorageSwift-Beta in Frameworks */,
@@ -748,7 +744,6 @@
 				8EF9352726AC1B7300176AF4 /* FirebaseAuth */,
 				8EF9352926AC1B7300176AF4 /* FirebaseFirestoreSwift-Beta */,
 				8EF9352B26AC1B7300176AF4 /* FirebaseStorageSwift-Beta */,
-				8E50D86726BB2A1F0075C08C /* PartialSheet */,
 				8E50D86F26BB33E30075C08C /* IrregularGradient */,
 			);
 			productName = "Brain3k (iOS)";
@@ -776,7 +771,6 @@
 				8E3C0D7826B9E24500EB82E8 /* FirebaseAuth */,
 				8E3C0D7A26B9E25500EB82E8 /* FirebaseFirestoreSwift-Beta */,
 				8E3C0D7C26B9E26500EB82E8 /* FirebaseStorageSwift-Beta */,
-				8E50D86926BB2A2C0075C08C /* PartialSheet */,
 				8E50D87126BB33EF0075C08C /* IrregularGradient */,
 			);
 			productName = "Brain3k (macOS)";
@@ -824,7 +818,6 @@
 				8E92A7D126A0B31600BAED7F /* XCRemoteSwiftPackageReference "Cuckoo" */,
 				8EF9352626AC1B7300176AF4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				8EF9353A26AC464200176AF4 /* XCRemoteSwiftPackageReference "ViewInspector" */,
-				8E50D86626BB2A1F0075C08C /* XCRemoteSwiftPackageReference "PartialSheet" */,
 				8E50D86E26BB33E20075C08C /* XCRemoteSwiftPackageReference "IrregularGradient" */,
 			);
 			productRefGroup = 8EC607482688AFD1006ED3C1 /* Products */;
@@ -1415,14 +1408,6 @@
 				minimumVersion = 9.0.0;
 			};
 		};
-		8E50D86626BB2A1F0075C08C /* XCRemoteSwiftPackageReference "PartialSheet" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/AndreaMiotto/PartialSheet";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
 		8E50D86E26BB33E20075C08C /* XCRemoteSwiftPackageReference "IrregularGradient" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/joogps/IrregularGradient";
@@ -1514,16 +1499,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8EF9352626AC1B7300176AF4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = "FirebaseStorageSwift-Beta";
-		};
-		8E50D86726BB2A1F0075C08C /* PartialSheet */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8E50D86626BB2A1F0075C08C /* XCRemoteSwiftPackageReference "PartialSheet" */;
-			productName = PartialSheet;
-		};
-		8E50D86926BB2A2C0075C08C /* PartialSheet */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8E50D86626BB2A1F0075C08C /* XCRemoteSwiftPackageReference "PartialSheet" */;
-			productName = PartialSheet;
 		};
 		8E50D86F26BB33E30075C08C /* IrregularGradient */ = {
 			isa = XCSwiftPackageProductDependency;
