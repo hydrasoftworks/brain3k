@@ -16,7 +16,7 @@ extension AccountAction {
 
             return accountService.sendVerificationEmail()
                 .mapToEmptyResult(ofType: Action.self)
-                .catch { Just(MessageAction.set(.error($0.message))) }
+                .catch { Just(MessageAction.show(.error($0.message))) }
                 .eraseToAnyPublisher()
         }
     }

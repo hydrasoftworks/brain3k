@@ -32,7 +32,7 @@ struct SplashPage: ConnectableView {
             isPresented: viewModel.$hasMessage,
             presenting: viewModel.message,
             actions: { _ in
-                Button("OK", role: .cancel, action: {})
+                Button(L10n.General.ok, role: .cancel, action: {})
             },
             message: { message in
                 switch message {

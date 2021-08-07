@@ -30,11 +30,11 @@ struct MemoriesPage: ConnectableView {
         .padding(.horizontal)
         .refreshable { dispatch.send(MemoriesAction.getAll()) }
         .searchable(text: $searchQuery)
-        .navigationTitle("Memories")
+        .navigationTitle(L10n.MemoriesPage.title)
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button(action: { isAddMemoryPresented.toggle() }) {
-                    Label("Add Memory", systemImage: "plus")
+                    Label(L10n.MemoriesPage.Button.add, systemImage: "plus")
                 }
             }
         }

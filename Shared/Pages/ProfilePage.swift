@@ -14,11 +14,11 @@ struct ProfilePage: ConnectableView {
 
     func body(props _: ViewModel) -> some View {
         VStack {
-            SecondaryButton(title: "Sign out") {
+            SecondaryButton(title: L10n.ProfilePage.Button.signOut) {
                 dispatch.send(AccountAction.signOut())
             }
         }
-        .navigationTitle("Profile")
+        .navigationTitle(L10n.ProfilePage.title)
     }
 
     struct ViewModel: Equatable {}

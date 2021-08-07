@@ -5,6 +5,6 @@
 import SwiftDux
 
 enum MessageAction: Action, Equatable {
-    case set(Message)
+    case show(Message)
     case clear
 }

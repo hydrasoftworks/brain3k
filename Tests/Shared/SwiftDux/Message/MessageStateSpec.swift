@@ -19,12 +19,12 @@ final class MessageStateSpec: QuickSpec {
                 expect(sut.message).to(beNil())
             }
 
-            it("copyWith should set properites") {
+            it("copyWith should set properties") {
                 sut = sut.copyWith(message: Message.error("Test"))
                 expect(sut.message).toNot(beNil())
             }
 
-            it("copyWithNil should clear properites") {
+            it("copyWithNil should clear properties") {
                 sut = sut.copyWith(message: Message.error("Test"))
                 sut = sut.copyWithNil(message: true)
                 expect(sut.message).to(beNil())

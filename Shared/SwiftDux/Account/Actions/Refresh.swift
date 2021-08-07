@@ -16,7 +16,7 @@ extension AccountAction {
 
             return accountService.refresh()
                 .map(accountAction(for:))
-                .catch { Just(MessageAction.set(.error($0.message))) }
+                .catch { Just(MessageAction.show(.error($0.message))) }
                 .eraseToAnyPublisher()
         }
     }

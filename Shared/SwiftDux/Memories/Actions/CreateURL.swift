@@ -20,7 +20,7 @@ extension MemoriesAction {
                 to: account.id
             )
             .map { MemoriesAction.add($0) }
-            .catch { Just(MessageAction.set(.error($0.message))) }
+            .catch { Just(MessageAction.show(.error($0.message))) }
             .eraseToAnyPublisher()
         }
     }

@@ -8,7 +8,7 @@ struct EmailTextField: View {
     @Binding var email: String
 
     var body: some View {
-        TextField("e-mail", text: $email)
+        TextField(L10n.EmailTextField.placeholder, text: $email)
             .styleTextField()
             .textContentType(.emailAddress)
             .autocapitalization(.none)
