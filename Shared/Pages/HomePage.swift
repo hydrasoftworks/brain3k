@@ -16,13 +16,19 @@ struct HomePage: ConnectableView {
                 MemoryPage()
             }
             .tabItem {
-                Label("Memories", systemImage: "lightbulb")
+                Label(
+                    L10n.MemoriesPage.title,
+                    systemImage: "lightbulb"
+                )
             }
             NavigationView {
                 ProfilePage()
             }
             .tabItem {
-                Label("Profile", systemImage: "person")
+                Label(
+                    L10n.ProfilePage.title,
+                    systemImage: "person"
+                )
             }
         }
         .accentColor(Color.brand)

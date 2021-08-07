@@ -24,7 +24,11 @@ struct AppSignInWithAppleButton: ConnectableView {
                 case let .success(authorization):
                     dispatch.send(AccountAction.signIn(authorization))
                 case let .failure(error):
-                    log.error("Authorization failed: " + error.localizedDescription)
+                    dispatch.send(
+                        MessageAction.show(
+                            .error(L10n.SignInWithAppleButton.error(error.localizedDescription))
+                        )
+                    )
                 }
             }
         )

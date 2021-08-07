@@ -10,7 +10,7 @@ final class MessageReducer: Reducer {
         action: MessageAction
     ) -> MessageState {
         switch action {
-        case let .set(message):
+        case let .show(message):
             return state.copyWith(message: message)
         case .clear:
             return state.copyWithNil(message: true)

@@ -22,18 +22,18 @@ struct SignInPage: ConnectableView {
 
     func body(props _: ViewModel) -> some View {
         VStack(spacing: 16) {
-            Text("Welcome back")
+            Text(L10n.SignInPage.title)
                 .font(.title)
                 .bold()
                 .foregroundStyle(Color.brand)
-            Text("Start using your new digital brain.")
+            Text(L10n.SignInPage.description1)
                 .font(.body)
             AppSignInWithAppleButton()
-            Text("or sign in using email and password")
+            Text(L10n.SignInPage.description2)
                 .font(.body)
             EmailTextField(email: $email)
             PasswordTextField(
-                title: "password",
+                title: L10n.PasswordTextField.passwordPlaceholder,
                 textContentType: .password,
                 password: $password
             )
@@ -47,7 +47,7 @@ struct SignInPage: ConnectableView {
     }
 
     private var signInButton: some View {
-        PrimaryButton(title: "Sign in with e-mail") {
+        PrimaryButton(title: L10n.SignInPage.Button.signIn) {
             dispatch.send(
                 AccountAction.signIn(
                     withEmail: email,
@@ -60,7 +60,7 @@ struct SignInPage: ConnectableView {
 
     private var goToSignUpButton: some View {
         SecondaryButton(
-            title: "You are new? Create an account.",
+            title: L10n.SignInPage.Button.signUp,
             action: flip
         )
     }

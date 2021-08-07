@@ -14,7 +14,7 @@ extension AccountAction {
         ActionPlan<AppState> { _ -> AnyPublisher<Action, Never> in
             accountService.signUp(email: email, password: password)
                 .map { account in AccountAction.setStatus(.unverifiedEmail(account)) }
-                .catch { Just(MessageAction.set(.error($0.message))) }
+                .catch { Just(MessageAction.show(.error($0.message))) }
                 .eraseToAnyPublisher()
         }
     }

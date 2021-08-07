@@ -15,13 +15,13 @@ final class MessageReducerSpec: QuickSpec {
                 sut = MessageReducer()
             }
 
-            context("\(MessageAction.self) set") {
+            context("\(MessageAction.self) show") {
                 it("should set message in state") {
                     let state = MessageState()
                     let message = Message.error("Test message")
                     let result = sut.reduce(
                         state: state,
-                        action: .set(message)
+                        action: .show(message)
                     )
                     expect(result.message).to(equal(message))
                 }
@@ -32,7 +32,7 @@ final class MessageReducerSpec: QuickSpec {
                     let state = MessageState(message: message1)
                     let result = sut.reduce(
                         state: state,
-                        action: .set(message2)
+                        action: .show(message2)
                     )
                     expect(result.message).to(equal(message2))
                 }

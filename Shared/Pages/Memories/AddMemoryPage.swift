@@ -20,18 +20,18 @@ struct AddMemoryPage: ConnectableView {
 
     func body(props _: ViewModel) -> some View {
         VStack(spacing: 16) {
-            TextField("Paste URL here", text: $value)
+            TextField(L10n.AddMemoryPage.TextField.placeholder, text: $value)
                 .styleTextField()
                 .keyboardType(.URL)
                 .autocapitalization(.none)
                 .disableAutocorrection(true)
-            PrimaryButton(title: "Add") {
+            PrimaryButton(title: L10n.AddMemoryPage.Button.add) {
                 dispatch.send(MemoriesAction.createURL(url: value))
                 sheetManager.closePartialSheet()
             }
             .validated(_value)
             .padding(.bottom)
-            SecondaryButton(title: "Cancel") {
+            SecondaryButton(title: L10n.General.cancel) {
                 sheetManager.closePartialSheet()
             }
         }

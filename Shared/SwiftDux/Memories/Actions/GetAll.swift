@@ -16,7 +16,7 @@ extension MemoriesAction {
 
             return memoriesService.getAll(for: account.id)
                 .map { MemoriesAction.set($0) }
-                .catch { Just(MessageAction.set(.error($0.message))) }
+                .catch { Just(MessageAction.show(.error($0.message))) }
                 .eraseToAnyPublisher()
         }
     }

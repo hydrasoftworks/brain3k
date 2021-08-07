@@ -16,17 +16,17 @@ struct UnverifiedEmailPage: ConnectableView {
         ZStack {
             Background()
             VStack(spacing: 16) {
-                Text("Email address verification needed")
+                Text(L10n.UnverifiedEmailPage.title)
                     .font(.title)
                     .bold()
                     .foregroundStyle(Color.brand)
-                Text("Go to your \(viewModel.email ?? "") inbox and confirm message from Brain3k. After that, press button below.")
+                Text(L10n.UnverifiedEmailPage.description1(viewModel.email ?? "", L10n.appName))
                     .font(.body)
                 emailVerifiedButton
-                Text("Didn't received verification email?")
+                Text(L10n.UnverifiedEmailPage.description2)
                     .font(.body)
                 sendVerificationEmailButton
-                Text("or")
+                Text(L10n.UnverifiedEmailPage.description3)
                     .font(.body)
                 signOutButton
             }
@@ -39,19 +39,19 @@ struct UnverifiedEmailPage: ConnectableView {
     }
 
     private var emailVerifiedButton: some View {
-        PrimaryButton(title: "Email verified") {
+        PrimaryButton(title: L10n.UnverifiedEmailPage.Button.verified) {
             dispatch.send(AccountAction.refresh())
         }
     }
 
     private var sendVerificationEmailButton: some View {
-        SecondaryButton(title: "Send verification email") {
+        SecondaryButton(title: L10n.UnverifiedEmailPage.Button.send) {
             dispatch.send(AccountAction.sendVerificationEmail())
         }
     }
 
     private var signOutButton: some View {
-        SecondaryButton(title: "Sign out") {
+        SecondaryButton(title: L10n.UnverifiedEmailPage.Button.signOut) {
             dispatch.send(AccountAction.signOut())
         }
     }
