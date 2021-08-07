@@ -24,7 +24,8 @@
 "unverified_email_page.button.sign_out" = "Sign out";
 "memory_cell.processing_cell.title" = "Processing...";
 "memories_page.title" = "Memories";
-"memories_page.button.add" = "Add Memory";
+"memories_page.button.add" = "Add memory";
+"add_memory_page.title" = "Add Memory";
 "add_memory_page.text_field.placeholder" = "Paste URL here";
 "add_memory_page.button.add" = "Add";
 "profile_page.title" = "Profile";

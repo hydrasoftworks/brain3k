@@ -14,6 +14,8 @@ internal enum L10n {
   internal static let appName = L10n.tr("Localizable", "app_name")
 
   internal enum AddMemoryPage {
+    /// Add Memory
+    internal static let title = L10n.tr("Localizable", "add_memory_page.title")
     internal enum Button {
       /// Add
       internal static let add = L10n.tr("Localizable", "add_memory_page.button.add")
@@ -40,7 +42,7 @@ internal enum L10n {
     /// Memories
     internal static let title = L10n.tr("Localizable", "memories_page.title")
     internal enum Button {
-      /// Add Memory
+      /// Add memory
       internal static let add = L10n.tr("Localizable", "memories_page.button.add")
     }
   }

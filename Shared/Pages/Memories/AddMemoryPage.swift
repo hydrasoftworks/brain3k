@@ -2,13 +2,13 @@
 //  Created by Kamil Powałowski on 27/07/2021.
 //
 
-import PartialSheet
+import Combine
 import SwiftDux
 import SwiftUI
 import ValidatedPropertyKit
 
 struct AddMemoryPage: ConnectableView {
-    @EnvironmentObject var sheetManager: PartialSheetManager
+    @Environment(\.presentationMode) private var presentationMode
     @Environment(\.actionDispatcher) private var dispatch
 
     @Validated(.isURL)
@@ -27,16 +27,18 @@ struct AddMemoryPage: ConnectableView {
                 .disableAutocorrection(true)
             PrimaryButton(title: L10n.AddMemoryPage.Button.add) {
                 dispatch.send(MemoriesAction.createURL(url: value))
-                sheetManager.closePartialSheet()
+                presentationMode.wrappedValue.dismiss()
             }
             .validated(_value)
             .padding(.bottom)
             SecondaryButton(title: L10n.General.cancel) {
-                sheetManager.closePartialSheet()
+                presentationMode.wrappedValue.dismiss()
             }
+            Spacer()
         }
         .padding()
         .padding(.bottom, 32)
+        .navigationTitle(L10n.AddMemoryPage.title)
     }
 
     struct ViewModel: Equatable {}

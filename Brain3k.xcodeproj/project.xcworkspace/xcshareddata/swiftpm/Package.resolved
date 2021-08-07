@@ -146,15 +146,6 @@
         }
       },
       {
-        "package": "PartialSheet",
-        "repositoryURL": "https://github.com/AndreaMiotto/PartialSheet",
-        "state": {
-          "branch": "master",
-          "revision": "3ddaa02fe54f8083e5bf0ab83257b9df65bf8107",
-          "version": null
-        }
-      },
-      {
         "package": "Promises",
         "repositoryURL": "https://github.com/google/promises.git",
         "state": {
