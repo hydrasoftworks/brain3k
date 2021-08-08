@@ -1,0 +1,16 @@
+{
+  "name": "brain3k-firebase",
+  "description": "Local dependencies for Brain3k Firebase project",
+  "scripts": {
+    "serve": "firebase emulators:start",
+    "deploy": "firebase deploy"
+  },
+  "engines": {
+    "node": "14"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "firebase-tools": "^9.16.0"
+  },
+  "private": true
+}
