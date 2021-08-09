@@ -5,24 +5,34 @@
 import SwiftUI
 
 struct MemoryCell: View {
+    @Environment(\.colorScheme) private var colorScheme
+
     let memory: Memory
 
     var body: some View {
-        view
-            .frame(minWidth: 0, maxWidth: .infinity)
+        content
+            .expanded()
+            .background(
+                LinearGradient(
+                    colors: Color.gradient(colorScheme),
+                    startPoint: .topLeading,
+                    endPoint: .bottomTrailing
+                )
+            )
             .aspectRatio(1, contentMode: .fill)
             .cornerRadius(16)
     }
 
     @ViewBuilder
-    private var view: some View {
+    private var content: some View {
         if memory.processed {
             switch memory.type {
             case .url: URLMemoryCell(memory: memory)
             case .image: fatalError()
             }
+        } else {
+            ProcessingCell()
         }
-        ProcessingCell()
     }
 }
 

@@ -12,6 +12,8 @@ nvm use
 npm install
 ```
 
+You have to call `nvm use` each time you are starting new session of work.
+
 ## Deployment
 
 To deploy project to Firebase call:
@@ -19,3 +21,7 @@ To deploy project to Firebase call:
 ```bash
 npm run deploy
 ```
+
+## Emulators
+
+Call `npm run serve` to run Firebase emulator.

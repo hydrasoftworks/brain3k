@@ -20,7 +20,7 @@ struct Memory: Identifiable, Codable, Equatable {
     let notes: String?
     let description: String?
     let tags: [String]?
-    let additionalInfo: [String: String]?
+    let processed: Bool
 
     var thumbnailURL: URL? {
         guard let thumbnail = thumbnail else { return nil }
@@ -28,8 +28,6 @@ struct Memory: Identifiable, Codable, Equatable {
     }
 
     var valueURL: URL? { URL(string: value) }
-
-    var processed: Bool { tags != nil }
 
     init(
         id: String? = nil,
@@ -42,7 +40,7 @@ struct Memory: Identifiable, Codable, Equatable {
         notes: String? = nil,
         description: String? = nil,
         tags: [String]? = nil,
-        additionalInfo: [String: String]? = nil
+        processed: Bool = false
     ) {
         self.id = id
         self.createdAt = createdAt
@@ -54,7 +52,7 @@ struct Memory: Identifiable, Codable, Equatable {
         self.notes = notes
         self.description = description
         self.tags = tags
-        self.additionalInfo = additionalInfo
+        self.processed = processed
     }
 }
 
@@ -71,7 +69,7 @@ extension Memory {
             notes: nil,
             description: nil,
             tags: nil,
-            additionalInfo: nil
+            processed: true
         )
     }
 }

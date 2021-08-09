@@ -25,6 +25,7 @@ struct URLMemoryCell: View {
             image
                 .resizable()
                 .scaledToFill()
+                .expanded()
         } placeholder: {
             PlaceholderView()
         }
@@ -37,10 +38,7 @@ struct URLMemoryCell: View {
             .lineLimit(2)
             .multilineTextAlignment(.center)
             .padding()
-            .frame(
-                minWidth: 0, maxWidth: .infinity,
-                minHeight: 0, maxHeight: .infinity
-            )
+            .expanded()
     }
 
     private func title(_ text: String) -> some View {
