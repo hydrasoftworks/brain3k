@@ -9,24 +9,23 @@ import Quick
 final class MemorySpec: QuickSpec {
     override func spec() {
         describe("\(Memory.self)") {
-            it("Should be unprocessed when tags are nil") {
+            it("Should map value to URL") {
                 let memory = Memory.test(
                     type: .url,
-                    value: "https://example.com",
-                    processed: false
+                    value: "https://example.com"
                 )
-                expect(memory.tags).to(beNil())
-                expect(memory.processed).to(beFalse())
+                expect(memory.valueURL?.absoluteString)
+                    .to(equal(memory.value))
             }
 
-            it("Should be unprocessed when tags are nil") {
+            it("Should map thumbnail to URL") {
                 let memory = Memory.test(
                     type: .url,
                     value: "https://example.com",
-                    processed: true
+                    thumbnail: "https://example.com/thumbnail"
                 )
-                expect(memory.tags).toNot(beNil())
-                expect(memory.processed).to(beTrue())
+                expect(memory.thumbnailURL?.absoluteString)
+                    .to(equal(memory.thumbnail))
             }
         }
     }

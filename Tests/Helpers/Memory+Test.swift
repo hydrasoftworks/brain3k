@@ -23,8 +23,8 @@ extension Memory {
             title: title,
             notes: nil,
             description: nil,
-            tags: processed ? [] : nil,
-            additionalInfo: nil
+            tags: nil,
+            processed: processed
         )
     }
 }

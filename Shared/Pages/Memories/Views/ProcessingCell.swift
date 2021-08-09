@@ -11,7 +11,7 @@ struct ProcessingCell: View {
     var body: some View {
         ZStack {
             IrregularGradient(
-                colors: colors,
+                colors: Color.gradient(colorScheme),
                 backgroundColor: Color.brand,
                 shouldAnimate: .constant(true)
             )
@@ -19,21 +19,6 @@ struct ProcessingCell: View {
                 .foregroundColor(foregroundColor)
                 .tint(tintColor)
         }
-    }
-
-    private var colors: [Color] {
-        if colorScheme == .dark {
-            return [
-                Color(red: 0.239, green: 0.306, blue: 0.506),
-                Color(red: 0.341, green: 0.325, blue: 0.788),
-                Color(red: 0.431, green: 0.498, blue: 0.953),
-            ]
-        }
-        return [
-            Color(red: 0.086, green: 0.851, blue: 0.89),
-            Color(red: 0.188, green: 0.78, blue: 0.925),
-            Color(red: 0.275, green: 0.682, blue: 0.969),
-        ]
     }
 
     private var foregroundColor: Color {

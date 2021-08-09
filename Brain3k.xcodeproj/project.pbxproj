@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E260FE726C2F44900715524 /* ExpandedFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E260FE626C2F44900715524 /* ExpandedFrame.swift */; };
+		8E260FE826C2F44900715524 /* ExpandedFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E260FE626C2F44900715524 /* ExpandedFrame.swift */; };
 		8E3810E4269CCF5800ED3851 /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = 8E3810E3269CCF5800ED3851 /* Quick */; };
 		8E3810E7269CCF8D00ED3851 /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = 8E3810E6269CCF8D00ED3851 /* Nimble */; };
 		8E3810EC269CD00700ED3851 /* MessageReducerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3810EB269CD00700ED3851 /* MessageReducerSpec.swift */; };
@@ -183,6 +185,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8E260FE626C2F44900715524 /* ExpandedFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandedFrame.swift; sourceTree = "<group>"; };
 		8E3810D9269CCDC800ED3851 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E3810EB269CD00700ED3851 /* MessageReducerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageReducerSpec.swift; sourceTree = "<group>"; };
 		8E3810ED269CD59300ED3851 /* MessageStateSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageStateSpec.swift; sourceTree = "<group>"; };
@@ -525,6 +528,7 @@
 			children = (
 				8EA4D27C26938D1000C0A037 /* TextFieldStyle.swift */,
 				8EBC05232699C926008B2478 /* MaterialBackground.swift */,
+				8E260FE626C2F44900715524 /* ExpandedFrame.swift */,
 			);
 			path = "View Modifiers";
 			sourceTree = "<group>";
@@ -916,6 +920,7 @@
 				8EC4BAD826BDD7E000F20EAE /* StringsGen.swift in Sources */,
 				8EBC0540269A0B8D008B2478 /* SecondaryButton.swift in Sources */,
 				8EC607502688AFD1006ED3C1 /* SignInPage.swift in Sources */,
+				8E260FE726C2F44900715524 /* ExpandedFrame.swift in Sources */,
 				8E79C139269618BE002D2A8B /* JoinPage.swift in Sources */,
 				8EBC052D2699CB52008B2478 /* PrimaryButton.swift in Sources */,
 				8EC6074E2688AFD1006ED3C1 /* Brain3kApp.swift in Sources */,
@@ -979,6 +984,7 @@
 				8EC4BAD926BDD7E000F20EAE /* StringsGen.swift in Sources */,
 				8EBC0541269A0B8D008B2478 /* SecondaryButton.swift in Sources */,
 				8EC607512688AFD1006ED3C1 /* SignInPage.swift in Sources */,
+				8E260FE826C2F44900715524 /* ExpandedFrame.swift in Sources */,
 				8E79C13A269618BE002D2A8B /* JoinPage.swift in Sources */,
 				8EBC052E2699CB52008B2478 /* PrimaryButton.swift in Sources */,
 				8EC6074F2688AFD1006ED3C1 /* Brain3kApp.swift in Sources */,
