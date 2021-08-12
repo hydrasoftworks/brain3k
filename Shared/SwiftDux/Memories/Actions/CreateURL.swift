@@ -19,7 +19,7 @@ extension MemoriesAction {
                 memory: Memory(type: .url, value: url),
                 to: account.id
             )
-            .map { MemoriesAction.add($0) }
+            .mapToEmptyResult(ofType: Action.self)
             .catch { Just(MessageAction.show(.error($0.message))) }
             .eraseToAnyPublisher()
         }

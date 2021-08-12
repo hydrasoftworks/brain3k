@@ -6,14 +6,12 @@ import SwiftDux
 
 final class MemoriesReducer: Reducer {
     func reduce(
-        state: [Memory],
+        state _: [Memory],
         action: MemoriesAction
     ) -> [Memory] {
         switch action {
         case let .set(memories):
             return memories
-        case let .add(memory):
-            return [memory] + state
         }
     }
 }

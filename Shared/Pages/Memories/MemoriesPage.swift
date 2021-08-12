@@ -39,11 +39,7 @@ struct MemoriesPage: ConnectableView {
         }
         .sheet(
             isPresented: $isAddMemoryPresented,
-            content: {
-                NavigationView {
-                    AddMemoryPage()
-                }
-            }
+            content: { NavigationView { AddMemoryPage() } }
         )
     }
 

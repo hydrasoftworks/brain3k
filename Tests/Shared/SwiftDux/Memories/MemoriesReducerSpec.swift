@@ -31,23 +31,6 @@ final class MemoriesReducerSpec: QuickSpec {
                     expect(result).to(equal(memories))
                 }
             }
-
-            context("\(MemoriesAction.self) add") {
-                it("should add memory at first place in state") {
-                    let memory = Memory.test(type: .url, value: "https://example.com")
-
-                    let state = [
-                        Memory.test(type: .image, value: "https://example.com/file.png"),
-                        Memory.test(type: .url, value: "https://example.com"),
-                    ]
-                    let result = sut.reduce(
-                        state: state,
-                        action: .add(memory)
-                    )
-                    expect(result.count).to(equal(3))
-                    expect(result.first).to(equal(memory))
-                }
-            }
         }
     }
 }

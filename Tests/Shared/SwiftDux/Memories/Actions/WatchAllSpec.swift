@@ -1,5 +1,5 @@
 //
-//  Created by Kamil Powałowski on 25/07/2021.
+//  Created by Kamil Powałowski on 12/08/2021.
 //
 
 @testable import Brain3k
@@ -9,9 +9,9 @@ import Nimble
 import Quick
 import SwiftDux
 
-final class CreateURLSpec: QuickSpec {
+final class WatchAllSpec: QuickSpec {
     override func spec() {
-        describe("\(MemoriesAction.self) createURL action") {
+        describe("\(MemoriesAction.self) watchAll action") {
             var mock: MockMemoriesService!
             var cancellable: AnyCancellable?
             var state: AppState!
@@ -32,32 +32,38 @@ final class CreateURLSpec: QuickSpec {
 
             context("when there is no account in state") {
                 it("service shouldn't be called") {
-                    let actionPlan = MemoriesAction.createURL(url: "https://example.com", mock)
+                    let actionPlan = MemoriesAction.watchAll(mock)
 
                     cancellable = actionPlan.run(store: storeProxy())
                         .sink(receiveValue: { _ in })
 
-                    verify(mock, never()).getAll(for: anyString())
+                    verify(mock, never()).watchAll(for: anyString())
                 }
             }
 
             context("when request returns success") {
-                var memory: Memory!
+                var action: MemoriesAction?
+                var memories: [Memory]!
 
                 beforeEach {
-                    memory = Memory.test(type: .url, value: "https://example.com")
+                    memories = [
+                        Memory.test(type: .url, value: "https://example.com"),
+                        Memory.test(type: .image, value: "https://example.com/file.png"),
+                        Memory.test(type: .url, value: "https://example.com"),
+                    ]
                     stub(mock) { stub in
-                        when(stub.add(memory: any(), to: anyString()))
-                            .thenReturn(makeCombineResult(()))
+                        when(stub.watchAll(for: anyString()))
+                            .thenReturn(makeCombineResult(memories))
                     }
                 }
 
-                it("should call add(memory:to:) in service") {
-                    let actionPlan = MemoriesAction.createURL(url: memory.value, mock)
+                it("should call set action") {
+                    let actionPlan = MemoriesAction.watchAll(mock)
 
                     cancellable = actionPlan.run(store: storeProxy(state))
-                        .sink(receiveValue: { _ in })
-                    verify(mock, times(1)).add(memory: any(), to: anyString())
+                        .sink(receiveValue: { action = $0 as? MemoriesAction })
+
+                    expect(action).toEventually(equal(MemoriesAction.set(memories)))
                 }
             }
 
@@ -66,13 +72,13 @@ final class CreateURLSpec: QuickSpec {
 
                 beforeEach {
                     stub(mock) { stub in
-                        when(stub.add(memory: any(), to: anyString()))
-                            .thenReturn(makeCombineError(Void.self))
+                        when(stub.watchAll(for: anyString()))
+                            .thenReturn(makeCombineError([Memory].self))
                     }
                 }
 
                 it("should call message action") {
-                    let actionPlan = MemoriesAction.createURL(url: "https://example.com", mock)
+                    let actionPlan = MemoriesAction.watchAll(mock)
 
                     cancellable = actionPlan.run(store: storeProxy(state))
                         .sink(receiveValue: { action = $0 })
