@@ -32,7 +32,7 @@ struct HomePage: ConnectableView {
         }
         .accentColor(Color.brand)
         .materialBackground()
-        .onAppear(dispatch: MemoriesAction.getAll())
+        .onAppear(dispatch: MemoriesAction.watchAll())
     }
 
     struct ViewModel: Equatable {}
