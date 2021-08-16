@@ -8,9 +8,9 @@ exports.memoryAdded = functions
   .onCreate(async (snapshot) => {
     let data = snapshot.data();
 
-    switch (snapshot.data().type) {
+    switch (data.type) {
       case MEMORY_TYPE.url: {
-        const result = await readMetadataForURL(snapshot.data().value);
+        const result = await readMetadataForURL(data.value);
         data = { ...data, ...result };
         break;
       }
