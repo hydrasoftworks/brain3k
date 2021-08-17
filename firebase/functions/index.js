@@ -4,6 +4,6 @@ admin.initializeApp();
 admin.firestore().settings({ ignoreUndefinedProperties: true });
 
 module.exports = {
-  ...require("./memories/memoryAdded.js"),
-  ...require("./memories/memoryUpdated.js"),
+  ...require("./memories/metadata.js"),
+  ...require("./memories/thumbnail.js"),
 };

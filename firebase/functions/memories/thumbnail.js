@@ -1,7 +1,7 @@
 const functions = require("firebase-functions");
 const { MEMORY_TYPE } = require("../models/memoryType");
 
-exports.memoryUpdated = functions
+exports.thumbnail = functions
   .runWith({ timeoutSeconds: 540, memory: "2GB" })
   .region("europe-west1")
   .firestore.document("users/{userId}/memories/{memoryId}")
