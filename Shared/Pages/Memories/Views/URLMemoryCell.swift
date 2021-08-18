@@ -5,16 +5,20 @@
 import SwiftUI
 
 struct URLMemoryCell: View {
-    let memory: Memory
+    let viewModel: ViewModel
 
     var body: some View {
         ZStack(alignment: .bottom) {
-            if let url = memory.thumbnailURL {
-                image(url)
+            if viewModel.hasImage {
+                if let url = viewModel.imageToDisplay {
+                    image(url)
+                } else {
+                    PlaceholderView()
+                }
             } else {
-                domain
+                domain(viewModel.domain)
             }
-            if let text = memory.title {
+            if let text = viewModel.title {
                 title(text)
             }
         }
@@ -31,10 +35,10 @@ struct URLMemoryCell: View {
         }
     }
 
-    private var domain: some View {
-        let url = memory.valueURL
-        return Text(url?.host ?? memory.value)
+    private func domain(_ text: String) -> some View {
+        Text(text)
             .font(.title3)
+            .foregroundColor(.white)
             .lineLimit(2)
             .multilineTextAlignment(.center)
             .padding()
@@ -50,15 +54,38 @@ struct URLMemoryCell: View {
             .frame(minWidth: 0, maxWidth: .infinity)
             .background(.regularMaterial, in: Rectangle())
     }
+
+    struct ViewModel: Equatable {
+        let title: String?
+        let domain: String
+        let image: URL?
+        let imageToDisplay: URL?
+        var hasImage: Bool { image != nil }
+    }
 }
 
 struct URLMemoryCell_Previews: PreviewProvider {
+    static let memoryUrl1 = Memory.exampleURL()
+    static let memoryUrl2 = Memory.exampleURL(thumbnail: false)
+
     static var previews: some View {
         Group {
-            MemoryCell(memory: Memory.exampleURL())
-                .previewLayout(.fixed(width: 200, height: 200))
-            MemoryCell(
-                memory: Memory.exampleURL(thumbnail: false)
+            URLMemoryCell(
+                viewModel: URLMemoryCell.ViewModel(
+                    title: memoryUrl1.title,
+                    domain: memoryUrl1.valueURL?.host ?? memoryUrl1.value,
+                    image: memoryUrl1.thumbnailURL,
+                    imageToDisplay: nil
+                )
+            )
+            .previewLayout(.fixed(width: 200, height: 200))
+            URLMemoryCell(
+                viewModel: URLMemoryCell.ViewModel(
+                    title: memoryUrl2.title,
+                    domain: memoryUrl2.valueURL?.host ?? memoryUrl2.value,
+                    image: memoryUrl2.thumbnailURL,
+                    imageToDisplay: nil
+                )
             )
             .previewLayout(.fixed(width: 200, height: 200))
         }

@@ -28,7 +28,7 @@ class MemoriesService {
         Future<QuerySnapshot, Error> { [unowned self] promise in
             self.collection(of: accountId)
                 .order(by: "createdAt", descending: true)
-                .getDocuments(completion: self.handleResponse(promise))
+                .getDocuments(completion: CompletionHandler(promise).handle())
         }
         .eraseToAnyPublisher()
         .mapToMemories()
@@ -53,18 +53,6 @@ class MemoriesService {
             .collection("users")
             .document(accountId)
             .collection("memories")
-    }
-
-    private func handleResponse<T>(
-        _ promise: @escaping Future<T, Error>.Promise
-    ) -> (T?, Error?) -> Void {
-        { response, error in
-            if let response = response {
-                promise(.success(response))
-            } else if let error = error {
-                promise(.failure(error))
-            }
-        }
     }
 }
 

@@ -16,17 +16,9 @@ struct ProcessingCell: View {
                 shouldAnimate: .constant(true)
             )
             PlaceholderView(title: L10n.MemoryCell.ProcessingCell.title)
-                .foregroundColor(foregroundColor)
-                .tint(tintColor)
+                .foregroundColor(.white)
+                .tint(.white.opacity(0.8))
         }
-    }
-
-    private var foregroundColor: Color {
-        colorScheme == .dark ? .black : .white
-    }
-
-    private var tintColor: Color {
-        foregroundColor.opacity(0.8)
     }
 }
 

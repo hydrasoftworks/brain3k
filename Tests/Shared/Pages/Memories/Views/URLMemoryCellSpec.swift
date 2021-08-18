@@ -14,22 +14,31 @@ final class URLMemoryCellSpec: QuickSpec {
     override func spec() {
         describe("\(URLMemoryCell.self)") {
             it("Should display domain name when thumbnail doesn't exist") {
+                let domain = "example.com"
                 let sut = URLMemoryCell(
-                    memory: Memory.test(type: .url, value: "https://example.com")
+                    viewModel: URLMemoryCell.ViewModel(
+                        title: nil,
+                        domain: domain,
+                        image: nil,
+                        imageToDisplay: nil
+                    )
                 )
-                let view = try sut.inspect().find(text: "example.com")
+
+                let view = try sut.inspect().find(text: domain)
                 expect(view).toNot(beNil())
             }
 
             it("Should display title") {
                 let title = "Example title"
                 let sut = URLMemoryCell(
-                    memory: Memory.test(
-                        type: .url,
-                        value: "https://example.com",
-                        title: title
+                    viewModel: URLMemoryCell.ViewModel(
+                        title: title,
+                        domain: "example.com",
+                        image: nil,
+                        imageToDisplay: nil
                     )
                 )
+
                 let view = try sut.inspect().find(text: title)
                 expect(view).toNot(beNil())
             }

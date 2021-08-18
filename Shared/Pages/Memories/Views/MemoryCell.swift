@@ -27,7 +27,7 @@ struct MemoryCell: View {
     private var content: some View {
         if memory.processed {
             switch memory.type {
-            case .url: URLMemoryCell(memory: memory)
+            case .url: URLMemoryCellConnector(memory: memory)
             case .image: fatalError()
             }
         } else {

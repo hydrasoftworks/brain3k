@@ -23,6 +23,16 @@
 		8E50D87026BB33E30075C08C /* IrregularGradient in Frameworks */ = {isa = PBXBuildFile; productRef = 8E50D86F26BB33E30075C08C /* IrregularGradient */; };
 		8E50D87226BB33EF0075C08C /* IrregularGradient in Frameworks */ = {isa = PBXBuildFile; productRef = 8E50D87126BB33EF0075C08C /* IrregularGradient */; };
 		8E50D87526BB40320075C08C /* MemorySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E50D87426BB40320075C08C /* MemorySpec.swift */; };
+		8E5D7D0826CC4D43009024A0 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5D7D0726CC4D43009024A0 /* StorageService.swift */; };
+		8E5D7D0926CC4D43009024A0 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5D7D0726CC4D43009024A0 /* StorageService.swift */; };
+		8E5D7D0C26CC4FB8009024A0 /* StorageState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5D7D0B26CC4FB8009024A0 /* StorageState.swift */; };
+		8E5D7D0D26CC4FB8009024A0 /* StorageState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5D7D0B26CC4FB8009024A0 /* StorageState.swift */; };
+		8E5D7D1026CC504E009024A0 /* StorageReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5D7D0F26CC504E009024A0 /* StorageReducer.swift */; };
+		8E5D7D1126CC504E009024A0 /* StorageReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5D7D0F26CC504E009024A0 /* StorageReducer.swift */; };
+		8E5D7D1326CC50D9009024A0 /* StorageAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5D7D1226CC50D9009024A0 /* StorageAction.swift */; };
+		8E5D7D1426CC50D9009024A0 /* StorageAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5D7D1226CC50D9009024A0 /* StorageAction.swift */; };
+		8E5D7D1626CC523D009024A0 /* GetDownloadURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5D7D1526CC523C009024A0 /* GetDownloadURL.swift */; };
+		8E5D7D1726CC523D009024A0 /* GetDownloadURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5D7D1526CC523C009024A0 /* GetDownloadURL.swift */; };
 		8E66FEA926A8B5E400838C70 /* MemoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E66FEA826A8B5E400838C70 /* MemoryCell.swift */; };
 		8E66FEAA26A8B5E400838C70 /* MemoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E66FEA826A8B5E400838C70 /* MemoryCell.swift */; };
 		8E6821B726A9E43800B2DACB /* PlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6821B626A9E43800B2DACB /* PlaceholderView.swift */; };
@@ -152,6 +162,13 @@
 		8EC607862688BED5006ED3C1 /* SwiftyBeaver in Frameworks */ = {isa = PBXBuildFile; productRef = 8EC607852688BED5006ED3C1 /* SwiftyBeaver */; };
 		8EC607882688BEE0006ED3C1 /* SwiftDux in Frameworks */ = {isa = PBXBuildFile; productRef = 8EC607872688BEE0006ED3C1 /* SwiftDux */; };
 		8EC6078A2688BEE4006ED3C1 /* SwiftyBeaver in Frameworks */ = {isa = PBXBuildFile; productRef = 8EC607892688BEE4006ED3C1 /* SwiftyBeaver */; };
+		8EDC011126D029D300D2064A /* URLMemoryCellConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDC011026D029D300D2064A /* URLMemoryCellConnector.swift */; };
+		8EDC011226D029D300D2064A /* URLMemoryCellConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDC011026D029D300D2064A /* URLMemoryCellConnector.swift */; };
+		8EDC011626D02F6600D2064A /* GetDownloadURLSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDC011526D02F6600D2064A /* GetDownloadURLSpec.swift */; };
+		8EDC011826D0359400D2064A /* StorageReducerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDC011726D0359400D2064A /* StorageReducerSpec.swift */; };
+		8EDC011A26D036EA00D2064A /* StorageStateSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDC011926D036EA00D2064A /* StorageStateSpec.swift */; };
+		8EDC011C26D03E9600D2064A /* CompletionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDC011B26D03E9600D2064A /* CompletionHandler.swift */; };
+		8EDC011D26D03E9600D2064A /* CompletionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDC011B26D03E9600D2064A /* CompletionHandler.swift */; };
 		8EEDD78A268BC05D00F670D2 /* AccountState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEDD789268BC05D00F670D2 /* AccountState.swift */; };
 		8EEDD78B268BC05D00F670D2 /* AccountState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEDD789268BC05D00F670D2 /* AccountState.swift */; };
 		8EEDD78D268BC1F600F670D2 /* AccountReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEDD78C268BC1F600F670D2 /* AccountReducer.swift */; };
@@ -198,6 +215,11 @@
 		8E3810F2269CD72500ED3851 /* AccountStateSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountStateSpec.swift; sourceTree = "<group>"; };
 		8E50D86B26BB30280075C08C /* ProcessingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessingCell.swift; sourceTree = "<group>"; };
 		8E50D87426BB40320075C08C /* MemorySpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemorySpec.swift; sourceTree = "<group>"; };
+		8E5D7D0726CC4D43009024A0 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
+		8E5D7D0B26CC4FB8009024A0 /* StorageState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageState.swift; sourceTree = "<group>"; };
+		8E5D7D0F26CC504E009024A0 /* StorageReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageReducer.swift; sourceTree = "<group>"; };
+		8E5D7D1226CC50D9009024A0 /* StorageAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageAction.swift; sourceTree = "<group>"; };
+		8E5D7D1526CC523C009024A0 /* GetDownloadURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDownloadURL.swift; sourceTree = "<group>"; };
 		8E66FEA826A8B5E400838C70 /* MemoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryCell.swift; sourceTree = "<group>"; };
 		8E6821B626A9E43800B2DACB /* PlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderView.swift; sourceTree = "<group>"; };
 		8E6821B926A9E6F200B2DACB /* URLMemoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLMemoryCell.swift; sourceTree = "<group>"; };
@@ -271,6 +293,11 @@
 		8EC6077A2688BB5B006ED3C1 /* MemoriesAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoriesAction.swift; sourceTree = "<group>"; };
 		8EC607812688BD92006ED3C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8EC6078C268A7ED9006ED3C1 /* Brain3k.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Brain3k.entitlements; sourceTree = "<group>"; };
+		8EDC011026D029D300D2064A /* URLMemoryCellConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLMemoryCellConnector.swift; sourceTree = "<group>"; };
+		8EDC011526D02F6600D2064A /* GetDownloadURLSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDownloadURLSpec.swift; sourceTree = "<group>"; };
+		8EDC011726D0359400D2064A /* StorageReducerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageReducerSpec.swift; sourceTree = "<group>"; };
+		8EDC011926D036EA00D2064A /* StorageStateSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageStateSpec.swift; sourceTree = "<group>"; };
+		8EDC011B26D03E9600D2064A /* CompletionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionHandler.swift; sourceTree = "<group>"; };
 		8EEDD789268BC05D00F670D2 /* AccountState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountState.swift; sourceTree = "<group>"; };
 		8EEDD78C268BC1F600F670D2 /* AccountReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountReducer.swift; sourceTree = "<group>"; };
 		8EEDD78F268BC2AF00F670D2 /* AccountAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountAction.swift; sourceTree = "<group>"; };
@@ -357,6 +384,7 @@
 				8E776FFE26A3281500D97F52 /* Memories */,
 				8E3810EF269CD65200ED3851 /* Account */,
 				8E3810EA269CCFF100ED3851 /* Message */,
+				8EDC011326D02F2E00D2064A /* Storage */,
 			);
 			path = SwiftDux;
 			sourceTree = "<group>";
@@ -389,10 +417,30 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		8E5D7D0A26CC4FA4009024A0 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				8E5D7D0E26CC5034009024A0 /* Actions */,
+				8E5D7D0B26CC4FB8009024A0 /* StorageState.swift */,
+				8E5D7D0F26CC504E009024A0 /* StorageReducer.swift */,
+				8E5D7D1226CC50D9009024A0 /* StorageAction.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		8E5D7D0E26CC5034009024A0 /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				8E5D7D1526CC523C009024A0 /* GetDownloadURL.swift */,
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
 		8E66FEA726A8B5C500838C70 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				8E66FEA826A8B5E400838C70 /* MemoryCell.swift */,
+				8EDC011026D029D300D2064A /* URLMemoryCellConnector.swift */,
 				8E6821B926A9E6F200B2DACB /* URLMemoryCell.swift */,
 				8E50D86B26BB30280075C08C /* ProcessingCell.swift */,
 			);
@@ -466,6 +514,8 @@
 			children = (
 				8E92A7D526A0B59F00BAED7F /* AccountService.swift */,
 				8E776FFB26A326C400D97F52 /* MemoriesService.swift */,
+				8E5D7D0726CC4D43009024A0 /* StorageService.swift */,
+				8EDC011B26D03E9600D2064A /* CompletionHandler.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -629,6 +679,7 @@
 				8E79C13E269786A0002D2A8B /* Message */,
 				8EEDD788268BC03100F670D2 /* Account */,
 				8EC607732688BA80006ED3C1 /* Memories */,
+				8E5D7D0A26CC4FA4009024A0 /* Storage */,
 				8EC607692688B952006ED3C1 /* AppState.swift */,
 				8EC607702688BA3A006ED3C1 /* AppReducer.swift */,
 			);
@@ -688,6 +739,24 @@
 				8EBC053F269A0B8D008B2478 /* SecondaryButton.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		8EDC011326D02F2E00D2064A /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				8EDC011426D02F3D00D2064A /* Actions */,
+				8EDC011726D0359400D2064A /* StorageReducerSpec.swift */,
+				8EDC011926D036EA00D2064A /* StorageStateSpec.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		8EDC011426D02F3D00D2064A /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				8EDC011526D02F6600D2064A /* GetDownloadURLSpec.swift */,
+			);
+			path = Actions;
 			sourceTree = "<group>";
 		};
 		8EEDD788268BC03100F670D2 /* Account */ = {
@@ -882,6 +951,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EF9353F26AC46ED00176AF4 /* PlaceholderViewSpec.swift in Sources */,
+				8EDC011A26D036EA00D2064A /* StorageStateSpec.swift in Sources */,
 				8E50D87526BB40320075C08C /* MemorySpec.swift in Sources */,
 				8EA1006826AC564F007AFAA9 /* MemoryCellSpec.swift in Sources */,
 				8EA1006F26ADBDE6007AFAA9 /* CreateURLSpec.swift in Sources */,
@@ -896,6 +966,8 @@
 				8E92A7DB26A0B8DC00BAED7F /* AccountActionSpec.swift in Sources */,
 				8EF9354126AC494E00176AF4 /* PrimaryButtonSpec.swift in Sources */,
 				8EAAD9EE26C5A95D007C2973 /* WatchAllSpec.swift in Sources */,
+				8EDC011626D02F6600D2064A /* GetDownloadURLSpec.swift in Sources */,
+				8EDC011826D0359400D2064A /* StorageReducerSpec.swift in Sources */,
 				8E776FF426A231F000D97F52 /* RefreshSpec.swift in Sources */,
 				8E92A7DE26A0BB8E00BAED7F /* StoreProxy.swift in Sources */,
 				8EF9353426AC3DAC00176AF4 /* Account+Test.swift in Sources */,
@@ -918,9 +990,11 @@
 				8EA4D28126939DE100C0A037 /* EmailTextField.swift in Sources */,
 				8E92A7E726A0D04100BAED7F /* SignIn.swift in Sources */,
 				8EBC051B2699C065008B2478 /* AnyPublisher+Empty.swift in Sources */,
+				8E5D7D0C26CC4FB8009024A0 /* StorageState.swift in Sources */,
 				8EBC0543269A1B76008B2478 /* String+Trim.swift in Sources */,
 				8EC6076A2688B952006ED3C1 /* AppState.swift in Sources */,
 				8E77700626A32D5600D97F52 /* Future+MapError.swift in Sources */,
+				8E5D7D1026CC504E009024A0 /* StorageReducer.swift in Sources */,
 				8EA4D28426939E6400C0A037 /* PasswordTextField.swift in Sources */,
 				8EAAD9EB26C5A525007C2973 /* WatchAll.swift in Sources */,
 				8EEDD78A268BC05D00F670D2 /* AccountState.swift in Sources */,
@@ -931,6 +1005,7 @@
 				8EEF35E1268CED570068DB58 /* AccountStatus.swift in Sources */,
 				8EC6076E2688B993006ED3C1 /* StateType.swift in Sources */,
 				8EC4BAD826BDD7E000F20EAE /* StringsGen.swift in Sources */,
+				8EDC011C26D03E9600D2064A /* CompletionHandler.swift in Sources */,
 				8EBC0540269A0B8D008B2478 /* SecondaryButton.swift in Sources */,
 				8EC607502688AFD1006ED3C1 /* SignInPage.swift in Sources */,
 				8E260FE726C2F44900715524 /* ExpandedFrame.swift in Sources */,
@@ -939,15 +1014,18 @@
 				8EC6074E2688AFD1006ED3C1 /* Brain3kApp.swift in Sources */,
 				8EBC05302699D25D008B2478 /* Publisher+MapToEmptyResult.swift in Sources */,
 				8EA4D27D26938D1000C0A037 /* TextFieldStyle.swift in Sources */,
+				8E5D7D0826CC4D43009024A0 /* StorageService.swift in Sources */,
 				8E92A7D626A0B59F00BAED7F /* AccountService.swift in Sources */,
 				8EBC053D269A0A8A008B2478 /* MemoryPage.swift in Sources */,
 				8E79C140269786F9002D2A8B /* MessageState.swift in Sources */,
 				8EBC0536269A0585008B2478 /* ProfilePage.swift in Sources */,
 				8EBC05212699C55C008B2478 /* Background.swift in Sources */,
+				8E5D7D1326CC50D9009024A0 /* StorageAction.swift in Sources */,
 				8E79C14626978828002D2A8B /* MessageReducer.swift in Sources */,
 				8E776FF126A2311200D97F52 /* SendVerificationEmail.swift in Sources */,
 				8EC4BACC26BDD40D00F20EAE /* Color+Asset.swift in Sources */,
 				8E50D86C26BB30280075C08C /* ProcessingCell.swift in Sources */,
+				8EDC011126D029D300D2064A /* URLMemoryCellConnector.swift in Sources */,
 				8E79C13C269619C0002D2A8B /* SignInWithAppleButton.swift in Sources */,
 				8EC6077B2688BB5B006ED3C1 /* MemoriesAction.swift in Sources */,
 				8E8835BC26B0928E00EE0234 /* Validation+URL.swift in Sources */,
@@ -968,6 +1046,7 @@
 				8EEF35DB268CE9F40068DB58 /* HomePage.swift in Sources */,
 				8E8835B926B08DCF00EE0234 /* AddMemoryPage.swift in Sources */,
 				8E6821BA26A9E6F200B2DACB /* URLMemoryCell.swift in Sources */,
+				8E5D7D1626CC523D009024A0 /* GetDownloadURL.swift in Sources */,
 				8EBC051E2699C10C008B2478 /* UnverifiedEmailPage.swift in Sources */,
 				8EBC05242699C926008B2478 /* MaterialBackground.swift in Sources */,
 				8EC607782688BB3E006ED3C1 /* MemoriesReducer.swift in Sources */,
@@ -984,9 +1063,11 @@
 				8EA4D28226939DE100C0A037 /* EmailTextField.swift in Sources */,
 				8E92A7E826A0D04100BAED7F /* SignIn.swift in Sources */,
 				8EBC051C2699C065008B2478 /* AnyPublisher+Empty.swift in Sources */,
+				8E5D7D0D26CC4FB8009024A0 /* StorageState.swift in Sources */,
 				8EBC0544269A1B76008B2478 /* String+Trim.swift in Sources */,
 				8EC6076B2688B952006ED3C1 /* AppState.swift in Sources */,
 				8E77700726A32D5600D97F52 /* Future+MapError.swift in Sources */,
+				8E5D7D1126CC504E009024A0 /* StorageReducer.swift in Sources */,
 				8EA4D28526939E6400C0A037 /* PasswordTextField.swift in Sources */,
 				8EAAD9EC26C5A525007C2973 /* WatchAll.swift in Sources */,
 				8EEDD78B268BC05D00F670D2 /* AccountState.swift in Sources */,
@@ -997,6 +1078,7 @@
 				8EEF35E2268CED570068DB58 /* AccountStatus.swift in Sources */,
 				8EC6076F2688B993006ED3C1 /* StateType.swift in Sources */,
 				8EC4BAD926BDD7E000F20EAE /* StringsGen.swift in Sources */,
+				8EDC011D26D03E9600D2064A /* CompletionHandler.swift in Sources */,
 				8EBC0541269A0B8D008B2478 /* SecondaryButton.swift in Sources */,
 				8EC607512688AFD1006ED3C1 /* SignInPage.swift in Sources */,
 				8E260FE826C2F44900715524 /* ExpandedFrame.swift in Sources */,
@@ -1005,15 +1087,18 @@
 				8EC6074F2688AFD1006ED3C1 /* Brain3kApp.swift in Sources */,
 				8EBC05312699D25D008B2478 /* Publisher+MapToEmptyResult.swift in Sources */,
 				8EA4D27E26938D1100C0A037 /* TextFieldStyle.swift in Sources */,
+				8E5D7D0926CC4D43009024A0 /* StorageService.swift in Sources */,
 				8E92A7D726A0B59F00BAED7F /* AccountService.swift in Sources */,
 				8EBC053E269A0A8A008B2478 /* MemoryPage.swift in Sources */,
 				8E79C141269786F9002D2A8B /* MessageState.swift in Sources */,
 				8EBC0537269A0586008B2478 /* ProfilePage.swift in Sources */,
 				8EBC05222699C55C008B2478 /* Background.swift in Sources */,
+				8E5D7D1426CC50D9009024A0 /* StorageAction.swift in Sources */,
 				8E79C14726978828002D2A8B /* MessageReducer.swift in Sources */,
 				8E776FF226A2311200D97F52 /* SendVerificationEmail.swift in Sources */,
 				8EC4BACD26BDD40D00F20EAE /* Color+Asset.swift in Sources */,
 				8E50D86D26BB30280075C08C /* ProcessingCell.swift in Sources */,
+				8EDC011226D029D300D2064A /* URLMemoryCellConnector.swift in Sources */,
 				8E79C13D269619C0002D2A8B /* SignInWithAppleButton.swift in Sources */,
 				8EC6077C2688BB5B006ED3C1 /* MemoriesAction.swift in Sources */,
 				8E8835BD26B0928E00EE0234 /* Validation+URL.swift in Sources */,
@@ -1034,6 +1119,7 @@
 				8EEF35DC268CE9F40068DB58 /* HomePage.swift in Sources */,
 				8E8835BA26B08DCF00EE0234 /* AddMemoryPage.swift in Sources */,
 				8E6821BB26A9E6F200B2DACB /* URLMemoryCell.swift in Sources */,
+				8E5D7D1726CC523D009024A0 /* GetDownloadURL.swift in Sources */,
 				8EBC051F2699C10C008B2478 /* UnverifiedEmailPage.swift in Sources */,
 				8EBC05252699C926008B2478 /* MaterialBackground.swift in Sources */,
 				8EC607792688BB3E006ED3C1 /* MemoriesReducer.swift in Sources */,
