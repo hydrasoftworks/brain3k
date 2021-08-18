@@ -27,9 +27,15 @@ struct Brain3kApp: App {
 
     var body: some Scene {
         WindowGroup {
-            SplashPage()
-                .provideStore(store)
+            if !runningTests {
+                SplashPage()
+                    .provideStore(store)
+            }
         }
+    }
+
+    private var runningTests: Bool {
+        ProcessInfo.processInfo.environment["XCInjectBundleInto"] != nil
     }
 
     private func initSwiftyBeaver() {

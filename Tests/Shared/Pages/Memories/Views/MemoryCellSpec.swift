@@ -5,17 +5,19 @@
 @testable import Brain3k
 import Nimble
 import Quick
+import SwiftDux
 import SwiftUI
 import ViewInspector
 
 extension ProcessingCell: Inspectable {}
 extension MemoryCell: Inspectable {}
+extension URLMemoryCellConnector: Inspectable {}
 
 final class MemoryCellSpec: QuickSpec {
     override func spec() {
         describe("\(MemoryCellSpec.self)") {
             context("unprocessed cell") {
-                it("Should return URLMemoryCell for memory type url") {
+                it("Should return ProcessingCell for memory type url") {
                     let sut = MemoryCell(
                         memory: Memory.test(
                             type: .url,
@@ -29,11 +31,11 @@ final class MemoryCellSpec: QuickSpec {
             }
 
             context("processed cell") {
-                it("Should return URLMemoryCell for memory type url") {
+                it("Should return URLMemoryCellConnector for memory type url") {
                     let sut = MemoryCell(
                         memory: Memory.test(type: .url, value: "https://example.com")
                     )
-                    let view = try sut.inspect().find(URLMemoryCell.self)
+                    let view = try sut.inspect().find(URLMemoryCellConnector.self)
                     expect(view).toNot(beNil())
                 }
             }

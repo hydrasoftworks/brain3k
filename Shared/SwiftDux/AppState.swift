@@ -9,14 +9,17 @@ struct AppState: StateType {
     let messageState: MessageState
     let accountState: AccountState
     let memoriesState: [Memory]
+    let storageState: StorageState
 
     init(
         messageState: MessageState = MessageState(),
         accountState: AccountState = AccountState(),
-        memoriesState: [Memory] = []
+        memoriesState: [Memory] = [],
+        storageState: StorageState = StorageState()
     ) {
         self.messageState = messageState
         self.accountState = accountState
         self.memoriesState = memoriesState
+        self.storageState = storageState
     }
 }

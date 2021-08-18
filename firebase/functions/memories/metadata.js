@@ -1,4 +1,5 @@
 const functions = require("firebase-functions");
+const admin = require("firebase-admin");
 const { MEMORY_TYPE } = require("../models/memoryType");
 
 exports.metadata = functions
@@ -21,7 +22,11 @@ exports.metadata = functions
         break;
     }
 
-    await after.ref.update({ ...data, processed: true });
+    await after.ref.update({
+      ...data,
+      updatedAt: admin.firestore.FieldValue.serverTimestamp(),
+      processed: true,
+    });
   });
 
 async function readMetadataForURL(url) {
@@ -30,10 +35,12 @@ async function readMetadataForURL(url) {
   const response = await ogs({ url });
   const result = response.result;
   if (result.success !== true) return {};
-  return {
-    title: result.ogTitle,
-    description: result.ogDescription,
-    thumbnail: result.ogImage.url,
-    additionalInfo: result,
-  };
+  return JSON.parse(
+    JSON.stringify({
+      title: result.ogTitle,
+      description: result.ogDescription,
+      thumbnail: result.ogImage.url,
+      additionalInfo: result,
+    }),
+  );
 }

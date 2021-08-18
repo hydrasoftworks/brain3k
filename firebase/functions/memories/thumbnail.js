@@ -1,4 +1,5 @@
 const functions = require("firebase-functions");
+const admin = require("firebase-admin");
 const { MEMORY_TYPE } = require("../models/memoryType");
 
 exports.thumbnail = functions
@@ -20,7 +21,10 @@ exports.thumbnail = functions
         break;
     }
 
-    await after.ref.update(data);
+    await after.ref.update({
+      ...data,
+      updatedAt: admin.firestore.FieldValue.serverTimestamp(),
+    });
   });
 
 async function makeThumbnailForURL(ref, url) {
@@ -48,6 +52,6 @@ async function makeThumbnailForURL(ref, url) {
   await file.save(result);
 
   return {
-    thumbnail: "gs://" + path,
+    thumbnail: "gs://" + admin.app().options.storageBucket + "/" + path,
   };
 }
