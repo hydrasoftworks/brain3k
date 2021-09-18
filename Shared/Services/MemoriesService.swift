@@ -5,6 +5,7 @@
 import Combine
 import FirebaseFirestore
 import FirebaseFirestoreSwift
+import Fuse
 
 class MemoriesService {
     func watchAll(for accountId: String) -> AnyPublisher<[Memory], AppError> {
@@ -46,6 +47,19 @@ class MemoriesService {
         }
         .eraseToAnyPublisher()
         .mapToAppError()
+    }
+
+    func search(for query: String, in memories: [Memory]) -> AnyPublisher<[Memory], AppError> {
+        AnyPublisher<[Memory], AppError>.create { observer in
+            let fuse = Fuse(threshold: 0.3, tokenize: true)
+            fuse.search(query, in: memories) { results in
+                let filtered = results.map { memories[$0.index] }
+                observer.onNext(filtered)
+                observer.onComplete()
+            }
+
+            return Disposable {}
+        }
     }
 
     private func collection(of accountId: String) -> CollectionReference {

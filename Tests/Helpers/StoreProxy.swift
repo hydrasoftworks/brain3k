@@ -13,10 +13,11 @@ func storeProxy(_ state: AppState = AppState()) -> StoreProxy<AppState> {
 }
 
 func storeProxy(
+    state: AppState = AppState(),
     send: @escaping SendAction,
     sendAsCancellable: @escaping SendCancellableAction = { _ in AnyCancellable {} }
 ) -> StoreProxy<AppState> {
-    Store<AppState>(state: AppState(), reducer: AppReducer())
+    Store<AppState>(state: state, reducer: AppReducer())
         .proxy(
             dispatcher: ActionDispatcherProxy(
                 send: send,

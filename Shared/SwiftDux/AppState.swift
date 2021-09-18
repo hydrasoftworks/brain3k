@@ -8,13 +8,13 @@ import SwiftDux
 struct AppState: StateType {
     let messageState: MessageState
     let accountState: AccountState
-    let memoriesState: [Memory]
+    let memoriesState: MemoriesState
     let storageState: StorageState
 
     init(
         messageState: MessageState = MessageState(),
         accountState: AccountState = AccountState(),
-        memoriesState: [Memory] = [],
+        memoriesState: MemoriesState = MemoriesState(),
         storageState: StorageState = StorageState()
     ) {
         self.messageState = messageState
