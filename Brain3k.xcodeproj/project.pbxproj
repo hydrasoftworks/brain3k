@@ -94,6 +94,14 @@
 		8E92A7E826A0D04100BAED7F /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E92A7E626A0D04100BAED7F /* SignIn.swift */; };
 		8E92A7EA26A0D27A00BAED7F /* SignInSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E92A7E926A0D27A00BAED7F /* SignInSpec.swift */; };
 		8E92A7EC26A0D4D300BAED7F /* CombineResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E92A7EB26A0D4D300BAED7F /* CombineResult.swift */; };
+		8E9EEBA326F280C400106FCD /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9EEBA226F280C400106FCD /* Search.swift */; };
+		8E9EEBA426F280C400106FCD /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9EEBA226F280C400106FCD /* Search.swift */; };
+		8E9EEBA626F2813600106FCD /* MemoriesState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9EEBA526F2813600106FCD /* MemoriesState.swift */; };
+		8E9EEBA726F2813600106FCD /* MemoriesState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9EEBA526F2813600106FCD /* MemoriesState.swift */; };
+		8E9EEBA926F2830700106FCD /* MemoriesStateSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9EEBA826F2830700106FCD /* MemoriesStateSpec.swift */; };
+		8E9EEBAC26F2888A00106FCD /* Fuse in Frameworks */ = {isa = PBXBuildFile; productRef = 8E9EEBAB26F2888A00106FCD /* Fuse */; };
+		8E9EEBAE26F2889500106FCD /* Fuse in Frameworks */ = {isa = PBXBuildFile; productRef = 8E9EEBAD26F2889500106FCD /* Fuse */; };
+		8E9EEBB026F2905B00106FCD /* SearchSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9EEBAF26F2905B00106FCD /* SearchSpec.swift */; };
 		8EA1006826AC564F007AFAA9 /* MemoryCellSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA1006726AC564F007AFAA9 /* MemoryCellSpec.swift */; };
 		8EA1006A26AC572D007AFAA9 /* URLMemoryCellSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA1006926AC572D007AFAA9 /* URLMemoryCellSpec.swift */; };
 		8EA1006C26ADB348007AFAA9 /* CreateURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA1006B26ADB348007AFAA9 /* CreateURL.swift */; };
@@ -254,6 +262,10 @@
 		8E92A7E626A0D04100BAED7F /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
 		8E92A7E926A0D27A00BAED7F /* SignInSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInSpec.swift; sourceTree = "<group>"; };
 		8E92A7EB26A0D4D300BAED7F /* CombineResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineResult.swift; sourceTree = "<group>"; };
+		8E9EEBA226F280C400106FCD /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
+		8E9EEBA526F2813600106FCD /* MemoriesState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoriesState.swift; sourceTree = "<group>"; };
+		8E9EEBA826F2830700106FCD /* MemoriesStateSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoriesStateSpec.swift; sourceTree = "<group>"; };
+		8E9EEBAF26F2905B00106FCD /* SearchSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSpec.swift; sourceTree = "<group>"; };
 		8EA1006726AC564F007AFAA9 /* MemoryCellSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryCellSpec.swift; sourceTree = "<group>"; };
 		8EA1006926AC572D007AFAA9 /* URLMemoryCellSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLMemoryCellSpec.swift; sourceTree = "<group>"; };
 		8EA1006B26ADB348007AFAA9 /* CreateURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateURL.swift; sourceTree = "<group>"; };
@@ -335,6 +347,7 @@
 				8EF9352A26AC1B7300176AF4 /* FirebaseFirestoreSwift-Beta in Frameworks */,
 				8E79C14D269791EA002D2A8B /* ValidatedPropertyKit in Frameworks */,
 				8E50D87026BB33E30075C08C /* IrregularGradient in Frameworks */,
+				8E9EEBAC26F2888A00106FCD /* Fuse in Frameworks */,
 				8EF9352C26AC1B7300176AF4 /* FirebaseStorageSwift-Beta in Frameworks */,
 				8EC607862688BED5006ED3C1 /* SwiftyBeaver in Frameworks */,
 			);
@@ -350,6 +363,7 @@
 				8EC607882688BEE0006ED3C1 /* SwiftDux in Frameworks */,
 				8E3C0D7D26B9E26500EB82E8 /* FirebaseStorageSwift-Beta in Frameworks */,
 				8E50D87226BB33EF0075C08C /* IrregularGradient in Frameworks */,
+				8E9EEBAE26F2889500106FCD /* Fuse in Frameworks */,
 				8E79C14F269791F4002D2A8B /* ValidatedPropertyKit in Frameworks */,
 				8EC6078A2688BEE4006ED3C1 /* SwiftyBeaver in Frameworks */,
 			);
@@ -453,6 +467,7 @@
 				8EAAD9EA26C5A525007C2973 /* WatchAll.swift */,
 				8E776FF826A3257B00D97F52 /* GetAll.swift */,
 				8EA1006B26ADB348007AFAA9 /* CreateURL.swift */,
+				8E9EEBA226F280C400106FCD /* Search.swift */,
 			);
 			path = Actions;
 			sourceTree = "<group>";
@@ -462,6 +477,7 @@
 			children = (
 				8E776FFF26A3282000D97F52 /* Actions */,
 				8E77700A26A349B300D97F52 /* MemoriesReducerSpec.swift */,
+				8E9EEBA826F2830700106FCD /* MemoriesStateSpec.swift */,
 			);
 			path = Memories;
 			sourceTree = "<group>";
@@ -472,6 +488,7 @@
 				8EAAD9ED26C5A95D007C2973 /* WatchAllSpec.swift */,
 				8E77700026A3283A00D97F52 /* GetAllSpec.swift */,
 				8EA1006E26ADBDE6007AFAA9 /* CreateURLSpec.swift */,
+				8E9EEBAF26F2905B00106FCD /* SearchSpec.swift */,
 			);
 			path = Actions;
 			sourceTree = "<group>";
@@ -703,6 +720,7 @@
 			isa = PBXGroup;
 			children = (
 				8E776FF726A3253B00D97F52 /* Actions */,
+				8E9EEBA526F2813600106FCD /* MemoriesState.swift */,
 				8EC607772688BB3E006ED3C1 /* MemoriesReducer.swift */,
 				8EC6077A2688BB5B006ED3C1 /* MemoriesAction.swift */,
 			);
@@ -829,6 +847,7 @@
 				8EF9352926AC1B7300176AF4 /* FirebaseFirestoreSwift-Beta */,
 				8EF9352B26AC1B7300176AF4 /* FirebaseStorageSwift-Beta */,
 				8E50D86F26BB33E30075C08C /* IrregularGradient */,
+				8E9EEBAB26F2888A00106FCD /* Fuse */,
 			);
 			productName = "Brain3k (iOS)";
 			productReference = 8EC607472688AFD1006ED3C1 /* Brain3k.app */;
@@ -856,6 +875,7 @@
 				8E3C0D7A26B9E25500EB82E8 /* FirebaseFirestoreSwift-Beta */,
 				8E3C0D7C26B9E26500EB82E8 /* FirebaseStorageSwift-Beta */,
 				8E50D87126BB33EF0075C08C /* IrregularGradient */,
+				8E9EEBAD26F2889500106FCD /* Fuse */,
 			);
 			productName = "Brain3k (macOS)";
 			productReference = 8EC6074D2688AFD1006ED3C1 /* Brain3k.app */;
@@ -903,6 +923,7 @@
 				8EF9352626AC1B7300176AF4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				8EF9353A26AC464200176AF4 /* XCRemoteSwiftPackageReference "ViewInspector" */,
 				8E50D86E26BB33E20075C08C /* XCRemoteSwiftPackageReference "IrregularGradient" */,
+				8E9EEBAA26F2888A00106FCD /* XCRemoteSwiftPackageReference "fuse-swift" */,
 			);
 			productRefGroup = 8EC607482688AFD1006ED3C1 /* Products */;
 			projectDirPath = "";
@@ -953,6 +974,7 @@
 				8EF9353F26AC46ED00176AF4 /* PlaceholderViewSpec.swift in Sources */,
 				8EDC011A26D036EA00D2064A /* StorageStateSpec.swift in Sources */,
 				8E50D87526BB40320075C08C /* MemorySpec.swift in Sources */,
+				8E9EEBB026F2905B00106FCD /* SearchSpec.swift in Sources */,
 				8EA1006826AC564F007AFAA9 /* MemoryCellSpec.swift in Sources */,
 				8EA1006F26ADBDE6007AFAA9 /* CreateURLSpec.swift in Sources */,
 				8E3810EE269CD59300ED3851 /* MessageStateSpec.swift in Sources */,
@@ -975,6 +997,7 @@
 				8E77700B26A349B300D97F52 /* MemoriesReducerSpec.swift in Sources */,
 				8E889CF326A22DE200F7C47C /* SignOutSpec.swift in Sources */,
 				8E92A7EC26A0D4D300BAED7F /* CombineResult.swift in Sources */,
+				8E9EEBA926F2830700106FCD /* MemoriesStateSpec.swift in Sources */,
 				8E3810EC269CD00700ED3851 /* MessageReducerSpec.swift in Sources */,
 				8EA1006A26AC572D007AFAA9 /* URLMemoryCellSpec.swift in Sources */,
 				8E776FF626A236F600D97F52 /* SendVerificationEmailSpec.swift in Sources */,
@@ -987,6 +1010,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E776FF926A3257B00D97F52 /* GetAll.swift in Sources */,
+				8E9EEBA326F280C400106FCD /* Search.swift in Sources */,
 				8EA4D28126939DE100C0A037 /* EmailTextField.swift in Sources */,
 				8E92A7E726A0D04100BAED7F /* SignIn.swift in Sources */,
 				8EBC051B2699C065008B2478 /* AnyPublisher+Empty.swift in Sources */,
@@ -1009,6 +1033,7 @@
 				8EBC0540269A0B8D008B2478 /* SecondaryButton.swift in Sources */,
 				8EC607502688AFD1006ED3C1 /* SignInPage.swift in Sources */,
 				8E260FE726C2F44900715524 /* ExpandedFrame.swift in Sources */,
+				8E9EEBA626F2813600106FCD /* MemoriesState.swift in Sources */,
 				8E79C139269618BE002D2A8B /* JoinPage.swift in Sources */,
 				8EBC052D2699CB52008B2478 /* PrimaryButton.swift in Sources */,
 				8EC6074E2688AFD1006ED3C1 /* Brain3kApp.swift in Sources */,
@@ -1060,6 +1085,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E776FFA26A3257B00D97F52 /* GetAll.swift in Sources */,
+				8E9EEBA426F280C400106FCD /* Search.swift in Sources */,
 				8EA4D28226939DE100C0A037 /* EmailTextField.swift in Sources */,
 				8E92A7E826A0D04100BAED7F /* SignIn.swift in Sources */,
 				8EBC051C2699C065008B2478 /* AnyPublisher+Empty.swift in Sources */,
@@ -1082,6 +1108,7 @@
 				8EBC0541269A0B8D008B2478 /* SecondaryButton.swift in Sources */,
 				8EC607512688AFD1006ED3C1 /* SignInPage.swift in Sources */,
 				8E260FE826C2F44900715524 /* ExpandedFrame.swift in Sources */,
+				8E9EEBA726F2813600106FCD /* MemoriesState.swift in Sources */,
 				8E79C13A269618BE002D2A8B /* JoinPage.swift in Sources */,
 				8EBC052E2699CB52008B2478 /* PrimaryButton.swift in Sources */,
 				8EC6074F2688AFD1006ED3C1 /* Brain3kApp.swift in Sources */,
@@ -1548,6 +1575,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		8E9EEBAA26F2888A00106FCD /* XCRemoteSwiftPackageReference "fuse-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/krisk/fuse-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		8EC607652688B86B006ED3C1 /* XCRemoteSwiftPackageReference "SwiftDux" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/StevenLambion/SwiftDux";
@@ -1642,6 +1677,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8E92A7D126A0B31600BAED7F /* XCRemoteSwiftPackageReference "Cuckoo" */;
 			productName = Cuckoo;
+		};
+		8E9EEBAB26F2888A00106FCD /* Fuse */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8E9EEBAA26F2888A00106FCD /* XCRemoteSwiftPackageReference "fuse-swift" */;
+			productName = Fuse;
+		};
+		8E9EEBAD26F2889500106FCD /* Fuse */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8E9EEBAA26F2888A00106FCD /* XCRemoteSwiftPackageReference "fuse-swift" */;
+			productName = Fuse;
 		};
 		8EC607662688B86B006ED3C1 /* SwiftDux */ = {
 			isa = XCSwiftPackageProductDependency;

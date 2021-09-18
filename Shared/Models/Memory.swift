@@ -4,6 +4,7 @@
 
 import FirebaseFirestoreSwift
 import Foundation
+import Fuse
 
 enum MemoryType: String, Codable {
     case url, image
@@ -53,6 +54,18 @@ struct Memory: Identifiable, Codable, Equatable {
         self.description = description
         self.tags = tags
         self.processed = processed
+    }
+}
+
+extension Memory: Fuseable {
+    var properties: [FuseProperty] {
+        [
+            FuseProperty(name: title ?? "", weight: 0.2),
+            FuseProperty(name: description ?? "", weight: 0.2),
+            FuseProperty(name: notes ?? "", weight: 0.2),
+            FuseProperty(name: value, weight: 0.1),
+            FuseProperty(name: tags?.joined(separator: " ") ?? "", weight: 0.3),
+        ]
     }
 }
 

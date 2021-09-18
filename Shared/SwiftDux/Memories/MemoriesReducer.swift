@@ -6,12 +6,18 @@ import SwiftDux
 
 final class MemoriesReducer: Reducer {
     func reduce(
-        state _: [Memory],
+        state: MemoriesState,
         action: MemoriesAction
-    ) -> [Memory] {
+    ) -> MemoriesState {
         switch action {
         case let .set(memories):
-            return memories
+            return state.copyWith(all: memories)
+        case let .setSearchQuery(query):
+            return state.copyWith(searchQuery: query)
+        case let .setFiltered(memories):
+            return state.copyWith(filtered: memories)
+        case .clearFiltered:
+            return state.copyWithNil(filtered: true)
         }
     }
 }

@@ -8,11 +8,15 @@ import SwiftUI
 struct MemoriesPage: ConnectableView {
     @Environment(\.actionDispatcher) private var dispatch
 
-    @SwiftUI.State private var searchQuery: String = ""
     @SwiftUI.State private var isAddMemoryPresented: Bool = false
 
-    func map(state: AppState) -> ViewModel? {
-        ViewModel(memories: state.memoriesState)
+    func map(state: AppState, binder: ActionBinder) -> ViewModel? {
+        ViewModel(
+            memories: state.memoriesState.filtered ?? state.memoriesState.all,
+            searchQuery: binder.bind(state.memoriesState.searchQuery) {
+                MemoriesAction.search(for: $0)
+            }
+        )
     }
 
     func body(props viewModel: ViewModel) -> some View {
@@ -28,7 +32,7 @@ struct MemoriesPage: ConnectableView {
         }
         .padding(.horizontal)
         .refreshable { dispatch.send(MemoriesAction.getAll()) }
-        .searchable(text: $searchQuery)
+        .searchable(text: viewModel.$searchQuery)
         .navigationTitle(L10n.MemoriesPage.title)
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
@@ -45,6 +49,7 @@ struct MemoriesPage: ConnectableView {
 
     struct ViewModel: Equatable {
         let memories: [Memory]
+        @ActionBinding var searchQuery: String
     }
 }
 
