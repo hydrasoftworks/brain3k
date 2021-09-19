@@ -29,8 +29,8 @@ struct MemoriesPage: ConnectableView {
                     MemoryCell(memory: memory)
                 }
             }
+            .padding(.horizontal)
         }
-        .padding(.horizontal)
         .refreshable { dispatch.send(MemoriesAction.getAll()) }
         .searchable(text: viewModel.$searchQuery)
         .navigationTitle(L10n.MemoriesPage.title)

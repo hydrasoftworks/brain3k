@@ -170,6 +170,30 @@
 		8EC607862688BED5006ED3C1 /* SwiftyBeaver in Frameworks */ = {isa = PBXBuildFile; productRef = 8EC607852688BED5006ED3C1 /* SwiftyBeaver */; };
 		8EC607882688BEE0006ED3C1 /* SwiftDux in Frameworks */ = {isa = PBXBuildFile; productRef = 8EC607872688BEE0006ED3C1 /* SwiftDux */; };
 		8EC6078A2688BEE4006ED3C1 /* SwiftyBeaver in Frameworks */ = {isa = PBXBuildFile; productRef = 8EC607892688BEE4006ED3C1 /* SwiftyBeaver */; };
+		8ED381F026F74FE50003D4F3 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED381EF26F74FE50003D4F3 /* ShareViewController.swift */; };
+		8ED381F326F74FE50003D4F3 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8ED381F126F74FE50003D4F3 /* MainInterface.storyboard */; };
+		8ED381F726F74FE50003D4F3 /* ShareExtension (iOS).appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8ED381ED26F74FE50003D4F3 /* ShareExtension (iOS).appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8ED381FB26F75CB00003D4F3 /* AccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E92A7D526A0B59F00BAED7F /* AccountService.swift */; };
+		8ED381FC26F75CB90003D4F3 /* MemoriesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E776FFB26A326C400D97F52 /* MemoriesService.swift */; };
+		8ED381FE26F75CE60003D4F3 /* SwiftDux in Frameworks */ = {isa = PBXBuildFile; productRef = 8ED381FD26F75CE60003D4F3 /* SwiftDux */; };
+		8ED3820026F75CE60003D4F3 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 8ED381FF26F75CE60003D4F3 /* FirebaseAuth */; };
+		8ED3820226F75CE60003D4F3 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 8ED3820126F75CE60003D4F3 /* FirebaseFirestore */; };
+		8ED3820426F75CE60003D4F3 /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 8ED3820326F75CE60003D4F3 /* FirebaseFirestoreSwift-Beta */; };
+		8ED3820526F75CFA0003D4F3 /* Memory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC607742688BAD4006ED3C1 /* Memory.swift */; };
+		8ED3820626F75CFD0003D4F3 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEDD792268BCD9200F670D2 /* Account.swift */; };
+		8ED3820726F75D010003D4F3 /* AccountStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEF35E0268CED570068DB58 /* AccountStatus.swift */; };
+		8ED3820826F75D070003D4F3 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E77700226A32C6B00D97F52 /* AppError.swift */; };
+		8ED3820926F75D200003D4F3 /* AnyPublisher+Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAAD9E726C5A3F1007C2973 /* AnyPublisher+Create.swift */; };
+		8ED3820A26F75D2B0003D4F3 /* Future+MapError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E77700526A32D5600D97F52 /* Future+MapError.swift */; };
+		8ED3820B26F75D400003D4F3 /* CompletionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDC011B26D03E9600D2064A /* CompletionHandler.swift */; };
+		8ED3820D26F75D5F0003D4F3 /* Fuse in Frameworks */ = {isa = PBXBuildFile; productRef = 8ED3820C26F75D5F0003D4F3 /* Fuse */; };
+		8ED3820E26F760AA0003D4F3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8EF9353726AC448300176AF4 /* GoogleService-Info.plist */; };
+		8ED3821026F764D10003D4F3 /* SwiftyBeaver in Frameworks */ = {isa = PBXBuildFile; productRef = 8ED3820F26F764D10003D4F3 /* SwiftyBeaver */; };
+		8ED3821326F767CB0003D4F3 /* LibrariesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED3821226F767CB0003D4F3 /* LibrariesService.swift */; };
+		8ED3821426F767CB0003D4F3 /* LibrariesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED3821226F767CB0003D4F3 /* LibrariesService.swift */; };
+		8ED3821526F767CB0003D4F3 /* LibrariesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED3821226F767CB0003D4F3 /* LibrariesService.swift */; };
+		8ED3821626F76CCE0003D4F3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8EC4BAD326BDD79F00F20EAE /* Localizable.strings */; };
+		8ED3821726F76CD40003D4F3 /* StringsGen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC4BAD726BDD7E000F20EAE /* StringsGen.swift */; };
 		8EDC011126D029D300D2064A /* URLMemoryCellConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDC011026D029D300D2064A /* URLMemoryCellConnector.swift */; };
 		8EDC011226D029D300D2064A /* URLMemoryCellConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDC011026D029D300D2064A /* URLMemoryCellConnector.swift */; };
 		8EDC011626D02F6600D2064A /* GetDownloadURLSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDC011526D02F6600D2064A /* GetDownloadURLSpec.swift */; };
@@ -212,7 +236,28 @@
 			remoteGlobalIDString = 8EC607462688AFD1006ED3C1;
 			remoteInfo = "Brain3k (iOS)";
 		};
+		8ED381F526F74FE50003D4F3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8EC6073B2688AFCF006ED3C1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8ED381EC26F74FE50003D4F3;
+			remoteInfo = "ShareExtension-iOS";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8ED381D326F74B5E0003D4F3 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				8ED381F726F74FE50003D4F3 /* ShareExtension (iOS).appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		8E260FE626C2F44900715524 /* ExpandedFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandedFrame.swift; sourceTree = "<group>"; };
@@ -305,6 +350,12 @@
 		8EC6077A2688BB5B006ED3C1 /* MemoriesAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoriesAction.swift; sourceTree = "<group>"; };
 		8EC607812688BD92006ED3C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8EC6078C268A7ED9006ED3C1 /* Brain3k.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Brain3k.entitlements; sourceTree = "<group>"; };
+		8ED381ED26F74FE50003D4F3 /* ShareExtension (iOS).appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "ShareExtension (iOS).appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8ED381EF26F74FE50003D4F3 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		8ED381F226F74FE50003D4F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		8ED381F426F74FE50003D4F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8ED3821126F765E50003D4F3 /* ShareExtension (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "ShareExtension (iOS).entitlements"; sourceTree = "<group>"; };
+		8ED3821226F767CB0003D4F3 /* LibrariesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibrariesService.swift; sourceTree = "<group>"; };
 		8EDC011026D029D300D2064A /* URLMemoryCellConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLMemoryCellConnector.swift; sourceTree = "<group>"; };
 		8EDC011526D02F6600D2064A /* GetDownloadURLSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDownloadURLSpec.swift; sourceTree = "<group>"; };
 		8EDC011726D0359400D2064A /* StorageReducerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageReducerSpec.swift; sourceTree = "<group>"; };
@@ -366,6 +417,19 @@
 				8E9EEBAE26F2889500106FCD /* Fuse in Frameworks */,
 				8E79C14F269791F4002D2A8B /* ValidatedPropertyKit in Frameworks */,
 				8EC6078A2688BEE4006ED3C1 /* SwiftyBeaver in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8ED381EA26F74FE50003D4F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8ED381FE26F75CE60003D4F3 /* SwiftDux in Frameworks */,
+				8ED3820426F75CE60003D4F3 /* FirebaseFirestoreSwift-Beta in Frameworks */,
+				8ED3820026F75CE60003D4F3 /* FirebaseAuth in Frameworks */,
+				8ED3820D26F75D5F0003D4F3 /* Fuse in Frameworks */,
+				8ED3820226F75CE60003D4F3 /* FirebaseFirestore in Frameworks */,
+				8ED3821026F764D10003D4F3 /* SwiftyBeaver in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -533,6 +597,7 @@
 				8E776FFB26A326C400D97F52 /* MemoriesService.swift */,
 				8E5D7D0726CC4D43009024A0 /* StorageService.swift */,
 				8EDC011B26D03E9600D2064A /* CompletionHandler.swift */,
+				8ED3821226F767CB0003D4F3 /* LibrariesService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -648,6 +713,7 @@
 				8EC4BAD326BDD79F00F20EAE /* Localizable.strings */,
 				8EC6073F2688AFCF006ED3C1 /* Shared */,
 				8EC607822688BD9A006ED3C1 /* iOS */,
+				8ED381EE26F74FE50003D4F3 /* ShareExtension iOS */,
 				8E3810DA269CCDC800ED3851 /* Tests */,
 				8EC607482688AFD1006ED3C1 /* Products */,
 				8EC607622688B6C2006ED3C1 /* Frameworks */,
@@ -679,6 +745,7 @@
 				8EC607472688AFD1006ED3C1 /* Brain3k.app */,
 				8EC6074D2688AFD1006ED3C1 /* Brain3k.app */,
 				8E3810D9269CCDC800ED3851 /* Tests.xctest */,
+				8ED381ED26F74FE50003D4F3 /* ShareExtension (iOS).appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -759,6 +826,17 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		8ED381EE26F74FE50003D4F3 /* ShareExtension iOS */ = {
+			isa = PBXGroup;
+			children = (
+				8ED3821126F765E50003D4F3 /* ShareExtension (iOS).entitlements */,
+				8ED381F426F74FE50003D4F3 /* Info.plist */,
+				8ED381EF26F74FE50003D4F3 /* ShareViewController.swift */,
+				8ED381F126F74FE50003D4F3 /* MainInterface.storyboard */,
+			);
+			path = "ShareExtension iOS";
+			sourceTree = "<group>";
+		};
 		8EDC011326D02F2E00D2064A /* Storage */ = {
 			isa = PBXGroup;
 			children = (
@@ -832,10 +910,12 @@
 				8EC607432688AFD1006ED3C1 /* Sources */,
 				8EC607442688AFD1006ED3C1 /* Frameworks */,
 				8EC607452688AFD1006ED3C1 /* Resources */,
+				8ED381D326F74B5E0003D4F3 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				8ED381F626F74FE50003D4F3 /* PBXTargetDependency */,
 			);
 			name = "Brain3k (iOS)";
 			packageProductDependencies = (
@@ -881,6 +961,31 @@
 			productReference = 8EC6074D2688AFD1006ED3C1 /* Brain3k.app */;
 			productType = "com.apple.product-type.application";
 		};
+		8ED381EC26F74FE50003D4F3 /* ShareExtension (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8ED381F826F74FE50003D4F3 /* Build configuration list for PBXNativeTarget "ShareExtension (iOS)" */;
+			buildPhases = (
+				8ED381E926F74FE50003D4F3 /* Sources */,
+				8ED381EA26F74FE50003D4F3 /* Frameworks */,
+				8ED381EB26F74FE50003D4F3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ShareExtension (iOS)";
+			packageProductDependencies = (
+				8ED381FD26F75CE60003D4F3 /* SwiftDux */,
+				8ED381FF26F75CE60003D4F3 /* FirebaseAuth */,
+				8ED3820126F75CE60003D4F3 /* FirebaseFirestore */,
+				8ED3820326F75CE60003D4F3 /* FirebaseFirestoreSwift-Beta */,
+				8ED3820C26F75D5F0003D4F3 /* Fuse */,
+				8ED3820F26F764D10003D4F3 /* SwiftyBeaver */,
+			);
+			productName = "ShareExtension-iOS";
+			productReference = 8ED381ED26F74FE50003D4F3 /* ShareExtension (iOS).appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -899,6 +1004,9 @@
 						CreatedOnToolsVersion = 13.0;
 					};
 					8EC6074C2688AFD1006ED3C1 = {
+						CreatedOnToolsVersion = 13.0;
+					};
+					8ED381EC26F74FE50003D4F3 = {
 						CreatedOnToolsVersion = 13.0;
 					};
 				};
@@ -931,6 +1039,7 @@
 			targets = (
 				8EC607462688AFD1006ED3C1 /* Brain3k (iOS) */,
 				8EC6074C2688AFD1006ED3C1 /* Brain3k (macOS) */,
+				8ED381EC26F74FE50003D4F3 /* ShareExtension (iOS) */,
 				8E3810D8269CCDC800ED3851 /* Tests */,
 			);
 		};
@@ -961,6 +1070,16 @@
 				8EC607532688AFD1006ED3C1 /* Assets.xcassets in Resources */,
 				8EC4BAD626BDD79F00F20EAE /* Localizable.strings in Resources */,
 				8EF9353926AC448300176AF4 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8ED381EB26F74FE50003D4F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8ED381F326F74FE50003D4F3 /* MainInterface.storyboard in Resources */,
+				8ED3821626F76CCE0003D4F3 /* Localizable.strings in Resources */,
+				8ED3820E26F760AA0003D4F3 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1070,6 +1189,7 @@
 				8E92A7E126A0CD2500BAED7F /* CheckAccountStatus.swift in Sources */,
 				8EEF35DB268CE9F40068DB58 /* HomePage.swift in Sources */,
 				8E8835B926B08DCF00EE0234 /* AddMemoryPage.swift in Sources */,
+				8ED3821326F767CB0003D4F3 /* LibrariesService.swift in Sources */,
 				8E6821BA26A9E6F200B2DACB /* URLMemoryCell.swift in Sources */,
 				8E5D7D1626CC523D009024A0 /* GetDownloadURL.swift in Sources */,
 				8EBC051E2699C10C008B2478 /* UnverifiedEmailPage.swift in Sources */,
@@ -1145,6 +1265,7 @@
 				8E92A7E226A0CD2500BAED7F /* CheckAccountStatus.swift in Sources */,
 				8EEF35DC268CE9F40068DB58 /* HomePage.swift in Sources */,
 				8E8835BA26B08DCF00EE0234 /* AddMemoryPage.swift in Sources */,
+				8ED3821426F767CB0003D4F3 /* LibrariesService.swift in Sources */,
 				8E6821BB26A9E6F200B2DACB /* URLMemoryCell.swift in Sources */,
 				8E5D7D1726CC523D009024A0 /* GetDownloadURL.swift in Sources */,
 				8EBC051F2699C10C008B2478 /* UnverifiedEmailPage.swift in Sources */,
@@ -1152,6 +1273,25 @@
 				8EC607792688BB3E006ED3C1 /* MemoriesReducer.swift in Sources */,
 				8EC607722688BA3A006ED3C1 /* AppReducer.swift in Sources */,
 				8E776FFD26A326C400D97F52 /* MemoriesService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8ED381E926F74FE50003D4F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8ED3820A26F75D2B0003D4F3 /* Future+MapError.swift in Sources */,
+				8ED3820626F75CFD0003D4F3 /* Account.swift in Sources */,
+				8ED3820926F75D200003D4F3 /* AnyPublisher+Create.swift in Sources */,
+				8ED3820526F75CFA0003D4F3 /* Memory.swift in Sources */,
+				8ED3821526F767CB0003D4F3 /* LibrariesService.swift in Sources */,
+				8ED381F026F74FE50003D4F3 /* ShareViewController.swift in Sources */,
+				8ED381FB26F75CB00003D4F3 /* AccountService.swift in Sources */,
+				8ED381FC26F75CB90003D4F3 /* MemoriesService.swift in Sources */,
+				8ED3820726F75D010003D4F3 /* AccountStatus.swift in Sources */,
+				8ED3820B26F75D400003D4F3 /* CompletionHandler.swift in Sources */,
+				8ED3820826F75D070003D4F3 /* AppError.swift in Sources */,
+				8ED3821726F76CD40003D4F3 /* StringsGen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1163,6 +1303,11 @@
 			target = 8EC607462688AFD1006ED3C1 /* Brain3k (iOS) */;
 			targetProxy = 8E3810DD269CCDC800ED3851 /* PBXContainerItemProxy */;
 		};
+		8ED381F626F74FE50003D4F3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8ED381EC26F74FE50003D4F3 /* ShareExtension (iOS) */;
+			targetProxy = 8ED381F526F74FE50003D4F3 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -1172,6 +1317,14 @@
 				8EC4BAD426BDD79F00F20EAE /* en */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		8ED381F126F74FE50003D4F3 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8ED381F226F74FE50003D4F3 /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -1341,6 +1494,7 @@
 		8EC607572688AFD1006ED3C1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Shared/Brain3k.entitlements;
@@ -1379,6 +1533,7 @@
 		8EC607582688AFD1006ED3C1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Shared/Brain3k.entitlements;
@@ -1485,6 +1640,69 @@
 			};
 			name = Release;
 		};
+		8ED381F926F74FE50003D4F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_ENTITLEMENTS = "ShareExtension iOS/ShareExtension (iOS).entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V3QMW7D5T5;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ShareExtension iOS/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "ShareExtension (iOS)";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 0.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.brain3k.Brain3k.ShareExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "match Development com.brain3k.Brain3k.ShareExtension";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8ED381FA26F74FE50003D4F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_ENTITLEMENTS = "ShareExtension iOS/ShareExtension (iOS).entitlements";
+				CODE_SIGN_IDENTITY = "Apple Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V3QMW7D5T5;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ShareExtension iOS/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "ShareExtension (iOS)";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 0.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.brain3k.Brain3k.ShareExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.brain3k.Brain3k.ShareExtension";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1520,6 +1738,15 @@
 			buildConfigurations = (
 				8EC6075A2688AFD1006ED3C1 /* Debug */,
 				8EC6075B2688AFD1006ED3C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8ED381F826F74FE50003D4F3 /* Build configuration list for PBXNativeTarget "ShareExtension (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8ED381F926F74FE50003D4F3 /* Debug */,
+				8ED381FA26F74FE50003D4F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1704,6 +1931,36 @@
 			productName = SwiftDux;
 		};
 		8EC607892688BEE4006ED3C1 /* SwiftyBeaver */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8EC607842688BED5006ED3C1 /* XCRemoteSwiftPackageReference "SwiftyBeaver" */;
+			productName = SwiftyBeaver;
+		};
+		8ED381FD26F75CE60003D4F3 /* SwiftDux */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8EC607652688B86B006ED3C1 /* XCRemoteSwiftPackageReference "SwiftDux" */;
+			productName = SwiftDux;
+		};
+		8ED381FF26F75CE60003D4F3 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8EF9352626AC1B7300176AF4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		8ED3820126F75CE60003D4F3 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8EF9352626AC1B7300176AF4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		8ED3820326F75CE60003D4F3 /* FirebaseFirestoreSwift-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8EF9352626AC1B7300176AF4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreSwift-Beta";
+		};
+		8ED3820C26F75D5F0003D4F3 /* Fuse */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8E9EEBAA26F2888A00106FCD /* XCRemoteSwiftPackageReference "fuse-swift" */;
+			productName = Fuse;
+		};
+		8ED3820F26F764D10003D4F3 /* SwiftyBeaver */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 8EC607842688BED5006ED3C1 /* XCRemoteSwiftPackageReference "SwiftyBeaver" */;
 			productName = SwiftyBeaver;

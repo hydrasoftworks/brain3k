@@ -2,13 +2,9 @@
 //  Created by Kamil Powałowski on 27/06/2021.
 //
 
-import Firebase
 import SwiftDux
 import SwiftDuxExtras
 import SwiftUI
-import SwiftyBeaver
-
-let log = SwiftyBeaver.self
 
 @main
 struct Brain3kApp: App {
@@ -21,8 +17,9 @@ struct Brain3kApp: App {
             middleware: PrintActionMiddleware<AppState>()
         )
 
-        initSwiftyBeaver()
-        FirebaseApp.configure()
+        let librariesService = LibrariesService()
+        librariesService.initSwiftyBeaver()
+        librariesService.initFirebase()
     }
 
     var body: some Scene {
@@ -36,13 +33,5 @@ struct Brain3kApp: App {
 
     private var runningTests: Bool {
         ProcessInfo.processInfo.environment["XCInjectBundleInto"] != nil
-    }
-
-    private func initSwiftyBeaver() {
-        #if Debug
-            let console = ConsoleDestination() // log to Xcode Console
-            log.addDestination(console)
-            log.info("📘 SwiftyBeaver initialized")
-        #endif
     }
 }

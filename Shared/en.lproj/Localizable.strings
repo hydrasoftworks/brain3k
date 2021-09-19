@@ -1,6 +1,8 @@
 "app_name" = "Brain3k";
 "general.ok" = "OK";
 "general.cancel" = "Cancel";
+"share_extension.primary_action" = "Add";
+"share_extension.unsigned_message" = "Go to the %s app and sign in to perform this operation.";
 "sign_in_with_apple_button.error" = "Authorization failed: %s";
 "email_text_field.placeholder" = "e-mail";
 "password_text_field.password_placeholder" = "password";
