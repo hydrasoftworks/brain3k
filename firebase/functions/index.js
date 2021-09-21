@@ -1,8 +1,11 @@
-const admin = require("firebase-admin");
+import admin from "firebase-admin";
 
-module.exports = {
-  ...require("./memories/metadata.js"),
-  ...require("./memories/thumbnail.js"),
+import metadata from "./memories/metadata.js";
+import thumbnail from "./memories/thumbnail.js";
+
+export {
+  metadata,
+  thumbnail,
 };
 
 // This must be called at the end when all functions are exported

@@ -1,4 +1,4 @@
-module.exports.MEMORY_TYPE = {
+export const MEMORY_TYPE = {
   url: "url",
   image: "image",
 };

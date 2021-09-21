@@ -1,8 +1,10 @@
-const functions = require("firebase-functions");
-const admin = require("firebase-admin");
-const { MEMORY_TYPE } = require("../models/memoryType");
+import functions from "firebase-functions";
+import admin from "firebase-admin";
+import { MEMORY_TYPE } from "../models/memoryType.js";
+import puppeteer from "puppeteer";
+import { v1 } from "uuid";
 
-exports.thumbnail = functions
+export default functions
   .runWith({ timeoutSeconds: 540, memory: "2GB" })
   .region("europe-west1")
   .firestore.document("users/{userId}/memories/{memoryId}")
@@ -28,11 +30,7 @@ exports.thumbnail = functions
   });
 
 async function makeThumbnailForURL(ref, url) {
-  const admin = require("firebase-admin");
-  const puppeteer = require("puppeteer");
-  const { v1: uuidv1 } = require("uuid");
-
-  const path = ref.path + "/thumbnail-" + uuidv1() + ".png";
+  const path = ref.path + "/thumbnail-" + v1() + ".png";
 
   const browser = await puppeteer.launch();
   const page = await browser.newPage();

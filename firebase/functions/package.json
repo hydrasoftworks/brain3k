@@ -1,6 +1,7 @@
 {
   "name": "brain3k-firebase-functions",
   "description": "Cloud Functions for Firebase",
+  "type": "module",
   "scripts": {
     "lint": "eslint .",
     "serve": "firebase emulators:start --only functions",
@@ -12,7 +13,7 @@
   "engines": {
     "node": "14"
   },
-  "main": "index.js",
+  "exports": "./index.js",
   "dependencies": {
     "firebase-admin": "^9.11.0",
     "firebase-functions": "^3.15.4",

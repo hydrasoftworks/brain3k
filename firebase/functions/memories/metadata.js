@@ -1,8 +1,9 @@
-const functions = require("firebase-functions");
-const admin = require("firebase-admin");
-const { MEMORY_TYPE } = require("../models/memoryType");
+import functions from "firebase-functions";
+import admin from "firebase-admin";
+import { MEMORY_TYPE } from "../models/memoryType.js";
+import ogs from "open-graph-scraper";
 
-exports.metadata = functions
+export default functions
   .runWith({ timeoutSeconds: 540, memory: "2GB" })
   .region("europe-west1")
   .firestore.document("users/{userId}/memories/{memoryId}")
@@ -30,8 +31,6 @@ exports.metadata = functions
   });
 
 async function readMetadataForURL(url) {
-  const ogs = require("open-graph-scraper");
-
   const response = await ogs({ url });
   const result = response.result;
   if (result.success !== true) return {};
