@@ -40,7 +40,7 @@ async function makeThumbnailForURL(ref, url) {
     height: 800,
   });
 
-  await page.goto(url);
+  await page.goto(url, { waitUntil: "networkidle2" });
   const result = await page.screenshot();
 
   await browser.close();
