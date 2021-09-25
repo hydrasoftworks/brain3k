@@ -12,7 +12,6 @@ struct HomePage: ConnectableView {
         TabView {
             NavigationView {
                 MemoriesPage()
-                MemoryPage()
             }
             .tabItem {
                 Label(

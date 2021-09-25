@@ -54,6 +54,15 @@ internal enum L10n {
     }
   }
 
+  internal enum MemoryPage {
+    /// Memory not found
+    internal static let notFound = L10n.tr("Localizable", "memory_page.not_found")
+    /// Open memory
+    internal static let openMemory = L10n.tr("Localizable", "memory_page.open_memory")
+    /// Memory
+    internal static let title = L10n.tr("Localizable", "memory_page.title")
+  }
+
   internal enum PasswordTextField {
     /// password (min. 8 characters)
     internal static let newPasswordPlaceholder = L10n.tr("Localizable", "password_text_field.new_password_placeholder")

@@ -27,6 +27,9 @@
 "memory_cell.processing_cell.title" = "Processing...";
 "memories_page.title" = "Memories";
 "memories_page.button.add" = "Add memory";
+"memory_page.not_found" = "Memory not found";
+"memory_page.title" = "Memory";
+"memory_page.open_memory" = "Open memory";
 "add_memory_page.title" = "Add Memory";
 "add_memory_page.text_field.placeholder" = "Paste URL here";
 "add_memory_page.button.add" = "Add";

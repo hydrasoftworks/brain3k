@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E15375526FF3F2400D3232F /* MemoryPageConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E15375426FF3F2400D3232F /* MemoryPageConnector.swift */; };
+		8E15375626FF3F2400D3232F /* MemoryPageConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E15375426FF3F2400D3232F /* MemoryPageConnector.swift */; };
+		8E15375926FF439100D3232F /* OpenMemoryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E15375826FF439100D3232F /* OpenMemoryButton.swift */; };
+		8E15375A26FF439100D3232F /* OpenMemoryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E15375826FF439100D3232F /* OpenMemoryButton.swift */; };
 		8E260FE726C2F44900715524 /* ExpandedFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E260FE626C2F44900715524 /* ExpandedFrame.swift */; };
 		8E260FE826C2F44900715524 /* ExpandedFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E260FE626C2F44900715524 /* ExpandedFrame.swift */; };
 		8E3810E4269CCF5800ED3851 /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = 8E3810E3269CCF5800ED3851 /* Quick */; };
@@ -260,6 +264,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8E15375426FF3F2400D3232F /* MemoryPageConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryPageConnector.swift; sourceTree = "<group>"; };
+		8E15375826FF439100D3232F /* OpenMemoryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenMemoryButton.swift; sourceTree = "<group>"; };
 		8E260FE626C2F44900715524 /* ExpandedFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandedFrame.swift; sourceTree = "<group>"; };
 		8E3810D9269CCDC800ED3851 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E3810EB269CD00700ED3851 /* MessageReducerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageReducerSpec.swift; sourceTree = "<group>"; };
@@ -436,6 +442,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8E15375326FF3F0C00D3232F /* Memory */ = {
+			isa = PBXGroup;
+			children = (
+				8E15375726FF437900D3232F /* Views */,
+				8E15375426FF3F2400D3232F /* MemoryPageConnector.swift */,
+				8EBC053C269A0A8A008B2478 /* MemoryPage.swift */,
+			);
+			path = Memory;
+			sourceTree = "<group>";
+		};
+		8E15375726FF437900D3232F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8E15375826FF439100D3232F /* OpenMemoryButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		8E3810DA269CCDC800ED3851 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -690,9 +714,9 @@
 		8EBC0538269A05B0008B2478 /* Memories */ = {
 			isa = PBXGroup;
 			children = (
+				8E15375326FF3F0C00D3232F /* Memory */,
 				8E66FEA726A8B5C500838C70 /* Views */,
 				8EBC0539269A0A7E008B2478 /* MemoriesPage.swift */,
-				8EBC053C269A0A8A008B2478 /* MemoryPage.swift */,
 				8E8835B826B08DCF00EE0234 /* AddMemoryPage.swift */,
 			);
 			path = Memories;
@@ -1167,6 +1191,7 @@
 				8E5D7D1326CC50D9009024A0 /* StorageAction.swift in Sources */,
 				8E79C14626978828002D2A8B /* MessageReducer.swift in Sources */,
 				8E776FF126A2311200D97F52 /* SendVerificationEmail.swift in Sources */,
+				8E15375926FF439100D3232F /* OpenMemoryButton.swift in Sources */,
 				8EC4BACC26BDD40D00F20EAE /* Color+Asset.swift in Sources */,
 				8E50D86C26BB30280075C08C /* ProcessingCell.swift in Sources */,
 				8EDC011126D029D300D2064A /* URLMemoryCellConnector.swift in Sources */,
@@ -1197,6 +1222,7 @@
 				8EC607782688BB3E006ED3C1 /* MemoriesReducer.swift in Sources */,
 				8EC607712688BA3A006ED3C1 /* AppReducer.swift in Sources */,
 				8E776FFC26A326C400D97F52 /* MemoriesService.swift in Sources */,
+				8E15375526FF3F2400D3232F /* MemoryPageConnector.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1243,6 +1269,7 @@
 				8E5D7D1426CC50D9009024A0 /* StorageAction.swift in Sources */,
 				8E79C14726978828002D2A8B /* MessageReducer.swift in Sources */,
 				8E776FF226A2311200D97F52 /* SendVerificationEmail.swift in Sources */,
+				8E15375A26FF439100D3232F /* OpenMemoryButton.swift in Sources */,
 				8EC4BACD26BDD40D00F20EAE /* Color+Asset.swift in Sources */,
 				8E50D86D26BB30280075C08C /* ProcessingCell.swift in Sources */,
 				8EDC011226D029D300D2064A /* URLMemoryCellConnector.swift in Sources */,
@@ -1273,6 +1300,7 @@
 				8EC607792688BB3E006ED3C1 /* MemoriesReducer.swift in Sources */,
 				8EC607722688BA3A006ED3C1 /* AppReducer.swift in Sources */,
 				8E776FFD26A326C400D97F52 /* MemoriesService.swift in Sources */,
+				8E15375626FF3F2400D3232F /* MemoryPageConnector.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

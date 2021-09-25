@@ -80,7 +80,7 @@ extension Memory {
             thumbnail: thumbnail ? "https://swiftwombat.com/content/images/2020/12/cover.png" : nil,
             title: "Swift Wombat - Swift & SwiftUI knowledge base",
             notes: nil,
-            description: nil,
+            description: "Basic, intermediate, and advanced topics of iOS and macOS development. Knowledge base for mobile and desktop developers working on the Apple ecosystem.",
             tags: nil,
             processed: true
         )

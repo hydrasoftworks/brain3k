@@ -26,7 +26,11 @@ struct MemoriesPage: ConnectableView {
                 spacing: 16
             ) {
                 ForEach(viewModel.memories) { memory in
-                    MemoryCell(memory: memory)
+                    NavigationLink(
+                        destination: MemoryPageConnector(memoryId: memory.id)
+                    ) {
+                        MemoryCell(memory: memory)
+                    }
                 }
             }
             .padding(.horizontal)

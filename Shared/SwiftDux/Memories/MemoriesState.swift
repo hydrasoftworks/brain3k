@@ -21,6 +21,10 @@ struct MemoriesState: StateType {
         self.filtered = filtered
     }
 
+    func memory(forId id: String?) -> Memory? {
+        all.first(where: { $0.id == id })
+    }
+
     func copyWith(
         all: [Memory]? = nil,
         searchQuery: String? = nil,
