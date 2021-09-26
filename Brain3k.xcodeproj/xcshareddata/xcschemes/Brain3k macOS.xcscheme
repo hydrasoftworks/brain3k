@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8EC6074C2688AFD1006ED3C1"
                BuildableName = "Brain3k.app"
-               BlueprintName = "Brain3k (macOS)"
+               BlueprintName = "Brain3k macOS"
                ReferencedContainer = "container:Brain3k.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -46,7 +46,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8EC6074C2688AFD1006ED3C1"
             BuildableName = "Brain3k.app"
-            BlueprintName = "Brain3k (macOS)"
+            BlueprintName = "Brain3k macOS"
             ReferencedContainer = "container:Brain3k.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -63,7 +63,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8EC6074C2688AFD1006ED3C1"
             BuildableName = "Brain3k.app"
-            BlueprintName = "Brain3k (macOS)"
+            BlueprintName = "Brain3k macOS"
             ReferencedContainer = "container:Brain3k.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

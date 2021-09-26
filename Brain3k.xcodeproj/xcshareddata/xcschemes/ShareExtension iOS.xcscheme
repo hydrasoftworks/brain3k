@@ -16,8 +16,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8ED381EC26F74FE50003D4F3"
-               BuildableName = "ShareExtension (iOS).appex"
-               BlueprintName = "ShareExtension (iOS)"
+               BuildableName = "ShareExtension iOS.appex"
+               BlueprintName = "ShareExtension iOS"
                ReferencedContainer = "container:Brain3k.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -31,7 +31,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8EC607462688AFD1006ED3C1"
                BuildableName = "Brain3k.app"
-               BlueprintName = "Brain3k (iOS)"
+               BlueprintName = "Brain3k iOS"
                ReferencedContainer = "container:Brain3k.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -67,7 +67,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8EC607462688AFD1006ED3C1"
             BuildableName = "Brain3k.app"
-            BlueprintName = "Brain3k (iOS)"
+            BlueprintName = "Brain3k iOS"
             ReferencedContainer = "container:Brain3k.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -86,7 +86,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8EC607462688AFD1006ED3C1"
             BuildableName = "Brain3k.app"
-            BlueprintName = "Brain3k (iOS)"
+            BlueprintName = "Brain3k iOS"
             ReferencedContainer = "container:Brain3k.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

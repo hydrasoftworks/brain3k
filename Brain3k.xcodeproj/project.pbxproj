@@ -176,7 +176,7 @@
 		8EC6078A2688BEE4006ED3C1 /* SwiftyBeaver in Frameworks */ = {isa = PBXBuildFile; productRef = 8EC607892688BEE4006ED3C1 /* SwiftyBeaver */; };
 		8ED381F026F74FE50003D4F3 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED381EF26F74FE50003D4F3 /* ShareViewController.swift */; };
 		8ED381F326F74FE50003D4F3 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8ED381F126F74FE50003D4F3 /* MainInterface.storyboard */; };
-		8ED381F726F74FE50003D4F3 /* ShareExtension (iOS).appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8ED381ED26F74FE50003D4F3 /* ShareExtension (iOS).appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8ED381F726F74FE50003D4F3 /* ShareExtension iOS.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8ED381ED26F74FE50003D4F3 /* ShareExtension iOS.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		8ED381FB26F75CB00003D4F3 /* AccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E92A7D526A0B59F00BAED7F /* AccountService.swift */; };
 		8ED381FC26F75CB90003D4F3 /* MemoriesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E776FFB26A326C400D97F52 /* MemoriesService.swift */; };
 		8ED381FE26F75CE60003D4F3 /* SwiftDux in Frameworks */ = {isa = PBXBuildFile; productRef = 8ED381FD26F75CE60003D4F3 /* SwiftDux */; };
@@ -256,7 +256,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				8ED381F726F74FE50003D4F3 /* ShareExtension (iOS).appex in Embed App Extensions */,
+				8ED381F726F74FE50003D4F3 /* ShareExtension iOS.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -356,11 +356,11 @@
 		8EC6077A2688BB5B006ED3C1 /* MemoriesAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoriesAction.swift; sourceTree = "<group>"; };
 		8EC607812688BD92006ED3C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8EC6078C268A7ED9006ED3C1 /* Brain3k.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Brain3k.entitlements; sourceTree = "<group>"; };
-		8ED381ED26F74FE50003D4F3 /* ShareExtension (iOS).appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "ShareExtension (iOS).appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8ED381ED26F74FE50003D4F3 /* ShareExtension iOS.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "ShareExtension iOS.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8ED381EF26F74FE50003D4F3 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		8ED381F226F74FE50003D4F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		8ED381F426F74FE50003D4F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8ED3821126F765E50003D4F3 /* ShareExtension (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "ShareExtension (iOS).entitlements"; sourceTree = "<group>"; };
+		8ED3821126F765E50003D4F3 /* ShareExtension_iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShareExtension_iOS.entitlements; sourceTree = "<group>"; };
 		8ED3821226F767CB0003D4F3 /* LibrariesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibrariesService.swift; sourceTree = "<group>"; };
 		8EDC011026D029D300D2064A /* URLMemoryCellConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLMemoryCellConnector.swift; sourceTree = "<group>"; };
 		8EDC011526D02F6600D2064A /* GetDownloadURLSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDownloadURLSpec.swift; sourceTree = "<group>"; };
@@ -769,7 +769,7 @@
 				8EC607472688AFD1006ED3C1 /* Brain3k.app */,
 				8EC6074D2688AFD1006ED3C1 /* Brain3k.app */,
 				8E3810D9269CCDC800ED3851 /* Tests.xctest */,
-				8ED381ED26F74FE50003D4F3 /* ShareExtension (iOS).appex */,
+				8ED381ED26F74FE50003D4F3 /* ShareExtension iOS.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -853,7 +853,7 @@
 		8ED381EE26F74FE50003D4F3 /* ShareExtension iOS */ = {
 			isa = PBXGroup;
 			children = (
-				8ED3821126F765E50003D4F3 /* ShareExtension (iOS).entitlements */,
+				8ED3821126F765E50003D4F3 /* ShareExtension_iOS.entitlements */,
 				8ED381F426F74FE50003D4F3 /* Info.plist */,
 				8ED381EF26F74FE50003D4F3 /* ShareViewController.swift */,
 				8ED381F126F74FE50003D4F3 /* MainInterface.storyboard */,
@@ -927,9 +927,9 @@
 			productReference = 8E3810D9269CCDC800ED3851 /* Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		8EC607462688AFD1006ED3C1 /* Brain3k (iOS) */ = {
+		8EC607462688AFD1006ED3C1 /* Brain3k iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8EC607562688AFD1006ED3C1 /* Build configuration list for PBXNativeTarget "Brain3k (iOS)" */;
+			buildConfigurationList = 8EC607562688AFD1006ED3C1 /* Build configuration list for PBXNativeTarget "Brain3k iOS" */;
 			buildPhases = (
 				8EC607432688AFD1006ED3C1 /* Sources */,
 				8EC607442688AFD1006ED3C1 /* Frameworks */,
@@ -941,7 +941,7 @@
 			dependencies = (
 				8ED381F626F74FE50003D4F3 /* PBXTargetDependency */,
 			);
-			name = "Brain3k (iOS)";
+			name = "Brain3k iOS";
 			packageProductDependencies = (
 				8EC607662688B86B006ED3C1 /* SwiftDux */,
 				8EC607852688BED5006ED3C1 /* SwiftyBeaver */,
@@ -957,9 +957,9 @@
 			productReference = 8EC607472688AFD1006ED3C1 /* Brain3k.app */;
 			productType = "com.apple.product-type.application";
 		};
-		8EC6074C2688AFD1006ED3C1 /* Brain3k (macOS) */ = {
+		8EC6074C2688AFD1006ED3C1 /* Brain3k macOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8EC607592688AFD1006ED3C1 /* Build configuration list for PBXNativeTarget "Brain3k (macOS)" */;
+			buildConfigurationList = 8EC607592688AFD1006ED3C1 /* Build configuration list for PBXNativeTarget "Brain3k macOS" */;
 			buildPhases = (
 				8EC607492688AFD1006ED3C1 /* Sources */,
 				8EC6074A2688AFD1006ED3C1 /* Frameworks */,
@@ -969,7 +969,7 @@
 			);
 			dependencies = (
 			);
-			name = "Brain3k (macOS)";
+			name = "Brain3k macOS";
 			packageProductDependencies = (
 				8EC607872688BEE0006ED3C1 /* SwiftDux */,
 				8EC607892688BEE4006ED3C1 /* SwiftyBeaver */,
@@ -985,9 +985,9 @@
 			productReference = 8EC6074D2688AFD1006ED3C1 /* Brain3k.app */;
 			productType = "com.apple.product-type.application";
 		};
-		8ED381EC26F74FE50003D4F3 /* ShareExtension (iOS) */ = {
+		8ED381EC26F74FE50003D4F3 /* ShareExtension iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8ED381F826F74FE50003D4F3 /* Build configuration list for PBXNativeTarget "ShareExtension (iOS)" */;
+			buildConfigurationList = 8ED381F826F74FE50003D4F3 /* Build configuration list for PBXNativeTarget "ShareExtension iOS" */;
 			buildPhases = (
 				8ED381E926F74FE50003D4F3 /* Sources */,
 				8ED381EA26F74FE50003D4F3 /* Frameworks */,
@@ -997,7 +997,7 @@
 			);
 			dependencies = (
 			);
-			name = "ShareExtension (iOS)";
+			name = "ShareExtension iOS";
 			packageProductDependencies = (
 				8ED381FD26F75CE60003D4F3 /* SwiftDux */,
 				8ED381FF26F75CE60003D4F3 /* FirebaseAuth */,
@@ -1007,7 +1007,7 @@
 				8ED3820F26F764D10003D4F3 /* SwiftyBeaver */,
 			);
 			productName = "ShareExtension-iOS";
-			productReference = 8ED381ED26F74FE50003D4F3 /* ShareExtension (iOS).appex */;
+			productReference = 8ED381ED26F74FE50003D4F3 /* ShareExtension iOS.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
@@ -1061,9 +1061,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8EC607462688AFD1006ED3C1 /* Brain3k (iOS) */,
-				8EC6074C2688AFD1006ED3C1 /* Brain3k (macOS) */,
-				8ED381EC26F74FE50003D4F3 /* ShareExtension (iOS) */,
+				8EC607462688AFD1006ED3C1 /* Brain3k iOS */,
+				8EC6074C2688AFD1006ED3C1 /* Brain3k macOS */,
+				8ED381EC26F74FE50003D4F3 /* ShareExtension iOS */,
 				8E3810D8269CCDC800ED3851 /* Tests */,
 			);
 		};
@@ -1328,12 +1328,12 @@
 /* Begin PBXTargetDependency section */
 		8E3810DE269CCDC800ED3851 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8EC607462688AFD1006ED3C1 /* Brain3k (iOS) */;
+			target = 8EC607462688AFD1006ED3C1 /* Brain3k iOS */;
 			targetProxy = 8E3810DD269CCDC800ED3851 /* PBXContainerItemProxy */;
 		};
 		8ED381F626F74FE50003D4F3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8ED381EC26F74FE50003D4F3 /* ShareExtension (iOS) */;
+			target = 8ED381EC26F74FE50003D4F3 /* ShareExtension iOS */;
 			targetProxy = 8ED381F526F74FE50003D4F3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1678,14 +1678,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
-				CODE_SIGN_ENTITLEMENTS = "ShareExtension iOS/ShareExtension (iOS).entitlements";
+				CODE_SIGN_ENTITLEMENTS = "ShareExtension iOS/ShareExtension_iOS.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = "$(inherited)";
 				DEVELOPMENT_TEAM = V3QMW7D5T5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "ShareExtension iOS/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "ShareExtension (iOS)";
+				INFOPLIST_KEY_CFBundleDisplayName = "Brain3k ShareExtension";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1709,14 +1709,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
-				CODE_SIGN_ENTITLEMENTS = "ShareExtension iOS/ShareExtension (iOS).entitlements";
+				CODE_SIGN_ENTITLEMENTS = "ShareExtension iOS/ShareExtension_iOS.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Distribution";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = "$(inherited)";
 				DEVELOPMENT_TEAM = V3QMW7D5T5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "ShareExtension iOS/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "ShareExtension (iOS)";
+				INFOPLIST_KEY_CFBundleDisplayName = "Brain3k ShareExtension";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1758,7 +1758,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8EC607562688AFD1006ED3C1 /* Build configuration list for PBXNativeTarget "Brain3k (iOS)" */ = {
+		8EC607562688AFD1006ED3C1 /* Build configuration list for PBXNativeTarget "Brain3k iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8EC607572688AFD1006ED3C1 /* Debug */,
@@ -1767,7 +1767,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8EC607592688AFD1006ED3C1 /* Build configuration list for PBXNativeTarget "Brain3k (macOS)" */ = {
+		8EC607592688AFD1006ED3C1 /* Build configuration list for PBXNativeTarget "Brain3k macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8EC6075A2688AFD1006ED3C1 /* Debug */,
@@ -1776,7 +1776,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8ED381F826F74FE50003D4F3 /* Build configuration list for PBXNativeTarget "ShareExtension (iOS)" */ = {
+		8ED381F826F74FE50003D4F3 /* Build configuration list for PBXNativeTarget "ShareExtension iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8ED381F926F74FE50003D4F3 /* Debug */,
