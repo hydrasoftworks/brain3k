@@ -85,6 +85,8 @@
 		8E889CF326A22DE200F7C47C /* SignOutSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E889CF226A22DE200F7C47C /* SignOutSpec.swift */; };
 		8E889CF526A22F9500F7C47C /* Refresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E889CF426A22F9500F7C47C /* Refresh.swift */; };
 		8E889CF626A22F9500F7C47C /* Refresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E889CF426A22F9500F7C47C /* Refresh.swift */; };
+		8E8DF14A270096F500CA0EBF /* ImagesGen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8DF149270096F500CA0EBF /* ImagesGen.swift */; };
+		8E8DF14B270096F500CA0EBF /* ImagesGen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8DF149270096F500CA0EBF /* ImagesGen.swift */; };
 		8E92A7D326A0B31600BAED7F /* Cuckoo in Frameworks */ = {isa = PBXBuildFile; productRef = 8E92A7D226A0B31600BAED7F /* Cuckoo */; };
 		8E92A7D626A0B59F00BAED7F /* AccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E92A7D526A0B59F00BAED7F /* AccountService.swift */; };
 		8E92A7D726A0B59F00BAED7F /* AccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E92A7D526A0B59F00BAED7F /* AccountService.swift */; };
@@ -136,8 +138,8 @@
 		8EBC052E2699CB52008B2478 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBC052C2699CB52008B2478 /* PrimaryButton.swift */; };
 		8EBC05302699D25D008B2478 /* Publisher+MapToEmptyResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBC052F2699D25C008B2478 /* Publisher+MapToEmptyResult.swift */; };
 		8EBC05312699D25D008B2478 /* Publisher+MapToEmptyResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBC052F2699D25C008B2478 /* Publisher+MapToEmptyResult.swift */; };
-		8EBC0536269A0585008B2478 /* ProfilePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBC0535269A0585008B2478 /* ProfilePage.swift */; };
-		8EBC0537269A0586008B2478 /* ProfilePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBC0535269A0585008B2478 /* ProfilePage.swift */; };
+		8EBC0536269A0585008B2478 /* SettingsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBC0535269A0585008B2478 /* SettingsPage.swift */; };
+		8EBC0537269A0586008B2478 /* SettingsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBC0535269A0585008B2478 /* SettingsPage.swift */; };
 		8EBC053A269A0A7E008B2478 /* MemoriesPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBC0539269A0A7E008B2478 /* MemoriesPage.swift */; };
 		8EBC053B269A0A7E008B2478 /* MemoriesPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBC0539269A0A7E008B2478 /* MemoriesPage.swift */; };
 		8EBC053D269A0A8A008B2478 /* MemoryPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBC053C269A0A8A008B2478 /* MemoryPage.swift */; };
@@ -304,6 +306,7 @@
 		8E889CEF26A22D4F00F7C47C /* SignOut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOut.swift; sourceTree = "<group>"; };
 		8E889CF226A22DE200F7C47C /* SignOutSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutSpec.swift; sourceTree = "<group>"; };
 		8E889CF426A22F9500F7C47C /* Refresh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Refresh.swift; sourceTree = "<group>"; };
+		8E8DF149270096F500CA0EBF /* ImagesGen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagesGen.swift; sourceTree = "<group>"; };
 		8E92A7D526A0B59F00BAED7F /* AccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountService.swift; sourceTree = "<group>"; };
 		8E92A7D826A0B63500BAED7F /* GeneratedMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedMocks.swift; sourceTree = "<group>"; };
 		8E92A7DA26A0B8DC00BAED7F /* AccountActionSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountActionSpec.swift; sourceTree = "<group>"; };
@@ -334,7 +337,7 @@
 		8EBC05232699C926008B2478 /* MaterialBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialBackground.swift; sourceTree = "<group>"; };
 		8EBC052C2699CB52008B2478 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		8EBC052F2699D25C008B2478 /* Publisher+MapToEmptyResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher+MapToEmptyResult.swift"; sourceTree = "<group>"; };
-		8EBC0535269A0585008B2478 /* ProfilePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePage.swift; sourceTree = "<group>"; };
+		8EBC0535269A0585008B2478 /* SettingsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPage.swift; sourceTree = "<group>"; };
 		8EBC0539269A0A7E008B2478 /* MemoriesPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoriesPage.swift; sourceTree = "<group>"; };
 		8EBC053C269A0A8A008B2478 /* MemoryPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryPage.swift; sourceTree = "<group>"; };
 		8EBC053F269A0B8D008B2478 /* SecondaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryButton.swift; sourceTree = "<group>"; };
@@ -706,7 +709,7 @@
 				8EEF35DA268CE9F40068DB58 /* HomePage.swift */,
 				8E79C15026979409002D2A8B /* Authentication */,
 				8EBC0538269A05B0008B2478 /* Memories */,
-				8EBC0535269A0585008B2478 /* ProfilePage.swift */,
+				8EBC0535269A0585008B2478 /* SettingsPage.swift */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -726,6 +729,7 @@
 			isa = PBXGroup;
 			children = (
 				8EC4BAD726BDD7E000F20EAE /* StringsGen.swift */,
+				8E8DF149270096F500CA0EBF /* ImagesGen.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -1178,6 +1182,7 @@
 				8E260FE726C2F44900715524 /* ExpandedFrame.swift in Sources */,
 				8E9EEBA626F2813600106FCD /* MemoriesState.swift in Sources */,
 				8E79C139269618BE002D2A8B /* JoinPage.swift in Sources */,
+				8E8DF14A270096F500CA0EBF /* ImagesGen.swift in Sources */,
 				8EBC052D2699CB52008B2478 /* PrimaryButton.swift in Sources */,
 				8EC6074E2688AFD1006ED3C1 /* Brain3kApp.swift in Sources */,
 				8EBC05302699D25D008B2478 /* Publisher+MapToEmptyResult.swift in Sources */,
@@ -1186,7 +1191,7 @@
 				8E92A7D626A0B59F00BAED7F /* AccountService.swift in Sources */,
 				8EBC053D269A0A8A008B2478 /* MemoryPage.swift in Sources */,
 				8E79C140269786F9002D2A8B /* MessageState.swift in Sources */,
-				8EBC0536269A0585008B2478 /* ProfilePage.swift in Sources */,
+				8EBC0536269A0585008B2478 /* SettingsPage.swift in Sources */,
 				8EBC05212699C55C008B2478 /* Background.swift in Sources */,
 				8E5D7D1326CC50D9009024A0 /* StorageAction.swift in Sources */,
 				8E79C14626978828002D2A8B /* MessageReducer.swift in Sources */,
@@ -1256,6 +1261,7 @@
 				8E260FE826C2F44900715524 /* ExpandedFrame.swift in Sources */,
 				8E9EEBA726F2813600106FCD /* MemoriesState.swift in Sources */,
 				8E79C13A269618BE002D2A8B /* JoinPage.swift in Sources */,
+				8E8DF14B270096F500CA0EBF /* ImagesGen.swift in Sources */,
 				8EBC052E2699CB52008B2478 /* PrimaryButton.swift in Sources */,
 				8EC6074F2688AFD1006ED3C1 /* Brain3kApp.swift in Sources */,
 				8EBC05312699D25D008B2478 /* Publisher+MapToEmptyResult.swift in Sources */,
@@ -1264,7 +1270,7 @@
 				8E92A7D726A0B59F00BAED7F /* AccountService.swift in Sources */,
 				8EBC053E269A0A8A008B2478 /* MemoryPage.swift in Sources */,
 				8E79C141269786F9002D2A8B /* MessageState.swift in Sources */,
-				8EBC0537269A0586008B2478 /* ProfilePage.swift in Sources */,
+				8EBC0537269A0586008B2478 /* SettingsPage.swift in Sources */,
 				8EBC05222699C55C008B2478 /* Background.swift in Sources */,
 				8E5D7D1426CC50D9009024A0 /* StorageAction.swift in Sources */,
 				8E79C14726978828002D2A8B /* MessageReducer.swift in Sources */,
@@ -1459,7 +1465,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MARKETING_VERSION = 0.0.1;
+				MARKETING_VERSION = 0.2.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1516,7 +1522,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MARKETING_VERSION = 0.0.1;
+				MARKETING_VERSION = 0.2.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;

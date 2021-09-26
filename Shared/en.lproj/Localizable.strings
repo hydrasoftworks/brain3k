@@ -33,5 +33,5 @@
 "add_memory_page.title" = "Add Memory";
 "add_memory_page.text_field.placeholder" = "Paste URL here";
 "add_memory_page.button.add" = "Add";
-"profile_page.title" = "Profile";
-"profile_page.button.sign_out" = "Sign out";
+"settings_page.title" = "Settings";
+"settings_page.button.sign_out" = "Sign out";

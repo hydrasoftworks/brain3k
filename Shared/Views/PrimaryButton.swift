@@ -27,7 +27,7 @@ private struct PrimaryButtonStyle: ButtonStyle {
         var body: some View {
             configuration.label
                 .font(.title2)
-                .foregroundColor(isEnabled ? .white : .white.opacity(0.5))
+                .foregroundColor(Color.brandText.opacity(isEnabled ? 1 : 0.5))
                 .frame(minWidth: 0, maxWidth: .infinity)
                 .frame(height: 56)
                 .background(Color.brand.opacity(isEnabled ? 1 : 0.5))

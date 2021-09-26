@@ -70,12 +70,12 @@ internal enum L10n {
     internal static let passwordPlaceholder = L10n.tr("Localizable", "password_text_field.password_placeholder")
   }
 
-  internal enum ProfilePage {
-    /// Profile
-    internal static let title = L10n.tr("Localizable", "profile_page.title")
+  internal enum SettingsPage {
+    /// Settings
+    internal static let title = L10n.tr("Localizable", "settings_page.title")
     internal enum Button {
       /// Sign out
-      internal static let signOut = L10n.tr("Localizable", "profile_page.button.sign_out")
+      internal static let signOut = L10n.tr("Localizable", "settings_page.button.sign_out")
     }
   }
 

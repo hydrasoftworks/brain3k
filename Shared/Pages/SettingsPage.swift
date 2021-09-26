@@ -5,7 +5,7 @@
 import SwiftDux
 import SwiftUI
 
-struct ProfilePage: ConnectableView {
+struct SettingsPage: ConnectableView {
     @Environment(\.actionDispatcher) private var dispatch
 
     func map(state _: AppState) -> ViewModel? {
@@ -14,11 +14,11 @@ struct ProfilePage: ConnectableView {
 
     func body(props _: ViewModel) -> some View {
         VStack {
-            SecondaryButton(title: L10n.ProfilePage.Button.signOut) {
+            SecondaryButton(title: L10n.SettingsPage.Button.signOut) {
                 dispatch.send(AccountAction.signOut())
             }
         }
-        .navigationTitle(L10n.ProfilePage.title)
+        .navigationTitle(L10n.SettingsPage.title)
     }
 
     struct ViewModel: Equatable {}
@@ -26,6 +26,6 @@ struct ProfilePage: ConnectableView {
 
 struct ProfilePage_Previews: PreviewProvider {
     static var previews: some View {
-        ProfilePage()
+        SettingsPage()
     }
 }

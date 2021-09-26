@@ -16,16 +16,16 @@ struct HomePage: ConnectableView {
             .tabItem {
                 Label(
                     L10n.MemoriesPage.title,
-                    systemImage: "lightbulb"
+                    image: Asset.brainIcon.name
                 )
             }
             NavigationView {
-                ProfilePage()
+                SettingsPage()
             }
             .tabItem {
                 Label(
-                    L10n.ProfilePage.title,
-                    systemImage: "person"
+                    L10n.SettingsPage.title,
+                    systemImage: "gearshape.fill"
                 )
             }
         }
