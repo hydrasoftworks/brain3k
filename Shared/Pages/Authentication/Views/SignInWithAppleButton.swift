@@ -9,15 +9,16 @@ import SwiftUI
 struct AppSignInWithAppleButton: ConnectableView {
     @Environment(\.actionDispatcher) private var dispatch
 
-    func map(state _: AppState) -> ViewModel? {
-        ViewModel()
+    func map(state: AppState) -> ViewModel? {
+        ViewModel(nonce: state.accountState.sha256Nonce)
     }
 
-    func body(props _: ViewModel) -> some View {
+    func body(props viewModel: ViewModel) -> some View {
         SignInWithAppleButton(
             .continue,
             onRequest: { request in
                 request.requestedScopes = [.fullName, .email]
+                request.nonce = viewModel.nonce
             },
             onCompletion: { result in
                 switch result {
@@ -35,7 +36,9 @@ struct AppSignInWithAppleButton: ConnectableView {
         .frame(height: 56)
     }
 
-    struct ViewModel: Equatable {}
+    struct ViewModel: Equatable {
+        let nonce: String?
+    }
 }
 
 struct AppSignInWithAppleButton_Previews: PreviewProvider {

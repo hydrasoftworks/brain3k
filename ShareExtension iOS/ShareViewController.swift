@@ -10,8 +10,8 @@ final class ShareViewController: SLComposeServiceViewController {
     private let accountService = AccountService()
     private let memoriesService = MemoriesService()
 
-    override func loadView() {
-        super.loadView()
+    override func viewDidLoad() {
+        super.viewDidLoad()
         let librariesService = LibrariesService()
         librariesService.initSwiftyBeaver()
         librariesService.initFirebase()

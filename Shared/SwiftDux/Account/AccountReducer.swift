@@ -12,6 +12,8 @@ final class AccountReducer: Reducer {
         switch action {
         case let .setStatus(status):
             return state.copyWith(status: status)
+        case let .setNonce(nonce):
+            return state.copyWith(nonce: nonce)
         }
     }
 }

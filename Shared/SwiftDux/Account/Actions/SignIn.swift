@@ -11,12 +11,13 @@ extension AccountAction {
         _ authorization: ASAuthorization,
         _ accountService: AccountService = AccountService()
     ) -> ActionPlan<AppState> {
-        ActionPlan<AppState> { _ -> AnyPublisher<Action, Never> in
+        ActionPlan<AppState> { store -> AnyPublisher<Action, Never> in
             guard let credential = authorization.credential as? ASAuthorizationAppleIDCredential else {
                 return .empty
             }
+            let nonce = store.state.accountState.nonce
 
-            return accountService.login(credential: credential)
+            return accountService.login(credential: credential, nonce: nonce)
                 .map { account in AccountAction.setStatus(.authenticated(account)) }
                 .catch { Just(MessageAction.show(.error($0.message))) }
                 .eraseToAnyPublisher()

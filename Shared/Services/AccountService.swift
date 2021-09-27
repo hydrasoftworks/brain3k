@@ -26,7 +26,7 @@ class AccountService {
         .mapToAppError()
     }
 
-    func login(credential: ASAuthorizationAppleIDCredential) -> AnyPublisher<Account, AppError> {
+    func login(credential: ASAuthorizationAppleIDCredential, nonce: String?) -> AnyPublisher<Account, AppError> {
         Future<Account, Error> { [weak self] promise in
             guard let appleIDToken = credential.identityToken,
                   let idTokenString = String(data: appleIDToken, encoding: .utf8)
@@ -38,7 +38,8 @@ class AccountService {
 
             let credential = OAuthProvider.credential(
                 withProviderID: "apple.com",
-                accessToken: idTokenString
+                idToken: idTokenString,
+                rawNonce: nonce
             )
             Auth.auth().signIn(
                 with: credential,

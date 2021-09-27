@@ -18,6 +18,7 @@ struct JoinPage: View {
                 flipAxis: .y
             )
         }
+        .onAppear(dispatch: AccountAction.generateNonce())
     }
 }
 
