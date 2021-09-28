@@ -80,6 +80,8 @@ internal enum L10n {
   }
 
   internal enum ShareExtension {
+    /// Notes (optional)
+    internal static let notesPlaceholder = L10n.tr("Localizable", "share_extension.notes_placeholder")
     /// Add
     internal static let primaryAction = L10n.tr("Localizable", "share_extension.primary_action")
     /// Go to the %s app and sign in to perform this operation.

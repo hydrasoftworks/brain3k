@@ -10,17 +10,27 @@ final class ShareViewController: SLComposeServiceViewController {
     private let accountService = AccountService()
     private let memoriesService = MemoriesService()
 
+    private var notes: String? {
+        contentText?.isEmpty == false ? contentText : nil
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        placeholder = L10n.ShareExtension.notesPlaceholder
+        textView.text = nil
+        navigationController?.navigationBar.topItem?.rightBarButtonItem?.title = L10n.ShareExtension.primaryAction
+    }
+
+    override func presentationAnimationDidFinish() {
+        super.presentationAnimationDidFinish()
         let librariesService = LibrariesService()
         librariesService.initSwiftyBeaver()
         librariesService.initFirebase()
 
-        textView.isEditable = false
-        textView.textColor = UIColor.secondaryLabel
-        navigationController?.navigationBar.topItem?.rightBarButtonItem?.title = L10n.ShareExtension.primaryAction
-
         if accountService.getCurrentAccount() == nil {
+            textView.resignFirstResponder()
+            textView.isEditable = false
+            textView.textColor = UIColor.secondaryLabel
             textView.text = L10n.ShareExtension.unsignedMessage(L10n.appName)
             navigationController?.navigationBar.topItem?.rightBarButtonItem?.isEnabled = false
         }
@@ -32,27 +42,27 @@ final class ShareViewController: SLComposeServiceViewController {
 
     override func didSelectPost() {
         let attachments = (extensionContext?.inputItems.first as? NSExtensionItem)?.attachments ?? []
-        guard !attachments.isEmpty else { return super.didSelectPost() }
 
         let contentType = UTType.url.identifier
+        guard let provider = attachments.first,
+              provider.hasItemConformingToTypeIdentifier(contentType) else { return super.didSelectPost() }
 
-        for provider in attachments {
-            guard provider.hasItemConformingToTypeIdentifier(contentType) else {
+        provider.loadItem(forTypeIdentifier: contentType, options: nil) { result, _ in
+            guard let url = result as? URL else {
                 return super.didSelectPost()
             }
-            provider.loadItem(forTypeIdentifier: contentType, options: nil) { result, _ in
-                guard let url = result as? URL else {
-                    return super.didSelectPost()
-                }
-                self.addURLMemory(url) { super.didSelectPost() }
-            }
+            self.addURLMemory(url, notes: self.notes) { super.didSelectPost() }
         }
     }
 
-    private func addURLMemory(_ url: URL, completion: @escaping () -> Void) {
+    private func addURLMemory(_ url: URL, notes: String?, completion: @escaping () -> Void) {
         guard let account = accountService.getCurrentAccount() else { return }
         _ = memoriesService.add(
-            memory: Memory(type: .url, value: url.absoluteString),
+            memory: Memory(
+                type: .url,
+                value: url.absoluteString,
+                notes: notes
+            ),
             to: account.id
         )
         .sink(receiveCompletion: { _ in completion() }, receiveValue: {})

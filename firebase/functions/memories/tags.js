@@ -33,17 +33,7 @@ export default functions
   });
 
 async function readTagsForURL(url) {
-  const browser = await puppeteer.launch();
-  const page = await browser.newPage();
-
-  await page.setViewport({
-    width: 1280,
-    height: 800,
-  });
-
-  await page.goto(url, { waitUntil: "networkidle2" });
-  const html = await page.content();
-  await browser.close();
+  const html = await getHTMLForURL(url);
 
   const text = htmlToText(html, {
     wordwrap: false,
@@ -67,4 +57,19 @@ async function readTagsForURL(url) {
       tags: [...new Set(tags)],
     }),
   );
+}
+
+async function getHTMLForURL(url) {
+  const browser = await puppeteer.launch();
+  const page = await browser.newPage();
+
+  await page.setViewport({
+    width: 1280,
+    height: 800,
+  });
+
+  await page.goto(url, { waitUntil: "networkidle2" });
+  const html = await page.content();
+  await browser.close();
+  return html;
 }
