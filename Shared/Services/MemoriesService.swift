@@ -49,6 +49,16 @@ class MemoriesService {
         .mapToAppError()
     }
 
+    func deleteMemory(withId memoryId: String, from accountId: String) -> AnyPublisher<Void, AppError> {
+        let document = collection(of: accountId).document(memoryId)
+        return Future<Void, Error> { promise in
+            document.delete()
+            promise(.success(()))
+        }
+        .eraseToAnyPublisher()
+        .mapToAppError()
+    }
+
     func search(for query: String, in memories: [Memory]) -> AnyPublisher<[Memory], AppError> {
         AnyPublisher<[Memory], AppError>.create { observer in
             let fuse = Fuse(threshold: 0.3, tokenize: true)

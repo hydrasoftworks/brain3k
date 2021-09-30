@@ -8,7 +8,7 @@ export default functions
   .region("europe-west1")
   .firestore.document("users/{userId}/memories/{memoryId}")
   .onWrite(async ({ after }) => {
-    if (after === undefined) return;
+    if (!after.exists) return;
 
     let data = after.data();
     if (data.processed === true) return;

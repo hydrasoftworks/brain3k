@@ -128,6 +128,9 @@
 		8EAAD9EB26C5A525007C2973 /* WatchAll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAAD9EA26C5A525007C2973 /* WatchAll.swift */; };
 		8EAAD9EC26C5A525007C2973 /* WatchAll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAAD9EA26C5A525007C2973 /* WatchAll.swift */; };
 		8EAAD9EE26C5A95D007C2973 /* WatchAllSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAAD9ED26C5A95D007C2973 /* WatchAllSpec.swift */; };
+		8EB7470B2706588B004F4F18 /* Delete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB7470A2706588B004F4F18 /* Delete.swift */; };
+		8EB7470C2706588B004F4F18 /* Delete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB7470A2706588B004F4F18 /* Delete.swift */; };
+		8EB7470E27065C58004F4F18 /* DeleteSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB7470D27065C58004F4F18 /* DeleteSpec.swift */; };
 		8EBC051B2699C065008B2478 /* AnyPublisher+Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBC051A2699C065008B2478 /* AnyPublisher+Empty.swift */; };
 		8EBC051C2699C065008B2478 /* AnyPublisher+Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBC051A2699C065008B2478 /* AnyPublisher+Empty.swift */; };
 		8EBC051E2699C10C008B2478 /* UnverifiedEmailPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBC051D2699C10C008B2478 /* UnverifiedEmailPage.swift */; };
@@ -334,6 +337,8 @@
 		8EAAD9E726C5A3F1007C2973 /* AnyPublisher+Create.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnyPublisher+Create.swift"; sourceTree = "<group>"; };
 		8EAAD9EA26C5A525007C2973 /* WatchAll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchAll.swift; sourceTree = "<group>"; };
 		8EAAD9ED26C5A95D007C2973 /* WatchAllSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchAllSpec.swift; sourceTree = "<group>"; };
+		8EB7470A2706588B004F4F18 /* Delete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Delete.swift; sourceTree = "<group>"; };
+		8EB7470D27065C58004F4F18 /* DeleteSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteSpec.swift; sourceTree = "<group>"; };
 		8EBC051A2699C065008B2478 /* AnyPublisher+Empty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnyPublisher+Empty.swift"; sourceTree = "<group>"; };
 		8EBC051D2699C10C008B2478 /* UnverifiedEmailPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnverifiedEmailPage.swift; sourceTree = "<group>"; };
 		8EBC05202699C55C008B2478 /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
@@ -562,6 +567,7 @@
 				8E776FF826A3257B00D97F52 /* GetAll.swift */,
 				8EA1006B26ADB348007AFAA9 /* CreateURL.swift */,
 				8E9EEBA226F280C400106FCD /* Search.swift */,
+				8EB7470A2706588B004F4F18 /* Delete.swift */,
 			);
 			path = Actions;
 			sourceTree = "<group>";
@@ -583,6 +589,7 @@
 				8E77700026A3283A00D97F52 /* GetAllSpec.swift */,
 				8EA1006E26ADBDE6007AFAA9 /* CreateURLSpec.swift */,
 				8E9EEBAF26F2905B00106FCD /* SearchSpec.swift */,
+				8EB7470D27065C58004F4F18 /* DeleteSpec.swift */,
 			);
 			path = Actions;
 			sourceTree = "<group>";
@@ -1131,6 +1138,7 @@
 				8E3810EE269CD59300ED3851 /* MessageStateSpec.swift in Sources */,
 				8EF9354326AC4A3100176AF4 /* SecondaryButtonSpec.swift in Sources */,
 				8E77700126A3283A00D97F52 /* GetAllSpec.swift in Sources */,
+				8EB7470E27065C58004F4F18 /* DeleteSpec.swift in Sources */,
 				8E889CEE26A22BDC00F7C47C /* SignUpSpec.swift in Sources */,
 				8E92A7E526A0CDAD00BAED7F /* CheckAccountStatusSpec.swift in Sources */,
 				8EF9353626AC3EA900176AF4 /* Memory+Test.swift in Sources */,
@@ -1208,6 +1216,7 @@
 				8EC6077B2688BB5B006ED3C1 /* MemoriesAction.swift in Sources */,
 				8E8835BC26B0928E00EE0234 /* Validation+URL.swift in Sources */,
 				8E889CF526A22F9500F7C47C /* Refresh.swift in Sources */,
+				8EB7470B2706588B004F4F18 /* Delete.swift in Sources */,
 				8EBC053A269A0A7E008B2478 /* MemoriesPage.swift in Sources */,
 				8E889CF026A22D4F00F7C47C /* SignOut.swift in Sources */,
 				8EAAD9E826C5A3F1007C2973 /* AnyPublisher+Create.swift in Sources */,
@@ -1288,6 +1297,7 @@
 				8EC6077C2688BB5B006ED3C1 /* MemoriesAction.swift in Sources */,
 				8E8835BD26B0928E00EE0234 /* Validation+URL.swift in Sources */,
 				8E889CF626A22F9500F7C47C /* Refresh.swift in Sources */,
+				8EB7470C2706588B004F4F18 /* Delete.swift in Sources */,
 				8EBC053B269A0A7E008B2478 /* MemoriesPage.swift in Sources */,
 				8E889CF126A22D4F00F7C47C /* SignOut.swift in Sources */,
 				8EAAD9E926C5A3F1007C2973 /* AnyPublisher+Create.swift in Sources */,

@@ -13,7 +13,11 @@ extension StorageAction {
     ) -> ActionPlan<AppState> {
         ActionPlan<AppState> { store -> AnyPublisher<Action, Never> in
             let state = store.state.storageState
-            guard let url = url, state.downloadURLs[url] == nil else { return .empty }
+            guard let url = url,
+                  state.downloadURLs[url] == nil
+            else {
+                return .empty
+            }
 
             if url.scheme != "gs" {
                 return Just(StorageAction.add(url, url))

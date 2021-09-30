@@ -35,6 +35,7 @@ struct MemoriesPage: ConnectableView {
             }
             .padding(.horizontal)
         }
+        // Pull to Refresh doesn't work on ScrollView xD
         .refreshable { dispatch.send(MemoriesAction.getAll()) }
         .searchable(text: viewModel.$searchQuery)
         .navigationTitle(L10n.MemoriesPage.title)

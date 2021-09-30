@@ -6,6 +6,8 @@ import SwiftDux
 import SwiftUI
 
 struct MemoryPageConnector: ConnectableView {
+    @Environment(\.actionDispatcher) private var dispatch
+
     let memoryId: String?
 
     func map(state: AppState) -> MemoryPage.ViewModel? {
@@ -15,7 +17,8 @@ struct MemoryPageConnector: ConnectableView {
             imageToDisplay: state.storageState.downloadURL(for: memory?.thumbnailURL),
             title: memory?.title,
             description: memory?.description,
-            valueURL: memory?.valueURL
+            valueURL: memory?.valueURL,
+            delete: { dispatch.send(MemoriesAction.delete(memory: memory)) }
         )
     }
 

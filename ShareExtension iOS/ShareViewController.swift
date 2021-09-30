@@ -45,7 +45,10 @@ final class ShareViewController: SLComposeServiceViewController {
 
         let contentType = UTType.url.identifier
         guard let provider = attachments.first,
-              provider.hasItemConformingToTypeIdentifier(contentType) else { return super.didSelectPost() }
+              provider.hasItemConformingToTypeIdentifier(contentType)
+        else {
+            return super.didSelectPost()
+        }
 
         provider.loadItem(forTypeIdentifier: contentType, options: nil) { result, _ in
             guard let url = result as? URL else {

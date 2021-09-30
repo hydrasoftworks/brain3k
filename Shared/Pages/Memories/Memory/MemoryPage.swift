@@ -6,6 +6,8 @@ import SwiftDux
 import SwiftUI
 
 struct MemoryPage: View {
+    @Environment(\.dismiss) var dismiss
+
     let viewModel: ViewModel
 
     var body: some View {
@@ -26,6 +28,16 @@ struct MemoryPage: View {
             }
         }
         .navigationTitle(L10n.MemoryPage.title)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button(action: {
+                    viewModel.delete()
+                    dismiss()
+                }) {
+                    Label(L10n.MemoryPage.Button.delete, systemImage: "trash")
+                }
+            }
+        }
     }
 
     private func image(_ url: URL) -> some View {
@@ -65,6 +77,15 @@ struct MemoryPage: View {
         let title: String?
         let description: String?
         let valueURL: URL?
+        let delete: () -> Void
+
+        static func == (lhs: ViewModel, rhs: ViewModel) -> Bool {
+            lhs.image == rhs.image
+                && lhs.imageToDisplay == rhs.imageToDisplay
+                && lhs.title == rhs.title
+                && lhs.description == rhs.description
+                && lhs.valueURL == rhs.valueURL
+        }
     }
 }
 
@@ -78,7 +99,8 @@ struct MemoryPage_Previews: PreviewProvider {
                 imageToDisplay: nil,
                 title: memoryUrl.title,
                 description: memoryUrl.description,
-                valueURL: memoryUrl.valueURL
+                valueURL: memoryUrl.valueURL,
+                delete: {}
             )
         )
     }

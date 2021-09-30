@@ -61,6 +61,10 @@ internal enum L10n {
     internal static let openMemory = L10n.tr("Localizable", "memory_page.open_memory")
     /// Memory
     internal static let title = L10n.tr("Localizable", "memory_page.title")
+    internal enum Button {
+      /// Delete memory
+      internal static let delete = L10n.tr("Localizable", "memory_page.button.delete")
+    }
   }
 
   internal enum PasswordTextField {

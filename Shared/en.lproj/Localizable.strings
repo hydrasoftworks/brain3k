@@ -30,6 +30,7 @@
 "memories_page.button.add" = "Add memory";
 "memory_page.not_found" = "Memory not found";
 "memory_page.title" = "Memory";
+"memory_page.button.delete" = "Delete memory";
 "memory_page.open_memory" = "Open memory";
 "add_memory_page.title" = "Add Memory";
 "add_memory_page.text_field.placeholder" = "Paste URL here";
