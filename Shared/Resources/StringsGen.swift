@@ -36,6 +36,8 @@ internal enum L10n {
     internal static let cancel = L10n.tr("Localizable", "general.cancel")
     /// OK
     internal static let ok = L10n.tr("Localizable", "general.ok")
+    /// Processing...
+    internal static let processing = L10n.tr("Localizable", "general.processing")
   }
 
   internal enum MemoriesPage {
@@ -44,13 +46,6 @@ internal enum L10n {
     internal enum Button {
       /// Add memory
       internal static let add = L10n.tr("Localizable", "memories_page.button.add")
-    }
-  }
-
-  internal enum MemoryCell {
-    internal enum ProcessingCell {
-      /// Processing...
-      internal static let title = L10n.tr("Localizable", "memory_cell.processing_cell.title")
     }
   }
 
@@ -64,6 +59,10 @@ internal enum L10n {
     internal enum Button {
       /// Delete memory
       internal static let delete = L10n.tr("Localizable", "memory_page.button.delete")
+      /// Actions
+      internal static let menu = L10n.tr("Localizable", "memory_page.button.menu")
+      /// Refresh memory
+      internal static let refresh = L10n.tr("Localizable", "memory_page.button.refresh")
     }
   }
 

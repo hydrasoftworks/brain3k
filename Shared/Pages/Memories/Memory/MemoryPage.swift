@@ -14,11 +14,7 @@ struct MemoryPage: View {
         VStack {
             ScrollView {
                 if viewModel.hasImage {
-                    if let url = viewModel.imageToDisplay {
-                        image(url)
-                    } else {
-                        PlaceholderView()
-                    }
+                    image(viewModel.imageToDisplay)
                 }
                 if let text = viewModel.title { title(text) }
                 if let text = viewModel.description { description(text) }
@@ -30,23 +26,54 @@ struct MemoryPage: View {
         .navigationTitle(L10n.MemoryPage.title)
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
-                Button(action: {
-                    viewModel.delete()
-                    dismiss()
+                Menu(content: {
+                    refreshButton
+                    deleteButton
                 }) {
-                    Label(L10n.MemoryPage.Button.delete, systemImage: "trash")
+                    Label(
+                        L10n.MemoryPage.Button.menu,
+                        systemImage: "ellipsis.circle"
+                    )
                 }
             }
         }
     }
 
-    private func image(_ url: URL) -> some View {
+    private var refreshButton: some View {
+        Button(
+            action: { viewModel.refresh() },
+            label: {
+                Label(
+                    L10n.MemoryPage.Button.refresh,
+                    systemImage: "arrow.triangle.2.circlepath"
+                )
+            }
+        )
+    }
+
+    private var deleteButton: some View {
+        Button(
+            role: .destructive,
+            action: {
+                viewModel.delete()
+                dismiss()
+            }, label: {
+                Label(
+                    L10n.MemoryPage.Button.delete,
+                    systemImage: "trash"
+                )
+            }
+        )
+    }
+
+    private func image(_ url: URL?) -> some View {
         AsyncImage(url: url) { image in
             image
                 .resizable()
                 .scaledToFill()
         } placeholder: {
             PlaceholderView()
+                .onAppear { viewModel.getDownloadURL() }
         }
         .frame(minHeight: 250, maxHeight: 250)
         .clipped()
@@ -78,6 +105,8 @@ struct MemoryPage: View {
         let description: String?
         let valueURL: URL?
         let delete: () -> Void
+        let refresh: () -> Void
+        let getDownloadURL: () -> Void
 
         static func == (lhs: ViewModel, rhs: ViewModel) -> Bool {
             lhs.image == rhs.image
@@ -100,7 +129,9 @@ struct MemoryPage_Previews: PreviewProvider {
                 title: memoryUrl.title,
                 description: memoryUrl.description,
                 valueURL: memoryUrl.valueURL,
-                delete: {}
+                delete: {},
+                refresh: {},
+                getDownloadURL: {}
             )
         )
     }

@@ -1,6 +1,7 @@
 "app_name" = "Brain3k";
 "general.ok" = "OK";
 "general.cancel" = "Cancel";
+"general.processing" = "Processing...";
 "share_extension.primary_action" = "Add";
 "share_extension.unsigned_message" = "Go to the %s app and sign in to perform this operation.";
 "share_extension.notes_placeholder" = "Notes (optional)";
@@ -25,11 +26,12 @@
 "unverified_email_page.button.verified" = "Email verified";
 "unverified_email_page.button.send" = "Send verification email";
 "unverified_email_page.button.sign_out" = "Sign out";
-"memory_cell.processing_cell.title" = "Processing...";
 "memories_page.title" = "Memories";
 "memories_page.button.add" = "Add memory";
 "memory_page.not_found" = "Memory not found";
 "memory_page.title" = "Memory";
+"memory_page.button.menu" = "Actions";
+"memory_page.button.refresh" = "Refresh memory";
 "memory_page.button.delete" = "Delete memory";
 "memory_page.open_memory" = "Open memory";
 "add_memory_page.title" = "Add Memory";

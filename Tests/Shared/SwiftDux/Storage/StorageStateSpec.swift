@@ -16,7 +16,7 @@ final class StorageStateSpec: QuickSpec {
             }
 
             it("should have empty list of downloaded URLs") {
-                expect(sut.downloadURLs).to(beEmpty())
+                expect(sut.downloadedURLs).to(beEmpty())
             }
         }
     }

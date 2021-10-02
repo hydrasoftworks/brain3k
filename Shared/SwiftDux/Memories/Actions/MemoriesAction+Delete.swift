@@ -17,8 +17,8 @@ extension MemoriesAction {
                 return .empty
             }
 
-            return memoriesService.deleteMemory(
-                withId: memoryId,
+            return memoriesService.delete(
+                memoryWithId: memoryId,
                 from: account.id
             )
             .mapToEmptyResult(ofType: Action.self)

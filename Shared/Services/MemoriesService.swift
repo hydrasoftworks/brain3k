@@ -49,7 +49,25 @@ class MemoriesService {
         .mapToAppError()
     }
 
-    func deleteMemory(withId memoryId: String, from accountId: String) -> AnyPublisher<Void, AppError> {
+    func update(
+        memoryWithId memoryId: String,
+        with memory: Memory,
+        on accountId: String
+    ) -> AnyPublisher<Void, AppError> {
+        let document = collection(of: accountId).document(memoryId)
+        return Future<Void, Error> { promise in
+            do {
+                try document.setData(from: memory)
+                promise(.success(()))
+            } catch {
+                promise(.failure(error))
+            }
+        }
+        .eraseToAnyPublisher()
+        .mapToAppError()
+    }
+
+    func delete(memoryWithId memoryId: String, from accountId: String) -> AnyPublisher<Void, AppError> {
         let document = collection(of: accountId).document(memoryId)
         return Future<Void, Error> { promise in
             document.delete()

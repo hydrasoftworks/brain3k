@@ -15,7 +15,7 @@ struct ProcessingCell: View {
                 backgroundColor: Color.brand,
                 shouldAnimate: .constant(true)
             )
-            PlaceholderView(title: L10n.MemoryCell.ProcessingCell.title)
+            PlaceholderView(title: L10n.General.processing)
                 .foregroundColor(.white)
                 .tint(.white.opacity(0.8))
         }

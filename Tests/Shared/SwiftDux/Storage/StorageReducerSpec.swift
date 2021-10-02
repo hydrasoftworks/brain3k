@@ -27,7 +27,7 @@ final class StorageReducerSpec: QuickSpec {
                         state: state,
                         action: .add(url1, url2)
                     )
-                    expect(result.downloadURLs[url1]).to(equal(url2))
+                    expect(result.downloadedURLs[url1]).to(equal(url2))
                 }
             }
         }

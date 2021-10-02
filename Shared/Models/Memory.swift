@@ -4,11 +4,6 @@
 
 import FirebaseFirestoreSwift
 import Foundation
-import Fuse
-
-enum MemoryType: String, Codable {
-    case url, image
-}
 
 struct Memory: Identifiable, Codable, Equatable {
     @DocumentID var id: String?
@@ -54,21 +49,6 @@ struct Memory: Identifiable, Codable, Equatable {
         self.description = description
         self.tags = tags
         self.processed = processed
-    }
-}
-
-extension Memory: Fuseable {
-    var properties: [FuseProperty] {
-        let tagWeight = 0.3 / Double(tags?.count ?? 1)
-
-        let properties = [
-            FuseProperty(name: title ?? "", weight: 0.2),
-            FuseProperty(name: description ?? "", weight: 0.2),
-            FuseProperty(name: notes ?? "", weight: 0.2),
-            FuseProperty(name: value, weight: 0.1),
-        ]
-        let tagProperties = tags?.map { FuseProperty(name: $0, weight: tagWeight) }
-        return properties + (tagProperties ?? [])
     }
 }
 

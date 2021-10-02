@@ -39,7 +39,7 @@ final class DeleteSpec: QuickSpec {
                     cancellable = actionPlan.run(store: storeProxy())
                         .sink(receiveValue: { _ in })
 
-                    verify(mock, never()).deleteMemory(withId: anyString(), from: anyString())
+                    verify(mock, never()).delete(memoryWithId: anyString(), from: anyString())
                 }
             }
 
@@ -50,14 +50,14 @@ final class DeleteSpec: QuickSpec {
                     cancellable = actionPlan.run(store: storeProxy())
                         .sink(receiveValue: { _ in })
 
-                    verify(mock, never()).deleteMemory(withId: anyString(), from: anyString())
+                    verify(mock, never()).delete(memoryWithId: anyString(), from: anyString())
                 }
             }
 
             context("when request returns success") {
                 beforeEach {
                     stub(mock) { stub in
-                        when(stub.deleteMemory(withId: anyString(), from: anyString()))
+                        when(stub.delete(memoryWithId: anyString(), from: anyString()))
                             .thenReturn(makeCombineResult(()))
                     }
                 }
@@ -68,7 +68,7 @@ final class DeleteSpec: QuickSpec {
                     cancellable = actionPlan.run(store: storeProxy(state))
                         .sink(receiveValue: { _ in })
                     verify(mock, times(1))
-                        .deleteMemory(withId: equal(to: memory.id ?? ""), from: anyString())
+                        .delete(memoryWithId: equal(to: memory.id ?? ""), from: anyString())
                 }
             }
         }
