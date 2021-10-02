@@ -18,7 +18,7 @@ final class StorageReducerSpec: QuickSpec {
             }
 
             context("\(StorageReducer.self) add") {
-                it("should update dowloadedURLs dictionary") {
+                it("should update downloadURLs dictionary") {
                     let url1 = URL(string: "gs://example.com")!
                     let url2 = URL(string: "https://example.com")!
 
@@ -27,7 +27,7 @@ final class StorageReducerSpec: QuickSpec {
                         state: state,
                         action: .add(url1, url2)
                     )
-                    expect(result.downloadedURLs[url1]).to(equal(url2))
+                    expect(result.downloadURLs[url1]).to(equal(url2))
                 }
             }
         }
