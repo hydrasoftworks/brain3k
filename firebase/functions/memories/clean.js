@@ -2,7 +2,6 @@ import functions from "firebase-functions";
 import admin from "firebase-admin";
 
 export default functions
-  .runWith({ timeoutSeconds: 540, memory: "2GB" })
   .region("europe-west1")
   .firestore.document("users/{userId}/memories/{memoryId}")
   .onDelete(async (_, context) => {

@@ -31,14 +31,25 @@ export default functions
   });
 
 async function readMetadataForURL(url) {
-  const response = await ogs({ url });
+  let response;
+  try {
+    response = await ogs({ url });
+  } catch (error) {
+    console.error(
+      `Open Graph Scrapper error for URL ${url}. Description: ${
+        error ?? "unavailable"
+      }`,
+    );
+    return {};
+  }
+
   const result = response.result;
-  if (result.success !== true) return {};
+  if (response.error || result.success !== true) return {};
   return JSON.parse(
     JSON.stringify({
       title: result.ogTitle,
       description: result.ogDescription,
-      thumbnail: result.ogImage.url,
+      thumbnail: result.ogImage?.url,
       additionalInfo: result,
     }),
   );
