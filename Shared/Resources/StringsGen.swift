@@ -47,6 +47,12 @@ internal enum L10n {
       /// Add memory
       internal static let add = L10n.tr("Localizable", "memories_page.button.add")
     }
+    internal enum Empty {
+      /// Add your first memory using the + button above or by sharing the URL from any app.
+      internal static let all = L10n.tr("Localizable", "memories_page.empty.all")
+      /// Didn't find memories matching provided search query.
+      internal static let search = L10n.tr("Localizable", "memories_page.empty.search")
+    }
   }
 
   internal enum MemoryPage {

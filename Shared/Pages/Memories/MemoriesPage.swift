@@ -20,7 +20,33 @@ struct MemoriesPage: ConnectableView {
     }
 
     func body(props viewModel: ViewModel) -> some View {
-        ScrollView {
+        ScrollView { list(viewModel) }
+            // Pull to Refresh doesn't work on ScrollView xD
+            .refreshable { dispatch.send(MemoriesAction.getAll()) }
+            .searchable(text: viewModel.$searchQuery)
+            .navigationTitle(L10n.MemoriesPage.title)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: { isAddMemoryPresented.toggle() }) {
+                        Label(L10n.MemoriesPage.Button.add, systemImage: "plus")
+                    }
+                }
+            }
+            .sheet(
+                isPresented: $isAddMemoryPresented,
+                content: { NavigationView { AddMemoryPage() } }
+            )
+    }
+
+    @ViewBuilder
+    private func list(_ viewModel: ViewModel) -> some View {
+        if viewModel.memories.isEmpty {
+            EmptyList(
+                text: viewModel.searchQuery.isEmpty
+                    ? L10n.MemoriesPage.Empty.all
+                    : L10n.MemoriesPage.Empty.search
+            )
+        } else {
             LazyVGrid(
                 columns: [GridItem(.adaptive(minimum: 150), spacing: 16)],
                 spacing: 16
@@ -35,21 +61,6 @@ struct MemoriesPage: ConnectableView {
             }
             .padding(.horizontal)
         }
-        // Pull to Refresh doesn't work on ScrollView xD
-        .refreshable { dispatch.send(MemoriesAction.getAll()) }
-        .searchable(text: viewModel.$searchQuery)
-        .navigationTitle(L10n.MemoriesPage.title)
-        .toolbar {
-            ToolbarItem(placement: .navigationBarTrailing) {
-                Button(action: { isAddMemoryPresented.toggle() }) {
-                    Label(L10n.MemoriesPage.Button.add, systemImage: "plus")
-                }
-            }
-        }
-        .sheet(
-            isPresented: $isAddMemoryPresented,
-            content: { NavigationView { AddMemoryPage() } }
-        )
     }
 
     struct ViewModel: Equatable {
@@ -58,7 +69,7 @@ struct MemoriesPage: ConnectableView {
     }
 }
 
-struct BrowseMemoriesPage_Previews: PreviewProvider {
+struct MemoriesPage_Previews: PreviewProvider {
     static var previews: some View {
         MemoriesPage()
     }

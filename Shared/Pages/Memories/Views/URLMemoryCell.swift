@@ -10,11 +10,7 @@ struct URLMemoryCell: View {
     var body: some View {
         ZStack(alignment: .bottom) {
             if viewModel.hasImage {
-                if let url = viewModel.imageToDisplay {
-                    image(url)
-                } else {
-                    PlaceholderView()
-                }
+                image(viewModel.imageToDisplay)
             } else {
                 domain(viewModel.domain)
             }
@@ -24,7 +20,7 @@ struct URLMemoryCell: View {
         }
     }
 
-    private func image(_ url: URL) -> some View {
+    private func image(_ url: URL?) -> some View {
         AsyncImage(url: url) { image in
             image
                 .resizable()

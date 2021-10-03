@@ -28,6 +28,8 @@
 "unverified_email_page.button.sign_out" = "Sign out";
 "memories_page.title" = "Memories";
 "memories_page.button.add" = "Add memory";
+"memories_page.empty.all" = "Add your first memory using the + button above or by sharing the URL from any app.";
+"memories_page.empty.search" = "Didn't find memories matching provided search query.";
 "memory_page.not_found" = "Memory not found";
 "memory_page.title" = "Memory";
 "memory_page.button.menu" = "Actions";
