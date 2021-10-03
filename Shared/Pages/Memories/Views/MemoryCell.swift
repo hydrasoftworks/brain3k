@@ -10,17 +10,21 @@ struct MemoryCell: View {
     let memory: Memory
 
     var body: some View {
-        content
-            .expanded()
-            .background(
-                LinearGradient(
-                    colors: Color.gradient(colorScheme),
-                    startPoint: .topLeading,
-                    endPoint: .bottomTrailing
+        NavigationLink(
+            destination: MemoryPageConnector(memoryId: memory.id)
+        ) {
+            content
+                .background(
+                    LinearGradient(
+                        colors: Color.gradient(colorScheme),
+                        startPoint: .topLeading,
+                        endPoint: .bottomTrailing
+                    )
                 )
-            )
-            .aspectRatio(1, contentMode: .fill)
-            .cornerRadius(16)
+        }
+        .expanded()
+        .aspectRatio(1, contentMode: .fill)
+        .cornerRadius(16)
     }
 
     @ViewBuilder

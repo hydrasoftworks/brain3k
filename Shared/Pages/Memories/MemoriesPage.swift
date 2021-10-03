@@ -20,26 +20,29 @@ struct MemoriesPage: ConnectableView {
     }
 
     func body(props viewModel: ViewModel) -> some View {
-        ScrollView { list(viewModel) }
-            // Pull to Refresh doesn't work on ScrollView xD
-            .refreshable { dispatch.send(MemoriesAction.getAll()) }
-            .searchable(text: viewModel.$searchQuery)
-            .navigationTitle(L10n.MemoriesPage.title)
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(action: { isAddMemoryPresented.toggle() }) {
-                        Label(L10n.MemoriesPage.Button.add, systemImage: "plus")
-                    }
+        ScrollView {
+            grid(viewModel)
+                .padding(.horizontal)
+        }
+        // Pull to Refresh doesn't work on ScrollView xD
+        .refreshable { dispatch.send(MemoriesAction.getAll()) }
+        .searchable(text: viewModel.$searchQuery)
+        .navigationTitle(L10n.MemoriesPage.title)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button(action: { isAddMemoryPresented.toggle() }) {
+                    Label(L10n.MemoriesPage.Button.add, systemImage: "plus")
                 }
             }
-            .sheet(
-                isPresented: $isAddMemoryPresented,
-                content: { NavigationView { AddMemoryPage() } }
-            )
+        }
+        .sheet(
+            isPresented: $isAddMemoryPresented,
+            content: { NavigationView { AddMemoryPage() } }
+        )
     }
 
     @ViewBuilder
-    private func list(_ viewModel: ViewModel) -> some View {
+    private func grid(_ viewModel: ViewModel) -> some View {
         if viewModel.memories.isEmpty {
             EmptyList(
                 text: viewModel.searchQuery.isEmpty
@@ -52,14 +55,9 @@ struct MemoriesPage: ConnectableView {
                 spacing: 16
             ) {
                 ForEach(viewModel.memories) { memory in
-                    NavigationLink(
-                        destination: MemoryPageConnector(memoryId: memory.id)
-                    ) {
-                        MemoryCell(memory: memory)
-                    }
+                    MemoryCell(memory: memory)
                 }
             }
-            .padding(.horizontal)
         }
     }
 
