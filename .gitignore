@@ -2,3 +2,4 @@
 Brain3k.xcodeproj/xcuserdata
 scripts/cuckoo_generator
 Tests/Helpers/GeneratedMocks.swift
+firebase/functions/.runtimeconfig.json

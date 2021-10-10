@@ -1,11 +1,8 @@
 import admin from "firebase-admin";
-
-import metadata from "./memories/metadata.js";
-import thumbnail from "./memories/thumbnail.js";
-import tags from "./memories/tags.js";
+import analyzeURL from "./memories/url/analyze.js";
 import clean from "./memories/clean.js";
 
-export { metadata, thumbnail, tags, clean };
+export { analyzeURL, clean };
 
 // This must be called at the end when all functions are exported
 admin.initializeApp();
