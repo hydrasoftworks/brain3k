@@ -83,8 +83,22 @@ internal enum L10n {
     /// Settings
     internal static let title = L10n.tr("Localizable", "settings_page.title")
     internal enum Button {
+      /// Delete account
+      internal static let deleteAccount = L10n.tr("Localizable", "settings_page.button.delete_account")
       /// Sign out
       internal static let signOut = L10n.tr("Localizable", "settings_page.button.sign_out")
+    }
+    internal enum Confirmation {
+      /// Do you want to delete your account?\nThis action cannot be undone.
+      internal static let deleteAccount = L10n.tr("Localizable", "settings_page.confirmation.delete_account")
+      internal enum Button {
+        /// Yes, delete my account
+        internal static let deleteAccount = L10n.tr("Localizable", "settings_page.confirmation.button.delete_account")
+      }
+    }
+    internal enum Sections {
+      /// Account
+      internal static let account = L10n.tr("Localizable", "settings_page.sections.account")
     }
   }
 

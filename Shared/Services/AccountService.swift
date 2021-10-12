@@ -98,6 +98,19 @@ class AccountService {
         .mapToAppError()
     }
 
+    func deleteAccount() -> AnyPublisher<Void, AppError> {
+        Future<Void, Error> { promise in
+            Auth.auth().currentUser?.delete { error in
+                if let error = error {
+                    promise(.failure(error))
+                } else {
+                    promise(.success(()))
+                }
+            }
+        }
+        .mapToAppError()
+    }
+
     private func handleSignResponse(
         _ promise: @escaping Future<Account, Error>.Promise
     ) -> AuthDataResultCallback {

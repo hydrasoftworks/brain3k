@@ -6,16 +6,30 @@ import SwiftUI
 
 struct SecondaryButton: View {
     let title: String
+    let role: ButtonRole?
     let action: () -> Void
 
+    init(
+        title: String,
+        role: ButtonRole? = nil,
+        action: @escaping () -> Void
+    ) {
+        self.title = title
+        self.role = role
+        self.action = action
+    }
+
     var body: some View {
-        Button(title, action: action)
+        Button(title, role: role, action: action)
             .foregroundColor(Color.brand)
     }
 }
 
 struct SecondaryButton_Previews: PreviewProvider {
     static var previews: some View {
-        SecondaryButton(title: "Secondary Button", action: {})
+        SecondaryButton(
+            title: "Secondary Button",
+            action: {}
+        )
     }
 }
