@@ -11,18 +11,10 @@ struct MemoryPage: View {
     let viewModel: ViewModel
 
     var body: some View {
-        VStack {
-            ScrollView {
-                if viewModel.hasImage {
-                    image(viewModel.imageToDisplay)
-                }
-                if let text = viewModel.title { title(text) }
-                if let text = viewModel.description { description(text) }
-            }
-            if let url = viewModel.valueURL {
-                OpenMemoryButton(url: url)
-            }
-        }
+        DeviceOrientationView(
+            portrait: { portrait },
+            landscape: { landscape }
+        )
         .navigationTitle(L10n.MemoryPage.title)
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
@@ -34,6 +26,47 @@ struct MemoryPage: View {
                         L10n.MemoryPage.Button.menu,
                         systemImage: "ellipsis.circle"
                     )
+                }
+            }
+        }
+    }
+
+    private var portrait: some View {
+        VStack {
+            ScrollView {
+                if viewModel.hasImage {
+                    MemoryImage(
+                        viewModel.imageToDisplay,
+                        onAppear: viewModel.getDownloadURL,
+                        height: 250
+                    )
+                    .padding(.bottom)
+                }
+                if let text = viewModel.title { title(text) }
+                if let text = viewModel.description { description(text) }
+            }
+            if let url = viewModel.valueURL {
+                OpenMemoryButton(url: url)
+            }
+        }
+    }
+
+    private var landscape: some View {
+        HStack {
+            if viewModel.hasImage {
+                MemoryImage(
+                    viewModel.imageToDisplay,
+                    onAppear: viewModel.getDownloadURL,
+                    width: 300
+                )
+            }
+            VStack {
+                ScrollView {
+                    if let text = viewModel.title { title(text) }
+                    if let text = viewModel.description { description(text) }
+                }
+                if let url = viewModel.valueURL {
+                    OpenMemoryButton(url: url)
                 }
             }
         }
@@ -64,20 +97,6 @@ struct MemoryPage: View {
                 )
             }
         )
-    }
-
-    private func image(_ url: URL?) -> some View {
-        AsyncImage(url: url) { image in
-            image
-                .resizable()
-                .scaledToFill()
-        } placeholder: {
-            PlaceholderView()
-                .onAppear { viewModel.getDownloadURL() }
-        }
-        .frame(minHeight: 250, maxHeight: 250)
-        .clipped()
-        .padding(.bottom)
     }
 
     private func title(_ text: String) -> some View {

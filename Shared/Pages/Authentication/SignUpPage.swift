@@ -22,29 +22,29 @@ struct SignUpPage: ConnectableView {
     }
 
     func body(props _: ViewModel) -> some View {
-        VStack(spacing: 16) {
-            Text(L10n.SignUpPage.title)
-                .font(.title)
-                .bold()
-                .foregroundStyle(Color.brand)
-            Text(L10n.SignUpPage.description1)
-                .font(.body)
-            AppSignInWithAppleButton()
-            Text(L10n.SignUpPage.description2)
-                .font(.body)
-            EmailTextField(email: $email)
-            PasswordTextField(
-                title: L10n.PasswordTextField.newPasswordPlaceholder,
-                textContentType: .newPassword,
-                password: $password
-            )
-            signUpButton
-            goToSignInButton
-        }
-        .multilineTextAlignment(.center)
-        .padding()
-        .materialBackground()
-        .padding()
+        SignPageBase(
+            firstSection: {
+                Text(L10n.SignUpPage.title)
+                    .font(.title)
+                    .bold()
+                    .foregroundStyle(Color.brand)
+                Text(L10n.SignUpPage.description1)
+                    .font(.body)
+                AppSignInWithAppleButton()
+            },
+            secondSection: {
+                Text(L10n.SignUpPage.description2)
+                    .font(.body)
+                EmailTextField(email: $email)
+                PasswordTextField(
+                    title: L10n.PasswordTextField.newPasswordPlaceholder,
+                    textContentType: .newPassword,
+                    password: $password
+                )
+                signUpButton
+                goToSignInButton
+            }
+        )
     }
 
     private var signUpButton: some View {

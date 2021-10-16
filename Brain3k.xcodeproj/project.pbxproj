@@ -39,6 +39,14 @@
 		8E50D87026BB33E30075C08C /* IrregularGradient in Frameworks */ = {isa = PBXBuildFile; productRef = 8E50D86F26BB33E30075C08C /* IrregularGradient */; };
 		8E50D87226BB33EF0075C08C /* IrregularGradient in Frameworks */ = {isa = PBXBuildFile; productRef = 8E50D87126BB33EF0075C08C /* IrregularGradient */; };
 		8E50D87526BB40320075C08C /* MemorySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E50D87426BB40320075C08C /* MemorySpec.swift */; };
+		8E58D146271B096A0033B02A /* DeviceOrientationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E58D145271B096A0033B02A /* DeviceOrientationView.swift */; };
+		8E58D147271B096A0033B02A /* DeviceOrientationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E58D145271B096A0033B02A /* DeviceOrientationView.swift */; };
+		8E58D149271B0F350033B02A /* MemoryImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E58D148271B0F350033B02A /* MemoryImage.swift */; };
+		8E58D14A271B0F350033B02A /* MemoryImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E58D148271B0F350033B02A /* MemoryImage.swift */; };
+		8E58D14C271B17840033B02A /* OrientationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E58D14B271B17840033B02A /* OrientationHelper.swift */; };
+		8E58D14D271B17840033B02A /* OrientationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E58D14B271B17840033B02A /* OrientationHelper.swift */; };
+		8E58D14F271B2D590033B02A /* SignPageBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E58D14E271B2D590033B02A /* SignPageBase.swift */; };
+		8E58D150271B2D590033B02A /* SignPageBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E58D14E271B2D590033B02A /* SignPageBase.swift */; };
 		8E5D7D0826CC4D43009024A0 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5D7D0726CC4D43009024A0 /* StorageService.swift */; };
 		8E5D7D0926CC4D43009024A0 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5D7D0726CC4D43009024A0 /* StorageService.swift */; };
 		8E5D7D0C26CC4FB8009024A0 /* StorageState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5D7D0B26CC4FB8009024A0 /* StorageState.swift */; };
@@ -300,6 +308,10 @@
 		8E3810F2269CD72500ED3851 /* AccountStateSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountStateSpec.swift; sourceTree = "<group>"; };
 		8E50D86B26BB30280075C08C /* ProcessingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessingCell.swift; sourceTree = "<group>"; };
 		8E50D87426BB40320075C08C /* MemorySpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemorySpec.swift; sourceTree = "<group>"; };
+		8E58D145271B096A0033B02A /* DeviceOrientationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceOrientationView.swift; sourceTree = "<group>"; };
+		8E58D148271B0F350033B02A /* MemoryImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryImage.swift; sourceTree = "<group>"; };
+		8E58D14B271B17840033B02A /* OrientationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrientationHelper.swift; sourceTree = "<group>"; };
+		8E58D14E271B2D590033B02A /* SignPageBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignPageBase.swift; sourceTree = "<group>"; };
 		8E5D7D0726CC4D43009024A0 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 		8E5D7D0B26CC4FB8009024A0 /* StorageState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageState.swift; sourceTree = "<group>"; };
 		8E5D7D0F26CC504E009024A0 /* StorageReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageReducer.swift; sourceTree = "<group>"; };
@@ -487,6 +499,7 @@
 			isa = PBXGroup;
 			children = (
 				8E15375826FF439100D3232F /* OpenMemoryButton.swift */,
+				8E58D148271B0F350033B02A /* MemoryImage.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -623,6 +636,7 @@
 				8E79C13B269619C0002D2A8B /* SignInWithAppleButton.swift */,
 				8EA4D28326939E6400C0A037 /* PasswordTextField.swift */,
 				8EA4D28026939DE100C0A037 /* EmailTextField.swift */,
+				8E58D14E271B2D590033B02A /* SignPageBase.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -844,6 +858,7 @@
 				8EEF35E0268CED570068DB58 /* AccountStatus.swift */,
 				8E79C14226978778002D2A8B /* Message.swift */,
 				8E77700226A32C6B00D97F52 /* AppError.swift */,
+				8E58D14B271B17840033B02A /* OrientationHelper.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -887,6 +902,7 @@
 				8E6821B626A9E43800B2DACB /* PlaceholderView.swift */,
 				8EBC052C2699CB52008B2478 /* PrimaryButton.swift */,
 				8EBC053F269A0B8D008B2478 /* SecondaryButton.swift */,
+				8E58D145271B096A0033B02A /* DeviceOrientationView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1217,6 +1233,7 @@
 				8E3436EE27089D1900FA1CB0 /* Memory+Fuseable.swift in Sources */,
 				8EC4BAD826BDD7E000F20EAE /* StringsGen.swift in Sources */,
 				8EDC011C26D03E9600D2064A /* CompletionHandler.swift in Sources */,
+				8E58D14C271B17840033B02A /* OrientationHelper.swift in Sources */,
 				8EBF94BB2709CA690045B33E /* EmptyList.swift in Sources */,
 				8EBC0540269A0B8D008B2478 /* SecondaryButton.swift in Sources */,
 				8EC607502688AFD1006ED3C1 /* SignInPage.swift in Sources */,
@@ -1228,6 +1245,7 @@
 				8EC6074E2688AFD1006ED3C1 /* Brain3kApp.swift in Sources */,
 				8EBC05302699D25D008B2478 /* Publisher+MapToEmptyResult.swift in Sources */,
 				8EA4D27D26938D1000C0A037 /* TextFieldStyle.swift in Sources */,
+				8E58D149271B0F350033B02A /* MemoryImage.swift in Sources */,
 				8E5D7D0826CC4D43009024A0 /* StorageService.swift in Sources */,
 				8E92A7D626A0B59F00BAED7F /* AccountService.swift in Sources */,
 				8EBC053D269A0A8A008B2478 /* MemoryPage.swift in Sources */,
@@ -1247,8 +1265,10 @@
 				8E889CF526A22F9500F7C47C /* AccountAction+Refresh.swift in Sources */,
 				8EB7470B2706588B004F4F18 /* MemoriesAction+Delete.swift in Sources */,
 				8EBC053A269A0A7E008B2478 /* MemoriesPage.swift in Sources */,
+				8E58D14F271B2D590033B02A /* SignPageBase.swift in Sources */,
 				8E889CF026A22D4F00F7C47C /* AccountAction+SignOut.swift in Sources */,
 				8EAAD9E826C5A3F1007C2973 /* AnyPublisher+Create.swift in Sources */,
+				8E58D146271B096A0033B02A /* DeviceOrientationView.swift in Sources */,
 				8EEDD793268BCD9200F670D2 /* Account.swift in Sources */,
 				8E889CEB26A22A4300F7C47C /* AccountAction+SignUp.swift in Sources */,
 				8E79C14326978778002D2A8B /* Message.swift in Sources */,
@@ -1304,6 +1324,7 @@
 				8E3436EF27089D1900FA1CB0 /* Memory+Fuseable.swift in Sources */,
 				8EC4BAD926BDD7E000F20EAE /* StringsGen.swift in Sources */,
 				8EDC011D26D03E9600D2064A /* CompletionHandler.swift in Sources */,
+				8E58D14D271B17840033B02A /* OrientationHelper.swift in Sources */,
 				8EBF94BC2709CA690045B33E /* EmptyList.swift in Sources */,
 				8EBC0541269A0B8D008B2478 /* SecondaryButton.swift in Sources */,
 				8EC607512688AFD1006ED3C1 /* SignInPage.swift in Sources */,
@@ -1315,6 +1336,7 @@
 				8EC6074F2688AFD1006ED3C1 /* Brain3kApp.swift in Sources */,
 				8EBC05312699D25D008B2478 /* Publisher+MapToEmptyResult.swift in Sources */,
 				8EA4D27E26938D1100C0A037 /* TextFieldStyle.swift in Sources */,
+				8E58D14A271B0F350033B02A /* MemoryImage.swift in Sources */,
 				8E5D7D0926CC4D43009024A0 /* StorageService.swift in Sources */,
 				8E92A7D726A0B59F00BAED7F /* AccountService.swift in Sources */,
 				8EBC053E269A0A8A008B2478 /* MemoryPage.swift in Sources */,
@@ -1334,8 +1356,10 @@
 				8E889CF626A22F9500F7C47C /* AccountAction+Refresh.swift in Sources */,
 				8EB7470C2706588B004F4F18 /* MemoriesAction+Delete.swift in Sources */,
 				8EBC053B269A0A7E008B2478 /* MemoriesPage.swift in Sources */,
+				8E58D150271B2D590033B02A /* SignPageBase.swift in Sources */,
 				8E889CF126A22D4F00F7C47C /* AccountAction+SignOut.swift in Sources */,
 				8EAAD9E926C5A3F1007C2973 /* AnyPublisher+Create.swift in Sources */,
+				8E58D147271B096A0033B02A /* DeviceOrientationView.swift in Sources */,
 				8EEDD794268BCD9200F670D2 /* Account.swift in Sources */,
 				8E889CEC26A22A4300F7C47C /* AccountAction+SignUp.swift in Sources */,
 				8E79C14426978778002D2A8B /* Message.swift in Sources */,
@@ -1607,6 +1631,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -1646,6 +1671,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
