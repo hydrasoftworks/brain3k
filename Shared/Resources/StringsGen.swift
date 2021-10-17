@@ -40,6 +40,13 @@ internal enum L10n {
     internal static let processing = L10n.tr("Localizable", "general.processing")
   }
 
+  internal enum HomePage {
+    internal enum Menu {
+      /// Menu
+      internal static let title = L10n.tr("Localizable", "home_page.menu.title")
+    }
+  }
+
   internal enum MemoriesPage {
     /// Memories
     internal static let title = L10n.tr("Localizable", "memories_page.title")
@@ -69,6 +76,12 @@ internal enum L10n {
       internal static let menu = L10n.tr("Localizable", "memory_page.button.menu")
       /// Refresh memory
       internal static let refresh = L10n.tr("Localizable", "memory_page.button.refresh")
+    }
+    internal enum Empty {
+      /// Select memory from %s page to display.
+      internal static func notSelected(_ p1: UnsafePointer<CChar>) -> String {
+        return L10n.tr("Localizable", "memory_page.empty.not_selected", p1)
+      }
     }
   }
 

@@ -60,9 +60,3 @@ struct UnverifiedEmailPage: ConnectableView {
         let email: String?
     }
 }
-
-struct UnverifiedEmailPage_Previews: PreviewProvider {
-    static var previews: some View {
-        UnverifiedEmailPage()
-    }
-}

@@ -45,9 +45,3 @@ struct SettingsPage: ConnectableView {
 
     struct ViewModel: Equatable {}
 }
-
-struct ProfilePage_Previews: PreviewProvider {
-    static var previews: some View {
-        SettingsPage()
-    }
-}

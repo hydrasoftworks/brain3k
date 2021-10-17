@@ -24,12 +24,3 @@ struct SecondaryButton: View {
             .foregroundColor(Color.brand)
     }
 }
-
-struct SecondaryButton_Previews: PreviewProvider {
-    static var previews: some View {
-        SecondaryButton(
-            title: "Secondary Button",
-            action: {}
-        )
-    }
-}

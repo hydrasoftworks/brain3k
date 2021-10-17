@@ -5,27 +5,18 @@
 import SwiftDux
 import SwiftUI
 
-struct MemoriesPage: ConnectableView {
-    @Environment(\.actionDispatcher) private var dispatch
-
+struct MemoriesPage: View {
     @SwiftUI.State private var isAddMemoryPresented: Bool = false
 
-    func map(state: AppState, binder: ActionBinder) -> ViewModel? {
-        ViewModel(
-            memories: state.memoriesState.filtered ?? state.memoriesState.all,
-            searchQuery: binder.bind(state.memoriesState.searchQuery) {
-                MemoriesAction.search(for: $0)
-            }
-        )
-    }
+    let viewModel: ViewModel
 
-    func body(props viewModel: ViewModel) -> some View {
+    var body: some View {
         ScrollView {
             grid(viewModel)
                 .padding(.horizontal)
         }
         // Pull to Refresh doesn't work on ScrollView xD
-        .refreshable { dispatch.send(MemoriesAction.getAll()) }
+        .refreshable { viewModel.getAllMemories() }
         .searchable(text: viewModel.$searchQuery)
         .navigationTitle(L10n.MemoriesPage.title)
         .toolbar {
@@ -44,7 +35,7 @@ struct MemoriesPage: ConnectableView {
     @ViewBuilder
     private func grid(_ viewModel: ViewModel) -> some View {
         if viewModel.memories.isEmpty {
-            EmptyList(
+            EmptyView(
                 text: viewModel.searchQuery.isEmpty
                     ? L10n.MemoriesPage.Empty.all
                     : L10n.MemoriesPage.Empty.search
@@ -64,11 +55,10 @@ struct MemoriesPage: ConnectableView {
     struct ViewModel: Equatable {
         let memories: [Memory]
         @ActionBinding var searchQuery: String
-    }
-}
+        let getAllMemories: () -> Void
 
-struct MemoriesPage_Previews: PreviewProvider {
-    static var previews: some View {
-        MemoriesPage()
+        static func == (lhs: MemoriesPage.ViewModel, rhs: MemoriesPage.ViewModel) -> Bool {
+            lhs.memories == rhs.memories
+        }
     }
 }

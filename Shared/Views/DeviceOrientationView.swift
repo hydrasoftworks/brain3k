@@ -37,20 +37,3 @@ struct DeviceOrientationView<Portrait, Landscape>: View where Portrait: View, La
         }
     }
 }
-
-struct DeviceOrientationView_Previews: PreviewProvider {
-    static var previews: some View {
-        Group {
-            DeviceOrientationView(
-                portrait: { Text("Portrait") },
-                landscape: { Text("Landscape") }
-            )
-            .previewInterfaceOrientation(.portrait)
-            DeviceOrientationView(
-                portrait: { Text("Portrait") },
-                landscape: { Text("Landscape") }
-            )
-            .previewInterfaceOrientation(.landscapeLeft)
-        }
-    }
-}

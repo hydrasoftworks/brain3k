@@ -16,9 +16,3 @@ struct PlaceholderView: View {
             .expanded()
     }
 }
-
-struct ProgressView_Previews: PreviewProvider {
-    static var previews: some View {
-        PlaceholderView()
-    }
-}

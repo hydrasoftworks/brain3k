@@ -39,10 +39,3 @@ struct MemoryCell: View {
         }
     }
 }
-
-struct MemoryCell_Previews: PreviewProvider {
-    static var previews: some View {
-        MemoryCell(memory: Memory.exampleURL())
-            .previewLayout(.fixed(width: 200, height: 200))
-    }
-}

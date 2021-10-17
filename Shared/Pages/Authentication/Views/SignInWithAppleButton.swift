@@ -40,9 +40,3 @@ struct AppSignInWithAppleButton: ConnectableView {
         let nonce: String?
     }
 }
-
-struct AppSignInWithAppleButton_Previews: PreviewProvider {
-    static var previews: some View {
-        AppSignInWithAppleButton()
-    }
-}

@@ -21,9 +21,3 @@ struct JoinPage: View {
         .onAppear(dispatch: AccountAction.generateNonce())
     }
 }
-
-struct JoinPage_Previews: PreviewProvider {
-    static var previews: some View {
-        JoinPage()
-    }
-}

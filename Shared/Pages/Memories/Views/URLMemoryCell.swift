@@ -59,31 +59,3 @@ struct URLMemoryCell: View {
         var hasImage: Bool { image != nil }
     }
 }
-
-struct URLMemoryCell_Previews: PreviewProvider {
-    static let memoryUrl1 = Memory.exampleURL()
-    static let memoryUrl2 = Memory.exampleURL(thumbnail: false)
-
-    static var previews: some View {
-        Group {
-            URLMemoryCell(
-                viewModel: URLMemoryCell.ViewModel(
-                    title: memoryUrl1.title,
-                    domain: memoryUrl1.valueURL?.host ?? memoryUrl1.value,
-                    image: memoryUrl1.thumbnailURL,
-                    imageToDisplay: nil
-                )
-            )
-            .previewLayout(.fixed(width: 200, height: 200))
-            URLMemoryCell(
-                viewModel: URLMemoryCell.ViewModel(
-                    title: memoryUrl2.title,
-                    domain: memoryUrl2.valueURL?.host ?? memoryUrl2.value,
-                    image: memoryUrl2.thumbnailURL,
-                    imageToDisplay: nil
-                )
-            )
-            .previewLayout(.fixed(width: 200, height: 200))
-        }
-    }
-}

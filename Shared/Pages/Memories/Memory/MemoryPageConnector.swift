@@ -16,6 +16,7 @@ struct MemoryPageConnector: ConnectableView {
         let title = (memory?.processed ?? false) ? memory?.title : L10n.General.processing
 
         return MemoryPage.ViewModel(
+            memoryExist: memory != nil,
             image: image,
             imageToDisplay: state.storageState.downloadURL(for: memory?.thumbnailURL),
             title: title,

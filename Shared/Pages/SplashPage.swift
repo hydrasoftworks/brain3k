@@ -55,17 +55,3 @@ struct SplashPage: ConnectableView {
         }
     }
 }
-
-struct SplashScreen_Previews: PreviewProvider {
-    private static var store: Store<AppState> {
-        Store(
-            state: AppState(),
-            reducer: AppReducer()
-        )
-    }
-
-    static var previews: some View {
-        SplashPage()
-            .provideStore(store)
-    }
-}

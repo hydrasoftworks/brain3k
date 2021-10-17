@@ -22,9 +22,3 @@ struct Background: View {
         .ignoresSafeArea()
     }
 }
-
-struct Background_Previews: PreviewProvider {
-    static var previews: some View {
-        Background()
-    }
-}

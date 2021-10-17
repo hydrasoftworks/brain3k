@@ -67,17 +67,3 @@ struct SignInPage: ConnectableView {
 
     struct ViewModel: Equatable {}
 }
-
-struct SignInPage_Previews: PreviewProvider {
-    private static var store: Store<AppState> {
-        Store(
-            state: AppState(),
-            reducer: AppReducer()
-        )
-    }
-
-    static var previews: some View {
-        SignInPage(flip: {})
-            .provideStore(store)
-    }
-}

@@ -15,11 +15,3 @@ struct OpenMemoryButton: View {
         .padding()
     }
 }
-
-struct OpenURLButton_Previews: PreviewProvider {
-    static var previews: some View {
-        if let url = URL(string: "https://example.com") {
-            OpenMemoryButton(url: url)
-        }
-    }
-}

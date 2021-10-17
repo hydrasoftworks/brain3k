@@ -4,7 +4,7 @@
 
 import SwiftUI
 
-struct EmptyList: View {
+struct EmptyView: View {
     let text: String
 
     var body: some View {
@@ -22,11 +22,5 @@ struct EmptyList: View {
                 .padding(.horizontal, 48)
         }
         .frame(maxHeight: .infinity, alignment: .top)
-    }
-}
-
-struct EmptyList_Previews: PreviewProvider {
-    static var previews: some View {
-        EmptyList(text: L10n.MemoriesPage.Empty.all)
     }
 }

@@ -51,21 +51,3 @@ struct Memory: Identifiable, Codable, Equatable {
         self.processed = processed
     }
 }
-
-extension Memory {
-    static func exampleURL(thumbnail: Bool = true) -> Memory {
-        Memory(
-            id: "1",
-            createdAt: Date(),
-            updatedAt: Date(),
-            type: .url,
-            value: "https://swiftwombat.com",
-            thumbnail: thumbnail ? "https://swiftwombat.com/content/images/2020/12/cover.png" : nil,
-            title: "Swift Wombat - Swift & SwiftUI knowledge base",
-            notes: nil,
-            description: "Basic, intermediate, and advanced topics of iOS and macOS development. Knowledge base for mobile and desktop developers working on the Apple ecosystem.",
-            tags: nil,
-            processed: true
-        )
-    }
-}

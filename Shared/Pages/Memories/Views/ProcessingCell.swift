@@ -21,9 +21,3 @@ struct ProcessingCell: View {
         }
     }
 }
-
-struct ProcessingCell_Previews: PreviewProvider {
-    static var previews: some View {
-        ProcessingCell()
-    }
-}

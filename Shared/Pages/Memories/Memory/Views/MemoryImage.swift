@@ -38,14 +38,3 @@ struct MemoryImage: View {
         .clipped()
     }
 }
-
-struct MemoryImage_Previews: PreviewProvider {
-    static let memoryUrl = Memory.exampleURL()
-
-    static var previews: some View {
-        MemoryImage(
-            memoryUrl.thumbnailURL,
-            onAppear: {}
-        )
-    }
-}

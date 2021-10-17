@@ -39,9 +39,3 @@ private struct PrimaryButtonStyle: ButtonStyle {
         }
     }
 }
-
-struct PrimaryButton_Previews: PreviewProvider {
-    static var previews: some View {
-        PrimaryButton(title: "Primary button", action: {})
-    }
-}

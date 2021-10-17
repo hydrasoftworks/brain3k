@@ -5,13 +5,20 @@
 import SwiftDux
 import SwiftUI
 
-struct HomePage: ConnectableView {
-    func map(state _: AppState) -> ViewModel? { ViewModel() }
+struct HomePage: View {
+    var body: some View {
+        UserInterfaceIdiomView(
+            phone: { phone },
+            pad: { pad }
+        )
+        .accentColor(Color.brand)
+        .onAppear(dispatch: MemoriesAction.watchAll())
+    }
 
-    func body(props _: ViewModel) -> some View {
+    private var phone: some View {
         TabView {
             NavigationView {
-                MemoriesPage()
+                MemoriesPageConnector()
             }
             .tabItem {
                 Label(
@@ -29,16 +36,14 @@ struct HomePage: ConnectableView {
                 )
             }
         }
-        .accentColor(Color.brand)
         .materialBackground()
-        .onAppear(dispatch: MemoriesAction.watchAll())
     }
 
-    struct ViewModel: Equatable {}
-}
-
-struct HomePage_Previews: PreviewProvider {
-    static var previews: some View {
-        HomePage()
+    private var pad: some View {
+        NavigationView {
+            Sidebar()
+            MemoriesPageConnector()
+            MemoryPageConnector(memoryId: nil)
+        }
     }
 }

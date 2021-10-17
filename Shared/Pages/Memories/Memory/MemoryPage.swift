@@ -10,10 +10,24 @@ struct MemoryPage: View {
 
     let viewModel: ViewModel
 
+    @ViewBuilder
     var body: some View {
-        DeviceOrientationView(
-            portrait: { portrait },
-            landscape: { landscape }
+        if viewModel.memoryExist {
+            content
+        } else {
+            EmptyView(text: L10n.MemoryPage.Empty.notSelected(L10n.MemoriesPage.title))
+        }
+    }
+
+    private var content: some View {
+        UserInterfaceIdiomView(
+            phone: {
+                DeviceOrientationView(
+                    portrait: { portrait },
+                    landscape: { landscape }
+                )
+            },
+            pad: { portrait }
         )
         .navigationTitle(L10n.MemoryPage.title)
         .toolbar {
@@ -117,6 +131,7 @@ struct MemoryPage: View {
     }
 
     struct ViewModel: Equatable {
+        let memoryExist: Bool
         let image: URL?
         let imageToDisplay: URL?
         var hasImage: Bool { image != nil }
@@ -128,30 +143,12 @@ struct MemoryPage: View {
         let getDownloadURL: () -> Void
 
         static func == (lhs: ViewModel, rhs: ViewModel) -> Bool {
-            lhs.image == rhs.image
+            lhs.memoryExist == rhs.memoryExist
+                && lhs.image == rhs.image
                 && lhs.imageToDisplay == rhs.imageToDisplay
                 && lhs.title == rhs.title
                 && lhs.description == rhs.description
                 && lhs.valueURL == rhs.valueURL
         }
-    }
-}
-
-struct MemoryPage_Previews: PreviewProvider {
-    static let memoryUrl = Memory.exampleURL()
-
-    static var previews: some View {
-        MemoryPage(
-            viewModel: MemoryPage.ViewModel(
-                image: memoryUrl.thumbnailURL,
-                imageToDisplay: nil,
-                title: memoryUrl.title,
-                description: memoryUrl.description,
-                valueURL: memoryUrl.valueURL,
-                delete: {},
-                refresh: {},
-                getDownloadURL: {}
-            )
-        )
     }
 }

@@ -43,9 +43,3 @@ struct AddMemoryPage: ConnectableView {
 
     struct ViewModel: Equatable {}
 }
-
-struct AddMemoryPage_Previews: PreviewProvider {
-    static var previews: some View {
-        AddMemoryPage()
-    }
-}
