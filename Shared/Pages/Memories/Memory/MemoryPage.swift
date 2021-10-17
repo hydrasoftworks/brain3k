@@ -6,6 +6,7 @@ import SwiftDux
 import SwiftUI
 
 struct MemoryPage: View {
+    @Environment(\.verticalSizeClass) var verticalSizeClass: UserInterfaceSizeClass?
     @Environment(\.dismiss) var dismiss
 
     let viewModel: ViewModel
@@ -15,20 +16,20 @@ struct MemoryPage: View {
         if viewModel.memoryExist {
             content
         } else {
-            EmptyView(text: L10n.MemoryPage.Empty.notSelected(L10n.MemoriesPage.title))
+            EmptyView(
+                text: L10n.MemoryPage.Empty.notSelected(L10n.MemoriesPage.title)
+            )
         }
     }
 
     private var content: some View {
-        UserInterfaceIdiomView(
-            phone: {
-                DeviceOrientationView(
-                    portrait: { portrait },
-                    landscape: { landscape }
-                )
-            },
-            pad: { portrait }
-        )
+        Group {
+            if verticalSizeClass == .regular {
+                portrait
+            } else {
+                landscape
+            }
+        }
         .navigationTitle(L10n.MemoryPage.title)
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {

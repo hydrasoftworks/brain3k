@@ -6,11 +6,17 @@ import SwiftDux
 import SwiftUI
 
 struct HomePage: View {
+    @Environment(\.verticalSizeClass) var verticalSizeClass: UserInterfaceSizeClass?
+    @Environment(\.horizontalSizeClass) var horizontalSizeClass: UserInterfaceSizeClass?
+
     var body: some View {
-        UserInterfaceIdiomView(
-            phone: { phone },
-            pad: { pad }
-        )
+        Group {
+            if verticalSizeClass == .regular, horizontalSizeClass == .regular {
+                pad
+            } else {
+                phone
+            }
+        }
         .accentColor(Color.brand)
         .onAppear(dispatch: MemoriesAction.watchAll())
     }

@@ -4,7 +4,11 @@
 
 import SwiftUI
 
-struct SignPageBase<FirstSection, SecondSection>: View where FirstSection: View, SecondSection: View {
+struct SignPageBase<FirstSection, SecondSection>: View
+    where FirstSection: View, SecondSection: View
+{
+    @Environment(\.verticalSizeClass) var verticalSizeClass: UserInterfaceSizeClass?
+
     let firstSection: () -> FirstSection
     let secondSection: () -> SecondSection
 
@@ -17,10 +21,13 @@ struct SignPageBase<FirstSection, SecondSection>: View where FirstSection: View,
     }
 
     var body: some View {
-        DeviceOrientationView(
-            portrait: { portrait },
-            landscape: { landscape }
-        )
+        Group {
+            if verticalSizeClass == .regular {
+                portrait
+            } else if verticalSizeClass == .compact {
+                landscape
+            }
+        }
         .multilineTextAlignment(.center)
         .padding()
         .materialBackground()
