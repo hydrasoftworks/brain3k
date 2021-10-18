@@ -27,6 +27,9 @@ internal enum Asset {
   internal static let brandColor = ColorAsset(name: "BrandColor")
   internal static let brandTextColor = ColorAsset(name: "BrandTextColor")
   internal static let placeholder = ImageAsset(name: "Placeholder")
+  internal static let robotEmptyList = ImageAsset(name: "RobotEmptyList")
+  internal static let robotNotFound = ImageAsset(name: "RobotNotFound")
+  internal static let robotNotSelected = ImageAsset(name: "RobotNotSelected")
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name
 

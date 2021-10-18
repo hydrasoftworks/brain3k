@@ -5,18 +5,19 @@
 import SwiftUI
 
 struct EmptyView: View {
+    let image: ImageAsset
     let text: String
 
     var body: some View {
         VStack {
-            Image(Asset.placeholder.name)
+            Image(image.name)
                 .resizable()
                 .scaledToFit()
-                .frame(width: 60, height: 60)
+                .frame(width: 120, height: 120)
                 .padding(.bottom)
-                .padding(.top, 100)
+                .padding(.top, 40)
             Text(text)
-                .font(.caption)
+                .font(.body)
                 .foregroundStyle(Color.brand)
                 .multilineTextAlignment(.center)
                 .padding(.horizontal, 48)

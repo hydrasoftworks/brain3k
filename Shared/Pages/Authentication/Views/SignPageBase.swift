@@ -7,7 +7,7 @@ import SwiftUI
 struct SignPageBase<FirstSection, SecondSection>: View
     where FirstSection: View, SecondSection: View
 {
-    @Environment(\.verticalSizeClass) var verticalSizeClass: UserInterfaceSizeClass?
+    @Environment(\.verticalSizeClass) private var verticalSizeClass
 
     let firstSection: () -> FirstSection
     let secondSection: () -> SecondSection

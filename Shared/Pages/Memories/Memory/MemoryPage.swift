@@ -6,7 +6,7 @@ import SwiftDux
 import SwiftUI
 
 struct MemoryPage: View {
-    @Environment(\.verticalSizeClass) var verticalSizeClass: UserInterfaceSizeClass?
+    @Environment(\.verticalSizeClass) private var verticalSizeClass
     @Environment(\.dismiss) var dismiss
 
     let viewModel: ViewModel
@@ -17,6 +17,7 @@ struct MemoryPage: View {
             content
         } else {
             EmptyView(
+                image: Asset.robotNotSelected,
                 text: L10n.MemoryPage.Empty.notSelected(L10n.MemoriesPage.title)
             )
         }
