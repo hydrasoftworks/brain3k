@@ -13,14 +13,15 @@ struct MemoryCell: View {
         NavigationLink(
             destination: MemoryPageConnector(memoryId: memory.id)
         ) {
-            content
-                .background(
+            Rectangle()
+                .fill(
                     LinearGradient(
                         colors: Color.gradient(colorScheme),
                         startPoint: .topLeading,
                         endPoint: .bottomTrailing
                     )
                 )
+                .overlay { content }
         }
         .expanded()
         .aspectRatio(1, contentMode: .fill)
