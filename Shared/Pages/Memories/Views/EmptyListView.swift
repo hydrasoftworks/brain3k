@@ -4,7 +4,7 @@
 
 import SwiftUI
 
-struct EmptyView: View {
+struct EmptyListView: View {
     let image: ImageAsset
     let text: String
 

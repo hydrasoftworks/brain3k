@@ -16,7 +16,7 @@ struct MemoryPage: View {
         if viewModel.memoryExist {
             content
         } else {
-            EmptyView(
+            EmptyListView(
                 image: Asset.robotNotSelected,
                 text: L10n.MemoryPage.Empty.notSelected(L10n.MemoriesPage.title)
             )
@@ -53,6 +53,7 @@ struct MemoryPage: View {
                 if viewModel.hasImage {
                     MemoryImage(
                         viewModel.imageToDisplay,
+                        domain: viewModel.domain,
                         onAppear: viewModel.getDownloadURL,
                         height: 250
                     )
@@ -72,6 +73,7 @@ struct MemoryPage: View {
             if viewModel.hasImage {
                 MemoryImage(
                     viewModel.imageToDisplay,
+                    domain: viewModel.domain,
                     onAppear: viewModel.getDownloadURL,
                     width: 300
                 )
@@ -140,6 +142,7 @@ struct MemoryPage: View {
         let title: String?
         let description: String?
         let valueURL: URL?
+        let domain: String?
         let delete: () -> Void
         let refresh: () -> Void
         let getDownloadURL: () -> Void
@@ -151,6 +154,7 @@ struct MemoryPage: View {
                 && lhs.title == rhs.title
                 && lhs.description == rhs.description
                 && lhs.valueURL == rhs.valueURL
+                && lhs.domain == rhs.domain
         }
     }
 }

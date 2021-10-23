@@ -2,6 +2,7 @@
 //  Created by Kamil Powałowski on 22/07/2021.
 //
 
+import NukeUI
 import SwiftUI
 
 struct URLMemoryCell: View {
@@ -21,14 +22,17 @@ struct URLMemoryCell: View {
     }
 
     private func image(_ url: URL?) -> some View {
-        AsyncImage(url: url) { image in
-            image
-                .resizable()
-                .scaledToFill()
-                .expanded()
-        } placeholder: {
-            PlaceholderView()
+        LazyImage(source: url) { state in
+            if let image = state.image {
+                image
+                    .scaledToFill()
+            } else if state.error != nil, url != nil {
+                domain(viewModel.domain)
+            } else {
+                PlaceholderView()
+            }
         }
+        .expanded()
     }
 
     private func domain(_ text: String) -> some View {

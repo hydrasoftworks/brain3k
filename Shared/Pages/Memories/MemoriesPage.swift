@@ -35,7 +35,7 @@ struct MemoriesPage: View {
     @ViewBuilder
     private func grid(_ viewModel: ViewModel) -> some View {
         if viewModel.memories.isEmpty {
-            EmptyView(
+            EmptyListView(
                 image: viewModel.searchQuery.isEmpty
                     ? Asset.robotEmptyList
                     : Asset.robotNotFound,

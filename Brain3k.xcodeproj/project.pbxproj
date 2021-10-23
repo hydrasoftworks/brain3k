@@ -59,6 +59,8 @@
 		8E6821B826A9E43800B2DACB /* PlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6821B626A9E43800B2DACB /* PlaceholderView.swift */; };
 		8E6821BA26A9E6F200B2DACB /* URLMemoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6821B926A9E6F200B2DACB /* URLMemoryCell.swift */; };
 		8E6821BB26A9E6F200B2DACB /* URLMemoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6821B926A9E6F200B2DACB /* URLMemoryCell.swift */; };
+		8E6BEDF42724109800913D42 /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = 8E6BEDF32724109800913D42 /* NukeUI */; };
+		8E6BEDF6272410A200913D42 /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = 8E6BEDF5272410A200913D42 /* NukeUI */; };
 		8E776FF126A2311200D97F52 /* AccountAction+SendVerificationEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E776FF026A2311200D97F52 /* AccountAction+SendVerificationEmail.swift */; };
 		8E776FF226A2311200D97F52 /* AccountAction+SendVerificationEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E776FF026A2311200D97F52 /* AccountAction+SendVerificationEmail.swift */; };
 		8E776FF426A231F000D97F52 /* AccountAction+RefreshSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E776FF326A231F000D97F52 /* AccountAction+RefreshSpec.swift */; };
@@ -173,8 +175,8 @@
 		8EBC0541269A0B8D008B2478 /* SecondaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBC053F269A0B8D008B2478 /* SecondaryButton.swift */; };
 		8EBC0543269A1B76008B2478 /* String+Trim.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBC0542269A1B76008B2478 /* String+Trim.swift */; };
 		8EBC0544269A1B76008B2478 /* String+Trim.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBC0542269A1B76008B2478 /* String+Trim.swift */; };
-		8EBF94BB2709CA690045B33E /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBF94BA2709CA690045B33E /* EmptyView.swift */; };
-		8EBF94BC2709CA690045B33E /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBF94BA2709CA690045B33E /* EmptyView.swift */; };
+		8EBF94BB2709CA690045B33E /* EmptyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBF94BA2709CA690045B33E /* EmptyListView.swift */; };
+		8EBF94BC2709CA690045B33E /* EmptyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBF94BA2709CA690045B33E /* EmptyListView.swift */; };
 		8EC4BACC26BDD40D00F20EAE /* Color+Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC4BACB26BDD40D00F20EAE /* Color+Asset.swift */; };
 		8EC4BACD26BDD40D00F20EAE /* Color+Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC4BACB26BDD40D00F20EAE /* Color+Asset.swift */; };
 		8EC4BAD526BDD79F00F20EAE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8EC4BAD326BDD79F00F20EAE /* Localizable.strings */; };
@@ -381,7 +383,7 @@
 		8EBC053C269A0A8A008B2478 /* MemoryPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryPage.swift; sourceTree = "<group>"; };
 		8EBC053F269A0B8D008B2478 /* SecondaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryButton.swift; sourceTree = "<group>"; };
 		8EBC0542269A1B76008B2478 /* String+Trim.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Trim.swift"; sourceTree = "<group>"; };
-		8EBF94BA2709CA690045B33E /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
+		8EBF94BA2709CA690045B33E /* EmptyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyListView.swift; sourceTree = "<group>"; };
 		8EC4BACB26BDD40D00F20EAE /* Color+Asset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Asset.swift"; sourceTree = "<group>"; };
 		8EC4BAD426BDD79F00F20EAE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Shared/en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8EC4BAD726BDD7E000F20EAE /* StringsGen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringsGen.swift; sourceTree = "<group>"; };
@@ -446,6 +448,7 @@
 				8EC607672688B86B006ED3C1 /* SwiftDux in Frameworks */,
 				8EF9352A26AC1B7300176AF4 /* FirebaseFirestoreSwift-Beta in Frameworks */,
 				8E79C14D269791EA002D2A8B /* ValidatedPropertyKit in Frameworks */,
+				8E6BEDF42724109800913D42 /* NukeUI in Frameworks */,
 				8E50D87026BB33E30075C08C /* IrregularGradient in Frameworks */,
 				8E9EEBAC26F2888A00106FCD /* Fuse in Frameworks */,
 				8EF9352C26AC1B7300176AF4 /* FirebaseStorageSwift-Beta in Frameworks */,
@@ -462,6 +465,7 @@
 				8E79C13726961898002D2A8B /* MGFlipView in Frameworks */,
 				8EC607882688BEE0006ED3C1 /* SwiftDux in Frameworks */,
 				8E3C0D7D26B9E26500EB82E8 /* FirebaseStorageSwift-Beta in Frameworks */,
+				8E6BEDF6272410A200913D42 /* NukeUI in Frameworks */,
 				8E50D87226BB33EF0075C08C /* IrregularGradient in Frameworks */,
 				8E9EEBAE26F2889500106FCD /* Fuse in Frameworks */,
 				8E79C14F269791F4002D2A8B /* ValidatedPropertyKit in Frameworks */,
@@ -589,7 +593,7 @@
 				8EDC011026D029D300D2064A /* URLMemoryCellConnector.swift */,
 				8E6821B926A9E6F200B2DACB /* URLMemoryCell.swift */,
 				8E50D86B26BB30280075C08C /* ProcessingCell.swift */,
-				8EBF94BA2709CA690045B33E /* EmptyView.swift */,
+				8EBF94BA2709CA690045B33E /* EmptyListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1025,6 +1029,7 @@
 				8EF9352B26AC1B7300176AF4 /* FirebaseStorageSwift-Beta */,
 				8E50D86F26BB33E30075C08C /* IrregularGradient */,
 				8E9EEBAB26F2888A00106FCD /* Fuse */,
+				8E6BEDF32724109800913D42 /* NukeUI */,
 			);
 			productName = "Brain3k (iOS)";
 			productReference = 8EC607472688AFD1006ED3C1 /* Brain3k.app */;
@@ -1053,6 +1058,7 @@
 				8E3C0D7C26B9E26500EB82E8 /* FirebaseStorageSwift-Beta */,
 				8E50D87126BB33EF0075C08C /* IrregularGradient */,
 				8E9EEBAD26F2889500106FCD /* Fuse */,
+				8E6BEDF5272410A200913D42 /* NukeUI */,
 			);
 			productName = "Brain3k (macOS)";
 			productReference = 8EC6074D2688AFD1006ED3C1 /* Brain3k.app */;
@@ -1129,6 +1135,7 @@
 				8EF9353A26AC464200176AF4 /* XCRemoteSwiftPackageReference "ViewInspector" */,
 				8E50D86E26BB33E20075C08C /* XCRemoteSwiftPackageReference "IrregularGradient" */,
 				8E9EEBAA26F2888A00106FCD /* XCRemoteSwiftPackageReference "fuse-swift" */,
+				8E6BEDF22724109700913D42 /* XCRemoteSwiftPackageReference "NukeUI" */,
 			);
 			productRefGroup = 8EC607482688AFD1006ED3C1 /* Products */;
 			projectDirPath = "";
@@ -1250,7 +1257,7 @@
 				8E3436EE27089D1900FA1CB0 /* Memory+Fuseable.swift in Sources */,
 				8EC4BAD826BDD7E000F20EAE /* StringsGen.swift in Sources */,
 				8EDC011C26D03E9600D2064A /* CompletionHandler.swift in Sources */,
-				8EBF94BB2709CA690045B33E /* EmptyView.swift in Sources */,
+				8EBF94BB2709CA690045B33E /* EmptyListView.swift in Sources */,
 				8EBC0540269A0B8D008B2478 /* SecondaryButton.swift in Sources */,
 				8EC607502688AFD1006ED3C1 /* SignInPage.swift in Sources */,
 				8E260FE726C2F44900715524 /* ExpandedFrame.swift in Sources */,
@@ -1341,7 +1348,7 @@
 				8E3436EF27089D1900FA1CB0 /* Memory+Fuseable.swift in Sources */,
 				8EC4BAD926BDD7E000F20EAE /* StringsGen.swift in Sources */,
 				8EDC011D26D03E9600D2064A /* CompletionHandler.swift in Sources */,
-				8EBF94BC2709CA690045B33E /* EmptyView.swift in Sources */,
+				8EBF94BC2709CA690045B33E /* EmptyListView.swift in Sources */,
 				8EBC0541269A0B8D008B2478 /* SecondaryButton.swift in Sources */,
 				8EC607512688AFD1006ED3C1 /* SignInPage.swift in Sources */,
 				8E260FE826C2F44900715524 /* ExpandedFrame.swift in Sources */,
@@ -1916,6 +1923,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		8E6BEDF22724109700913D42 /* XCRemoteSwiftPackageReference "NukeUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/NukeUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.6.8;
+			};
+		};
 		8E79C13326961891002D2A8B /* XCRemoteSwiftPackageReference "MGFlipView" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Zaprogramiacz/MGFlipView";
@@ -2017,6 +2032,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8E50D86E26BB33E20075C08C /* XCRemoteSwiftPackageReference "IrregularGradient" */;
 			productName = IrregularGradient;
+		};
+		8E6BEDF32724109800913D42 /* NukeUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8E6BEDF22724109700913D42 /* XCRemoteSwiftPackageReference "NukeUI" */;
+			productName = NukeUI;
+		};
+		8E6BEDF5272410A200913D42 /* NukeUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8E6BEDF22724109700913D42 /* XCRemoteSwiftPackageReference "NukeUI" */;
+			productName = NukeUI;
 		};
 		8E79C13426961891002D2A8B /* MGFlipView */ = {
 			isa = XCSwiftPackageProductDependency;
