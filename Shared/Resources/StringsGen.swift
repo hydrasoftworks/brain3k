@@ -98,6 +98,10 @@ internal enum L10n {
     internal enum Button {
       /// Delete account
       internal static let deleteAccount = L10n.tr("Localizable", "settings_page.button.delete_account")
+      /// Privacy policy
+      internal static let privacyPolicy = L10n.tr("Localizable", "settings_page.button.privacy_policy")
+      /// Share feedback
+      internal static let shareFeedback = L10n.tr("Localizable", "settings_page.button.share_feedback")
       /// Sign out
       internal static let signOut = L10n.tr("Localizable", "settings_page.button.sign_out")
     }
@@ -112,6 +116,8 @@ internal enum L10n {
     internal enum Sections {
       /// Account
       internal static let account = L10n.tr("Localizable", "settings_page.sections.account")
+      /// Links
+      internal static let links = L10n.tr("Localizable", "settings_page.sections.links")
     }
   }
 
