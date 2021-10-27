@@ -48,5 +48,6 @@
 "settings_page.button.delete_account" = "Delete account";
 "settings_page.button.share_feedback" = "Share feedback";
 "settings_page.button.privacy_policy" = "Privacy policy";
+"settings_page.button.rate" = "Rate on App Store";
 "settings_page.confirmation.delete_account" = "Do you want to delete your account?\nThis action cannot be undone.";
 "settings_page.confirmation.button.delete_account" = "Yes, delete my account";

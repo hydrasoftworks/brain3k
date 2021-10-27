@@ -100,6 +100,8 @@ internal enum L10n {
       internal static let deleteAccount = L10n.tr("Localizable", "settings_page.button.delete_account")
       /// Privacy policy
       internal static let privacyPolicy = L10n.tr("Localizable", "settings_page.button.privacy_policy")
+      /// Rate on App Store
+      internal static let rate = L10n.tr("Localizable", "settings_page.button.rate")
       /// Share feedback
       internal static let shareFeedback = L10n.tr("Localizable", "settings_page.button.share_feedback")
       /// Sign out
