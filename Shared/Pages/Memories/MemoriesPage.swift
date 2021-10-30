@@ -14,13 +14,14 @@ struct MemoriesPage: View {
         ScrollView {
             grid(viewModel)
                 .padding(.horizontal)
+                .padding(.bottom)
         }
         // Pull to Refresh doesn't work on ScrollView xD
         .refreshable { viewModel.getAllMemories() }
         .searchable(text: viewModel.$searchQuery)
         .navigationTitle(L10n.MemoriesPage.title)
         .toolbar {
-            ToolbarItem(placement: .navigationBarTrailing) {
+            ToolbarItem {
                 Button(action: { isAddMemoryPresented.toggle() }) {
                     Label(L10n.MemoriesPage.Button.add, systemImage: "plus")
                 }

@@ -6,7 +6,9 @@ import SwiftDux
 import SwiftUI
 
 struct MemoryPage: View {
-    @Environment(\.verticalSizeClass) private var verticalSizeClass
+    #if os(iOS)
+        @Environment(\.verticalSizeClass) private var verticalSizeClass
+    #endif
     @Environment(\.dismiss) var dismiss
 
     let viewModel: ViewModel
@@ -18,22 +20,26 @@ struct MemoryPage: View {
         } else {
             EmptyListView(
                 image: Asset.robotNotSelected,
-                text: L10n.MemoryPage.Empty.notSelected(L10n.MemoriesPage.title)
+                text: L10n.MemoryPage.Empty.notSelected
             )
         }
     }
 
     private var content: some View {
         Group {
-            if verticalSizeClass == .regular {
+            #if os(iOS)
+                if verticalSizeClass == .regular {
+                    portrait
+                } else {
+                    landscape
+                }
+            #else
                 portrait
-            } else {
-                landscape
-            }
+            #endif
         }
         .navigationTitle(L10n.MemoryPage.title)
         .toolbar {
-            ToolbarItem(placement: .navigationBarTrailing) {
+            ToolbarItem {
                 Menu(content: {
                     refreshButton
                     deleteButton
@@ -57,8 +63,8 @@ struct MemoryPage: View {
                         onAppear: viewModel.getDownloadURL,
                         height: 250
                     )
-                    .padding(.bottom)
                 }
+                Spacer(minLength: 16)
                 if let text = viewModel.title { title(text) }
                 if let text = viewModel.description { description(text) }
             }

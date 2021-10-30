@@ -37,7 +37,7 @@
 "memory_page.button.refresh" = "Refresh memory";
 "memory_page.button.delete" = "Delete memory";
 "memory_page.open_memory" = "Open memory";
-"memory_page.empty.not_selected" = "Select memory from %s page to display.";
+"memory_page.empty.not_selected" = "No memory selected";
 "add_memory_page.title" = "Add Memory";
 "add_memory_page.text_field.placeholder" = "Paste URL here";
 "add_memory_page.button.add" = "Add";

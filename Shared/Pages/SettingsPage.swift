@@ -64,7 +64,11 @@ struct SettingsPage: ConnectableView {
 
     func openURL(_ url: URL?) {
         guard let url = url else { return }
-        UIApplication.shared.open(url)
+        #if os(iOS)
+            UIApplication.shared.open(url)
+        #else
+            NSWorkspace.shared.open(url)
+        #endif
     }
 
     struct ViewModel: Equatable {}

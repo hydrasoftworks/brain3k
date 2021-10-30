@@ -36,11 +36,19 @@ struct SignUpPage: ConnectableView {
                 Text(L10n.SignUpPage.description2)
                     .font(.body)
                 EmailTextField(email: $email)
-                PasswordTextField(
-                    title: L10n.PasswordTextField.newPasswordPlaceholder,
-                    textContentType: .newPassword,
-                    password: $password
-                )
+                #if os(iOS)
+                    PasswordTextField(
+                        title: L10n.PasswordTextField.newPasswordPlaceholder,
+                        textContentType: .newPassword,
+                        password: $password
+                    )
+                #else
+                    PasswordTextField(
+                        title: L10n.PasswordTextField.newPasswordPlaceholder,
+                        textContentType: .password,
+                        password: $password
+                    )
+                #endif
                 signUpButton
                 goToSignInButton
             }

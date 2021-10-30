@@ -20,11 +20,7 @@ struct AddMemoryPage: ConnectableView {
 
     func body(props _: ViewModel) -> some View {
         VStack(spacing: 16) {
-            TextField(L10n.AddMemoryPage.TextField.placeholder, text: $value)
-                .styleTextField()
-                .keyboardType(.URL)
-                .autocapitalization(.none)
-                .disableAutocorrection(true)
+            URLTextField(text: $value)
             PrimaryButton(title: L10n.AddMemoryPage.Button.add) {
                 dispatch.send(MemoriesAction.createURL(url: value))
                 presentationMode.wrappedValue.dismiss()

@@ -62,6 +62,7 @@ bundle install
 
 ```bash
 bundle exec fastlane match development --readonly
-bundle exec fastlane match adhoc --readonly
+bundle exec fastlane run match type:development platform:macos readonly:true
 bundle exec fastlane match appstore --readonly
+bundle exec fastlane run match type:appstore platform:macos readonly:true
 ```

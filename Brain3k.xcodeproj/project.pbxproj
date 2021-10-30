@@ -42,7 +42,6 @@
 		8E58D149271B0F350033B02A /* MemoryImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E58D148271B0F350033B02A /* MemoryImage.swift */; };
 		8E58D14A271B0F350033B02A /* MemoryImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E58D148271B0F350033B02A /* MemoryImage.swift */; };
 		8E58D14F271B2D590033B02A /* SignPageBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E58D14E271B2D590033B02A /* SignPageBase.swift */; };
-		8E58D150271B2D590033B02A /* SignPageBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E58D14E271B2D590033B02A /* SignPageBase.swift */; };
 		8E5D7D0826CC4D43009024A0 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5D7D0726CC4D43009024A0 /* StorageService.swift */; };
 		8E5D7D0926CC4D43009024A0 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5D7D0726CC4D43009024A0 /* StorageService.swift */; };
 		8E5D7D0C26CC4FB8009024A0 /* StorageState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5D7D0B26CC4FB8009024A0 /* StorageState.swift */; };
@@ -61,6 +60,12 @@
 		8E6821BB26A9E6F200B2DACB /* URLMemoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6821B926A9E6F200B2DACB /* URLMemoryCell.swift */; };
 		8E6BEDF42724109800913D42 /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = 8E6BEDF32724109800913D42 /* NukeUI */; };
 		8E6BEDF6272410A200913D42 /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = 8E6BEDF5272410A200913D42 /* NukeUI */; };
+		8E73D6DA272C971C0037DE6B /* SignPageBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E73D6D9272C971C0037DE6B /* SignPageBase.swift */; };
+		8E73D6DF272C9A920037DE6B /* EmailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E73D6DE272C9A920037DE6B /* EmailTextField.swift */; };
+		8E73D6E5272C9B4D0037DE6B /* URLTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E73D6E4272C9B4D0037DE6B /* URLTextField.swift */; };
+		8E73D6EA272C9BE70037DE6B /* URLTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E73D6E9272C9BE70037DE6B /* URLTextField.swift */; };
+		8E73D6EE272C9C920037DE6B /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E73D6ED272C9C920037DE6B /* HomePage.swift */; };
+		8E73D6F0272D6B250037DE6B /* Brain3kApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E73D6EF272D6B240037DE6B /* Brain3kApp.swift */; };
 		8E776FF126A2311200D97F52 /* AccountAction+SendVerificationEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E776FF026A2311200D97F52 /* AccountAction+SendVerificationEmail.swift */; };
 		8E776FF226A2311200D97F52 /* AccountAction+SendVerificationEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E776FF026A2311200D97F52 /* AccountAction+SendVerificationEmail.swift */; };
 		8E776FF426A231F000D97F52 /* AccountAction+RefreshSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E776FF326A231F000D97F52 /* AccountAction+RefreshSpec.swift */; };
@@ -140,7 +145,6 @@
 		8EA4D27D26938D1000C0A037 /* TextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA4D27C26938D1000C0A037 /* TextFieldStyle.swift */; };
 		8EA4D27E26938D1100C0A037 /* TextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA4D27C26938D1000C0A037 /* TextFieldStyle.swift */; };
 		8EA4D28126939DE100C0A037 /* EmailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA4D28026939DE100C0A037 /* EmailTextField.swift */; };
-		8EA4D28226939DE100C0A037 /* EmailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA4D28026939DE100C0A037 /* EmailTextField.swift */; };
 		8EA4D28426939E6400C0A037 /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA4D28326939E6400C0A037 /* PasswordTextField.swift */; };
 		8EA4D28526939E6400C0A037 /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA4D28326939E6400C0A037 /* PasswordTextField.swift */; };
 		8EA4D2872693A22A00C0A037 /* SignUpPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA4D2862693A22A00C0A037 /* SignUpPage.swift */; };
@@ -184,7 +188,6 @@
 		8EC4BAD826BDD7E000F20EAE /* StringsGen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC4BAD726BDD7E000F20EAE /* StringsGen.swift */; };
 		8EC4BAD926BDD7E000F20EAE /* StringsGen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC4BAD726BDD7E000F20EAE /* StringsGen.swift */; };
 		8EC6074E2688AFD1006ED3C1 /* Brain3kApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC607402688AFCF006ED3C1 /* Brain3kApp.swift */; };
-		8EC6074F2688AFD1006ED3C1 /* Brain3kApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC607402688AFCF006ED3C1 /* Brain3kApp.swift */; };
 		8EC607502688AFD1006ED3C1 /* SignInPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC607412688AFCF006ED3C1 /* SignInPage.swift */; };
 		8EC607512688AFD1006ED3C1 /* SignInPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC607412688AFCF006ED3C1 /* SignInPage.swift */; };
 		8EC607522688AFD1006ED3C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EC607422688AFD1006ED3C1 /* Assets.xcassets */; };
@@ -245,7 +248,6 @@
 		8EEDD793268BCD9200F670D2 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEDD792268BCD9200F670D2 /* Account.swift */; };
 		8EEDD794268BCD9200F670D2 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEDD792268BCD9200F670D2 /* Account.swift */; };
 		8EEF35DB268CE9F40068DB58 /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEF35DA268CE9F40068DB58 /* HomePage.swift */; };
-		8EEF35DC268CE9F40068DB58 /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEF35DA268CE9F40068DB58 /* HomePage.swift */; };
 		8EEF35DE268CEA500068DB58 /* SplashPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEF35DD268CEA500068DB58 /* SplashPage.swift */; };
 		8EEF35DF268CEA500068DB58 /* SplashPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEF35DD268CEA500068DB58 /* SplashPage.swift */; };
 		8EEF35E1268CED570068DB58 /* AccountStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEF35E0268CED570068DB58 /* AccountStatus.swift */; };
@@ -320,6 +322,13 @@
 		8E66FEA826A8B5E400838C70 /* MemoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryCell.swift; sourceTree = "<group>"; };
 		8E6821B626A9E43800B2DACB /* PlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderView.swift; sourceTree = "<group>"; };
 		8E6821B926A9E6F200B2DACB /* URLMemoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLMemoryCell.swift; sourceTree = "<group>"; };
+		8E73D6D5272C93150037DE6B /* Brain3k.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Brain3k.entitlements; sourceTree = "<group>"; };
+		8E73D6D9272C971C0037DE6B /* SignPageBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignPageBase.swift; sourceTree = "<group>"; };
+		8E73D6DE272C9A920037DE6B /* EmailTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailTextField.swift; sourceTree = "<group>"; };
+		8E73D6E4272C9B4D0037DE6B /* URLTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLTextField.swift; sourceTree = "<group>"; };
+		8E73D6E9272C9BE70037DE6B /* URLTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLTextField.swift; sourceTree = "<group>"; };
+		8E73D6ED272C9C920037DE6B /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
+		8E73D6EF272D6B240037DE6B /* Brain3kApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brain3kApp.swift; sourceTree = "<group>"; };
 		8E776FF026A2311200D97F52 /* AccountAction+SendVerificationEmail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountAction+SendVerificationEmail.swift"; sourceTree = "<group>"; };
 		8E776FF326A231F000D97F52 /* AccountAction+RefreshSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountAction+RefreshSpec.swift"; sourceTree = "<group>"; };
 		8E776FF526A236F600D97F52 /* AccountAction+SendVerificationEmailSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountAction+SendVerificationEmailSpec.swift"; sourceTree = "<group>"; };
@@ -598,6 +607,142 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		8E73D6D4272C92FA0037DE6B /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				8E73D6D5272C93150037DE6B /* Brain3k.entitlements */,
+				8E73D6EF272D6B240037DE6B /* Brain3kApp.swift */,
+				8E73D6D6272C96E90037DE6B /* Pages */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		8E73D6D6272C96E90037DE6B /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				8E73D6D7272C96F20037DE6B /* Authentication */,
+				8E73D6EC272C9C840037DE6B /* Home */,
+				8E73D6E6272C9BBD0037DE6B /* Memories */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		8E73D6D7272C96F20037DE6B /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				8E73D6D8272C97000037DE6B /* Views */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		8E73D6D8272C97000037DE6B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8E73D6D9272C971C0037DE6B /* SignPageBase.swift */,
+				8E73D6DE272C9A920037DE6B /* EmailTextField.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8E73D6DB272C97490037DE6B /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				8E73D6DC272C97500037DE6B /* Authentication */,
+				8E73D6EB272C9C660037DE6B /* Home */,
+				8E73D6E1272C9B030037DE6B /* Memories */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		8E73D6DC272C97500037DE6B /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				8E73D6DD272C975C0037DE6B /* Views */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		8E73D6DD272C975C0037DE6B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8EA4D28026939DE100C0A037 /* EmailTextField.swift */,
+				8E58D14E271B2D590033B02A /* SignPageBase.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8E73D6E0272C9AEA0037DE6B /* AddMemory */ = {
+			isa = PBXGroup;
+			children = (
+				8E8835B826B08DCF00EE0234 /* AddMemoryPage.swift */,
+			);
+			path = AddMemory;
+			sourceTree = "<group>";
+		};
+		8E73D6E1272C9B030037DE6B /* Memories */ = {
+			isa = PBXGroup;
+			children = (
+				8E73D6E2272C9B1A0037DE6B /* AddMemory */,
+			);
+			path = Memories;
+			sourceTree = "<group>";
+		};
+		8E73D6E2272C9B1A0037DE6B /* AddMemory */ = {
+			isa = PBXGroup;
+			children = (
+				8E73D6E3272C9B220037DE6B /* Views */,
+			);
+			path = AddMemory;
+			sourceTree = "<group>";
+		};
+		8E73D6E3272C9B220037DE6B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8E73D6E4272C9B4D0037DE6B /* URLTextField.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8E73D6E6272C9BBD0037DE6B /* Memories */ = {
+			isa = PBXGroup;
+			children = (
+				8E73D6E7272C9BC90037DE6B /* AddMemory */,
+			);
+			path = Memories;
+			sourceTree = "<group>";
+		};
+		8E73D6E7272C9BC90037DE6B /* AddMemory */ = {
+			isa = PBXGroup;
+			children = (
+				8E73D6E8272C9BD20037DE6B /* Views */,
+			);
+			path = AddMemory;
+			sourceTree = "<group>";
+		};
+		8E73D6E8272C9BD20037DE6B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8E73D6E9272C9BE70037DE6B /* URLTextField.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8E73D6EB272C9C660037DE6B /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				8EEF35DA268CE9F40068DB58 /* HomePage.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		8E73D6EC272C9C840037DE6B /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				8E73D6ED272C9C920037DE6B /* HomePage.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		8E776FF726A3253B00D97F52 /* Actions */ = {
 			isa = PBXGroup;
 			children = (
@@ -639,8 +784,6 @@
 				8EBC05202699C55C008B2478 /* Background.swift */,
 				8E79C13B269619C0002D2A8B /* SignInWithAppleButton.swift */,
 				8EA4D28326939E6400C0A037 /* PasswordTextField.swift */,
-				8EA4D28026939DE100C0A037 /* EmailTextField.swift */,
-				8E58D14E271B2D590033B02A /* SignPageBase.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -748,7 +891,6 @@
 			isa = PBXGroup;
 			children = (
 				8EA1D31B271C62B00060BAA9 /* Views */,
-				8EEF35DA268CE9F40068DB58 /* HomePage.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -788,9 +930,9 @@
 			children = (
 				8E66FEA726A8B5C500838C70 /* Views */,
 				8E15375326FF3F0C00D3232F /* Memory */,
+				8E73D6E0272C9AEA0037DE6B /* AddMemory */,
 				8EA1D31F271C699A0060BAA9 /* MemoriesPageConnector.swift */,
 				8EBC0539269A0A7E008B2478 /* MemoriesPage.swift */,
-				8E8835B826B08DCF00EE0234 /* AddMemoryPage.swift */,
 			);
 			path = Memories;
 			sourceTree = "<group>";
@@ -809,8 +951,9 @@
 			children = (
 				8EC6075C2688B10F006ED3C1 /* README.md */,
 				8EC4BAD326BDD79F00F20EAE /* Localizable.strings */,
-				8EC6073F2688AFCF006ED3C1 /* Shared */,
 				8EC607822688BD9A006ED3C1 /* iOS */,
+				8E73D6D4272C92FA0037DE6B /* macOS */,
+				8EC6073F2688AFCF006ED3C1 /* Shared */,
 				8ED381EE26F74FE50003D4F3 /* ShareExtension iOS */,
 				8E3810DA269CCDC800ED3851 /* Tests */,
 				8EC607482688AFD1006ED3C1 /* Products */,
@@ -821,9 +964,7 @@
 		8EC6073F2688AFCF006ED3C1 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				8EC6078C268A7ED9006ED3C1 /* Brain3k.entitlements */,
 				8EF9353726AC448300176AF4 /* GoogleService-Info.plist */,
-				8EC607402688AFCF006ED3C1 /* Brain3kApp.swift */,
 				8EA4D27F26939DA600C0A037 /* Pages */,
 				8EC6078B2688C029006ED3C1 /* Views */,
 				8EA4D27B26938CED00C0A037 /* View Modifiers */,
@@ -912,7 +1053,10 @@
 		8EC607822688BD9A006ED3C1 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				8EC6078C268A7ED9006ED3C1 /* Brain3k.entitlements */,
 				8EC607812688BD92006ED3C1 /* Info.plist */,
+				8EC607402688AFCF006ED3C1 /* Brain3kApp.swift */,
+				8E73D6DB272C97490037DE6B /* Pages */,
 			);
 			path = iOS;
 			sourceTree = "<group>";
@@ -1097,7 +1241,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1300;
-				LastUpgradeCheck = 1300;
+				LastUpgradeCheck = 1310;
 				TargetAttributes = {
 					8E3810D8269CCDC800ED3851 = {
 						CreatedOnToolsVersion = 13.0;
@@ -1304,6 +1448,7 @@
 				8E79C14926978898002D2A8B /* MessageAction.swift in Sources */,
 				8E92A7E126A0CD2500BAED7F /* AccountAction+CheckAccountStatus.swift in Sources */,
 				8EEF35DB268CE9F40068DB58 /* HomePage.swift in Sources */,
+				8E73D6E5272C9B4D0037DE6B /* URLTextField.swift in Sources */,
 				8E8835B926B08DCF00EE0234 /* AddMemoryPage.swift in Sources */,
 				8ED3821326F767CB0003D4F3 /* LibrariesService.swift in Sources */,
 				8E3436F527089E7200FA1CB0 /* MemoryType.swift in Sources */,
@@ -1326,7 +1471,6 @@
 			files = (
 				8E776FFA26A3257B00D97F52 /* MemoriesAction+GetAll.swift in Sources */,
 				8E9EEBA426F280C400106FCD /* MemoriesAction+Search.swift in Sources */,
-				8EA4D28226939DE100C0A037 /* EmailTextField.swift in Sources */,
 				8EA1D321271C699A0060BAA9 /* MemoriesPageConnector.swift in Sources */,
 				8E92A7E826A0D04100BAED7F /* AccountAction+SignIn.swift in Sources */,
 				8EBC051C2699C065008B2478 /* AnyPublisher+Empty.swift in Sources */,
@@ -1355,8 +1499,8 @@
 				8E9EEBA726F2813600106FCD /* MemoriesState.swift in Sources */,
 				8E79C13A269618BE002D2A8B /* JoinPage.swift in Sources */,
 				8E8DF14B270096F500CA0EBF /* ImagesGen.swift in Sources */,
+				8E73D6F0272D6B250037DE6B /* Brain3kApp.swift in Sources */,
 				8EBC052E2699CB52008B2478 /* PrimaryButton.swift in Sources */,
-				8EC6074F2688AFD1006ED3C1 /* Brain3kApp.swift in Sources */,
 				8EBC05312699D25D008B2478 /* Publisher+MapToEmptyResult.swift in Sources */,
 				8EA4D27E26938D1100C0A037 /* TextFieldStyle.swift in Sources */,
 				8E58D14A271B0F350033B02A /* MemoryImage.swift in Sources */,
@@ -1369,6 +1513,7 @@
 				8E5D7D1426CC50D9009024A0 /* StorageAction.swift in Sources */,
 				8E79C14726978828002D2A8B /* MessageReducer.swift in Sources */,
 				8E776FF226A2311200D97F52 /* AccountAction+SendVerificationEmail.swift in Sources */,
+				8E73D6DF272C9A920037DE6B /* EmailTextField.swift in Sources */,
 				8E15375A26FF439100D3232F /* OpenMemoryButton.swift in Sources */,
 				8EA1D31E271C62C10060BAA9 /* Sidebar.swift in Sources */,
 				8EC4BACD26BDD40D00F20EAE /* Color+Asset.swift in Sources */,
@@ -1379,12 +1524,13 @@
 				8E8835BD26B0928E00EE0234 /* Validation+URL.swift in Sources */,
 				8E889CF626A22F9500F7C47C /* AccountAction+Refresh.swift in Sources */,
 				8EB7470C2706588B004F4F18 /* MemoriesAction+Delete.swift in Sources */,
+				8E73D6EE272C9C920037DE6B /* HomePage.swift in Sources */,
 				8EBC053B269A0A7E008B2478 /* MemoriesPage.swift in Sources */,
-				8E58D150271B2D590033B02A /* SignPageBase.swift in Sources */,
 				8E889CF126A22D4F00F7C47C /* AccountAction+SignOut.swift in Sources */,
 				8EAAD9E926C5A3F1007C2973 /* AnyPublisher+Create.swift in Sources */,
 				8EEDD794268BCD9200F670D2 /* Account.swift in Sources */,
 				8E889CEC26A22A4300F7C47C /* AccountAction+SignUp.swift in Sources */,
+				8E73D6DA272C971C0037DE6B /* SignPageBase.swift in Sources */,
 				8E79C14426978778002D2A8B /* Message.swift in Sources */,
 				8E3436FA2708A2FA00FA1CB0 /* MemoriesAction+Refresh.swift in Sources */,
 				8EA4D2882693A22A00C0A037 /* SignUpPage.swift in Sources */,
@@ -1394,7 +1540,7 @@
 				8EC607762688BAD4006ED3C1 /* Memory.swift in Sources */,
 				8E79C14A26978898002D2A8B /* MessageAction.swift in Sources */,
 				8E92A7E226A0CD2500BAED7F /* AccountAction+CheckAccountStatus.swift in Sources */,
-				8EEF35DC268CE9F40068DB58 /* HomePage.swift in Sources */,
+				8E73D6EA272C9BE70037DE6B /* URLTextField.swift in Sources */,
 				8E8835BA26B08DCF00EE0234 /* AddMemoryPage.swift in Sources */,
 				8ED3821426F767CB0003D4F3 /* LibrariesService.swift in Sources */,
 				8E3436F627089E7200FA1CB0 /* MemoryType.swift in Sources */,
@@ -1640,7 +1786,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Shared/Brain3k.entitlements;
+				CODE_SIGN_ENTITLEMENTS = iOS/Brain3k.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = "$(inherited)";
@@ -1680,7 +1826,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Shared/Brain3k.entitlements;
+				CODE_SIGN_ENTITLEMENTS = iOS/Brain3k.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Distribution";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = "$(inherited)";
@@ -1720,19 +1866,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Shared/Brain3k.entitlements;
+				CODE_SIGN_ENTITLEMENTS = macOS/Brain3k.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = "$(inherited)";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = V3QMW7D5T5;
 				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleExecutable = Brain3k;
 				INFOPLIST_KEY_CFBundleName = Brain3k;
 				INFOPLIST_KEY_CFBundleVersion = 1;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1743,7 +1891,7 @@
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.brain3k.Brain3k;
 				PRODUCT_NAME = Brain3k;
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = "match Development com.brain3k.Brain3k macos";
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -1755,12 +1903,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Shared/Brain3k.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Distribution";
+				CODE_SIGN_ENTITLEMENTS = macOS/Brain3k.entitlements;
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = "$(inherited)";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = V3QMW7D5T5;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
@@ -1768,6 +1916,7 @@
 				INFOPLIST_KEY_CFBundleExecutable = Brain3k;
 				INFOPLIST_KEY_CFBundleName = Brain3k;
 				INFOPLIST_KEY_CFBundleVersion = 1;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1778,7 +1927,7 @@
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.brain3k.Brain3k;
 				PRODUCT_NAME = Brain3k;
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.brain3k.Brain3k macos";
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

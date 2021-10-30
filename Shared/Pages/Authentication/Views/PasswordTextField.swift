@@ -6,7 +6,13 @@ import SwiftUI
 
 struct PasswordTextField: View {
     let title: String
-    let textContentType: UITextContentType
+
+    #if os(iOS)
+        let textContentType: UITextContentType
+    #else
+        let textContentType: NSTextContentType
+    #endif
+
     @Binding var password: String
 
     var body: some View {

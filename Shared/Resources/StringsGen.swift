@@ -78,10 +78,8 @@ internal enum L10n {
       internal static let refresh = L10n.tr("Localizable", "memory_page.button.refresh")
     }
     internal enum Empty {
-      /// Select memory from %s page to display.
-      internal static func notSelected(_ p1: UnsafePointer<CChar>) -> String {
-        return L10n.tr("Localizable", "memory_page.empty.not_selected", p1)
-      }
+      /// No memory selected
+      internal static let notSelected = L10n.tr("Localizable", "memory_page.empty.not_selected")
     }
   }
 

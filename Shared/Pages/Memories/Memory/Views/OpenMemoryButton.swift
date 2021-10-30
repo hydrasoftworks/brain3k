@@ -10,7 +10,13 @@ struct OpenMemoryButton: View {
     var body: some View {
         PrimaryButton(
             title: L10n.MemoryPage.openMemory,
-            action: { UIApplication.shared.open(url) }
+            action: {
+                #if os(iOS)
+                    UIApplication.shared.open(url)
+                #else
+                    NSWorkspace.shared.open(url)
+                #endif
+            }
         )
         .padding()
     }

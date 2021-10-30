@@ -8,11 +8,13 @@ struct MemoryCell: View {
     @Environment(\.colorScheme) private var colorScheme
 
     let memory: Memory
+    @SwiftUI.State private var selectedMemory: String?
 
     var body: some View {
         NavigationLink(
-            destination: MemoryPageConnector(memoryId: memory.id)
+            destination: { MemoryPageConnector(memoryId: memory.id) }
         ) {
+            // This strange construction fixes iPad drawing on scroll
             Rectangle()
                 .fill(
                     LinearGradient(
@@ -23,6 +25,7 @@ struct MemoryCell: View {
                 )
                 .overlay { content }
         }
+        .buttonStyle(.plain)
         .expanded()
         .aspectRatio(1, contentMode: .fill)
         .cornerRadius(16)
