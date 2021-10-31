@@ -71,6 +71,7 @@
 		8E73D6FC272EC8A40037DE6B /* MemoryCellStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E73D6FB272EC8A40037DE6B /* MemoryCellStyle.swift */; };
 		8E73D6FD272EC8A40037DE6B /* MemoryCellStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E73D6FB272EC8A40037DE6B /* MemoryCellStyle.swift */; };
 		8E73D703272ED3C60037DE6B /* SelectedMemoryID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E73D702272ED3C60037DE6B /* SelectedMemoryID.swift */; };
+		8E73D708272EE02D0037DE6B /* TextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA4D27C26938D1000C0A037 /* TextFieldStyle.swift */; };
 		8E776FF126A2311200D97F52 /* AccountAction+SendVerificationEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E776FF026A2311200D97F52 /* AccountAction+SendVerificationEmail.swift */; };
 		8E776FF226A2311200D97F52 /* AccountAction+SendVerificationEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E776FF026A2311200D97F52 /* AccountAction+SendVerificationEmail.swift */; };
 		8E776FF426A231F000D97F52 /* AccountAction+RefreshSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E776FF326A231F000D97F52 /* AccountAction+RefreshSpec.swift */; };
@@ -148,7 +149,6 @@
 		8EA1D320271C699A0060BAA9 /* MemoriesPageConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA1D31F271C699A0060BAA9 /* MemoriesPageConnector.swift */; };
 		8EA1D321271C699A0060BAA9 /* MemoriesPageConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA1D31F271C699A0060BAA9 /* MemoriesPageConnector.swift */; };
 		8EA4D27D26938D1000C0A037 /* TextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA4D27C26938D1000C0A037 /* TextFieldStyle.swift */; };
-		8EA4D27E26938D1100C0A037 /* TextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA4D27C26938D1000C0A037 /* TextFieldStyle.swift */; };
 		8EA4D28126939DE100C0A037 /* EmailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA4D28026939DE100C0A037 /* EmailTextField.swift */; };
 		8EA4D28426939E6400C0A037 /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA4D28326939E6400C0A037 /* PasswordTextField.swift */; };
 		8EA4D28526939E6400C0A037 /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA4D28326939E6400C0A037 /* PasswordTextField.swift */; };
@@ -1541,7 +1541,6 @@
 				8E73D6F0272D6B250037DE6B /* Brain3kApp.swift in Sources */,
 				8EBC052E2699CB52008B2478 /* PrimaryButton.swift in Sources */,
 				8EBC05312699D25D008B2478 /* Publisher+MapToEmptyResult.swift in Sources */,
-				8EA4D27E26938D1100C0A037 /* TextFieldStyle.swift in Sources */,
 				8E58D14A271B0F350033B02A /* MemoryImage.swift in Sources */,
 				8E5D7D0926CC4D43009024A0 /* StorageService.swift in Sources */,
 				8E92A7D726A0B59F00BAED7F /* AccountService.swift in Sources */,
@@ -1553,6 +1552,7 @@
 				8E5D7D1426CC50D9009024A0 /* StorageAction.swift in Sources */,
 				8E73D6FA272EC7C00037DE6B /* MemoryCellConnector.swift in Sources */,
 				8E79C14726978828002D2A8B /* MessageReducer.swift in Sources */,
+				8E73D708272EE02D0037DE6B /* TextFieldStyle.swift in Sources */,
 				8E776FF226A2311200D97F52 /* AccountAction+SendVerificationEmail.swift in Sources */,
 				8E73D6DF272C9A920037DE6B /* EmailTextField.swift in Sources */,
 				8E15375A26FF439100D3232F /* OpenMemoryButton.swift in Sources */,

@@ -21,6 +21,7 @@ struct SecondaryButton: View {
 
     var body: some View {
         Button(title, role: role, action: action)
+            .buttonStyle(.plain)
             .foregroundColor(Color.brand)
     }
 }

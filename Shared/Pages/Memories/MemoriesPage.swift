@@ -29,8 +29,17 @@ struct MemoriesPage: View {
         }
         .sheet(
             isPresented: $isAddMemoryPresented,
-            content: { NavigationView { AddMemoryPage() } }
+            content: { addMemorySheet }
         )
+    }
+
+    private var addMemorySheet: some View {
+        #if os(iOS)
+            NavigationView { AddMemoryPage() }
+        #else
+            AddMemoryPage()
+                .frame(width: 300)
+        #endif
     }
 
     @ViewBuilder

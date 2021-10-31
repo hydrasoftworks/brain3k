@@ -18,12 +18,16 @@ extension SecureField {
 
 private struct TextFieldStyle: ViewModifier {
     func body(content: Content) -> some View {
-        content
-            .padding(.horizontal)
-            .frame(height: 56)
-            .background(
-                .thinMaterial,
-                in: RoundedRectangle(cornerRadius: 8, style: .continuous)
-            )
+        #if os(iOS)
+            content
+                .padding(.horizontal)
+                .frame(height: 56)
+                .background(
+                    .thinMaterial,
+                    in: RoundedRectangle(cornerRadius: 8, style: .continuous)
+                )
+        #else
+            content
+        #endif
     }
 }

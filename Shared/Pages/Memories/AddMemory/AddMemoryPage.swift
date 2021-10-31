@@ -20,6 +20,10 @@ struct AddMemoryPage: ConnectableView {
 
     func body(props _: ViewModel) -> some View {
         VStack(spacing: 16) {
+            #if os(macOS)
+                Text(L10n.AddMemoryPage.title)
+                    .font(.title)
+            #endif
             URLTextField(text: $value)
             PrimaryButton(title: L10n.AddMemoryPage.Button.add) {
                 dispatch.send(MemoriesAction.createURL(url: value))
@@ -30,7 +34,9 @@ struct AddMemoryPage: ConnectableView {
             SecondaryButton(title: L10n.General.cancel) {
                 presentationMode.wrappedValue.dismiss()
             }
-            Spacer()
+            #if os(iOS)
+                Spacer()
+            #endif
         }
         .padding()
         .padding(.bottom, 32)
