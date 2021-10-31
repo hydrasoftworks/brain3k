@@ -2,6 +2,7 @@
 "general.ok" = "OK";
 "general.cancel" = "Cancel";
 "general.processing" = "Processing...";
+"general.loading" = "Loading...";
 "share_extension.primary_action" = "Add";
 "share_extension.unsigned_message" = "Go to the %s app and sign in to perform this operation.";
 "share_extension.notes_placeholder" = "Notes (optional)";

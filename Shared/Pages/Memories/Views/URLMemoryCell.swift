@@ -29,7 +29,7 @@ struct URLMemoryCell: View {
             } else if state.error != nil, url != nil {
                 domain(viewModel.domain)
             } else {
-                PlaceholderView()
+                PlaceholderView(color: .white)
             }
         }
         .expanded()
@@ -50,6 +50,7 @@ struct URLMemoryCell: View {
             .font(.caption)
             .multilineTextAlignment(.center)
             .lineLimit(2)
+            .foregroundColor(Color.brand)
             .padding(8)
             .frame(minWidth: 0, maxWidth: .infinity)
             .background(.regularMaterial, in: Rectangle())

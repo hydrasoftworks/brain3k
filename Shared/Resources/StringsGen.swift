@@ -34,6 +34,8 @@ internal enum L10n {
   internal enum General {
     /// Cancel
     internal static let cancel = L10n.tr("Localizable", "general.cancel")
+    /// Loading...
+    internal static let loading = L10n.tr("Localizable", "general.loading")
     /// OK
     internal static let ok = L10n.tr("Localizable", "general.ok")
     /// Processing...

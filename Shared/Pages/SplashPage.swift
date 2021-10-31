@@ -16,7 +16,6 @@ struct SplashPage: ConnectableView {
         )
     }
 
-    @ViewBuilder
     func body(props viewModel: ViewModel) -> some View {
         Group {
             switch viewModel.status {

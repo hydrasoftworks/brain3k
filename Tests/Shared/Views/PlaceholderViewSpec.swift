@@ -16,7 +16,7 @@ final class PlaceholderViewSpec: QuickSpec {
         let title = "Test Title"
 
         beforeEach {
-            sut = PlaceholderView(title: title)
+            sut = PlaceholderView(title: title, color: .white)
         }
         describe("\(PlaceholderView.self)") {
             it("Should display ProgressView") {

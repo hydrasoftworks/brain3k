@@ -50,7 +50,7 @@ struct MemoriesPage: View {
                 spacing: 16
             ) {
                 ForEach(viewModel.memories) { memory in
-                    MemoryCell(memory: memory)
+                    MemoryCellConnector(memory: memory)
                 }
             }
         }

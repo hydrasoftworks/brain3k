@@ -5,10 +5,10 @@
 import SwiftUI
 
 struct URLTextField: View {
-    let text: Binding<String>
+    @Binding var text: String
 
     var body: some View {
-        TextField(L10n.AddMemoryPage.TextField.placeholder, text: text)
+        TextField(L10n.AddMemoryPage.TextField.placeholder, text: $text)
             .styleTextField()
             .disableAutocorrection(true)
     }

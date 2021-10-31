@@ -36,7 +36,7 @@ struct MemoryImage: View {
             } else if state.error != nil, url != nil {
                 domainView
             } else {
-                PlaceholderView()
+                PlaceholderView(color: .primary)
                     .onAppear(perform: onAppear)
             }
         }
