@@ -25,7 +25,7 @@ struct SecondaryButton: View {
             .foregroundColor(Color.brand)
     }
 
-    private var buttonStyle: PlainButtonStyle {
+    private var buttonStyle: some PrimitiveButtonStyle {
         #if os(iOS)
             .automatic
         #else
