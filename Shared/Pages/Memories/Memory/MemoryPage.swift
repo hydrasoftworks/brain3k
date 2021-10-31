@@ -6,23 +6,29 @@ import SwiftDux
 import SwiftUI
 
 struct MemoryPage: View {
+    @Environment(\.dismiss) var dismiss
+
     #if os(iOS)
         @Environment(\.verticalSizeClass) private var verticalSizeClass
+        let pageTitle = L10n.MemoryPage.title
+    #else
+        let pageTitle = ""
     #endif
-    @Environment(\.dismiss) var dismiss
 
     let viewModel: ViewModel
 
-    @ViewBuilder
     var body: some View {
-        if viewModel.memoryExist {
-            content
-        } else {
-            EmptyListView(
-                image: Asset.robotNotSelected,
-                text: L10n.MemoryPage.Empty.notSelected
-            )
+        Group {
+            if viewModel.memoryExist {
+                content
+            } else {
+                EmptyListView(
+                    image: Asset.robotNotSelected,
+                    text: L10n.MemoryPage.Empty.notSelected
+                )
+            }
         }
+        .navigationTitle(pageTitle)
     }
 
     private var content: some View {
@@ -37,7 +43,6 @@ struct MemoryPage: View {
                 portrait
             #endif
         }
-        .navigationTitle(L10n.MemoryPage.title)
         .toolbar {
             ToolbarItem {
                 Menu(content: {

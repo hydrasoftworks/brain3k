@@ -33,6 +33,9 @@ struct Brain3kApp: App {
                     .provideStore(store)
             }
         }
+        .commands {
+            SidebarCommands()
+        }
 
         Settings {
             SettingsPage()
