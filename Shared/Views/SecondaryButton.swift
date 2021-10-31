@@ -21,7 +21,15 @@ struct SecondaryButton: View {
 
     var body: some View {
         Button(title, role: role, action: action)
-            .buttonStyle(.plain)
+            .buttonStyle(buttonStyle)
             .foregroundColor(Color.brand)
+    }
+
+    private var buttonStyle: PlainButtonStyle {
+        #if os(iOS)
+            .automatic
+        #else
+            .plain
+        #endif
     }
 }

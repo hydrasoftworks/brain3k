@@ -33,7 +33,7 @@ struct AppSignInWithAppleButton: ConnectableView {
                 }
             }
         )
-        .frame(height: 56)
+        .frame(height: AppConfiguration.buttonHeight)
     }
 
     struct ViewModel: Equatable {

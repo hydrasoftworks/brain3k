@@ -21,7 +21,7 @@ private struct TextFieldStyle: ViewModifier {
         #if os(iOS)
             content
                 .padding(.horizontal)
-                .frame(height: 56)
+                .frame(height: AppConfiguration.buttonHeight)
                 .background(
                     .thinMaterial,
                     in: RoundedRectangle(cornerRadius: 8, style: .continuous)

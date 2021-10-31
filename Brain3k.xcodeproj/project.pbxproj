@@ -72,6 +72,9 @@
 		8E73D6FD272EC8A40037DE6B /* MemoryCellStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E73D6FB272EC8A40037DE6B /* MemoryCellStyle.swift */; };
 		8E73D703272ED3C60037DE6B /* SelectedMemoryID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E73D702272ED3C60037DE6B /* SelectedMemoryID.swift */; };
 		8E73D708272EE02D0037DE6B /* TextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA4D27C26938D1000C0A037 /* TextFieldStyle.swift */; };
+		8E73D70A272EE6940037DE6B /* JoinPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E73D709272EE6940037DE6B /* JoinPage.swift */; };
+		8E73D70C272EE7900037DE6B /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E73D70B272EE7900037DE6B /* AppConfiguration.swift */; };
+		8E73D70D272EE7900037DE6B /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E73D70B272EE7900037DE6B /* AppConfiguration.swift */; };
 		8E776FF126A2311200D97F52 /* AccountAction+SendVerificationEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E776FF026A2311200D97F52 /* AccountAction+SendVerificationEmail.swift */; };
 		8E776FF226A2311200D97F52 /* AccountAction+SendVerificationEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E776FF026A2311200D97F52 /* AccountAction+SendVerificationEmail.swift */; };
 		8E776FF426A231F000D97F52 /* AccountAction+RefreshSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E776FF326A231F000D97F52 /* AccountAction+RefreshSpec.swift */; };
@@ -87,9 +90,7 @@
 		8E77700726A32D5600D97F52 /* Future+MapError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E77700526A32D5600D97F52 /* Future+MapError.swift */; };
 		8E77700B26A349B300D97F52 /* MemoriesReducerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E77700A26A349B300D97F52 /* MemoriesReducerSpec.swift */; };
 		8E79C13526961891002D2A8B /* MGFlipView in Frameworks */ = {isa = PBXBuildFile; productRef = 8E79C13426961891002D2A8B /* MGFlipView */; };
-		8E79C13726961898002D2A8B /* MGFlipView in Frameworks */ = {isa = PBXBuildFile; productRef = 8E79C13626961898002D2A8B /* MGFlipView */; };
 		8E79C139269618BE002D2A8B /* JoinPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E79C138269618BE002D2A8B /* JoinPage.swift */; };
-		8E79C13A269618BE002D2A8B /* JoinPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E79C138269618BE002D2A8B /* JoinPage.swift */; };
 		8E79C13C269619C0002D2A8B /* SignInWithAppleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E79C13B269619C0002D2A8B /* SignInWithAppleButton.swift */; };
 		8E79C13D269619C0002D2A8B /* SignInWithAppleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E79C13B269619C0002D2A8B /* SignInWithAppleButton.swift */; };
 		8E79C140269786F9002D2A8B /* MessageState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E79C13F269786F9002D2A8B /* MessageState.swift */; };
@@ -338,6 +339,8 @@
 		8E73D6F9272EC7C00037DE6B /* MemoryCellConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryCellConnector.swift; sourceTree = "<group>"; };
 		8E73D6FB272EC8A40037DE6B /* MemoryCellStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryCellStyle.swift; sourceTree = "<group>"; };
 		8E73D702272ED3C60037DE6B /* SelectedMemoryID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedMemoryID.swift; sourceTree = "<group>"; };
+		8E73D709272EE6940037DE6B /* JoinPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinPage.swift; sourceTree = "<group>"; };
+		8E73D70B272EE7900037DE6B /* AppConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
 		8E776FF026A2311200D97F52 /* AccountAction+SendVerificationEmail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountAction+SendVerificationEmail.swift"; sourceTree = "<group>"; };
 		8E776FF326A231F000D97F52 /* AccountAction+RefreshSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountAction+RefreshSpec.swift"; sourceTree = "<group>"; };
 		8E776FF526A236F600D97F52 /* AccountAction+SendVerificationEmailSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountAction+SendVerificationEmailSpec.swift"; sourceTree = "<group>"; };
@@ -480,7 +483,6 @@
 			files = (
 				8E3C0D7926B9E24500EB82E8 /* FirebaseAuth in Frameworks */,
 				8E3C0D7B26B9E25500EB82E8 /* FirebaseFirestoreSwift-Beta in Frameworks */,
-				8E79C13726961898002D2A8B /* MGFlipView in Frameworks */,
 				8EC607882688BEE0006ED3C1 /* SwiftDux in Frameworks */,
 				8E3C0D7D26B9E26500EB82E8 /* FirebaseStorageSwift-Beta in Frameworks */,
 				8E6BEDF6272410A200913D42 /* NukeUI in Frameworks */,
@@ -641,6 +643,7 @@
 			isa = PBXGroup;
 			children = (
 				8E73D6D8272C97000037DE6B /* Views */,
+				8E73D709272EE6940037DE6B /* JoinPage.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -668,6 +671,7 @@
 			isa = PBXGroup;
 			children = (
 				8E73D6DD272C975C0037DE6B /* Views */,
+				8E79C138269618BE002D2A8B /* JoinPage.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -838,7 +842,6 @@
 			isa = PBXGroup;
 			children = (
 				8E77700F26A6040F00D97F52 /* Views */,
-				8E79C138269618BE002D2A8B /* JoinPage.swift */,
 				8EC607412688AFCF006ED3C1 /* SignInPage.swift */,
 				8EA4D2862693A22A00C0A037 /* SignUpPage.swift */,
 				8EBC051D2699C10C008B2478 /* UnverifiedEmailPage.swift */,
@@ -1002,6 +1005,7 @@
 			isa = PBXGroup;
 			children = (
 				8EF9353726AC448300176AF4 /* GoogleService-Info.plist */,
+				8E73D70B272EE7900037DE6B /* AppConfiguration.swift */,
 				8EA4D27F26939DA600C0A037 /* Pages */,
 				8EC6078B2688C029006ED3C1 /* Views */,
 				8EA4D27B26938CED00C0A037 /* View Modifiers */,
@@ -1232,7 +1236,6 @@
 			packageProductDependencies = (
 				8EC607872688BEE0006ED3C1 /* SwiftDux */,
 				8EC607892688BEE4006ED3C1 /* SwiftyBeaver */,
-				8E79C13626961898002D2A8B /* MGFlipView */,
 				8E79C14E269791F4002D2A8B /* ValidatedPropertyKit */,
 				8E3C0D7826B9E24500EB82E8 /* FirebaseAuth */,
 				8E3C0D7A26B9E25500EB82E8 /* FirebaseFirestoreSwift-Beta */,
@@ -1468,6 +1471,7 @@
 				8EDC011126D029D300D2064A /* URLMemoryCellConnector.swift in Sources */,
 				8E79C13C269619C0002D2A8B /* SignInWithAppleButton.swift in Sources */,
 				8EC6077B2688BB5B006ED3C1 /* MemoriesAction.swift in Sources */,
+				8E73D70C272EE7900037DE6B /* AppConfiguration.swift in Sources */,
 				8E8835BC26B0928E00EE0234 /* Validation+URL.swift in Sources */,
 				8E889CF526A22F9500F7C47C /* AccountAction+Refresh.swift in Sources */,
 				8EB7470B2706588B004F4F18 /* MemoriesAction+Delete.swift in Sources */,
@@ -1536,7 +1540,6 @@
 				8EC607512688AFD1006ED3C1 /* SignInPage.swift in Sources */,
 				8E260FE826C2F44900715524 /* ExpandedFrame.swift in Sources */,
 				8E9EEBA726F2813600106FCD /* MemoriesState.swift in Sources */,
-				8E79C13A269618BE002D2A8B /* JoinPage.swift in Sources */,
 				8E8DF14B270096F500CA0EBF /* ImagesGen.swift in Sources */,
 				8E73D6F0272D6B250037DE6B /* Brain3kApp.swift in Sources */,
 				8EBC052E2699CB52008B2478 /* PrimaryButton.swift in Sources */,
@@ -1571,6 +1574,7 @@
 				8EAAD9E926C5A3F1007C2973 /* AnyPublisher+Create.swift in Sources */,
 				8EEDD794268BCD9200F670D2 /* Account.swift in Sources */,
 				8E889CEC26A22A4300F7C47C /* AccountAction+SignUp.swift in Sources */,
+				8E73D70A272EE6940037DE6B /* JoinPage.swift in Sources */,
 				8E73D6DA272C971C0037DE6B /* SignPageBase.swift in Sources */,
 				8E73D703272ED3C60037DE6B /* SelectedMemoryID.swift in Sources */,
 				8E79C14426978778002D2A8B /* Message.swift in Sources */,
@@ -1590,6 +1594,7 @@
 				8E5D7D1726CC523D009024A0 /* StorageAction+GetDownloadURL.swift in Sources */,
 				8EBC051F2699C10C008B2478 /* UnverifiedEmailPage.swift in Sources */,
 				8E26236B27160A630092B6CE /* AccountAction+Delete.swift in Sources */,
+				8E73D70D272EE7900037DE6B /* AppConfiguration.swift in Sources */,
 				8EBC05252699C926008B2478 /* MaterialBackground.swift in Sources */,
 				8EC607792688BB3E006ED3C1 /* MemoriesReducer.swift in Sources */,
 				8EC607722688BA3A006ED3C1 /* AppReducer.swift in Sources */,
@@ -1756,7 +1761,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MARKETING_VERSION = 0.2.0;
+				MARKETING_VERSION = 0.3.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1813,7 +1818,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MARKETING_VERSION = 0.2.0;
+				MARKETING_VERSION = 0.3.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -2235,11 +2240,6 @@
 			productName = NukeUI;
 		};
 		8E79C13426961891002D2A8B /* MGFlipView */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8E79C13326961891002D2A8B /* XCRemoteSwiftPackageReference "MGFlipView" */;
-			productName = MGFlipView;
-		};
-		8E79C13626961898002D2A8B /* MGFlipView */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 8E79C13326961891002D2A8B /* XCRemoteSwiftPackageReference "MGFlipView" */;
 			productName = MGFlipView;

@@ -29,7 +29,7 @@ private struct PrimaryButtonStyle: ButtonStyle {
                 .font(.title2)
                 .foregroundColor(Color.brandText.opacity(isEnabled ? 1 : 0.5))
                 .frame(minWidth: 0, maxWidth: .infinity)
-                .frame(height: 56)
+                .frame(height: AppConfiguration.buttonHeight)
                 .background(
                     RoundedRectangle(cornerRadius: 8)
                         .foregroundColor(Color.brand.opacity(isEnabled ? 1 : 0.5))

@@ -10,7 +10,7 @@ import ValidatedPropertyKit
 struct SignInPage: ConnectableView {
     @Environment(\.actionDispatcher) private var dispatch
 
-    let flip: () -> Void
+    @Binding var flipped: Bool
 
     @Validated(!.isEmpty && .isEmail)
     private var email: String = ""
@@ -61,7 +61,7 @@ struct SignInPage: ConnectableView {
     private var goToSignUpButton: some View {
         SecondaryButton(
             title: L10n.SignInPage.Button.signUp,
-            action: flip
+            action: { flipped = true }
         )
     }
 

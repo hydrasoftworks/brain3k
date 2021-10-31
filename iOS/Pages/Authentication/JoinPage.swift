@@ -12,8 +12,8 @@ struct JoinPage: View {
         ZStack {
             Background()
             FlipView(
-                frontView: { SignInPage(flip: { flipped = true }) },
-                backView: { SignUpPage(flip: { flipped = false }) },
+                frontView: { SignInPage(flipped: $flipped) },
+                backView: { SignUpPage(flipped: $flipped) },
                 flipped: $flipped,
                 flipAxis: .y
             )
