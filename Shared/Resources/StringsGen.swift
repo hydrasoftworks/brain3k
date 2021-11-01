@@ -124,6 +124,10 @@ internal enum L10n {
   }
 
   internal enum ShareExtension {
+    /// Add to %s
+    internal static func name(_ p1: UnsafePointer<CChar>) -> String {
+      return L10n.tr("Localizable", "share_extension.name", p1)
+    }
     /// Notes (optional)
     internal static let notesPlaceholder = L10n.tr("Localizable", "share_extension.notes_placeholder")
     /// Add

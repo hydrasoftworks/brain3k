@@ -10,13 +10,17 @@ final class ShareViewController: SLComposeServiceViewController {
     private let accountService = AccountService()
     private let memoriesService = MemoriesService()
 
+    override var placeholder: String! {
+        get { L10n.ShareExtension.notesPlaceholder }
+        set {}
+    }
+
     private var notes: String? {
         contentText?.isEmpty == false ? contentText : nil
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        placeholder = L10n.ShareExtension.notesPlaceholder
         textView.text = nil
         navigationController?.navigationBar.topItem?.rightBarButtonItem?.title = L10n.ShareExtension.primaryAction
     }
