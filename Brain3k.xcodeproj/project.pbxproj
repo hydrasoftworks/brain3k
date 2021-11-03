@@ -75,7 +75,6 @@
 		8E73D70A272EE6940037DE6B /* JoinPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E73D709272EE6940037DE6B /* JoinPage.swift */; };
 		8E73D70C272EE7900037DE6B /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E73D70B272EE7900037DE6B /* AppConfiguration.swift */; };
 		8E73D70D272EE7900037DE6B /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E73D70B272EE7900037DE6B /* AppConfiguration.swift */; };
-		8E73D715273042900037DE6B /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 8E73D714273042900037DE6B /* icon.icns */; };
 		8E73D717273042900037DE6B /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E73D716273042900037DE6B /* ShareViewController.swift */; };
 		8E73D71C273042900037DE6B /* ShareExtension macOS.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8E73D712273042900037DE6B /* ShareExtension macOS.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		8E73D721273043C40037DE6B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8EC4BAD326BDD79F00F20EAE /* Localizable.strings */; };
@@ -384,7 +383,6 @@
 		8E73D709272EE6940037DE6B /* JoinPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinPage.swift; sourceTree = "<group>"; };
 		8E73D70B272EE7900037DE6B /* AppConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
 		8E73D712273042900037DE6B /* ShareExtension macOS.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "ShareExtension macOS.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8E73D714273042900037DE6B /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon.icns; sourceTree = "<group>"; };
 		8E73D716273042900037DE6B /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		8E73D718273042900037DE6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E73D719273042900037DE6B /* ShareExtension_macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShareExtension_macOS.entitlements; sourceTree = "<group>"; };
@@ -848,7 +846,6 @@
 			children = (
 				8E73D719273042900037DE6B /* ShareExtension_macOS.entitlements */,
 				8E73D718273042900037DE6B /* Info.plist */,
-				8E73D714273042900037DE6B /* icon.icns */,
 				8E73D716273042900037DE6B /* ShareViewController.swift */,
 			);
 			path = "ShareExtension macOS";
@@ -1449,7 +1446,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E73D715273042900037DE6B /* icon.icns in Resources */,
 				8E73D721273043C40037DE6B /* Localizable.strings in Resources */,
 				8E73D741273078280037DE6B /* GoogleService-Info.plist in Resources */,
 			);
@@ -1852,6 +1848,7 @@
 		8E73D71E273042900037DE6B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_ENTITLEMENTS = "ShareExtension macOS/ShareExtension_macOS.entitlements";
 				CODE_SIGN_IDENTITY = "Mac Developer";
@@ -1883,6 +1880,7 @@
 		8E73D71F273042900037DE6B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_ENTITLEMENTS = "ShareExtension macOS/ShareExtension_macOS.entitlements";
 				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
