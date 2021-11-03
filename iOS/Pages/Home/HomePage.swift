@@ -38,7 +38,7 @@ struct HomePage: View {
             .tabItem {
                 Label(
                     L10n.SettingsPage.title,
-                    systemImage: "gearshape.fill"
+                    image: Asset.settingsIcon.name
                 )
             }
         }

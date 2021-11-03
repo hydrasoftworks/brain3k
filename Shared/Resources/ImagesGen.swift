@@ -30,6 +30,7 @@ internal enum Asset {
   internal static let robotEmptyList = ImageAsset(name: "RobotEmptyList")
   internal static let robotNotFound = ImageAsset(name: "RobotNotFound")
   internal static let robotNotSelected = ImageAsset(name: "RobotNotSelected")
+  internal static let settingsIcon = ImageAsset(name: "SettingsIcon")
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name
 
