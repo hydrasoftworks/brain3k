@@ -169,7 +169,7 @@
       "size" : "512x512"
     },
     {
-      "filename" : "icon_macos.png",
+      "filename" : "icon_512x512@2x-1.png",
       "idiom" : "mac",
       "size" : "1024x1024"
     }

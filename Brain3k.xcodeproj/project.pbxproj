@@ -52,6 +52,8 @@
 		8E5D7D1426CC50D9009024A0 /* StorageAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5D7D1226CC50D9009024A0 /* StorageAction.swift */; };
 		8E5D7D1626CC523D009024A0 /* StorageAction+GetDownloadURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5D7D1526CC523C009024A0 /* StorageAction+GetDownloadURL.swift */; };
 		8E5D7D1726CC523D009024A0 /* StorageAction+GetDownloadURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5D7D1526CC523C009024A0 /* StorageAction+GetDownloadURL.swift */; };
+		8E628D5F2735DB9F004BC88C /* Colorful in Frameworks */ = {isa = PBXBuildFile; productRef = 8E628D5E2735DB9F004BC88C /* Colorful */; };
+		8E628D612735DBAC004BC88C /* Colorful in Frameworks */ = {isa = PBXBuildFile; productRef = 8E628D602735DBAC004BC88C /* Colorful */; };
 		8E66FEA926A8B5E400838C70 /* MemoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E66FEA826A8B5E400838C70 /* MemoryCell.swift */; };
 		8E66FEAA26A8B5E400838C70 /* MemoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E66FEA826A8B5E400838C70 /* MemoryCell.swift */; };
 		8E6821B726A9E43800B2DACB /* PlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6821B626A9E43800B2DACB /* PlaceholderView.swift */; };
@@ -532,6 +534,7 @@
 				8E9EEBAC26F2888A00106FCD /* Fuse in Frameworks */,
 				8EF9352C26AC1B7300176AF4 /* FirebaseStorageSwift-Beta in Frameworks */,
 				8EC607862688BED5006ED3C1 /* SwiftyBeaver in Frameworks */,
+				8E628D5F2735DB9F004BC88C /* Colorful in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -547,6 +550,7 @@
 				8E50D87226BB33EF0075C08C /* IrregularGradient in Frameworks */,
 				8E9EEBAE26F2889500106FCD /* Fuse in Frameworks */,
 				8E79C14F269791F4002D2A8B /* ValidatedPropertyKit in Frameworks */,
+				8E628D612735DBAC004BC88C /* Colorful in Frameworks */,
 				8EC6078A2688BEE4006ED3C1 /* SwiftyBeaver in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1310,6 +1314,7 @@
 				8E50D86F26BB33E30075C08C /* IrregularGradient */,
 				8E9EEBAB26F2888A00106FCD /* Fuse */,
 				8E6BEDF32724109800913D42 /* NukeUI */,
+				8E628D5E2735DB9F004BC88C /* Colorful */,
 			);
 			productName = "Brain3k (iOS)";
 			productReference = 8EC607472688AFD1006ED3C1 /* Brain3k.app */;
@@ -1340,6 +1345,7 @@
 				8E50D87126BB33EF0075C08C /* IrregularGradient */,
 				8E9EEBAD26F2889500106FCD /* Fuse */,
 				8E6BEDF5272410A200913D42 /* NukeUI */,
+				8E628D602735DBAC004BC88C /* Colorful */,
 			);
 			productName = "Brain3k (macOS)";
 			productReference = 8EC6074D2688AFD1006ED3C1 /* Brain3k.app */;
@@ -1420,6 +1426,7 @@
 				8E50D86E26BB33E20075C08C /* XCRemoteSwiftPackageReference "IrregularGradient" */,
 				8E9EEBAA26F2888A00106FCD /* XCRemoteSwiftPackageReference "fuse-swift" */,
 				8E6BEDF22724109700913D42 /* XCRemoteSwiftPackageReference "NukeUI" */,
+				8E628D5D2735DB9E004BC88C /* XCRemoteSwiftPackageReference "Colorful" */,
 			);
 			productRefGroup = 8EC607482688AFD1006ED3C1 /* Products */;
 			projectDirPath = "";
@@ -2330,6 +2337,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		8E628D5D2735DB9E004BC88C /* XCRemoteSwiftPackageReference "Colorful" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Co2333/Colorful";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		8E6BEDF22724109700913D42 /* XCRemoteSwiftPackageReference "NukeUI" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/kean/NukeUI";
@@ -2439,6 +2454,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8E50D86E26BB33E20075C08C /* XCRemoteSwiftPackageReference "IrregularGradient" */;
 			productName = IrregularGradient;
+		};
+		8E628D5E2735DB9F004BC88C /* Colorful */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8E628D5D2735DB9E004BC88C /* XCRemoteSwiftPackageReference "Colorful" */;
+			productName = Colorful;
+		};
+		8E628D602735DBAC004BC88C /* Colorful */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8E628D5D2735DB9E004BC88C /* XCRemoteSwiftPackageReference "Colorful" */;
+			productName = Colorful;
 		};
 		8E6BEDF32724109800913D42 /* NukeUI */ = {
 			isa = XCSwiftPackageProductDependency;

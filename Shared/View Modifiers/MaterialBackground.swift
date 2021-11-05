@@ -14,7 +14,7 @@ private struct MaterialBackground: ViewModifier {
     func body(content: Content) -> some View {
         content
             .background(
-                .ultraThinMaterial,
+                .regularMaterial,
                 in: RoundedRectangle(cornerRadius: 16, style: .continuous)
             )
     }
