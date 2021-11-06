@@ -2,5 +2,4 @@ storage_mode("git")
 git_url("https://github.com/kamilpowalowski/brain3k.git")
 git_branch("certificates")
 
-app_identifier(["com.brain3k.Brain3k", "com.brain3k.Brain3k.ShareExtension"])
 username("kamil.powalowski@gmail.com")

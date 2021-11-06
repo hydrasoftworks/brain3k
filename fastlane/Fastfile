@@ -1,0 +1,19 @@
+default_platform(:ios)
+add_extra_platforms(platforms: [:macos])
+
+desc "Get current provisioning profiles and certificates"
+lane :match_get do
+  match(readonly: true, type: "development")
+  match(readonly: true, type: "development", platform: "macos")
+  match(readonly: true, type: "appstore")
+  match(readonly: true, type: "appstore", platform: "macos", additional_cert_types: ["mac_installer_distribution"])
+end
+
+
+desc "Refresh provisioning profiles and certificates"
+lane :match_refresh do
+  match(type: "development")
+  match(type: "development", platform: "macos")
+  match(type: "appstore")
+  match(type: "appstore", platform: "macos", additional_cert_types: ["mac_installer_distribution"])
+end
