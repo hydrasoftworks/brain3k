@@ -23,7 +23,7 @@ struct Brain3kApp: App {
     }
 
     var body: some Scene {
-        WindowGroup {
+        WindowGroup(id: "Brain3k") {
             if !runningTests {
                 SplashPage()
                     .frame(
