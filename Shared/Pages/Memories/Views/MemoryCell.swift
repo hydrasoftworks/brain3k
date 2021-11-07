@@ -28,5 +28,6 @@ struct MemoryCell: View {
                 endPoint: .bottomTrailing
             )
         )
+        .contentShape(Rectangle())
     }
 }
