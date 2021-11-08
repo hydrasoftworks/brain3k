@@ -8,9 +8,8 @@
   "engines": {
     "node": "14"
   },
-  "dependencies": {},
   "devDependencies": {
-    "firebase-tools": "^9.16.0"
+    "firebase-tools": "^9.22.0"
   },
   "private": true
 }
