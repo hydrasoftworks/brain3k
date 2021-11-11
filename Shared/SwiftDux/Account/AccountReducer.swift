@@ -14,6 +14,12 @@ final class AccountReducer: Reducer {
             return state.copyWith(status: status)
         case let .setNonce(nonce):
             return state.copyWith(nonce: nonce)
+        case let .setUser(user):
+            if let user = user {
+                return state.copyWith(user: user)
+            } else {
+                return state.copyWithNil(user: true)
+            }
         }
     }
 }

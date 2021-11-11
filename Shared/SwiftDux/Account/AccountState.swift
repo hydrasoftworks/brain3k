@@ -8,6 +8,7 @@ import Foundation
 struct AccountState: StateType {
     let status: AccountStatus
     let nonce: String?
+    let user: User?
 
     var account: Account? {
         switch status {
@@ -32,19 +33,33 @@ struct AccountState: StateType {
 
     init(
         status: AccountStatus = .undetermined,
-        nonce: String? = nil
+        nonce: String? = nil,
+        user: User? = nil
     ) {
         self.status = status
         self.nonce = nonce
+        self.user = user
     }
 
     func copyWith(
         status: AccountStatus? = nil,
-        nonce: String? = nil
+        nonce: String? = nil,
+        user: User? = nil
     ) -> AccountState {
         AccountState(
             status: status ?? self.status,
-            nonce: nonce ?? self.nonce
+            nonce: nonce ?? self.nonce,
+            user: user ?? self.user
+        )
+    }
+
+    func copyWithNil(
+        user: Bool = false
+    ) -> AccountState {
+        AccountState(
+            status: status,
+            nonce: nonce,
+            user: user ? nil : self.user
         )
     }
 }

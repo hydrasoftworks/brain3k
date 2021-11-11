@@ -7,6 +7,7 @@ import SwiftDux
 enum AccountAction: Action, Equatable {
     case setStatus(AccountStatus)
     case setNonce(String)
+    case setUser(User?)
 
     static func accountAction(for account: Account) -> AccountAction {
         if account.emailVerified {

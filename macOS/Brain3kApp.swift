@@ -27,8 +27,8 @@ struct Brain3kApp: App {
             if !runningTests {
                 SplashPage()
                     .frame(
-                        minWidth: 800, idealWidth: 900, maxWidth: .infinity,
-                        minHeight: 500, idealHeight: 600, maxHeight: .infinity
+                        minWidth: 800, idealWidth: 1000, maxWidth: .infinity,
+                        minHeight: 500, idealHeight: 700, maxHeight: .infinity
                     )
                     .provideStore(store)
             }

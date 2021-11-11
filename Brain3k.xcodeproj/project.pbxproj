@@ -31,6 +31,12 @@
 		8E3810EE269CD59300ED3851 /* MessageStateSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3810ED269CD59300ED3851 /* MessageStateSpec.swift */; };
 		8E3810F1269CD67500ED3851 /* AccountReducerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3810F0269CD67500ED3851 /* AccountReducerSpec.swift */; };
 		8E3810F3269CD72500ED3851 /* AccountStateSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3810F2269CD72500ED3851 /* AccountStateSpec.swift */; };
+		8E3927F7273D458C001DA030 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3927F6273D458C001DA030 /* User.swift */; };
+		8E3927F8273D458C001DA030 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3927F6273D458C001DA030 /* User.swift */; };
+		8E3927FA273D4876001DA030 /* AccountAction+WatchUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3927F9273D4876001DA030 /* AccountAction+WatchUser.swift */; };
+		8E3927FB273D4876001DA030 /* AccountAction+WatchUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3927F9273D4876001DA030 /* AccountAction+WatchUser.swift */; };
+		8E3927FD273D4FAE001DA030 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3927FC273D4FAE001DA030 /* UserService.swift */; };
+		8E3927FE273D4FAE001DA030 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3927FC273D4FAE001DA030 /* UserService.swift */; };
 		8E3C0D7926B9E24500EB82E8 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 8E3C0D7826B9E24500EB82E8 /* FirebaseAuth */; };
 		8E3C0D7B26B9E25500EB82E8 /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 8E3C0D7A26B9E25500EB82E8 /* FirebaseFirestoreSwift-Beta */; };
 		8E3C0D7D26B9E26500EB82E8 /* FirebaseStorageSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 8E3C0D7C26B9E26500EB82E8 /* FirebaseStorageSwift-Beta */; };
@@ -358,6 +364,9 @@
 		8E3810ED269CD59300ED3851 /* MessageStateSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageStateSpec.swift; sourceTree = "<group>"; };
 		8E3810F0269CD67500ED3851 /* AccountReducerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountReducerSpec.swift; sourceTree = "<group>"; };
 		8E3810F2269CD72500ED3851 /* AccountStateSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountStateSpec.swift; sourceTree = "<group>"; };
+		8E3927F6273D458C001DA030 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		8E3927F9273D4876001DA030 /* AccountAction+WatchUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountAction+WatchUser.swift"; sourceTree = "<group>"; };
+		8E3927FC273D4FAE001DA030 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		8E50D86B26BB30280075C08C /* ProcessingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessingCell.swift; sourceTree = "<group>"; };
 		8E50D87426BB40320075C08C /* MemorySpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemorySpec.swift; sourceTree = "<group>"; };
 		8E58D148271B0F350033B02A /* MemoryImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryImage.swift; sourceTree = "<group>"; };
@@ -647,6 +656,14 @@
 				8E92A7DA26A0B8DC00BAED7F /* AccountActionSpec.swift */,
 			);
 			path = Account;
+			sourceTree = "<group>";
+		};
+		8E3927FF273D53AD001DA030 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				8EBC0535269A0585008B2478 /* SettingsPage.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		8E50D87326BB40210075C08C /* Models */ = {
@@ -939,6 +956,7 @@
 				8E5D7D0726CC4D43009024A0 /* StorageService.swift */,
 				8EDC011B26D03E9600D2064A /* CompletionHandler.swift */,
 				8ED3821226F767CB0003D4F3 /* LibrariesService.swift */,
+				8E3927FC273D4FAE001DA030 /* UserService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -966,6 +984,7 @@
 				8E776FF026A2311200D97F52 /* AccountAction+SendVerificationEmail.swift */,
 				8E8DF14C27024B3700CA0EBF /* AccountAction+GenerateNonce.swift */,
 				8E26236927160A630092B6CE /* AccountAction+Delete.swift */,
+				8E3927F9273D4876001DA030 /* AccountAction+WatchUser.swift */,
 			);
 			path = Actions;
 			sourceTree = "<group>";
@@ -1025,7 +1044,7 @@
 				8EEF35DD268CEA500068DB58 /* SplashPage.swift */,
 				8E79C15026979409002D2A8B /* Authentication */,
 				8EBC0538269A05B0008B2478 /* Memories */,
-				8EBC0535269A0585008B2478 /* SettingsPage.swift */,
+				8E3927FF273D53AD001DA030 /* Settings */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -1127,6 +1146,7 @@
 				8E3436F027089D4200FA1CB0 /* Memory+CopyWith.swift */,
 				8EEDD792268BCD9200F670D2 /* Account.swift */,
 				8EEF35E0268CED570068DB58 /* AccountStatus.swift */,
+				8E3927F6273D458C001DA030 /* User.swift */,
 				8E79C14226978778002D2A8B /* Message.swift */,
 				8E77700226A32C6B00D97F52 /* AppError.swift */,
 			);
@@ -1611,6 +1631,7 @@
 				8E889CF026A22D4F00F7C47C /* AccountAction+SignOut.swift in Sources */,
 				8EAAD9E826C5A3F1007C2973 /* AnyPublisher+Create.swift in Sources */,
 				8EEDD793268BCD9200F670D2 /* Account.swift in Sources */,
+				8E3927F7273D458C001DA030 /* User.swift in Sources */,
 				8E889CEB26A22A4300F7C47C /* AccountAction+SignUp.swift in Sources */,
 				8E79C14326978778002D2A8B /* Message.swift in Sources */,
 				8E3436F92708A2FA00FA1CB0 /* MemoriesAction+Refresh.swift in Sources */,
@@ -1619,6 +1640,7 @@
 				8E66FEA926A8B5E400838C70 /* MemoryCell.swift in Sources */,
 				8E77700326A32C6B00D97F52 /* AppError.swift in Sources */,
 				8EC607752688BAD4006ED3C1 /* Memory.swift in Sources */,
+				8E3927FA273D4876001DA030 /* AccountAction+WatchUser.swift in Sources */,
 				8E79C14926978898002D2A8B /* MessageAction.swift in Sources */,
 				8E92A7E126A0CD2500BAED7F /* AccountAction+CheckAccountStatus.swift in Sources */,
 				8EEF35DB268CE9F40068DB58 /* HomePage.swift in Sources */,
@@ -1630,6 +1652,7 @@
 				8E5D7D1626CC523D009024A0 /* StorageAction+GetDownloadURL.swift in Sources */,
 				8EBC051E2699C10C008B2478 /* UnverifiedEmailPage.swift in Sources */,
 				8E26236A27160A630092B6CE /* AccountAction+Delete.swift in Sources */,
+				8E3927FD273D4FAE001DA030 /* UserService.swift in Sources */,
 				8EBC05242699C926008B2478 /* MaterialBackground.swift in Sources */,
 				8EC607782688BB3E006ED3C1 /* MemoriesReducer.swift in Sources */,
 				8EC607712688BA3A006ED3C1 /* AppReducer.swift in Sources */,
@@ -1706,6 +1729,7 @@
 				8E889CEC26A22A4300F7C47C /* AccountAction+SignUp.swift in Sources */,
 				8E73D70A272EE6940037DE6B /* JoinPage.swift in Sources */,
 				8E73D6DA272C971C0037DE6B /* SignPageBase.swift in Sources */,
+				8E3927F8273D458C001DA030 /* User.swift in Sources */,
 				8E73D703272ED3C60037DE6B /* SelectedMemoryID.swift in Sources */,
 				8E79C14426978778002D2A8B /* Message.swift in Sources */,
 				8E3436FA2708A2FA00FA1CB0 /* MemoriesAction+Refresh.swift in Sources */,
@@ -1714,6 +1738,7 @@
 				8E66FEAA26A8B5E400838C70 /* MemoryCell.swift in Sources */,
 				8E77700426A32C6B00D97F52 /* AppError.swift in Sources */,
 				8EC607762688BAD4006ED3C1 /* Memory.swift in Sources */,
+				8E3927FB273D4876001DA030 /* AccountAction+WatchUser.swift in Sources */,
 				8E79C14A26978898002D2A8B /* MessageAction.swift in Sources */,
 				8E92A7E226A0CD2500BAED7F /* AccountAction+CheckAccountStatus.swift in Sources */,
 				8E73D6EA272C9BE70037DE6B /* URLTextField.swift in Sources */,
@@ -1725,6 +1750,7 @@
 				8EBC051F2699C10C008B2478 /* UnverifiedEmailPage.swift in Sources */,
 				8E26236B27160A630092B6CE /* AccountAction+Delete.swift in Sources */,
 				8E73D70D272EE7900037DE6B /* AppConfiguration.swift in Sources */,
+				8E3927FE273D4FAE001DA030 /* UserService.swift in Sources */,
 				8EBC05252699C926008B2478 /* MaterialBackground.swift in Sources */,
 				8EC607792688BB3E006ED3C1 /* MemoriesReducer.swift in Sources */,
 				8EC607722688BA3A006ED3C1 /* AppReducer.swift in Sources */,

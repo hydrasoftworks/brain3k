@@ -13,10 +13,11 @@ struct HomePage: View {
             MemoriesPageConnector()
                 .frame(minWidth: 182, idealWidth: 350)
             MemoryPageConnector(memoryId: selectedMemoryID)
-                .frame(minWidth: 300, idealWidth: 550)
+                .frame(minWidth: 300, idealWidth: 650)
         }
         .accentColor(Color.brand)
         .onAppear(dispatch: MemoriesAction.watchAll())
+        .onAppear(dispatch: AccountAction.watchUser())
         .environment(\.selectedMemoryID, $selectedMemoryID)
         .toolbar {
             ToolbarItem(placement: .navigation) {

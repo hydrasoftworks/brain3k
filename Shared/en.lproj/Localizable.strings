@@ -46,10 +46,16 @@
 "settings_page.title" = "Settings";
 "settings_page.sections.account" = "Account";
 "settings_page.sections.links" = "Links";
+"settings_page.sections.subscription" = "Subscription";
 "settings_page.button.sign_out" = "Sign out";
 "settings_page.button.delete_account" = "Delete account";
 "settings_page.button.share_feedback" = "Share feedback";
 "settings_page.button.privacy_policy" = "Privacy policy";
 "settings_page.button.rate" = "Rate on App Store";
+"settings_page.button.subscribe" = "More memories needed? Subscribe";
+"settings_page.button.restoreSubscription" = "Restore subscription";
+"settings_page.button.manageSubscription" = "Manage subscription";
+"settings_page.text.memories_current" = "Current memories: %d";
+"settings_page.text.memories_limit" = "Available memories: %d";
 "settings_page.confirmation.delete_account" = "Do you want to delete your account?\nThis action cannot be undone.";
 "settings_page.confirmation.button.delete_account" = "Yes, delete my account";

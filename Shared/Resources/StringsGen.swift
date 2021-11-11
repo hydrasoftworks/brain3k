@@ -98,14 +98,20 @@ internal enum L10n {
     internal enum Button {
       /// Delete account
       internal static let deleteAccount = L10n.tr("Localizable", "settings_page.button.delete_account")
+      /// Manage subscription
+      internal static let manageSubscription = L10n.tr("Localizable", "settings_page.button.manageSubscription")
       /// Privacy policy
       internal static let privacyPolicy = L10n.tr("Localizable", "settings_page.button.privacy_policy")
       /// Rate on App Store
       internal static let rate = L10n.tr("Localizable", "settings_page.button.rate")
+      /// Restore subscription
+      internal static let restoreSubscription = L10n.tr("Localizable", "settings_page.button.restoreSubscription")
       /// Share feedback
       internal static let shareFeedback = L10n.tr("Localizable", "settings_page.button.share_feedback")
       /// Sign out
       internal static let signOut = L10n.tr("Localizable", "settings_page.button.sign_out")
+      /// More memories needed? Subscribe
+      internal static let subscribe = L10n.tr("Localizable", "settings_page.button.subscribe")
     }
     internal enum Confirmation {
       /// Do you want to delete your account?\nThis action cannot be undone.
@@ -120,6 +126,18 @@ internal enum L10n {
       internal static let account = L10n.tr("Localizable", "settings_page.sections.account")
       /// Links
       internal static let links = L10n.tr("Localizable", "settings_page.sections.links")
+      /// Subscription
+      internal static let subscription = L10n.tr("Localizable", "settings_page.sections.subscription")
+    }
+    internal enum Text {
+      /// Current memories: %d
+      internal static func memoriesCurrent(_ p1: Int) -> String {
+        return L10n.tr("Localizable", "settings_page.text.memories_current", p1)
+      }
+      /// Available memories: %d
+      internal static func memoriesLimit(_ p1: Int) -> String {
+        return L10n.tr("Localizable", "settings_page.text.memories_limit", p1)
+      }
     }
   }
 
