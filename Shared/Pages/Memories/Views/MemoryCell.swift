@@ -27,6 +27,7 @@ struct MemoryCell: View {
                 startPoint: .topLeading,
                 endPoint: .bottomTrailing
             )
+            .animation(nil, value: UUID())
         )
         .contentShape(Rectangle())
     }
