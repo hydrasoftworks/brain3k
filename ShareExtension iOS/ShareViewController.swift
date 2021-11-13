@@ -2,6 +2,7 @@
 //  Created by Kamil Powałowski on 19/09/2021.
 //
 
+import Combine
 import Social
 import UIKit
 import UniformTypeIdentifiers
@@ -9,19 +10,22 @@ import UniformTypeIdentifiers
 final class ShareViewController: SLComposeServiceViewController {
     private let accountService = AccountService()
     private let memoriesService = MemoriesService()
+    private let userService = UserService()
 
-    override var placeholder: String! {
-        get { L10n.ShareExtension.notesPlaceholder }
-        set {}
-    }
+    private var cancellable: AnyCancellable?
 
     private var notes: String? {
         contentText?.isEmpty == false ? contentText : nil
     }
 
+    deinit {
+        cancellable?.cancel()
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         textView.text = nil
+        placeholder = L10n.ShareExtension.notesPlaceholder
         navigationController?.navigationBar.topItem?.rightBarButtonItem?.title = L10n.ShareExtension.primaryAction
     }
 
@@ -31,12 +35,10 @@ final class ShareViewController: SLComposeServiceViewController {
         librariesService.initSwiftyBeaver()
         librariesService.initFirebase()
 
-        if accountService.getCurrentAccount() == nil {
-            textView.resignFirstResponder()
-            textView.isEditable = false
-            textView.textColor = UIColor.secondaryLabel
-            textView.text = L10n.ShareExtension.unsignedMessage(L10n.appName)
-            navigationController?.navigationBar.topItem?.rightBarButtonItem?.isEnabled = false
+        if let account = accountService.getCurrentAccount() {
+            checkMemoryLimit(for: account.id)
+        } else {
+            lockFormWithMessage(L10n.ShareExtension.unsignedMessage(L10n.appName))
         }
     }
 
@@ -73,5 +75,24 @@ final class ShareViewController: SLComposeServiceViewController {
             to: account.id
         )
         .sink(receiveCompletion: { _ in completion() }, receiveValue: {})
+    }
+
+    private func checkMemoryLimit(for accountId: String) {
+        cancellable = userService.get(for: accountId)
+            .sink(
+                receiveCompletion: { _ in },
+                receiveValue: { [weak self] user in
+                    if user?.canAddMemory == false { self?.lockFormWithMessage(L10n.ShareExtension.limitExceeded(L10n.appName)) }
+                }
+            )
+    }
+
+    private func lockFormWithMessage(_ message: String) {
+        placeholder = nil
+        textView.resignFirstResponder()
+        textView.isEditable = false
+        textView.textColor = UIColor.secondaryLabel
+        textView.text = message
+        navigationController?.navigationBar.topItem?.rightBarButtonItem?.isEnabled = false
     }
 }

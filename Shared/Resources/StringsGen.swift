@@ -20,6 +20,12 @@ internal enum L10n {
       /// Add
       internal static let add = L10n.tr("Localizable", "add_memory_page.button.add")
     }
+    internal enum LimitExceeded {
+      /// The subscription is required to add more memories. Go to the settings to subscribe.
+      internal static let body = L10n.tr("Localizable", "add_memory_page.limit_exceeded.body")
+      /// Limit Exceeded
+      internal static let title = L10n.tr("Localizable", "add_memory_page.limit_exceeded.title")
+    }
     internal enum TextField {
       /// Paste URL here
       internal static let placeholder = L10n.tr("Localizable", "add_memory_page.text_field.placeholder")
@@ -142,6 +148,10 @@ internal enum L10n {
   }
 
   internal enum ShareExtension {
+    /// The subscription is required to add more memories. Go to the %s app settings to subscribe.
+    internal static func limitExceeded(_ p1: UnsafePointer<CChar>) -> String {
+      return L10n.tr("Localizable", "share_extension.limit_exceeded", p1)
+    }
     /// Add to %s
     internal static func name(_ p1: UnsafePointer<CChar>) -> String {
       return L10n.tr("Localizable", "share_extension.name", p1)

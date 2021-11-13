@@ -6,6 +6,7 @@
 "share_extension.name" = "Add to %s";
 "share_extension.primary_action" = "Add";
 "share_extension.unsigned_message" = "Go to the %s app and sign in to perform this operation.";
+"share_extension.limit_exceeded" = "The subscription is required to add more memories. Go to the %s app settings to subscribe.";
 "share_extension.notes_placeholder" = "Notes (optional)";
 "sign_in_with_apple_button.error" = "Authorization failed: %s";
 "email_text_field.placeholder" = "e-mail";
@@ -43,6 +44,8 @@
 "add_memory_page.title" = "Add Memory";
 "add_memory_page.text_field.placeholder" = "Paste URL here";
 "add_memory_page.button.add" = "Add";
+"add_memory_page.limit_exceeded.title" = "Limit Exceeded";
+"add_memory_page.limit_exceeded.body" = "The subscription is required to add more memories. Go to the settings to subscribe.";
 "settings_page.title" = "Settings";
 "settings_page.sections.account" = "Account";
 "settings_page.sections.links" = "Links";

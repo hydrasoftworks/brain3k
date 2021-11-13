@@ -172,6 +172,14 @@
 		8E9EEBAC26F2888A00106FCD /* Fuse in Frameworks */ = {isa = PBXBuildFile; productRef = 8E9EEBAB26F2888A00106FCD /* Fuse */; };
 		8E9EEBAE26F2889500106FCD /* Fuse in Frameworks */ = {isa = PBXBuildFile; productRef = 8E9EEBAD26F2889500106FCD /* Fuse */; };
 		8E9EEBB026F2905B00106FCD /* MemoriesAction+SearchSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9EEBAF26F2905B00106FCD /* MemoriesAction+SearchSpec.swift */; };
+		8EA052CF273FDE2900A4507A /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3927FC273D4FAE001DA030 /* UserService.swift */; };
+		8EA052D0273FDE2900A4507A /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3927FC273D4FAE001DA030 /* UserService.swift */; };
+		8EA052D1273FDE2F00A4507A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3927F6273D458C001DA030 /* User.swift */; };
+		8EA052D2273FDE3000A4507A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3927F6273D458C001DA030 /* User.swift */; };
+		8EA052D4273FE81C00A4507A /* UserSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA052D3273FE81C00A4507A /* UserSpec.swift */; };
+		8EA052D6273FE88600A4507A /* User+Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA052D5273FE88500A4507A /* User+Test.swift */; };
+		8EA052D9273FED9900A4507A /* LimitExceededView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA052D8273FED9900A4507A /* LimitExceededView.swift */; };
+		8EA052DA273FED9900A4507A /* LimitExceededView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA052D8273FED9900A4507A /* LimitExceededView.swift */; };
 		8EA1006826AC564F007AFAA9 /* MemoryCellSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA1006726AC564F007AFAA9 /* MemoryCellSpec.swift */; };
 		8EA1006A26AC572D007AFAA9 /* URLMemoryCellSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA1006926AC572D007AFAA9 /* URLMemoryCellSpec.swift */; };
 		8EA1006C26ADB348007AFAA9 /* MemoriesAction+CreateURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA1006B26ADB348007AFAA9 /* MemoriesAction+CreateURL.swift */; };
@@ -433,6 +441,9 @@
 		8E9EEBA526F2813600106FCD /* MemoriesState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoriesState.swift; sourceTree = "<group>"; };
 		8E9EEBA826F2830700106FCD /* MemoriesStateSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoriesStateSpec.swift; sourceTree = "<group>"; };
 		8E9EEBAF26F2905B00106FCD /* MemoriesAction+SearchSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MemoriesAction+SearchSpec.swift"; sourceTree = "<group>"; };
+		8EA052D3273FE81C00A4507A /* UserSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSpec.swift; sourceTree = "<group>"; };
+		8EA052D5273FE88500A4507A /* User+Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+Test.swift"; sourceTree = "<group>"; };
+		8EA052D8273FED9900A4507A /* LimitExceededView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LimitExceededView.swift; sourceTree = "<group>"; };
 		8EA1006726AC564F007AFAA9 /* MemoryCellSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryCellSpec.swift; sourceTree = "<group>"; };
 		8EA1006926AC572D007AFAA9 /* URLMemoryCellSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLMemoryCellSpec.swift; sourceTree = "<group>"; };
 		8EA1006B26ADB348007AFAA9 /* MemoriesAction+CreateURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MemoriesAction+CreateURL.swift"; sourceTree = "<group>"; };
@@ -670,6 +681,7 @@
 			isa = PBXGroup;
 			children = (
 				8E50D87426BB40320075C08C /* MemorySpec.swift */,
+				8EA052D3273FE81C00A4507A /* UserSpec.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -776,6 +788,7 @@
 		8E73D6E0272C9AEA0037DE6B /* AddMemory */ = {
 			isa = PBXGroup;
 			children = (
+				8EA052D7273FED5E00A4507A /* Views */,
 				8E8835B826B08DCF00EE0234 /* AddMemoryPage.swift */,
 			);
 			path = AddMemory;
@@ -969,6 +982,7 @@
 				8E92A7EB26A0D4D300BAED7F /* CombineResult.swift */,
 				8EF9353326AC3DAC00176AF4 /* Account+Test.swift */,
 				8EF9353526AC3EA900176AF4 /* Memory+Test.swift */,
+				8EA052D5273FE88500A4507A /* User+Test.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -1000,6 +1014,14 @@
 				8E776FF526A236F600D97F52 /* AccountAction+SendVerificationEmailSpec.swift */,
 			);
 			path = Actions;
+			sourceTree = "<group>";
+		};
+		8EA052D7273FED5E00A4507A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8EA052D8273FED9900A4507A /* LimitExceededView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		8EA1006426AC55F4007AFAA9 /* Pages */ = {
@@ -1510,12 +1532,14 @@
 			files = (
 				8EF9353F26AC46ED00176AF4 /* PlaceholderViewSpec.swift in Sources */,
 				8EDC011A26D036EA00D2064A /* StorageStateSpec.swift in Sources */,
+				8EA052D6273FE88600A4507A /* User+Test.swift in Sources */,
 				8E50D87526BB40320075C08C /* MemorySpec.swift in Sources */,
 				8E9EEBB026F2905B00106FCD /* MemoriesAction+SearchSpec.swift in Sources */,
 				8EA1006826AC564F007AFAA9 /* MemoryCellSpec.swift in Sources */,
 				8EA1006F26ADBDE6007AFAA9 /* MemoriesAction+CreateURLSpec.swift in Sources */,
 				8E3810EE269CD59300ED3851 /* MessageStateSpec.swift in Sources */,
 				8EF9354326AC4A3100176AF4 /* SecondaryButtonSpec.swift in Sources */,
+				8EA052D4273FE81C00A4507A /* UserSpec.swift in Sources */,
 				8E77700126A3283A00D97F52 /* MemoriesAction+GetAllSpec.swift in Sources */,
 				8EB7470E27065C58004F4F18 /* MemoriesAction+DeleteSpec.swift in Sources */,
 				8E889CEE26A22BDC00F7C47C /* AccountAction+SignUpSpec.swift in Sources */,
@@ -1551,6 +1575,7 @@
 				8E73D724273049BE0037DE6B /* AccountService.swift in Sources */,
 				8E73D73A27304A670037DE6B /* AnyPublisher+Create.swift in Sources */,
 				8E73D727273049CA0037DE6B /* LibrariesService.swift in Sources */,
+				8EA052D2273FDE3000A4507A /* User.swift in Sources */,
 				8E73D73427304A3F0037DE6B /* MemoryType.swift in Sources */,
 				8E73D73627304A450037DE6B /* Memory+Fuseable.swift in Sources */,
 				8E73D73727304A4B0037DE6B /* Account.swift in Sources */,
@@ -1558,6 +1583,7 @@
 				8E73D73B27304A6E0037DE6B /* Future+MapError.swift in Sources */,
 				8E73D725273049C10037DE6B /* MemoriesService.swift in Sources */,
 				8E73D73927304A530037DE6B /* AppError.swift in Sources */,
+				8EA052D0273FDE2900A4507A /* UserService.swift in Sources */,
 				8E73D726273049C70037DE6B /* CompletionHandler.swift in Sources */,
 				8E73D73827304A4E0037DE6B /* AccountStatus.swift in Sources */,
 				8E73D722273043D30037DE6B /* StringsGen.swift in Sources */,
@@ -1568,6 +1594,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EA052D9273FED9900A4507A /* LimitExceededView.swift in Sources */,
 				8E776FF926A3257B00D97F52 /* MemoriesAction+GetAll.swift in Sources */,
 				8E9EEBA326F280C400106FCD /* MemoriesAction+Search.swift in Sources */,
 				8EA4D28126939DE100C0A037 /* EmailTextField.swift in Sources */,
@@ -1666,6 +1693,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EA052DA273FED9900A4507A /* LimitExceededView.swift in Sources */,
 				8E776FFA26A3257B00D97F52 /* MemoriesAction+GetAll.swift in Sources */,
 				8E9EEBA426F280C400106FCD /* MemoriesAction+Search.swift in Sources */,
 				8EA1D321271C699A0060BAA9 /* MemoriesPageConnector.swift in Sources */,
@@ -1768,6 +1796,7 @@
 				8ED3820626F75CFD0003D4F3 /* Account.swift in Sources */,
 				8E3436F72708A14A00FA1CB0 /* MemoryType.swift in Sources */,
 				8ED3820926F75D200003D4F3 /* AnyPublisher+Create.swift in Sources */,
+				8EA052D1273FDE2F00A4507A /* User.swift in Sources */,
 				8ED3820526F75CFA0003D4F3 /* Memory.swift in Sources */,
 				8ED3821526F767CB0003D4F3 /* LibrariesService.swift in Sources */,
 				8ED381F026F74FE50003D4F3 /* ShareViewController.swift in Sources */,
@@ -1775,6 +1804,7 @@
 				8E3436F327089D9000FA1CB0 /* Memory+Fuseable.swift in Sources */,
 				8ED381FC26F75CB90003D4F3 /* MemoriesService.swift in Sources */,
 				8ED3820726F75D010003D4F3 /* AccountStatus.swift in Sources */,
+				8EA052CF273FDE2900A4507A /* UserService.swift in Sources */,
 				8ED3820B26F75D400003D4F3 /* CompletionHandler.swift in Sources */,
 				8ED3820826F75D070003D4F3 /* AppError.swift in Sources */,
 				8ED3821726F76CD40003D4F3 /* StringsGen.swift in Sources */,
@@ -1986,7 +2016,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MARKETING_VERSION = 0.3.1;
+				MARKETING_VERSION = 0.3.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -2043,7 +2073,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MARKETING_VERSION = 0.3.1;
+				MARKETING_VERSION = 0.3.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;

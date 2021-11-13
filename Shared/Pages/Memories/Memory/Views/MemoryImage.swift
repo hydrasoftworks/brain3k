@@ -61,7 +61,7 @@ struct MemoryImage: View {
                 )
                 .overlay {
                     Text(text)
-                        .font(.title3)
+                        .font(.title)
                         .foregroundColor(.white)
                         .lineLimit(2)
                         .multilineTextAlignment(.center)

@@ -3,17 +3,16 @@
 //
 
 import Cocoa
+import Combine
 import Social
 import UniformTypeIdentifiers
 
 class ShareViewController: SLComposeServiceViewController {
     private let accountService = AccountService()
     private let memoriesService = MemoriesService()
+    private let userService = UserService()
 
-    override var placeholder: String! {
-        get { L10n.ShareExtension.notesPlaceholder }
-        set {}
-    }
+    private var cancellable: AnyCancellable?
 
     private var notes: String? {
         contentText?.isEmpty == false ? contentText : nil
@@ -23,10 +22,15 @@ class ShareViewController: SLComposeServiceViewController {
         NSError(domain: NSCocoaErrorDomain, code: NSUserCancelledError, userInfo: nil)
     }
 
+    deinit {
+        cancellable?.cancel()
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         title = L10n.ShareExtension.name(L10n.appName)
+        placeholder = L10n.ShareExtension.notesPlaceholder
         sendButton()?.title = L10n.ShareExtension.primaryAction
     }
 
@@ -36,11 +40,10 @@ class ShareViewController: SLComposeServiceViewController {
         librariesService.initSwiftyBeaver()
         librariesService.initFirebase()
 
-        if accountService.getCurrentAccount() == nil {
-            textView.isEditable = false
-            textView.textColor = NSColor.secondaryLabelColor
-            textView.string = L10n.ShareExtension.unsignedMessage(L10n.appName)
-            sendButton()?.isEnabled = false
+        if let account = accountService.getCurrentAccount() {
+            checkMemoryLimit(for: account.id)
+        } else {
+            lockFormWithMessage(L10n.ShareExtension.unsignedMessage(L10n.appName))
         }
     }
 
@@ -97,5 +100,24 @@ class ShareViewController: SLComposeServiceViewController {
             }
         }
         return nil
+    }
+
+    private func checkMemoryLimit(for accountId: String) {
+        cancellable = userService.get(for: accountId)
+            .sink(
+                receiveCompletion: { _ in },
+                receiveValue: { [weak self] user in
+                    if user?.canAddMemory == false { self?.lockFormWithMessage(L10n.ShareExtension.limitExceeded(L10n.appName)) }
+                }
+            )
+    }
+
+    private func lockFormWithMessage(_: String) {
+        placeholder = nil
+        textView.isEditable = false
+        textView.isSelectable = false
+        textView.textColor = NSColor.secondaryLabelColor
+        textView.string = L10n.ShareExtension.unsignedMessage(L10n.appName)
+        sendButton()?.isEnabled = false
     }
 }

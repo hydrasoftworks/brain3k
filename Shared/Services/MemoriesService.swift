@@ -9,8 +9,9 @@ import Fuse
 
 class MemoriesService {
     func watchAll(for accountId: String) -> AnyPublisher<[Memory], AppError> {
-        AnyPublisher<QuerySnapshot, Error>.create { observer in
-            let registration = self.collection(of: accountId)
+        let collection = collection(of: accountId)
+        return AnyPublisher<QuerySnapshot, Error>.create { observer in
+            let registration = collection
                 .order(by: "createdAt", descending: true)
                 .addSnapshotListener { snapshot, error in
                     if let snapshot = snapshot {
@@ -26,8 +27,9 @@ class MemoriesService {
     }
 
     func getAll(for accountId: String) -> AnyPublisher<[Memory], AppError> {
-        Future<QuerySnapshot, Error> { [unowned self] promise in
-            self.collection(of: accountId)
+        let collection = collection(of: accountId)
+        return Future<QuerySnapshot, Error> { promise in
+            collection
                 .order(by: "createdAt", descending: true)
                 .getDocuments(completion: CompletionHandler(promise).handle())
         }

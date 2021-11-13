@@ -13,16 +13,20 @@ struct MemoryPageConnector: ConnectableView {
     func map(state: AppState) -> MemoryPage.ViewModel? {
         let memory = state.memoriesState.memory(forId: memoryId)
         let image = memory?.thumbnailURL
-        let title = (memory?.processed ?? false) ? memory?.title : L10n.General.processing
+        let domain = memory?.valueURL?.host ?? memory?.value
+        let title: String? = {
+            guard memory?.processed ?? false else { return L10n.General.processing }
+            return memory?.title ?? domain
+        }()
 
         return MemoryPage.ViewModel(
             memoryExist: memory != nil,
             image: image,
             imageToDisplay: state.storageState.downloadURL(for: memory?.thumbnailURL),
             title: title,
-            description: memory?.description,
+            description: memory?.description ?? memory?.value,
             valueURL: memory?.valueURL,
-            domain: memory?.valueURL?.host ?? memory?.value,
+            domain: domain,
             delete: { dispatch.send(MemoriesAction.delete(memory: memory)) },
             refresh: { dispatch.send(MemoriesAction.refresh(memory: memory)) },
             getDownloadURL: { dispatch.send(StorageAction.getDownloadURL(for: image)) }

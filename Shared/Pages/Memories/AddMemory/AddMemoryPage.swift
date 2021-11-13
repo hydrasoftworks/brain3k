@@ -14,34 +14,77 @@ struct AddMemoryPage: ConnectableView {
     @Validated(.isURL)
     private var value: String = ""
 
-    func map(state _: AppState) -> ViewModel? {
-        ViewModel()
+    func map(state: AppState) -> ViewModel? {
+        ViewModel(
+            canAddMemory: state.accountState.user?.canAddMemory ?? true
+        )
     }
 
-    func body(props _: ViewModel) -> some View {
+    func body(props viewModel: ViewModel) -> some View {
+        body(canAddMemory: viewModel.canAddMemory)
+            .padding()
+            .toolbar {
+                ToolbarItem(placement: cancelButtonPlacement) {
+                    Button(
+                        L10n.General.cancel,
+                        role: .cancel,
+                        action: { presentationMode.wrappedValue.dismiss() }
+                    )
+                }
+                #if os(macOS)
+                    ToolbarItem(placement: .confirmationAction) {
+                        Button(
+                            L10n.AddMemoryPage.Button.add,
+                            action: addMemory
+                        )
+                        .validated(_value)
+                    }
+                #endif
+            }
+    }
+
+    @ViewBuilder
+    private func body(canAddMemory: Bool) -> some View {
+        if canAddMemory {
+            form
+        } else {
+            LimitExceededView()
+        }
+    }
+
+    private var cancelButtonPlacement: ToolbarItemPlacement {
+        #if os(iOS)
+            return .automatic
+        #else
+            return .cancellationAction
+        #endif
+    }
+
+    private var form: some View {
         VStack(spacing: 16) {
             #if os(macOS)
                 Text(L10n.AddMemoryPage.title)
                     .font(.title)
             #endif
             URLTextField(text: $value)
-            PrimaryButton(title: L10n.AddMemoryPage.Button.add) {
-                dispatch.send(MemoriesAction.createURL(url: value))
-                presentationMode.wrappedValue.dismiss()
-            }
-            .validated(_value)
-            .padding(.bottom)
-            SecondaryButton(title: L10n.General.cancel) {
-                presentationMode.wrappedValue.dismiss()
-            }
             #if os(iOS)
+                PrimaryButton(
+                    title: L10n.AddMemoryPage.Button.add,
+                    action: addMemory
+                )
+                .validated(_value)
                 Spacer()
             #endif
         }
-        .padding()
-        .padding(.bottom, 32)
         .navigationTitle(L10n.AddMemoryPage.title)
     }
 
-    struct ViewModel: Equatable {}
+    private func addMemory() {
+        dispatch.send(MemoriesAction.createURL(url: value))
+        presentationMode.wrappedValue.dismiss()
+    }
+
+    struct ViewModel: Equatable {
+        let canAddMemory: Bool
+    }
 }

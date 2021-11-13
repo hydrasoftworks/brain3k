@@ -9,10 +9,9 @@ import Foundation
 
 class UserService {
     func watch(for accountId: String) -> AnyPublisher<User?, AppError> {
-        AnyPublisher<DocumentSnapshot, Error>.create { observer in
-            let document = Firestore.firestore()
-                .collection("users")
-                .document(accountId)
+        let document = document(for: accountId)
+        return AnyPublisher<DocumentSnapshot, Error>.create { observer in
+
             let registration = document
                 .addSnapshotListener { snapshot, error in
                     if let snapshot = snapshot {
@@ -25,6 +24,22 @@ class UserService {
             return Disposable { registration.remove() }
         }
         .mapToUser()
+    }
+
+    func get(for accountId: String) -> AnyPublisher<User?, AppError> {
+        let document = document(for: accountId)
+        return Future<DocumentSnapshot, Error> { promise in
+            document
+                .getDocument(completion: CompletionHandler(promise).handle())
+        }
+        .eraseToAnyPublisher()
+        .mapToUser()
+    }
+
+    private func document(for accountId: String) -> DocumentReference {
+        Firestore.firestore()
+            .collection("users")
+            .document(accountId)
     }
 }
 
