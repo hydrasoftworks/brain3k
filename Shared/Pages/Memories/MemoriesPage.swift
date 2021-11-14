@@ -35,7 +35,10 @@ struct MemoriesPage: View {
 
     private var addMemorySheet: some View {
         #if os(iOS)
-            NavigationView { AddMemoryPage() }
+            NavigationView {
+                AddMemoryPage()
+            }
+            .accentColor(Color.brand)
         #else
             AddMemoryPage()
                 .frame(width: 300)

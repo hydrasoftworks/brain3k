@@ -14,6 +14,21 @@ struct PrimaryButton: View {
     }
 }
 
+struct PrimaryIconButton: View {
+    let systemName: String
+    let label: String
+    let action: () -> Void
+
+    var body: some View {
+        Button(action: action) {
+            Image(systemName: systemName)
+        }
+        .accessibilityLabel(label)
+        .buttonStyle(PrimaryButtonStyle())
+        .frame(width: AppConfiguration.buttonHeight)
+    }
+}
+
 private struct PrimaryButtonStyle: ButtonStyle {
     func makeBody(configuration: Self.Configuration) -> some View {
         PrimaryButtonStyleView(configuration: configuration)

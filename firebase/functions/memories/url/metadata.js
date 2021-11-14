@@ -15,11 +15,14 @@ export default async function (url, html) {
 
   const result = response.result;
   if (response.error || result.success !== true) return {};
+
+  const thumbnail = result.ogImage?.url?.replace(/^http:\/\//i, 'https://');
+
   return JSON.parse(
     JSON.stringify({
       title: result.ogTitle,
       description: result.ogDescription,
-      thumbnail: result.ogImage?.url,
+      thumbnail,
       additionalInfo: result,
     }),
   );

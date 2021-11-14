@@ -74,7 +74,7 @@ struct MemoryPage: View {
                 if let text = viewModel.description { description(text) }
             }
             if let url = viewModel.valueURL {
-                OpenMemoryButton(url: url)
+                MemoryPrimaryActions(url: url)
             }
         }
     }
@@ -95,7 +95,7 @@ struct MemoryPage: View {
                     if let text = viewModel.description { description(text) }
                 }
                 if let url = viewModel.valueURL {
-                    OpenMemoryButton(url: url)
+                    MemoryPrimaryActions(url: url)
                 }
             }
         }

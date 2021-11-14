@@ -73,8 +73,6 @@ internal enum L10n {
   internal enum MemoryPage {
     /// Memory not found
     internal static let notFound = L10n.tr("Localizable", "memory_page.not_found")
-    /// Open memory
-    internal static let openMemory = L10n.tr("Localizable", "memory_page.open_memory")
     /// Memory
     internal static let title = L10n.tr("Localizable", "memory_page.title")
     internal enum Button {
@@ -82,8 +80,12 @@ internal enum L10n {
       internal static let delete = L10n.tr("Localizable", "memory_page.button.delete")
       /// Actions
       internal static let menu = L10n.tr("Localizable", "memory_page.button.menu")
+      /// Open memory
+      internal static let `open` = L10n.tr("Localizable", "memory_page.button.open")
       /// Refresh memory
       internal static let refresh = L10n.tr("Localizable", "memory_page.button.refresh")
+      /// Open memory
+      internal static let share = L10n.tr("Localizable", "memory_page.button.share")
     }
     internal enum Empty {
       /// No memory selected
