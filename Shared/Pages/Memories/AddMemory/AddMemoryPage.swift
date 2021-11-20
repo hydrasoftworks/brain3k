@@ -69,7 +69,7 @@ struct AddMemoryPage: ConnectableView {
             URLTextField(text: $value)
             #if os(iOS)
                 PrimaryButton(
-                    title: L10n.AddMemoryPage.Button.add,
+                    title: L10n.General.add,
                     action: addMemory
                 )
                 .validated(_value)

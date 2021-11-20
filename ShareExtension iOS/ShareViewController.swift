@@ -26,7 +26,7 @@ final class ShareViewController: SLComposeServiceViewController {
         super.viewDidLoad()
         textView.text = nil
         placeholder = L10n.ShareExtension.notesPlaceholder
-        navigationController?.navigationBar.topItem?.rightBarButtonItem?.title = L10n.ShareExtension.primaryAction
+        navigationController?.navigationBar.topItem?.rightBarButtonItem?.title = L10n.General.add
     }
 
     override func presentationAnimationDidFinish() {

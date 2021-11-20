@@ -1,10 +1,11 @@
 "app_name" = "Brain3k";
 "general.ok" = "OK";
 "general.cancel" = "Cancel";
+"general.save" = "Save";
+"general.add" = "Add";
 "general.processing" = "Processing...";
 "general.loading" = "Loading...";
 "share_extension.name" = "Add to %s";
-"share_extension.primary_action" = "Add";
 "share_extension.unsigned_message" = "Go to the %s app and sign in to perform this operation.";
 "share_extension.limit_exceeded" = "The subscription is required to add more memories. Go to the %s app settings to subscribe.";
 "share_extension.notes_placeholder" = "Notes (optional)";
@@ -41,10 +42,11 @@
 "memory_page.button.delete" = "Delete memory";
 "memory_page.button.open" = "Open memory";
 "memory_page.button.share" = "Open memory";
+"memory_page.label.notes" = "Notes";
+"memory_page.label.notes_placeholder" = "Tap to add notes";
 "memory_page.empty.not_selected" = "No memory selected";
 "add_memory_page.title" = "Add Memory";
 "add_memory_page.text_field.placeholder" = "Paste URL here";
-"add_memory_page.button.add" = "Add";
 "add_memory_page.limit_exceeded.title" = "Limit Exceeded";
 "add_memory_page.limit_exceeded.body" = "The subscription is required to add more memories. Go to the settings to subscribe.";
 "settings_page.title" = "Settings";

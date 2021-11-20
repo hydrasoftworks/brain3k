@@ -16,10 +16,6 @@ internal enum L10n {
   internal enum AddMemoryPage {
     /// Add Memory
     internal static let title = L10n.tr("Localizable", "add_memory_page.title")
-    internal enum Button {
-      /// Add
-      internal static let add = L10n.tr("Localizable", "add_memory_page.button.add")
-    }
     internal enum LimitExceeded {
       /// The subscription is required to add more memories. Go to the settings to subscribe.
       internal static let body = L10n.tr("Localizable", "add_memory_page.limit_exceeded.body")
@@ -38,6 +34,8 @@ internal enum L10n {
   }
 
   internal enum General {
+    /// Add
+    internal static let add = L10n.tr("Localizable", "general.add")
     /// Cancel
     internal static let cancel = L10n.tr("Localizable", "general.cancel")
     /// Loading...
@@ -46,6 +44,8 @@ internal enum L10n {
     internal static let ok = L10n.tr("Localizable", "general.ok")
     /// Processing...
     internal static let processing = L10n.tr("Localizable", "general.processing")
+    /// Save
+    internal static let save = L10n.tr("Localizable", "general.save")
   }
 
   internal enum HomePage {
@@ -90,6 +90,12 @@ internal enum L10n {
     internal enum Empty {
       /// No memory selected
       internal static let notSelected = L10n.tr("Localizable", "memory_page.empty.not_selected")
+    }
+    internal enum Label {
+      /// Notes
+      internal static let notes = L10n.tr("Localizable", "memory_page.label.notes")
+      /// Tap to add notes
+      internal static let notesPlaceholder = L10n.tr("Localizable", "memory_page.label.notes_placeholder")
     }
   }
 
@@ -160,8 +166,6 @@ internal enum L10n {
     }
     /// Notes (optional)
     internal static let notesPlaceholder = L10n.tr("Localizable", "share_extension.notes_placeholder")
-    /// Add
-    internal static let primaryAction = L10n.tr("Localizable", "share_extension.primary_action")
     /// Go to the %s app and sign in to perform this operation.
     internal static func unsignedMessage(_ p1: UnsafePointer<CChar>) -> String {
       return L10n.tr("Localizable", "share_extension.unsigned_message", p1)

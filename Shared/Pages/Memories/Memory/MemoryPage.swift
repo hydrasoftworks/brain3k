@@ -72,6 +72,7 @@ struct MemoryPage: View {
                 Spacer(minLength: 16)
                 if let text = viewModel.title { title(text) }
                 if let text = viewModel.description { description(text) }
+                notes
             }
             if let url = viewModel.valueURL {
                 MemoryPrimaryActions(url: url)
@@ -93,6 +94,7 @@ struct MemoryPage: View {
                 ScrollView {
                     if let text = viewModel.title { title(text) }
                     if let text = viewModel.description { description(text) }
+                    notes
                 }
                 if let url = viewModel.valueURL {
                     MemoryPrimaryActions(url: url)
@@ -101,29 +103,22 @@ struct MemoryPage: View {
         }
     }
 
-    private var refreshButton: some View {
-        Button(
-            action: { viewModel.refresh() },
-            label: {
-                Label(
-                    L10n.MemoryPage.Button.refresh,
-                    systemImage: "arrow.triangle.2.circlepath"
-                )
-            }
+    private var notes: some View {
+        NotesField(
+            notes: viewModel.notes,
+            updateNotes: viewModel.updateNotes
         )
     }
 
+    private var refreshButton: some View {
+        MemoryRefreshButton(action: { viewModel.refresh() })
+    }
+
     private var deleteButton: some View {
-        Button(
-            role: .destructive,
+        MemoryDeleteButton(
             action: {
                 viewModel.delete()
                 dismiss()
-            }, label: {
-                Label(
-                    L10n.MemoryPage.Button.delete,
-                    systemImage: "trash"
-                )
             }
         )
     }
@@ -143,6 +138,7 @@ struct MemoryPage: View {
             .multilineTextAlignment(.leading)
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(.horizontal)
+            .padding(.bottom, 8)
     }
 
     struct ViewModel: Equatable {
@@ -154,9 +150,11 @@ struct MemoryPage: View {
         let description: String?
         let valueURL: URL?
         let domain: String?
+        let notes: String?
         let delete: () -> Void
         let refresh: () -> Void
         let getDownloadURL: () -> Void
+        let updateNotes: (String) -> Void
 
         static func == (lhs: ViewModel, rhs: ViewModel) -> Bool {
             lhs.memoryExist == rhs.memoryExist
@@ -166,6 +164,7 @@ struct MemoryPage: View {
                 && lhs.description == rhs.description
                 && lhs.valueURL == rhs.valueURL
                 && lhs.domain == rhs.domain
+                && lhs.notes == rhs.notes
         }
     }
 }

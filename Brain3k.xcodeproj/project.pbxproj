@@ -44,6 +44,16 @@
 		8E50D87026BB33E30075C08C /* IrregularGradient in Frameworks */ = {isa = PBXBuildFile; productRef = 8E50D86F26BB33E30075C08C /* IrregularGradient */; };
 		8E50D87226BB33EF0075C08C /* IrregularGradient in Frameworks */ = {isa = PBXBuildFile; productRef = 8E50D87126BB33EF0075C08C /* IrregularGradient */; };
 		8E50D87526BB40320075C08C /* MemorySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E50D87426BB40320075C08C /* MemorySpec.swift */; };
+		8E58B8CB27492587003FB391 /* NotesField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E58B8CA27492587003FB391 /* NotesField.swift */; };
+		8E58B8CC27492587003FB391 /* NotesField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E58B8CA27492587003FB391 /* NotesField.swift */; };
+		8E58B8CE27493029003FB391 /* NotesEditorPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E58B8CD27493029003FB391 /* NotesEditorPage.swift */; };
+		8E58B8CF27493029003FB391 /* NotesEditorPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E58B8CD27493029003FB391 /* NotesEditorPage.swift */; };
+		8E58B8D22749342C003FB391 /* MemoryRefreshButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E58B8D12749342C003FB391 /* MemoryRefreshButton.swift */; };
+		8E58B8D32749342C003FB391 /* MemoryRefreshButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E58B8D12749342C003FB391 /* MemoryRefreshButton.swift */; };
+		8E58B8D52749349C003FB391 /* MemoryDeleteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E58B8D42749349C003FB391 /* MemoryDeleteButton.swift */; };
+		8E58B8D62749349C003FB391 /* MemoryDeleteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E58B8D42749349C003FB391 /* MemoryDeleteButton.swift */; };
+		8E58B8D8274935F3003FB391 /* MemoriesAction+UpdateNotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E58B8D7274935F3003FB391 /* MemoriesAction+UpdateNotes.swift */; };
+		8E58B8D9274935F3003FB391 /* MemoriesAction+UpdateNotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E58B8D7274935F3003FB391 /* MemoriesAction+UpdateNotes.swift */; };
 		8E58D149271B0F350033B02A /* MemoryImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E58D148271B0F350033B02A /* MemoryImage.swift */; };
 		8E58D14A271B0F350033B02A /* MemoryImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E58D148271B0F350033B02A /* MemoryImage.swift */; };
 		8E58D14F271B2D590033B02A /* SignPageBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E58D14E271B2D590033B02A /* SignPageBase.swift */; };
@@ -379,6 +389,11 @@
 		8E3927FC273D4FAE001DA030 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		8E50D86B26BB30280075C08C /* ProcessingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessingCell.swift; sourceTree = "<group>"; };
 		8E50D87426BB40320075C08C /* MemorySpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemorySpec.swift; sourceTree = "<group>"; };
+		8E58B8CA27492587003FB391 /* NotesField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesField.swift; sourceTree = "<group>"; };
+		8E58B8CD27493029003FB391 /* NotesEditorPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesEditorPage.swift; sourceTree = "<group>"; };
+		8E58B8D12749342C003FB391 /* MemoryRefreshButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryRefreshButton.swift; sourceTree = "<group>"; };
+		8E58B8D42749349C003FB391 /* MemoryDeleteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryDeleteButton.swift; sourceTree = "<group>"; };
+		8E58B8D7274935F3003FB391 /* MemoriesAction+UpdateNotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MemoriesAction+UpdateNotes.swift"; sourceTree = "<group>"; };
 		8E58D148271B0F350033B02A /* MemoryImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryImage.swift; sourceTree = "<group>"; };
 		8E58D14E271B2D590033B02A /* SignPageBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignPageBase.swift; sourceTree = "<group>"; };
 		8E5D7D0726CC4D43009024A0 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
@@ -600,6 +615,7 @@
 			isa = PBXGroup;
 			children = (
 				8E15375726FF437900D3232F /* Views */,
+				8E58B8D027493166003FB391 /* NotesEditor */,
 				8E15375426FF3F2400D3232F /* MemoryPageConnector.swift */,
 				8EBC053C269A0A8A008B2478 /* MemoryPage.swift */,
 			);
@@ -610,6 +626,9 @@
 			isa = PBXGroup;
 			children = (
 				8E58D148271B0F350033B02A /* MemoryImage.swift */,
+				8E58B8CA27492587003FB391 /* NotesField.swift */,
+				8E58B8D12749342C003FB391 /* MemoryRefreshButton.swift */,
+				8E58B8D42749349C003FB391 /* MemoryDeleteButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -688,6 +707,14 @@
 				8EA052D3273FE81C00A4507A /* UserSpec.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		8E58B8D027493166003FB391 /* NotesEditor */ = {
+			isa = PBXGroup;
+			children = (
+				8E58B8CD27493029003FB391 /* NotesEditorPage.swift */,
+			);
+			path = NotesEditor;
 			sourceTree = "<group>";
 		};
 		8E5D7D0A26CC4FA4009024A0 /* Storage */ = {
@@ -911,6 +938,7 @@
 				8E9EEBA226F280C400106FCD /* MemoriesAction+Search.swift */,
 				8EB7470A2706588B004F4F18 /* MemoriesAction+Delete.swift */,
 				8E3436F82708A2FA00FA1CB0 /* MemoriesAction+Refresh.swift */,
+				8E58B8D7274935F3003FB391 /* MemoriesAction+UpdateNotes.swift */,
 			);
 			path = Actions;
 			sourceTree = "<group>";
@@ -1662,6 +1690,7 @@
 				8EBC0543269A1B76008B2478 /* String+Trim.swift in Sources */,
 				8EC6076A2688B952006ED3C1 /* AppState.swift in Sources */,
 				8E77700626A32D5600D97F52 /* Future+MapError.swift in Sources */,
+				8E58B8CB27492587003FB391 /* NotesField.swift in Sources */,
 				8E5D7D1026CC504E009024A0 /* StorageReducer.swift in Sources */,
 				8EA4D28426939E6400C0A037 /* PasswordTextField.swift in Sources */,
 				8EAAD9EB26C5A525007C2973 /* MemoriesAction+WatchAll.swift in Sources */,
@@ -1683,7 +1712,9 @@
 				8E9EEBA626F2813600106FCD /* MemoriesState.swift in Sources */,
 				8E79C139269618BE002D2A8B /* JoinPage.swift in Sources */,
 				8E8DF14A270096F500CA0EBF /* ImagesGen.swift in Sources */,
+				8E58B8CE27493029003FB391 /* NotesEditorPage.swift in Sources */,
 				8EBC052D2699CB52008B2478 /* PrimaryButton.swift in Sources */,
+				8E58B8D52749349C003FB391 /* MemoryDeleteButton.swift in Sources */,
 				8EC6074E2688AFD1006ED3C1 /* Brain3kApp.swift in Sources */,
 				8EBC05302699D25D008B2478 /* Publisher+MapToEmptyResult.swift in Sources */,
 				8EA4D27D26938D1000C0A037 /* TextFieldStyle.swift in Sources */,
@@ -1735,7 +1766,9 @@
 				8E6821BA26A9E6F200B2DACB /* URLMemoryCell.swift in Sources */,
 				8E5D7D1626CC523D009024A0 /* StorageAction+GetDownloadURL.swift in Sources */,
 				8EBC051E2699C10C008B2478 /* UnverifiedEmailPage.swift in Sources */,
+				8E58B8D8274935F3003FB391 /* MemoriesAction+UpdateNotes.swift in Sources */,
 				8E26236A27160A630092B6CE /* AccountAction+Delete.swift in Sources */,
+				8E58B8D22749342C003FB391 /* MemoryRefreshButton.swift in Sources */,
 				8E3927FD273D4FAE001DA030 /* UserService.swift in Sources */,
 				8EBC05242699C926008B2478 /* MaterialBackground.swift in Sources */,
 				8EC607782688BB3E006ED3C1 /* MemoriesReducer.swift in Sources */,
@@ -1762,6 +1795,7 @@
 				8EC6076B2688B952006ED3C1 /* AppState.swift in Sources */,
 				8E77700726A32D5600D97F52 /* Future+MapError.swift in Sources */,
 				8E5D7D1126CC504E009024A0 /* StorageReducer.swift in Sources */,
+				8E58B8CC27492587003FB391 /* NotesField.swift in Sources */,
 				8EA4D28526939E6400C0A037 /* PasswordTextField.swift in Sources */,
 				8EAAD9EC26C5A525007C2973 /* MemoriesAction+WatchAll.swift in Sources */,
 				8EEDD78B268BC05D00F670D2 /* AccountState.swift in Sources */,
@@ -1783,7 +1817,9 @@
 				8E8DF14B270096F500CA0EBF /* ImagesGen.swift in Sources */,
 				8E73D6F0272D6B250037DE6B /* Brain3kApp.swift in Sources */,
 				8EBC052E2699CB52008B2478 /* PrimaryButton.swift in Sources */,
+				8E58B8CF27493029003FB391 /* NotesEditorPage.swift in Sources */,
 				8EBC05312699D25D008B2478 /* Publisher+MapToEmptyResult.swift in Sources */,
+				8E58B8D62749349C003FB391 /* MemoryDeleteButton.swift in Sources */,
 				8E58D14A271B0F350033B02A /* MemoryImage.swift in Sources */,
 				8E5D7D0926CC4D43009024A0 /* StorageService.swift in Sources */,
 				8E92A7D726A0B59F00BAED7F /* AccountService.swift in Sources */,
@@ -1835,7 +1871,9 @@
 				8EBC051F2699C10C008B2478 /* UnverifiedEmailPage.swift in Sources */,
 				8E26236B27160A630092B6CE /* AccountAction+Delete.swift in Sources */,
 				8E73D70D272EE7900037DE6B /* AppConfiguration.swift in Sources */,
+				8E58B8D9274935F3003FB391 /* MemoriesAction+UpdateNotes.swift in Sources */,
 				8EA052F12741A07800A4507A /* MemoryPrimaryActions.swift in Sources */,
+				8E58B8D32749342C003FB391 /* MemoryRefreshButton.swift in Sources */,
 				8E3927FE273D4FAE001DA030 /* UserService.swift in Sources */,
 				8EBC05252699C926008B2478 /* MaterialBackground.swift in Sources */,
 				8EC607792688BB3E006ED3C1 /* MemoriesReducer.swift in Sources */,

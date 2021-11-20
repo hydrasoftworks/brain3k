@@ -31,7 +31,7 @@ class ShareViewController: SLComposeServiceViewController {
 
         title = L10n.ShareExtension.name(L10n.appName)
         placeholder = L10n.ShareExtension.notesPlaceholder
-        sendButton()?.title = L10n.ShareExtension.primaryAction
+        sendButton()?.title = L10n.General.add
     }
 
     override func presentationAnimationDidFinish() {
