@@ -15,8 +15,8 @@ struct NotesField: View {
             Text(L10n.MemoryPage.Label.notes)
                 .font(.caption)
             Group {
-                if let notes = notes, !notes.isEmpty {
-                    Text(notes)
+                if let notes = notes {
+                    Text(.init(notes)) // .init(_) to support Markdown
                 } else {
                     Text(L10n.MemoryPage.Label.notesPlaceholder)
                         .opacity(0.3)
@@ -27,6 +27,7 @@ struct NotesField: View {
         .multilineTextAlignment(.leading)
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding(.horizontal)
+        .contentShape(Rectangle())
         .onTapGesture { editorPresented = true }
         .sheet(isPresented: $editorPresented) { editorSheet }
     }
@@ -38,6 +39,7 @@ struct NotesField: View {
         #else
             editor
                 .frame(width: 300)
+                .frame(minHeight: 200, maxHeight: 500)
         #endif
     }
 

@@ -69,6 +69,24 @@ class MemoriesService {
         .mapToAppError()
     }
 
+    func update(
+        memoryWithId memoryId: String,
+        withNotes notes: String?,
+        on accountId: String
+    ) -> AnyPublisher<Void, AppError> {
+        let document = collection(of: accountId).document(memoryId)
+        return Future<Void, Error> { promise in
+            if let notes = notes {
+                document.updateData(["notes": notes])
+            } else {
+                document.updateData(["notes": FieldValue.delete()])
+            }
+            promise(.success(()))
+        }
+        .eraseToAnyPublisher()
+        .mapToAppError()
+    }
+
     func delete(memoryWithId memoryId: String, from accountId: String) -> AnyPublisher<Void, AppError> {
         let document = collection(of: accountId).document(memoryId)
         return Future<Void, Error> { promise in

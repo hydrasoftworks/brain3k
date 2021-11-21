@@ -33,11 +33,8 @@ struct AddMemoryPage: ConnectableView {
                 }
                 #if os(macOS)
                     ToolbarItem(placement: .confirmationAction) {
-                        Button(
-                            L10n.AddMemoryPage.Button.add,
-                            action: addMemory
-                        )
-                        .validated(_value)
+                        Button(L10n.General.add, action: addMemory)
+                            .validated(_value)
                     }
                 #endif
             }

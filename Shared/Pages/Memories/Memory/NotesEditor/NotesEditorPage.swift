@@ -6,7 +6,7 @@ import SwiftUI
 
 struct NotesEditorPage: View {
     @Environment(\.presentationMode) private var presentationMode
-    @State private var editedNotes: String
+    @State private var notes: String
 
     let updateNotes: (String) -> Void
 
@@ -14,7 +14,7 @@ struct NotesEditorPage: View {
         currentNotes: String?,
         updateNotes: @escaping (String) -> Void
     ) {
-        _editedNotes = .init(initialValue: currentNotes ?? "")
+        _notes = .init(initialValue: currentNotes ?? "")
         self.updateNotes = updateNotes
     }
 
@@ -33,7 +33,7 @@ struct NotesEditorPage: View {
                     ToolbarItem(placement: .confirmationAction) {
                         Button(
                             L10n.General.save,
-                            action: { updateNotes(editedNotes) }
+                            action: update
                         )
                     }
                 #endif
@@ -46,13 +46,13 @@ struct NotesEditorPage: View {
                 Text(L10n.MemoryPage.Label.notes)
                     .font(.title)
             #endif
-            TextEditor(text: $editedNotes)
+            TextEditor(text: $notes)
                 .lineLimit(20)
                 .font(.body)
             #if os(iOS)
                 PrimaryButton(
                     title: L10n.General.save,
-                    action: { updateNotes(editedNotes) }
+                    action: update
                 )
             #endif
         }
@@ -65,5 +65,10 @@ struct NotesEditorPage: View {
         #else
             return .cancellationAction
         #endif
+    }
+
+    private func update() {
+        updateNotes(notes)
+        presentationMode.wrappedValue.dismiss()
     }
 }
