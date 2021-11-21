@@ -54,6 +54,10 @@
 		8E58B8D62749349C003FB391 /* MemoryDeleteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E58B8D42749349C003FB391 /* MemoryDeleteButton.swift */; };
 		8E58B8D8274935F3003FB391 /* MemoriesAction+UpdateNotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E58B8D7274935F3003FB391 /* MemoriesAction+UpdateNotes.swift */; };
 		8E58B8D9274935F3003FB391 /* MemoriesAction+UpdateNotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E58B8D7274935F3003FB391 /* MemoriesAction+UpdateNotes.swift */; };
+		8E58B8DF274A7203003FB391 /* UserServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E58B8DB274A7203003FB391 /* UserServiceMock.swift */; };
+		8E58B8E0274A7203003FB391 /* StorageServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E58B8DC274A7203003FB391 /* StorageServiceMock.swift */; };
+		8E58B8E1274A7203003FB391 /* MemoriesServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E58B8DD274A7203003FB391 /* MemoriesServiceMock.swift */; };
+		8E58B8E2274A7203003FB391 /* AccountServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E58B8DE274A7203003FB391 /* AccountServiceMock.swift */; };
 		8E58D149271B0F350033B02A /* MemoryImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E58D148271B0F350033B02A /* MemoryImage.swift */; };
 		8E58D14A271B0F350033B02A /* MemoryImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E58D148271B0F350033B02A /* MemoryImage.swift */; };
 		8E58D14F271B2D590033B02A /* SignPageBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E58D14E271B2D590033B02A /* SignPageBase.swift */; };
@@ -163,7 +167,6 @@
 		8E92A7D326A0B31600BAED7F /* Cuckoo in Frameworks */ = {isa = PBXBuildFile; productRef = 8E92A7D226A0B31600BAED7F /* Cuckoo */; };
 		8E92A7D626A0B59F00BAED7F /* AccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E92A7D526A0B59F00BAED7F /* AccountService.swift */; };
 		8E92A7D726A0B59F00BAED7F /* AccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E92A7D526A0B59F00BAED7F /* AccountService.swift */; };
-		8E92A7D926A0B63500BAED7F /* GeneratedMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E92A7D826A0B63500BAED7F /* GeneratedMocks.swift */; };
 		8E92A7DB26A0B8DC00BAED7F /* AccountActionSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E92A7DA26A0B8DC00BAED7F /* AccountActionSpec.swift */; };
 		8E92A7DE26A0BB8E00BAED7F /* StoreProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E92A7DD26A0BB8E00BAED7F /* StoreProxy.swift */; };
 		8E92A7E126A0CD2500BAED7F /* AccountAction+CheckAccountStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E92A7E026A0CD2500BAED7F /* AccountAction+CheckAccountStatus.swift */; };
@@ -394,6 +397,10 @@
 		8E58B8D12749342C003FB391 /* MemoryRefreshButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryRefreshButton.swift; sourceTree = "<group>"; };
 		8E58B8D42749349C003FB391 /* MemoryDeleteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryDeleteButton.swift; sourceTree = "<group>"; };
 		8E58B8D7274935F3003FB391 /* MemoriesAction+UpdateNotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MemoriesAction+UpdateNotes.swift"; sourceTree = "<group>"; };
+		8E58B8DB274A7203003FB391 /* UserServiceMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserServiceMock.swift; sourceTree = "<group>"; };
+		8E58B8DC274A7203003FB391 /* StorageServiceMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageServiceMock.swift; sourceTree = "<group>"; };
+		8E58B8DD274A7203003FB391 /* MemoriesServiceMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoriesServiceMock.swift; sourceTree = "<group>"; };
+		8E58B8DE274A7203003FB391 /* AccountServiceMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountServiceMock.swift; sourceTree = "<group>"; };
 		8E58D148271B0F350033B02A /* MemoryImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryImage.swift; sourceTree = "<group>"; };
 		8E58D14E271B2D590033B02A /* SignPageBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignPageBase.swift; sourceTree = "<group>"; };
 		8E5D7D0726CC4D43009024A0 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
@@ -446,7 +453,6 @@
 		8E8DF149270096F500CA0EBF /* ImagesGen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagesGen.swift; sourceTree = "<group>"; };
 		8E8DF14C27024B3700CA0EBF /* AccountAction+GenerateNonce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountAction+GenerateNonce.swift"; sourceTree = "<group>"; };
 		8E92A7D526A0B59F00BAED7F /* AccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountService.swift; sourceTree = "<group>"; };
-		8E92A7D826A0B63500BAED7F /* GeneratedMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedMocks.swift; sourceTree = "<group>"; };
 		8E92A7DA26A0B8DC00BAED7F /* AccountActionSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountActionSpec.swift; sourceTree = "<group>"; };
 		8E92A7DD26A0BB8E00BAED7F /* StoreProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreProxy.swift; sourceTree = "<group>"; };
 		8E92A7E026A0CD2500BAED7F /* AccountAction+CheckAccountStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountAction+CheckAccountStatus.swift"; sourceTree = "<group>"; };
@@ -715,6 +721,17 @@
 				8E58B8CD27493029003FB391 /* NotesEditorPage.swift */,
 			);
 			path = NotesEditor;
+			sourceTree = "<group>";
+		};
+		8E58B8DA274A71CB003FB391 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				8E58B8DE274A7203003FB391 /* AccountServiceMock.swift */,
+				8E58B8DD274A7203003FB391 /* MemoriesServiceMock.swift */,
+				8E58B8DC274A7203003FB391 /* StorageServiceMock.swift */,
+				8E58B8DB274A7203003FB391 /* UserServiceMock.swift */,
+			);
+			path = Generated;
 			sourceTree = "<group>";
 		};
 		8E5D7D0A26CC4FA4009024A0 /* Storage */ = {
@@ -1012,7 +1029,7 @@
 		8E92A7DC26A0BB7800BAED7F /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				8E92A7D826A0B63500BAED7F /* GeneratedMocks.swift */,
+				8E58B8DA274A71CB003FB391 /* Generated */,
 				8E92A7DD26A0BB8E00BAED7F /* StoreProxy.swift */,
 				8E92A7EB26A0D4D300BAED7F /* CombineResult.swift */,
 				8EF9353326AC3DAC00176AF4 /* Account+Test.swift */,
@@ -1620,6 +1637,7 @@
 				8E50D87526BB40320075C08C /* MemorySpec.swift in Sources */,
 				8E9EEBB026F2905B00106FCD /* MemoriesAction+SearchSpec.swift in Sources */,
 				8EA1006826AC564F007AFAA9 /* MemoryCellSpec.swift in Sources */,
+				8E58B8E2274A7203003FB391 /* AccountServiceMock.swift in Sources */,
 				8EA1006F26ADBDE6007AFAA9 /* MemoriesAction+CreateURLSpec.swift in Sources */,
 				8E3810EE269CD59300ED3851 /* MessageStateSpec.swift in Sources */,
 				8EF9354326AC4A3100176AF4 /* SecondaryButtonSpec.swift in Sources */,
@@ -1638,16 +1656,18 @@
 				8EDC011826D0359400D2064A /* StorageReducerSpec.swift in Sources */,
 				8E776FF426A231F000D97F52 /* AccountAction+RefreshSpec.swift in Sources */,
 				8E92A7DE26A0BB8E00BAED7F /* StoreProxy.swift in Sources */,
+				8E58B8E1274A7203003FB391 /* MemoriesServiceMock.swift in Sources */,
+				8E58B8DF274A7203003FB391 /* UserServiceMock.swift in Sources */,
 				8EF9353426AC3DAC00176AF4 /* Account+Test.swift in Sources */,
 				8E3810F3269CD72500ED3851 /* AccountStateSpec.swift in Sources */,
 				8E77700B26A349B300D97F52 /* MemoriesReducerSpec.swift in Sources */,
+				8E58B8E0274A7203003FB391 /* StorageServiceMock.swift in Sources */,
 				8E889CF326A22DE200F7C47C /* AccountAction+SignOutSpec.swift in Sources */,
 				8E92A7EC26A0D4D300BAED7F /* CombineResult.swift in Sources */,
 				8E9EEBA926F2830700106FCD /* MemoriesStateSpec.swift in Sources */,
 				8E3810EC269CD00700ED3851 /* MessageReducerSpec.swift in Sources */,
 				8EA1006A26AC572D007AFAA9 /* URLMemoryCellSpec.swift in Sources */,
 				8E776FF626A236F600D97F52 /* AccountAction+SendVerificationEmailSpec.swift in Sources */,
-				8E92A7D926A0B63500BAED7F /* GeneratedMocks.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -4,9 +4,7 @@
 
 import AuthenticationServices
 import Combine
-import class FirebaseAuth.Auth
-import typealias FirebaseAuth.AuthDataResultCallback
-import class FirebaseAuth.OAuthProvider
+import FirebaseAuth
 import Foundation
 
 class AccountService {

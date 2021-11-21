@@ -1,15 +1,17 @@
 #!/usr/bin/env bash
 
-OUTPUT_FILE="Tests/Helpers/GeneratedMocks.swift"
-
 INPUT_DIR="Shared"
+OUTPUT_DIR="Tests/Helpers/Generated"
 echo "Mocks Input Directory = ${INPUT_DIR}"
 
 "./scripts/cuckoorunner.sh" --download generate --testable "Brain3k" \
-    --output "${OUTPUT_FILE}" \
-    "${INPUT_DIR}/Services/AccountService.swift" \
-    "${INPUT_DIR}/Services/UserService.swift" \
-    "${INPUT_DIR}/Services/MemoriesService.swift" \
-    "${INPUT_DIR}/Services/StorageService.swift"
+    --output "${OUTPUT_DIR}/AccountServiceMock.swift" "${INPUT_DIR}/Services/AccountService.swift"
 
-echo "Generated Mocks File = ${OUTPUT_FILE}"
+"./scripts/cuckoorunner.sh" --download generate --testable "Brain3k" \
+    --output "${OUTPUT_DIR}/UserServiceMock.swift" "${INPUT_DIR}/Services/UserService.swift"
+
+"./scripts/cuckoorunner.sh" --download generate --testable "Brain3k" \
+    --output "${OUTPUT_DIR}/MemoriesServiceMock.swift" "${INPUT_DIR}/Services/MemoriesService.swift"
+    
+"./scripts/cuckoorunner.sh" --download generate --testable "Brain3k" \
+    --output "${OUTPUT_DIR}/StorageServiceMock.swift" "${INPUT_DIR}/Services/StorageService.swift"
