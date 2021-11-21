@@ -47,6 +47,7 @@ struct NotesEditorPage: View {
                     .font(.title)
             #endif
             TextEditor(text: $notes)
+                .focusOnStart()
                 .lineLimit(20)
                 .font(.body)
             #if os(iOS)

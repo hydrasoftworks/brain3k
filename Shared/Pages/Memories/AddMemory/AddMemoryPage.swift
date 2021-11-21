@@ -64,6 +64,7 @@ struct AddMemoryPage: ConnectableView {
                     .font(.title)
             #endif
             URLTextField(text: $value)
+                .focusOnStart()
             #if os(iOS)
                 PrimaryButton(
                     title: L10n.General.add,
