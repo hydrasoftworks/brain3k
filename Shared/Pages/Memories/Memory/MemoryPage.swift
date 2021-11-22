@@ -118,7 +118,9 @@ struct MemoryPage: View {
         MemoryDeleteButton(
             action: {
                 viewModel.delete()
-                dismiss()
+                #if os(iOS)
+                    dismiss()
+                #endif
             }
         )
     }
