@@ -42,6 +42,9 @@
 "memory_page.button.delete" = "Delete memory";
 "memory_page.button.open" = "Open memory";
 "memory_page.button.share" = "Open memory";
+"memory_page.button.add_tag" = "Add tag";
+"memory_page.button.delete_tag" = "Delete tag";
+"memory_page.label.tags" = "Tags";
 "memory_page.label.notes" = "Notes";
 "memory_page.label.notes_placeholder" = "Press to add notes";
 "memory_page.empty.not_selected" = "No memory selected";

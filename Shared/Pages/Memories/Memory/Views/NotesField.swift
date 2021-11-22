@@ -11,7 +11,7 @@ struct NotesField: View {
     let updateNotes: (String) -> Void
 
     var body: some View {
-        VStack(alignment: .leading) {
+        VStack(alignment: .leading, spacing: 3) {
             Text(L10n.MemoryPage.Label.notes)
                 .font(.caption)
             Group {
@@ -19,7 +19,7 @@ struct NotesField: View {
                     Text(.init(notes)) // .init(_) to support Markdown
                 } else {
                     Text(L10n.MemoryPage.Label.notesPlaceholder)
-                        .opacity(0.3)
+                        .opacity(0.7)
                 }
             }
         }

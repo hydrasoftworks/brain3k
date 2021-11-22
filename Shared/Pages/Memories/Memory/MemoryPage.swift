@@ -72,6 +72,7 @@ struct MemoryPage: View {
                 Spacer(minLength: 16)
                 if let text = viewModel.title { title(text) }
                 if let text = viewModel.description { description(text) }
+                tags
                 notes
             }
             if let url = viewModel.valueURL {
@@ -94,6 +95,7 @@ struct MemoryPage: View {
                 ScrollView {
                     if let text = viewModel.title { title(text) }
                     if let text = viewModel.description { description(text) }
+                    tags
                     notes
                 }
                 if let url = viewModel.valueURL {
@@ -101,6 +103,10 @@ struct MemoryPage: View {
                 }
             }
         }
+    }
+
+    private var tags: some View {
+        TagsView()
     }
 
     private var notes: some View {

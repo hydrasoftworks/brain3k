@@ -241,6 +241,10 @@
 		8EBC0541269A0B8D008B2478 /* SecondaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBC053F269A0B8D008B2478 /* SecondaryButton.swift */; };
 		8EBC0543269A1B76008B2478 /* String+Trim.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBC0542269A1B76008B2478 /* String+Trim.swift */; };
 		8EBC0544269A1B76008B2478 /* String+Trim.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBC0542269A1B76008B2478 /* String+Trim.swift */; };
+		8EBDE4DB274C28BA00FA6280 /* RoomTime in Frameworks */ = {isa = PBXBuildFile; productRef = 8EBDE4DA274C28BA00FA6280 /* RoomTime */; };
+		8EBDE4DD274C28D200FA6280 /* RoomTime in Frameworks */ = {isa = PBXBuildFile; productRef = 8EBDE4DC274C28D200FA6280 /* RoomTime */; };
+		8EBDE4DF274C28FF00FA6280 /* TagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBDE4DE274C28FF00FA6280 /* TagsView.swift */; };
+		8EBDE4E0274C28FF00FA6280 /* TagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBDE4DE274C28FF00FA6280 /* TagsView.swift */; };
 		8EBF94BB2709CA690045B33E /* EmptyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBF94BA2709CA690045B33E /* EmptyListView.swift */; };
 		8EBF94BC2709CA690045B33E /* EmptyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBF94BA2709CA690045B33E /* EmptyListView.swift */; };
 		8EC4BACC26BDD40D00F20EAE /* Color+Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC4BACB26BDD40D00F20EAE /* Color+Asset.swift */; };
@@ -499,6 +503,7 @@
 		8EBC053C269A0A8A008B2478 /* MemoryPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryPage.swift; sourceTree = "<group>"; };
 		8EBC053F269A0B8D008B2478 /* SecondaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryButton.swift; sourceTree = "<group>"; };
 		8EBC0542269A1B76008B2478 /* String+Trim.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Trim.swift"; sourceTree = "<group>"; };
+		8EBDE4DE274C28FF00FA6280 /* TagsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsView.swift; sourceTree = "<group>"; };
 		8EBF94BA2709CA690045B33E /* EmptyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyListView.swift; sourceTree = "<group>"; };
 		8EC4BACB26BDD40D00F20EAE /* Color+Asset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Asset.swift"; sourceTree = "<group>"; };
 		8EC4BAD426BDD79F00F20EAE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Shared/en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -577,6 +582,7 @@
 				8EF9352826AC1B7300176AF4 /* FirebaseAuth in Frameworks */,
 				8EC607672688B86B006ED3C1 /* SwiftDux in Frameworks */,
 				8EF9352A26AC1B7300176AF4 /* FirebaseFirestoreSwift-Beta in Frameworks */,
+				8EBDE4DB274C28BA00FA6280 /* RoomTime in Frameworks */,
 				8E79C14D269791EA002D2A8B /* ValidatedPropertyKit in Frameworks */,
 				8E6BEDF42724109800913D42 /* NukeUI in Frameworks */,
 				8E50D87026BB33E30075C08C /* IrregularGradient in Frameworks */,
@@ -594,6 +600,7 @@
 				8E3C0D7926B9E24500EB82E8 /* FirebaseAuth in Frameworks */,
 				8E3C0D7B26B9E25500EB82E8 /* FirebaseFirestoreSwift-Beta in Frameworks */,
 				8EC607882688BEE0006ED3C1 /* SwiftDux in Frameworks */,
+				8EBDE4DD274C28D200FA6280 /* RoomTime in Frameworks */,
 				8E3C0D7D26B9E26500EB82E8 /* FirebaseStorageSwift-Beta in Frameworks */,
 				8E6BEDF6272410A200913D42 /* NukeUI in Frameworks */,
 				8E50D87226BB33EF0075C08C /* IrregularGradient in Frameworks */,
@@ -638,6 +645,7 @@
 				8E58B8CA27492587003FB391 /* NotesField.swift */,
 				8E58B8D12749342C003FB391 /* MemoryRefreshButton.swift */,
 				8E58B8D42749349C003FB391 /* MemoryDeleteButton.swift */,
+				8EBDE4DE274C28FF00FA6280 /* TagsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1455,6 +1463,7 @@
 				8E9EEBAB26F2888A00106FCD /* Fuse */,
 				8E6BEDF32724109800913D42 /* NukeUI */,
 				8E628D5E2735DB9F004BC88C /* Colorful */,
+				8EBDE4DA274C28BA00FA6280 /* RoomTime */,
 			);
 			productName = "Brain3k (iOS)";
 			productReference = 8EC607472688AFD1006ED3C1 /* Brain3k.app */;
@@ -1486,6 +1495,7 @@
 				8E9EEBAD26F2889500106FCD /* Fuse */,
 				8E6BEDF5272410A200913D42 /* NukeUI */,
 				8E628D602735DBAC004BC88C /* Colorful */,
+				8EBDE4DC274C28D200FA6280 /* RoomTime */,
 			);
 			productName = "Brain3k (macOS)";
 			productReference = 8EC6074D2688AFD1006ED3C1 /* Brain3k.app */;
@@ -1567,6 +1577,7 @@
 				8E9EEBAA26F2888A00106FCD /* XCRemoteSwiftPackageReference "fuse-swift" */,
 				8E6BEDF22724109700913D42 /* XCRemoteSwiftPackageReference "NukeUI" */,
 				8E628D5D2735DB9E004BC88C /* XCRemoteSwiftPackageReference "Colorful" */,
+				8EBDE4D9274C28BA00FA6280 /* XCRemoteSwiftPackageReference "RoomTime" */,
 			);
 			productRefGroup = 8EC607482688AFD1006ED3C1 /* Products */;
 			projectDirPath = "";
@@ -1773,6 +1784,7 @@
 				8E3927F7273D458C001DA030 /* User.swift in Sources */,
 				8E889CEB26A22A4300F7C47C /* AccountAction+SignUp.swift in Sources */,
 				8E79C14326978778002D2A8B /* Message.swift in Sources */,
+				8EBDE4DF274C28FF00FA6280 /* TagsView.swift in Sources */,
 				8E3436F92708A2FA00FA1CB0 /* MemoriesAction+Refresh.swift in Sources */,
 				8E58B8E4274AE399003FB391 /* FocusOnStart.swift in Sources */,
 				8EA4D2872693A22A00C0A037 /* SignUpPage.swift in Sources */,
@@ -1879,6 +1891,7 @@
 				8E73D703272ED3C60037DE6B /* SelectedMemoryID.swift in Sources */,
 				8E79C14426978778002D2A8B /* Message.swift in Sources */,
 				8E3436FA2708A2FA00FA1CB0 /* MemoriesAction+Refresh.swift in Sources */,
+				8EBDE4E0274C28FF00FA6280 /* TagsView.swift in Sources */,
 				8EA4D2882693A22A00C0A037 /* SignUpPage.swift in Sources */,
 				8E58B8E5274AE399003FB391 /* FocusOnStart.swift in Sources */,
 				8E6821B826A9E43800B2DACB /* PlaceholderView.swift in Sources */,
@@ -2557,6 +2570,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		8EBDE4D9274C28BA00FA6280 /* XCRemoteSwiftPackageReference "RoomTime" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RainbowTalaxy/RoomTime";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.0;
+			};
+		};
 		8EC607652688B86B006ED3C1 /* XCRemoteSwiftPackageReference "SwiftDux" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/StevenLambion/SwiftDux";
@@ -2706,6 +2727,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8E9EEBAA26F2888A00106FCD /* XCRemoteSwiftPackageReference "fuse-swift" */;
 			productName = Fuse;
+		};
+		8EBDE4DA274C28BA00FA6280 /* RoomTime */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8EBDE4D9274C28BA00FA6280 /* XCRemoteSwiftPackageReference "RoomTime" */;
+			productName = RoomTime;
+		};
+		8EBDE4DC274C28D200FA6280 /* RoomTime */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8EBDE4D9274C28BA00FA6280 /* XCRemoteSwiftPackageReference "RoomTime" */;
+			productName = RoomTime;
 		};
 		8EC607662688B86B006ED3C1 /* SwiftDux */ = {
 			isa = XCSwiftPackageProductDependency;
