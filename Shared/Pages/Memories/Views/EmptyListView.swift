@@ -18,7 +18,6 @@ struct EmptyListView: View {
                 .padding(.top, 40)
             Text(text)
                 .font(.body)
-                .foregroundStyle(Color.brand)
                 .multilineTextAlignment(.center)
                 .padding(.horizontal, 48)
         }

@@ -209,15 +209,6 @@
         }
       },
       {
-        "package": "RoomTime",
-        "repositoryURL": "https://github.com/RainbowTalaxy/RoomTime",
-        "state": {
-          "branch": null,
-          "revision": "fb21f7752d47a485e225d575a04f5f41d3e3ba1b",
-          "version": "0.1.0"
-        }
-      },
-      {
         "package": "SwiftProtobuf",
         "repositoryURL": "https://github.com/apple/swift-protobuf.git",
         "state": {

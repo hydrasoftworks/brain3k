@@ -2,7 +2,6 @@
 //  Created by Kamil Powałowski on 22/11/2021.
 //
 
-import RoomTime
 import SwiftUI
 
 struct TagsView: View {
@@ -38,7 +37,10 @@ private struct Tag: View {
             Button(action: {}) {
                 Text(text)
                     .fixedSize()
+                    .padding(EdgeInsets(top: 4, leading: 8, bottom: 4, trailing: 0))
+                    .contentShape(Rectangle())
             }
+            .accessibilityLabel(text)
 
             Button(action: {}) {
                 Label(
@@ -46,11 +48,13 @@ private struct Tag: View {
                     systemImage: "xmark.circle.fill"
                 )
                 .labelStyle(IconOnlyLabelStyle())
+                .padding(EdgeInsets(top: 4, leading: 0, bottom: 4, trailing: 4))
+                .contentShape(Rectangle())
             }
+            .accessibilityLabel(L10n.MemoryPage.Button.deleteTag)
         }
+        .buttonStyle(PlainButtonStyle())
         .foregroundColor(Color.brandText)
-        .padding(4)
-        .padding(.leading, 8)
         .background(Color.brand.opacity(0.7))
         .cornerRadius(4)
     }
@@ -65,6 +69,7 @@ private struct AddTag: View {
             }
         }
         .accessibilityLabel(L10n.MemoryPage.Button.addTag)
+        .buttonStyle(PlainButtonStyle())
         .foregroundColor(Color.brand.opacity(0.7))
         .padding(.horizontal, 8)
         .padding(.vertical, 4)
