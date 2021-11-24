@@ -5,21 +5,23 @@
 import SwiftUI
 
 struct TagsView: View {
-    let data = [
-        "RoomTime", "AutoWrap", "Talaxy", "FlowLayout", "cold",
-        "Swift", "", "SwiftUI", "Overwatch", "Good Days", "back to school",
-        "plus",
-    ]
+    private let addTagButtonId: String
+    private let tags: [String]
+
+    init(tags: [String]?) {
+        addTagButtonId = UUID().uuidString
+        self.tags = (tags ?? []) + [addTagButtonId]
+    }
 
     var body: some View {
         VStack(alignment: .leading) {
             Text(L10n.MemoryPage.Label.tags)
                 .font(.caption)
-            AutoWrap(data, id: \.self, vSpacing: 6, hSpacing: 6) { text in
-                if text != "plus" {
+            AutoWrap(tags, id: \.self, vSpacing: 6, hSpacing: 6) { text in
+                if text != addTagButtonId {
                     Tag(text: text)
                 } else {
-                    AddTag()
+                    AddTagButton()
                 }
             }
             .font(.body)
@@ -60,18 +62,18 @@ private struct Tag: View {
     }
 }
 
-private struct AddTag: View {
+private struct AddTagButton: View {
     public var body: some View {
         Button(action: {}) {
             HStack(spacing: 4) {
                 Image(systemName: "plus")
                 Text(L10n.MemoryPage.Button.addTag)
             }
+            .contentShape(Rectangle())
         }
         .accessibilityLabel(L10n.MemoryPage.Button.addTag)
         .buttonStyle(PlainButtonStyle())
         .foregroundColor(Color.brand.opacity(0.7))
-        .padding(.horizontal, 8)
         .padding(.vertical, 4)
         .cornerRadius(4)
     }

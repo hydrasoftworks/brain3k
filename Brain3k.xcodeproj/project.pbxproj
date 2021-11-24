@@ -14,11 +14,8 @@
 		8E260FE826C2F44900715524 /* ExpandedFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E260FE626C2F44900715524 /* ExpandedFrame.swift */; };
 		8E26236A27160A630092B6CE /* AccountAction+Delete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E26236927160A630092B6CE /* AccountAction+Delete.swift */; };
 		8E26236B27160A630092B6CE /* AccountAction+Delete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E26236927160A630092B6CE /* AccountAction+Delete.swift */; };
-		8E3436EE27089D1900FA1CB0 /* Memory+Fuseable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3436ED27089D1900FA1CB0 /* Memory+Fuseable.swift */; };
-		8E3436EF27089D1900FA1CB0 /* Memory+Fuseable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3436ED27089D1900FA1CB0 /* Memory+Fuseable.swift */; };
 		8E3436F127089D4200FA1CB0 /* Memory+CopyWith.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3436F027089D4200FA1CB0 /* Memory+CopyWith.swift */; };
 		8E3436F227089D4200FA1CB0 /* Memory+CopyWith.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3436F027089D4200FA1CB0 /* Memory+CopyWith.swift */; };
-		8E3436F327089D9000FA1CB0 /* Memory+Fuseable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3436ED27089D1900FA1CB0 /* Memory+Fuseable.swift */; };
 		8E3436F527089E7200FA1CB0 /* MemoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3436F427089E7200FA1CB0 /* MemoryType.swift */; };
 		8E3436F627089E7200FA1CB0 /* MemoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3436F427089E7200FA1CB0 /* MemoryType.swift */; };
 		8E3436F72708A14A00FA1CB0 /* MemoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3436F427089E7200FA1CB0 /* MemoryType.swift */; };
@@ -114,7 +111,6 @@
 		8E73D73327304A2A0037DE6B /* Fuse in Frameworks */ = {isa = PBXBuildFile; productRef = 8E73D73227304A2A0037DE6B /* Fuse */; };
 		8E73D73427304A3F0037DE6B /* MemoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3436F427089E7200FA1CB0 /* MemoryType.swift */; };
 		8E73D73527304A420037DE6B /* Memory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC607742688BAD4006ED3C1 /* Memory.swift */; };
-		8E73D73627304A450037DE6B /* Memory+Fuseable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3436ED27089D1900FA1CB0 /* Memory+Fuseable.swift */; };
 		8E73D73727304A4B0037DE6B /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEDD792268BCD9200F670D2 /* Account.swift */; };
 		8E73D73827304A4E0037DE6B /* AccountStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEF35E0268CED570068DB58 /* AccountStatus.swift */; };
 		8E73D73927304A530037DE6B /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E77700226A32C6B00D97F52 /* AppError.swift */; };
@@ -247,6 +243,10 @@
 		8EBF94BC2709CA690045B33E /* EmptyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBF94BA2709CA690045B33E /* EmptyListView.swift */; };
 		8EC49D70274D798100E0FE61 /* AutoWrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC49D6F274D798100E0FE61 /* AutoWrap.swift */; };
 		8EC49D71274D798100E0FE61 /* AutoWrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC49D6F274D798100E0FE61 /* AutoWrap.swift */; };
+		8EC49D7F274ED25400E0FE61 /* Memory+Fuseable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC49D7E274ED25400E0FE61 /* Memory+Fuseable.swift */; };
+		8EC49D80274ED25400E0FE61 /* Memory+Fuseable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC49D7E274ED25400E0FE61 /* Memory+Fuseable.swift */; };
+		8EC49D81274ED25400E0FE61 /* Memory+Fuseable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC49D7E274ED25400E0FE61 /* Memory+Fuseable.swift */; };
+		8EC49D82274ED25400E0FE61 /* Memory+Fuseable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC49D7E274ED25400E0FE61 /* Memory+Fuseable.swift */; };
 		8EC4BACC26BDD40D00F20EAE /* Color+Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC4BACB26BDD40D00F20EAE /* Color+Asset.swift */; };
 		8EC4BACD26BDD40D00F20EAE /* Color+Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC4BACB26BDD40D00F20EAE /* Color+Asset.swift */; };
 		8EC4BAD526BDD79F00F20EAE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8EC4BAD326BDD79F00F20EAE /* Localizable.strings */; };
@@ -384,7 +384,6 @@
 		8E15375826FF439100D3232F /* MemoryPrimaryActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryPrimaryActions.swift; sourceTree = "<group>"; };
 		8E260FE626C2F44900715524 /* ExpandedFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandedFrame.swift; sourceTree = "<group>"; };
 		8E26236927160A630092B6CE /* AccountAction+Delete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountAction+Delete.swift"; sourceTree = "<group>"; };
-		8E3436ED27089D1900FA1CB0 /* Memory+Fuseable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Memory+Fuseable.swift"; sourceTree = "<group>"; };
 		8E3436F027089D4200FA1CB0 /* Memory+CopyWith.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Memory+CopyWith.swift"; sourceTree = "<group>"; };
 		8E3436F427089E7200FA1CB0 /* MemoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryType.swift; sourceTree = "<group>"; };
 		8E3436F82708A2FA00FA1CB0 /* MemoriesAction+Refresh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MemoriesAction+Refresh.swift"; sourceTree = "<group>"; };
@@ -506,6 +505,7 @@
 		8EBDE4DE274C28FF00FA6280 /* TagsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsView.swift; sourceTree = "<group>"; };
 		8EBF94BA2709CA690045B33E /* EmptyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyListView.swift; sourceTree = "<group>"; };
 		8EC49D6F274D798100E0FE61 /* AutoWrap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoWrap.swift; sourceTree = "<group>"; };
+		8EC49D7E274ED25400E0FE61 /* Memory+Fuseable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Memory+Fuseable.swift"; sourceTree = "<group>"; };
 		8EC4BACB26BDD40D00F20EAE /* Color+Asset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Asset.swift"; sourceTree = "<group>"; };
 		8EC4BAD426BDD79F00F20EAE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Shared/en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8EC4BAD726BDD7E000F20EAE /* StringsGen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringsGen.swift; sourceTree = "<group>"; };
@@ -1275,7 +1275,7 @@
 				8EC6076D2688B993006ED3C1 /* StateType.swift */,
 				8E3436F427089E7200FA1CB0 /* MemoryType.swift */,
 				8EC607742688BAD4006ED3C1 /* Memory.swift */,
-				8E3436ED27089D1900FA1CB0 /* Memory+Fuseable.swift */,
+				8EC49D7E274ED25400E0FE61 /* Memory+Fuseable.swift */,
 				8E3436F027089D4200FA1CB0 /* Memory+CopyWith.swift */,
 				8EEDD792268BCD9200F670D2 /* Account.swift */,
 				8EEF35E0268CED570068DB58 /* AccountStatus.swift */,
@@ -1693,12 +1693,12 @@
 				8E73D727273049CA0037DE6B /* LibrariesService.swift in Sources */,
 				8EA052D2273FDE3000A4507A /* User.swift in Sources */,
 				8E73D73427304A3F0037DE6B /* MemoryType.swift in Sources */,
-				8E73D73627304A450037DE6B /* Memory+Fuseable.swift in Sources */,
 				8E73D73727304A4B0037DE6B /* Account.swift in Sources */,
 				8E73D717273042900037DE6B /* ShareViewController.swift in Sources */,
 				8E73D73B27304A6E0037DE6B /* Future+MapError.swift in Sources */,
 				8E73D725273049C10037DE6B /* MemoriesService.swift in Sources */,
 				8E73D73927304A530037DE6B /* AppError.swift in Sources */,
+				8EC49D82274ED25400E0FE61 /* Memory+Fuseable.swift in Sources */,
 				8EA052D0273FDE2900A4507A /* UserService.swift in Sources */,
 				8E73D726273049C70037DE6B /* CompletionHandler.swift in Sources */,
 				8E73D73827304A4E0037DE6B /* AccountStatus.swift in Sources */,
@@ -1721,6 +1721,7 @@
 				8E5D7D0C26CC4FB8009024A0 /* StorageState.swift in Sources */,
 				8EBC0543269A1B76008B2478 /* String+Trim.swift in Sources */,
 				8EC6076A2688B952006ED3C1 /* AppState.swift in Sources */,
+				8EC49D7F274ED25400E0FE61 /* Memory+Fuseable.swift in Sources */,
 				8E77700626A32D5600D97F52 /* Future+MapError.swift in Sources */,
 				8E58B8CB27492587003FB391 /* NotesField.swift in Sources */,
 				8E5D7D1026CC504E009024A0 /* StorageReducer.swift in Sources */,
@@ -1733,7 +1734,6 @@
 				8EEDD78D268BC1F600F670D2 /* AccountReducer.swift in Sources */,
 				8EEF35E1268CED570068DB58 /* AccountStatus.swift in Sources */,
 				8EC6076E2688B993006ED3C1 /* StateType.swift in Sources */,
-				8E3436EE27089D1900FA1CB0 /* Memory+Fuseable.swift in Sources */,
 				8EC4BAD826BDD7E000F20EAE /* StringsGen.swift in Sources */,
 				8EDC011C26D03E9600D2064A /* CompletionHandler.swift in Sources */,
 				8EBF94BB2709CA690045B33E /* EmptyListView.swift in Sources */,
@@ -1829,6 +1829,7 @@
 				8EBC0544269A1B76008B2478 /* String+Trim.swift in Sources */,
 				8EC6076B2688B952006ED3C1 /* AppState.swift in Sources */,
 				8E77700726A32D5600D97F52 /* Future+MapError.swift in Sources */,
+				8EC49D80274ED25400E0FE61 /* Memory+Fuseable.swift in Sources */,
 				8E5D7D1126CC504E009024A0 /* StorageReducer.swift in Sources */,
 				8E58B8CC27492587003FB391 /* NotesField.swift in Sources */,
 				8EA4D28526939E6400C0A037 /* PasswordTextField.swift in Sources */,
@@ -1840,7 +1841,6 @@
 				8EEDD78E268BC1F600F670D2 /* AccountReducer.swift in Sources */,
 				8EEF35E2268CED570068DB58 /* AccountStatus.swift in Sources */,
 				8EC6076F2688B993006ED3C1 /* StateType.swift in Sources */,
-				8E3436EF27089D1900FA1CB0 /* Memory+Fuseable.swift in Sources */,
 				8EC4BAD926BDD7E000F20EAE /* StringsGen.swift in Sources */,
 				8EDC011D26D03E9600D2064A /* CompletionHandler.swift in Sources */,
 				8EBF94BC2709CA690045B33E /* EmptyListView.swift in Sources */,
@@ -1935,9 +1935,9 @@
 				8ED3821526F767CB0003D4F3 /* LibrariesService.swift in Sources */,
 				8ED381F026F74FE50003D4F3 /* ShareViewController.swift in Sources */,
 				8ED381FB26F75CB00003D4F3 /* AccountService.swift in Sources */,
-				8E3436F327089D9000FA1CB0 /* Memory+Fuseable.swift in Sources */,
 				8ED381FC26F75CB90003D4F3 /* MemoriesService.swift in Sources */,
 				8ED3820726F75D010003D4F3 /* AccountStatus.swift in Sources */,
+				8EC49D81274ED25400E0FE61 /* Memory+Fuseable.swift in Sources */,
 				8EA052CF273FDE2900A4507A /* UserService.swift in Sources */,
 				8ED3820B26F75D400003D4F3 /* CompletionHandler.swift in Sources */,
 				8ED3820826F75D070003D4F3 /* AppError.swift in Sources */,

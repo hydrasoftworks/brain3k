@@ -4,6 +4,7 @@
 
 import FirebaseFirestoreSwift
 import Foundation
+import Fuse
 
 struct Memory: Identifiable, Codable, Equatable {
     @DocumentID var id: String?
@@ -16,6 +17,7 @@ struct Memory: Identifiable, Codable, Equatable {
     let notes: String?
     let description: String?
     let tags: [String]?
+    let customTags: [String]?
     let processed: Bool
 
     var thumbnailURL: URL? {
@@ -36,6 +38,7 @@ struct Memory: Identifiable, Codable, Equatable {
         notes: String? = nil,
         description: String? = nil,
         tags: [String]? = nil,
+        customTags: [String]? = nil,
         processed: Bool = false
     ) {
         self.id = id
@@ -48,6 +51,7 @@ struct Memory: Identifiable, Codable, Equatable {
         self.notes = notes
         self.description = description
         self.tags = tags
+        self.customTags = customTags
         self.processed = processed
     }
 }

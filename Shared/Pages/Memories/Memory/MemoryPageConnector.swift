@@ -28,6 +28,7 @@ struct MemoryPageConnector: ConnectableView {
             valueURL: memory?.valueURL,
             domain: domain,
             notes: memory?.notes,
+            customTags: memory?.customTags,
             delete: { dispatch.send(MemoriesAction.delete(memory: memory)) },
             refresh: { dispatch.send(MemoriesAction.refresh(memory: memory)) },
             getDownloadURL: { dispatch.send(StorageAction.getDownloadURL(for: image)) },

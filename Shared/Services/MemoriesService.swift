@@ -76,11 +76,10 @@ class MemoriesService {
     ) -> AnyPublisher<Void, AppError> {
         let document = collection(of: accountId).document(memoryId)
         return Future<Void, Error> { promise in
-            if let notes = notes {
-                document.updateData(["notes": notes])
-            } else {
-                document.updateData(["notes": FieldValue.delete()])
-            }
+            document.updateData([
+                "notes": notes ?? FieldValue.delete(),
+                "updatedAt": FieldValue.serverTimestamp(),
+            ])
             promise(.success(()))
         }
         .eraseToAnyPublisher()
