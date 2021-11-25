@@ -80,9 +80,8 @@ function defaultHTML(message) {
         <head>
             <meta charset="utf-8">
             <title>${message}</title>
-            <style>
-            h1 {text-align: center;}
-            </style>
+            <meta property="og:title" content="${message}" />
+            <meta property="og:image" content="https://brain3k.com/assets/error.png" />
         </head>
         <body>
         <h1>${message}</h1>
