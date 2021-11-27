@@ -22,7 +22,12 @@ struct MemoriesPage: View {
         .navigationTitle(L10n.MemoriesPage.title)
         .toolbar {
             ToolbarItem {
-                Button(action: { isAddMemoryPresented.toggle() }) {
+                Button(
+                    action: {
+                        isAddMemoryPresented.toggle()
+                        HapticService.impactOccurred(.light)
+                    }
+                ) {
                     Label(L10n.MemoriesPage.Button.add, systemImage: "plus")
                 }
             }

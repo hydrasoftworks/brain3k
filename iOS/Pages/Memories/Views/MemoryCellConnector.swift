@@ -9,7 +9,10 @@ struct MemoryCellConnector: View {
 
     var body: some View {
         NavigationLink(
-            destination: { MemoryPageConnector(memoryId: memory.id) },
+            destination: {
+                MemoryPageConnector(memoryId: memory.id)
+                    .onAppear { HapticService.impactOccurred(.light) }
+            },
             label: { MemoryCell(memory: memory) }
         )
         .memoryCellStyle()

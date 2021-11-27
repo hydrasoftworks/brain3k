@@ -13,12 +13,18 @@ struct MemoryPrimaryActions: View {
         HStack(spacing: 16) {
             PrimaryButton(
                 title: L10n.MemoryPage.Button.open,
-                action: { UIApplication.shared.open(url) }
+                action: {
+                    UIApplication.shared.open(url)
+                    HapticService.impactOccurred(.light)
+                }
             )
             PrimaryIconButton(
                 systemName: "square.and.arrow.up",
                 label: L10n.MemoryPage.Button.share,
-                action: { isActivityViewPresented = true }
+                action: {
+                    isActivityViewPresented = true
+                    HapticService.impactOccurred(.light)
+                }
             )
             .sheet(
                 isPresented: $isActivityViewPresented,

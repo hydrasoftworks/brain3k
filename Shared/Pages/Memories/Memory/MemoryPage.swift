@@ -117,7 +117,12 @@ struct MemoryPage: View {
     }
 
     private var refreshButton: some View {
-        MemoryRefreshButton(action: { viewModel.refresh() })
+        MemoryRefreshButton(
+            action: {
+                viewModel.refresh()
+                HapticService.notificationOccurred(.success)
+            }
+        )
     }
 
     private var deleteButton: some View {
@@ -127,6 +132,7 @@ struct MemoryPage: View {
                 #if os(iOS)
                     dismiss()
                 #endif
+                HapticService.notificationOccurred(.success)
             }
         )
     }

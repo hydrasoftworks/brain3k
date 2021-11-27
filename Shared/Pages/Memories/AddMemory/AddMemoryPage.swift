@@ -80,6 +80,7 @@ struct AddMemoryPage: ConnectableView {
     private func addMemory() {
         dispatch.send(MemoriesAction.createURL(url: value))
         presentationMode.wrappedValue.dismiss()
+        HapticService.notificationOccurred(.success)
     }
 
     struct ViewModel: Equatable {
