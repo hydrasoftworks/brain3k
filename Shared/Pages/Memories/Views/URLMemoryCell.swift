@@ -36,10 +36,10 @@ struct URLMemoryCell: View {
                 PlaceholderView(color: .white)
             }
         }
+        .expanded()
         .onAppear { fetchImage.load(url) }
         .onChange(of: url) { fetchImage.load($0) }
         .onDisappear(perform: fetchImage.reset)
-        .expanded()
     }
 
     private func domain(_ text: String) -> some View {

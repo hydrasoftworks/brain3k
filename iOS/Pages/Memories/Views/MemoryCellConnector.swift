@@ -13,5 +13,6 @@ struct MemoryCellConnector: View {
             label: { MemoryCell(memory: memory) }
         )
         .memoryCellStyle()
+        .hoverEffect(.lift)
     }
 }

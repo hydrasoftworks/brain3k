@@ -42,15 +42,15 @@ struct MemoryImage: View {
                     .onAppear(perform: onAppear)
             }
         }
-        .onAppear { fetchImage.load(url) }
-        .onChange(of: url) { fetchImage.load($0) }
-        .onDisappear(perform: fetchImage.reset)
         .expanded()
         .frame(
             minWidth: width ?? 0, maxWidth: width ?? .infinity,
             minHeight: height ?? 0, maxHeight: height ?? .infinity
         )
         .clipped()
+        .onAppear { fetchImage.load(url) }
+        .onChange(of: url) { fetchImage.load($0) }
+        .onDisappear(perform: fetchImage.reset)
     }
 
     @ViewBuilder
