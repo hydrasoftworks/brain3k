@@ -74,15 +74,6 @@
         }
       },
       {
-        "package": "Gifu",
-        "repositoryURL": "https://github.com/kaishin/Gifu",
-        "state": {
-          "branch": null,
-          "revision": "51f2eab32903e336f590c013267cfa4d7f8b06c4",
-          "version": "3.3.1"
-        }
-      },
-      {
         "package": "GoogleAppMeasurement",
         "repositoryURL": "https://github.com/google/GoogleAppMeasurement.git",
         "state": {
@@ -173,24 +164,6 @@
         }
       },
       {
-        "package": "Nuke",
-        "repositoryURL": "https://github.com/kean/Nuke.git",
-        "state": {
-          "branch": null,
-          "revision": "472a03c15f39592007d94f25abe554350bc8aa2b",
-          "version": "10.5.1"
-        }
-      },
-      {
-        "package": "NukeUI",
-        "repositoryURL": "https://github.com/kean/NukeUI",
-        "state": {
-          "branch": null,
-          "revision": "08e953d8d80b409bebcd95ba0635fdd748934ce0",
-          "version": "0.7.0"
-        }
-      },
-      {
         "package": "Promises",
         "repositoryURL": "https://github.com/google/promises.git",
         "state": {
@@ -224,6 +197,15 @@
           "branch": null,
           "revision": "3b0693d7c4bd5ee8d1cdcab86fbcbbc75ddd14a2",
           "version": "2.0.1"
+        }
+      },
+      {
+        "package": "CachedAsyncImage",
+        "repositoryURL": "https://github.com/lorenzofiamingo/SwiftUI-CachedAsyncImage",
+        "state": {
+          "branch": null,
+          "revision": "eb489a699be1f6e6c1a19fecdd6bfdc556474fd6",
+          "version": "1.4.0"
         }
       },
       {

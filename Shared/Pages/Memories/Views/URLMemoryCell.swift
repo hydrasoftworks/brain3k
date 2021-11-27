@@ -2,7 +2,7 @@
 //  Created by Kamil Powałowski on 22/07/2021.
 //
 
-import NukeUI
+import CachedAsyncImage
 import SwiftUI
 
 struct URLMemoryCell: View {
@@ -22,14 +22,18 @@ struct URLMemoryCell: View {
     }
 
     private func image(_ url: URL?) -> some View {
-        LazyImage(source: url) { state in
-            if let image = state.image {
-                image
-                    .scaledToFill()
-            } else if state.error != nil, url != nil {
-                domain(viewModel.domain)
-            } else {
+        CachedAsyncImage(url: url) { phase in
+            switch phase {
+            case .empty:
                 PlaceholderView(color: .white)
+            case let .success(image):
+                image
+                    .resizable()
+                    .scaledToFill()
+            case .failure:
+                domain(viewModel.domain)
+            @unknown default:
+                EmptyView()
             }
         }
         .expanded()
