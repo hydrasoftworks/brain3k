@@ -51,8 +51,8 @@
         "repositoryURL": "https://github.com/mattgallagher/CwlPreconditionTesting.git",
         "state": {
           "branch": null,
-          "revision": "fb7a26374e8570ff5c68142e5c83406d6abae0d8",
-          "version": "2.0.2"
+          "revision": "c21f7bab5ca8eee0a9998bbd17ca1d0eb45d4688",
+          "version": "2.1.0"
         }
       },
       {
@@ -71,15 +71,6 @@
           "branch": null,
           "revision": "26ba868691b2d8b7bf2b1322951eb591be70ccca",
           "version": "1.4.0"
-        }
-      },
-      {
-        "package": "Gifu",
-        "repositoryURL": "https://github.com/kaishin/Gifu",
-        "state": {
-          "branch": null,
-          "revision": "51f2eab32903e336f590c013267cfa4d7f8b06c4",
-          "version": "3.3.1"
         }
       },
       {
@@ -174,20 +165,11 @@
       },
       {
         "package": "Nuke",
-        "repositoryURL": "https://github.com/kean/Nuke.git",
+        "repositoryURL": "https://github.com/kean/Nuke",
         "state": {
           "branch": null,
           "revision": "472a03c15f39592007d94f25abe554350bc8aa2b",
           "version": "10.5.1"
-        }
-      },
-      {
-        "package": "NukeUI",
-        "repositoryURL": "https://github.com/kean/NukeUI",
-        "state": {
-          "branch": null,
-          "revision": "08e953d8d80b409bebcd95ba0635fdd748934ce0",
-          "version": "0.7.0"
         }
       },
       {

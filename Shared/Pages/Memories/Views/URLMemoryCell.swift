@@ -2,10 +2,12 @@
 //  Created by Kamil Powałowski on 22/07/2021.
 //
 
-import NukeUI
+import Nuke
 import SwiftUI
 
 struct URLMemoryCell: View {
+    @StateObject private var fetchImage = FetchImage()
+
     let viewModel: ViewModel
 
     var body: some View {
@@ -21,17 +23,22 @@ struct URLMemoryCell: View {
         }
     }
 
+    @ViewBuilder
     private func image(_ url: URL?) -> some View {
-        LazyImage(source: url) { state in
-            if let image = state.image {
+        Group {
+            if url != nil, let image = fetchImage.view {
                 image
+                    .resizable()
                     .scaledToFill()
-            } else if state.error != nil, url != nil {
+            } else if !fetchImage.isLoading || url != nil {
                 domain(viewModel.domain)
             } else {
                 PlaceholderView(color: .white)
             }
         }
+        .onAppear { fetchImage.load(url) }
+        .onChange(of: url) { fetchImage.load($0) }
+        .onDisappear(perform: fetchImage.reset)
         .expanded()
     }
 
