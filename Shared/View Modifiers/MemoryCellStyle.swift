@@ -16,6 +16,6 @@ private struct MemoryCellStyle: ViewModifier {
             .buttonStyle(.plain)
             .expanded()
             .aspectRatio(1, contentMode: .fill)
-            .cornerRadius(16)
+            .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
     }
 }

@@ -2,12 +2,11 @@
 //  Created by Kamil Powałowski on 16/10/2021.
 //
 
-import Nuke
+import NukeUI
 import SwiftUI
 
 struct MemoryImage: View {
     @Environment(\.colorScheme) private var colorScheme
-    @StateObject private var fetchImage = FetchImage()
 
     private let url: URL?
     private let domain: String?
@@ -30,27 +29,22 @@ struct MemoryImage: View {
     }
 
     var body: some View {
-        Group {
-            if url != nil, let image = fetchImage.view {
+        LazyImage(source: url) { state in
+            if let image = state.image {
                 image
-                    .resizable()
                     .scaledToFill()
-            } else if !fetchImage.isLoading || url != nil {
+            } else if state.error != nil, url != nil {
                 domainView
             } else {
                 PlaceholderView(color: .primary)
                     .onAppear(perform: onAppear)
             }
         }
-        .expanded()
         .frame(
             minWidth: width ?? 0, maxWidth: width ?? .infinity,
             minHeight: height ?? 0, maxHeight: height ?? .infinity
         )
         .clipped()
-        .onAppear { fetchImage.load(url) }
-        .onChange(of: url) { fetchImage.load($0) }
-        .onDisappear(perform: fetchImage.reset)
     }
 
     @ViewBuilder
