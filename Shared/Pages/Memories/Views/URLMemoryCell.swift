@@ -2,11 +2,10 @@
 //  Created by Kamil Powałowski on 22/07/2021.
 //
 
+import NukeUI
 import SwiftUI
 
 struct URLMemoryCell: View {
-    @State private var imageOpacity: Double = 0
-
     let viewModel: ViewModel
 
     var body: some View {
@@ -23,16 +22,16 @@ struct URLMemoryCell: View {
     }
 
     private func image(_ url: URL?) -> some View {
-        AppAsyncImage(
-            url: url,
-            image: { image in
+        LazyImage(source: url) { state in
+            if let image = state.image {
                 image
-                    .resizable()
                     .scaledToFill()
-            },
-            placeholder: { PlaceholderView(color: .white) },
-            error: { domain(viewModel.domain) }
-        )
+            } else if state.error != nil, url != nil {
+                domain(viewModel.domain)
+            } else {
+                PlaceholderView(color: .white)
+            }
+        }
         .expanded()
     }
 

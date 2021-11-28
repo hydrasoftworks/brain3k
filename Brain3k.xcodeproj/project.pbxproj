@@ -152,6 +152,8 @@
 		8E7DEC6F2753A792005BE9B0 /* URLCache+Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7DEC6D2753A792005BE9B0 /* URLCache+Images.swift */; };
 		8E7DEC712753ADE2005BE9B0 /* AppAsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7DEC702753ADE2005BE9B0 /* AppAsyncImage.swift */; };
 		8E7DEC722753ADE2005BE9B0 /* AppAsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7DEC702753ADE2005BE9B0 /* AppAsyncImage.swift */; };
+		8E7DEC752753D453005BE9B0 /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = 8E7DEC742753D453005BE9B0 /* NukeUI */; };
+		8E7DEC772753D46D005BE9B0 /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = 8E7DEC762753D46D005BE9B0 /* NukeUI */; };
 		8E8835B926B08DCF00EE0234 /* AddMemoryPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8835B826B08DCF00EE0234 /* AddMemoryPage.swift */; };
 		8E8835BA26B08DCF00EE0234 /* AddMemoryPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8835B826B08DCF00EE0234 /* AddMemoryPage.swift */; };
 		8E8835BC26B0928E00EE0234 /* Validation+URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8835BB26B0928E00EE0234 /* Validation+URL.swift */; };
@@ -591,6 +593,7 @@
 				8E79C13526961891002D2A8B /* MGFlipView in Frameworks */,
 				8EF9352826AC1B7300176AF4 /* FirebaseAuth in Frameworks */,
 				8EC607672688B86B006ED3C1 /* SwiftDux in Frameworks */,
+				8E7DEC752753D453005BE9B0 /* NukeUI in Frameworks */,
 				8EF9352A26AC1B7300176AF4 /* FirebaseFirestoreSwift-Beta in Frameworks */,
 				8E79C14D269791EA002D2A8B /* ValidatedPropertyKit in Frameworks */,
 				8E50D87026BB33E30075C08C /* IrregularGradient in Frameworks */,
@@ -614,6 +617,7 @@
 				8E9EEBAE26F2889500106FCD /* Fuse in Frameworks */,
 				8E79C14F269791F4002D2A8B /* ValidatedPropertyKit in Frameworks */,
 				8E628D612735DBAC004BC88C /* Colorful in Frameworks */,
+				8E7DEC772753D46D005BE9B0 /* NukeUI in Frameworks */,
 				8EC6078A2688BEE4006ED3C1 /* SwiftyBeaver in Frameworks */,
 				8E4A9CBE2752C598007D32C9 /* CachedAsyncImage in Frameworks */,
 			);
@@ -1475,6 +1479,7 @@
 				8E9EEBAB26F2888A00106FCD /* Fuse */,
 				8E628D5E2735DB9F004BC88C /* Colorful */,
 				8E4A9CBB2752C58B007D32C9 /* CachedAsyncImage */,
+				8E7DEC742753D453005BE9B0 /* NukeUI */,
 			);
 			productName = "Brain3k (iOS)";
 			productReference = 8EC607472688AFD1006ED3C1 /* Brain3k.app */;
@@ -1506,6 +1511,7 @@
 				8E9EEBAD26F2889500106FCD /* Fuse */,
 				8E628D602735DBAC004BC88C /* Colorful */,
 				8E4A9CBD2752C598007D32C9 /* CachedAsyncImage */,
+				8E7DEC762753D46D005BE9B0 /* NukeUI */,
 			);
 			productName = "Brain3k (macOS)";
 			productReference = 8EC6074D2688AFD1006ED3C1 /* Brain3k.app */;
@@ -1587,6 +1593,7 @@
 				8E9EEBAA26F2888A00106FCD /* XCRemoteSwiftPackageReference "fuse-swift" */,
 				8E628D5D2735DB9E004BC88C /* XCRemoteSwiftPackageReference "Colorful" */,
 				8E4A9CBA2752C58B007D32C9 /* XCRemoteSwiftPackageReference "SwiftUI-CachedAsyncImage" */,
+				8E7DEC732753D453005BE9B0 /* XCRemoteSwiftPackageReference "NukeUI" */,
 			);
 			productRefGroup = 8EC607482688AFD1006ED3C1 /* Products */;
 			projectDirPath = "";
@@ -2168,7 +2175,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MARKETING_VERSION = 0.4.2;
+				MARKETING_VERSION = 0.4.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -2225,7 +2232,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MARKETING_VERSION = 0.4.2;
+				MARKETING_VERSION = 0.4.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -2571,6 +2578,14 @@
 				minimumVersion = 0.0.5;
 			};
 		};
+		8E7DEC732753D453005BE9B0 /* XCRemoteSwiftPackageReference "NukeUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/NukeUI";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		8E92A7D126A0B31600BAED7F /* XCRemoteSwiftPackageReference "Cuckoo" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Brightify/Cuckoo";
@@ -2721,6 +2736,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8E79C14B269791EA002D2A8B /* XCRemoteSwiftPackageReference "ValidatedPropertyKit" */;
 			productName = ValidatedPropertyKit;
+		};
+		8E7DEC742753D453005BE9B0 /* NukeUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8E7DEC732753D453005BE9B0 /* XCRemoteSwiftPackageReference "NukeUI" */;
+			productName = NukeUI;
+		};
+		8E7DEC762753D46D005BE9B0 /* NukeUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8E7DEC732753D453005BE9B0 /* XCRemoteSwiftPackageReference "NukeUI" */;
+			productName = NukeUI;
 		};
 		8E92A7D226A0B31600BAED7F /* Cuckoo */ = {
 			isa = XCSwiftPackageProductDependency;

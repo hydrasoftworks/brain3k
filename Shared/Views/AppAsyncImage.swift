@@ -5,6 +5,8 @@
 import CachedAsyncImage
 import SwiftUI
 
+// NukeUI LazyImage doesn't scale correctly on macOS
+// This is a temporary solution until fix
 struct AppAsyncImage<ContentImage, ContentPlaceholder, ContentError>: View where ContentImage: View, ContentPlaceholder: View, ContentError: View {
     @State private var imageOpacity: Double = 0
 
