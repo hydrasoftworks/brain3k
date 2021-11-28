@@ -2,10 +2,11 @@
 //  Created by Kamil Powałowski on 22/07/2021.
 //
 
-import CachedAsyncImage
 import SwiftUI
 
 struct URLMemoryCell: View {
+    @State private var imageOpacity: Double = 0
+
     let viewModel: ViewModel
 
     var body: some View {
@@ -22,20 +23,16 @@ struct URLMemoryCell: View {
     }
 
     private func image(_ url: URL?) -> some View {
-        CachedAsyncImage(url: url) { phase in
-            switch phase {
-            case .empty:
-                PlaceholderView(color: .white)
-            case let .success(image):
+        AppAsyncImage(
+            url: url,
+            image: { image in
                 image
                     .resizable()
                     .scaledToFill()
-            case .failure:
-                domain(viewModel.domain)
-            @unknown default:
-                EmptyView()
-            }
-        }
+            },
+            placeholder: { PlaceholderView(color: .white) },
+            error: { domain(viewModel.domain) }
+        )
         .expanded()
     }
 

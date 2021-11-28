@@ -2,11 +2,10 @@
 //  Created by Kamil Powałowski on 16/10/2021.
 //
 
-import CachedAsyncImage
-import NukeUI
 import SwiftUI
 
 struct MemoryImage: View {
+    @State private var imageOpacity: Double = 0
     @Environment(\.colorScheme) private var colorScheme
 
     private let url: URL?
@@ -30,20 +29,21 @@ struct MemoryImage: View {
     }
 
     var body: some View {
-        CachedAsyncImage(url: url) { phase in
-            switch phase {
-            case .empty:
-                PlaceholderView(color: .primary)
-            case let .success(image):
+        AppAsyncImage(
+            url: url,
+            transaction: .init(animation: .none),
+            image: { image in
                 image
                     .resizable()
                     .scaledToFill()
-            case .failure:
-                domainView
-            @unknown default:
-                EmptyView()
-            }
-        }
+            },
+
+            placeholder: {
+                PlaceholderView(color: .primary)
+                    .onAppear(perform: onAppear)
+            },
+            error: { domainView }
+        )
         .frame(
             minWidth: width ?? 0, maxWidth: width ?? .infinity,
             minHeight: height ?? 0, maxHeight: height ?? .infinity
