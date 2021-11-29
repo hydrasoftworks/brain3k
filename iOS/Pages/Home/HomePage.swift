@@ -6,12 +6,9 @@ import SwiftDux
 import SwiftUI
 
 struct HomePage: View {
-    @Environment(\.verticalSizeClass) private var verticalSizeClass
-    @Environment(\.horizontalSizeClass) private var horizontalSizeClass
-
     var body: some View {
         Group {
-            if verticalSizeClass == .regular, horizontalSizeClass == .regular {
+            if UIDevice.current.userInterfaceIdiom == .pad {
                 pad
             } else {
                 phone

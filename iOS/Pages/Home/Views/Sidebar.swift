@@ -14,9 +14,9 @@ struct Sidebar: View {
     var body: some View {
         List {
             NavigationLink(
-                destination: MemoriesPageConnector(),
                 tag: Option.memories,
-                selection: $selected
+                selection: $selected,
+                destination: { MemoriesPageConnector() }
             ) {
                 Label(
                     L10n.MemoriesPage.title,
@@ -24,9 +24,9 @@ struct Sidebar: View {
                 )
             }
             NavigationLink(
-                destination: SettingsPage(),
                 tag: Option.settings,
-                selection: $selected
+                selection: $selected,
+                destination: { SettingsPage() }
             ) {
                 Label(
                     L10n.SettingsPage.title,

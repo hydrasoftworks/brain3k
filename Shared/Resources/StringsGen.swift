@@ -46,6 +46,10 @@ internal enum L10n {
     internal static let processing = L10n.tr("Localizable", "general.processing")
     /// Save
     internal static let save = L10n.tr("Localizable", "general.save")
+    internal enum Error {
+      /// Houston, we have a problem
+      internal static let title = L10n.tr("Localizable", "general.error.title")
+    }
   }
 
   internal enum HomePage {

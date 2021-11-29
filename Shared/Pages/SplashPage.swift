@@ -27,7 +27,7 @@ struct SplashPage: ConnectableView {
             }
         }
         .alert(
-            "An error occurred.",
+            L10n.General.Error.title,
             isPresented: viewModel.$hasMessage,
             presenting: viewModel.message,
             actions: { _ in
