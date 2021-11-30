@@ -35,7 +35,7 @@ private struct PrimaryButtonStyle: ButtonStyle {
     }
 
     struct PrimaryButtonStyleView: View {
-        @Environment(\.isEnabled) var isEnabled
+        @Environment(\.isEnabled) private var isEnabled
 
         let configuration: PrimaryButtonStyle.Configuration
 

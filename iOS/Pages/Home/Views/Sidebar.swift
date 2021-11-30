@@ -9,7 +9,7 @@ private enum Option: String {
 }
 
 struct Sidebar: View {
-    @SwiftUI.State private var selected: Option? = Option.memories
+    @State private var selected: Option? = Option.memories
 
     var body: some View {
         List {

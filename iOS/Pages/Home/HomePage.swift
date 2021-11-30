@@ -6,17 +6,36 @@ import SwiftDux
 import SwiftUI
 
 struct HomePage: View {
+    @Environment(\.scenePhase) private var scenePhase
+    @Environment(\.verticalSizeClass) private var verticalSizeClass
+    @Environment(\.horizontalSizeClass) private var horizontalSizeClass
+
+    private static var lastIdiom: UIUserInterfaceIdiom?
+
     var body: some View {
-        Group {
-            if UIDevice.current.userInterfaceIdiom == .pad {
-                pad
-            } else {
-                phone
-            }
+        content
+            .accentColor(Color.brand)
+            .onAppear(dispatch: MemoriesAction.watchAll())
+            .onAppear(dispatch: AccountAction.watchUser())
+    }
+
+    @ViewBuilder
+    private var content: some View {
+        if shouldDisplayPadVersion {
+            pad
+                .onAppear { HomePage.lastIdiom = .pad }
+        } else {
+            phone
+                .onAppear { HomePage.lastIdiom = .phone }
         }
-        .accentColor(Color.brand)
-        .onAppear(dispatch: MemoriesAction.watchAll())
-        .onAppear(dispatch: AccountAction.watchUser())
+    }
+
+    private var pad: some View {
+        NavigationView {
+            Sidebar()
+            MemoriesPageConnector()
+            MemoryPageConnector(memoryId: nil)
+        }
     }
 
     private var phone: some View {
@@ -43,11 +62,14 @@ struct HomePage: View {
         .materialBackground()
     }
 
-    private var pad: some View {
-        NavigationView {
-            Sidebar()
-            MemoriesPageConnector()
-            MemoryPageConnector(memoryId: nil)
-        }
+    /*
+     On iPad, when the app is minimized, for a moment,
+     horizontalSizeClass equals .compact, which resets the navigation tree.
+     This repository https://github.com/pd95/SwiftUI-Sidebar contains an example
+     with fully working implementation, but it requires a lot of work.
+     */
+    private var shouldDisplayPadVersion: Bool {
+        (verticalSizeClass == .regular && horizontalSizeClass == .regular)
+            || (HomePage.lastIdiom == .pad && scenePhase == .background)
     }
 }
