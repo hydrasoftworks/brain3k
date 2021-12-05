@@ -16,8 +16,8 @@ struct Memory: Identifiable, Codable, Equatable {
     let title: String?
     let notes: String?
     let description: String?
+    let neurons: [String]?
     let tags: [String]?
-    let customTags: [String]?
     let processed: Bool
 
     var thumbnailURL: URL? {
@@ -37,8 +37,8 @@ struct Memory: Identifiable, Codable, Equatable {
         title: String? = nil,
         notes: String? = nil,
         description: String? = nil,
+        neurons: [String]? = nil,
         tags: [String]? = nil,
-        customTags: [String]? = nil,
         processed: Bool = false
     ) {
         self.id = id
@@ -50,8 +50,8 @@ struct Memory: Identifiable, Codable, Equatable {
         self.title = title
         self.notes = notes
         self.description = description
+        self.neurons = neurons
         self.tags = tags
-        self.customTags = customTags
         self.processed = processed
     }
 }

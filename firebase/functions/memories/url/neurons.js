@@ -19,11 +19,11 @@ export default async function (html) {
 
   const keywords = result.data?.keywords?.map((keyword) => keyword.stem) ?? [];
   const phrases = result.data?.keyphrases?.map((phrase) => phrase.value) ?? [];
-  const tags = [...keywords, ...phrases];
+  const neurons = [...keywords, ...phrases];
 
   return JSON.parse(
     JSON.stringify({
-      tags: [...new Set(tags)],
+      neurons: [...new Set(neurons)],
     }),
   );
 }

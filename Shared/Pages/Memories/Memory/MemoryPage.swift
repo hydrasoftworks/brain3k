@@ -106,7 +106,7 @@ struct MemoryPage: View {
     }
 
     private var tags: some View {
-        TagsView(tags: viewModel.customTags)
+        TagsView(tags: viewModel.tags)
     }
 
     private var notes: some View {
@@ -165,7 +165,7 @@ struct MemoryPage: View {
         let valueURL: URL?
         let domain: String?
         let notes: String?
-        let customTags: [String]?
+        let tags: [String]?
         let delete: () -> Void
         let refresh: () -> Void
         let getDownloadURL: () -> Void
@@ -180,7 +180,7 @@ struct MemoryPage: View {
                 && lhs.valueURL == rhs.valueURL
                 && lhs.domain == rhs.domain
                 && lhs.notes == rhs.notes
-                && lhs.customTags == rhs.customTags
+                && lhs.tags == rhs.tags
         }
     }
 }

@@ -3,7 +3,7 @@ import admin from "firebase-admin";
 import axios from "axios";
 import functions from "firebase-functions";
 import getMetadata from "./metadata.js";
-import getTags from "./tags.js";
+import getNeurons from "./neurons.js";
 import getThumbnail from "./thumbnail.js";
 
 export default functions
@@ -19,7 +19,7 @@ export default functions
     const url = data.value;
     const html = await readHTMLFromURL(url);
     const metadata = await getMetadata(url, html);
-    const tags = await getTags(html);
+    const neurons = await getNeurons(html);
 
     let thumbnail = {};
     if (metadata.thumbnail === undefined) {
@@ -29,7 +29,7 @@ export default functions
     data = {
       ...data,
       ...metadata,
-      ...tags,
+      ...neurons,
       ...thumbnail,
     };
 

@@ -12,12 +12,12 @@ extension Memory: Fuseable {
             FuseProperty(name: notes ?? "", weight: 0.2),
             FuseProperty(name: value, weight: 0.05),
         ]
-        let tagWeight = 0.2 / Double(tags?.count ?? 1)
+        let neuronWeight = 0.2 / Double(neurons?.count ?? 1)
+        let neuronProperties = neurons?.map { FuseProperty(name: $0, weight: neuronWeight) }
+
+        let tagWeight = 0.25 / Double(tags?.count ?? 1)
         let tagProperties = tags?.map { FuseProperty(name: $0, weight: tagWeight) }
 
-        let customTagWeight = 0.25 / Double(customTags?.count ?? 1)
-        let customTagProperties = customTags?.map { FuseProperty(name: $0, weight: customTagWeight) }
-
-        return properties + (tagProperties ?? []) + (customTagProperties ?? [])
+        return properties + (neuronProperties ?? []) + (tagProperties ?? [])
     }
 }
