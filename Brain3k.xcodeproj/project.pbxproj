@@ -82,6 +82,12 @@
 		8E6821B826A9E43800B2DACB /* PlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6821B626A9E43800B2DACB /* PlaceholderView.swift */; };
 		8E6821BA26A9E6F200B2DACB /* URLMemoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6821B926A9E6F200B2DACB /* URLMemoryCell.swift */; };
 		8E6821BB26A9E6F200B2DACB /* URLMemoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6821B926A9E6F200B2DACB /* URLMemoryCell.swift */; };
+		8E6A200C275E9733002EA4CE /* MemoriesAction+AddTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6A200B275E9733002EA4CE /* MemoriesAction+AddTag.swift */; };
+		8E6A200D275E9733002EA4CE /* MemoriesAction+AddTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6A200B275E9733002EA4CE /* MemoriesAction+AddTag.swift */; };
+		8E6A200F275E9C1F002EA4CE /* MemoriesAction+Wrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6A200E275E9C1E002EA4CE /* MemoriesAction+Wrapper.swift */; };
+		8E6A2010275E9C1F002EA4CE /* MemoriesAction+Wrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6A200E275E9C1E002EA4CE /* MemoriesAction+Wrapper.swift */; };
+		8E6A2012275EA089002EA4CE /* MemoriesAction+RemoveTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6A2011275EA089002EA4CE /* MemoriesAction+RemoveTag.swift */; };
+		8E6A2013275EA089002EA4CE /* MemoriesAction+RemoveTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6A2011275EA089002EA4CE /* MemoriesAction+RemoveTag.swift */; };
 		8E73D6DA272C971C0037DE6B /* SignPageBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E73D6D9272C971C0037DE6B /* SignPageBase.swift */; };
 		8E73D6DF272C9A920037DE6B /* EmailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E73D6DE272C9A920037DE6B /* EmailTextField.swift */; };
 		8E73D6E5272C9B4D0037DE6B /* URLTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E73D6E4272C9B4D0037DE6B /* URLTextField.swift */; };
@@ -426,6 +432,9 @@
 		8E66FEA826A8B5E400838C70 /* MemoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryCell.swift; sourceTree = "<group>"; };
 		8E6821B626A9E43800B2DACB /* PlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderView.swift; sourceTree = "<group>"; };
 		8E6821B926A9E6F200B2DACB /* URLMemoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLMemoryCell.swift; sourceTree = "<group>"; };
+		8E6A200B275E9733002EA4CE /* MemoriesAction+AddTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MemoriesAction+AddTag.swift"; sourceTree = "<group>"; };
+		8E6A200E275E9C1E002EA4CE /* MemoriesAction+Wrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MemoriesAction+Wrapper.swift"; sourceTree = "<group>"; };
+		8E6A2011275EA089002EA4CE /* MemoriesAction+RemoveTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MemoriesAction+RemoveTag.swift"; sourceTree = "<group>"; };
 		8E73D6D5272C93150037DE6B /* Brain3k.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Brain3k.entitlements; sourceTree = "<group>"; };
 		8E73D6D9272C971C0037DE6B /* SignPageBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignPageBase.swift; sourceTree = "<group>"; };
 		8E73D6DE272C9A920037DE6B /* EmailTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailTextField.swift; sourceTree = "<group>"; };
@@ -972,6 +981,7 @@
 		8E776FF726A3253B00D97F52 /* Actions */ = {
 			isa = PBXGroup;
 			children = (
+				8E6A200E275E9C1E002EA4CE /* MemoriesAction+Wrapper.swift */,
 				8EAAD9EA26C5A525007C2973 /* MemoriesAction+WatchAll.swift */,
 				8E776FF826A3257B00D97F52 /* MemoriesAction+GetAll.swift */,
 				8EA1006B26ADB348007AFAA9 /* MemoriesAction+CreateURL.swift */,
@@ -979,6 +989,8 @@
 				8EB7470A2706588B004F4F18 /* MemoriesAction+Delete.swift */,
 				8E3436F82708A2FA00FA1CB0 /* MemoriesAction+Refresh.swift */,
 				8E58B8D7274935F3003FB391 /* MemoriesAction+UpdateNotes.swift */,
+				8E6A200B275E9733002EA4CE /* MemoriesAction+AddTag.swift */,
+				8E6A2011275EA089002EA4CE /* MemoriesAction+RemoveTag.swift */,
 			);
 			path = Actions;
 			sourceTree = "<group>";
@@ -1733,6 +1745,7 @@
 				8E776FF926A3257B00D97F52 /* MemoriesAction+GetAll.swift in Sources */,
 				8E9EEBA326F280C400106FCD /* MemoriesAction+Search.swift in Sources */,
 				8EA4D28126939DE100C0A037 /* EmailTextField.swift in Sources */,
+				8E6A200C275E9733002EA4CE /* MemoriesAction+AddTag.swift in Sources */,
 				8EA1D320271C699A0060BAA9 /* MemoriesPageConnector.swift in Sources */,
 				8E92A7E726A0D04100BAED7F /* AccountAction+SignIn.swift in Sources */,
 				8EBC051B2699C065008B2478 /* AnyPublisher+Empty.swift in Sources */,
@@ -1820,6 +1833,7 @@
 				8E8835B926B08DCF00EE0234 /* AddMemoryPage.swift in Sources */,
 				8ED3821326F767CB0003D4F3 /* LibrariesService.swift in Sources */,
 				8E3436F527089E7200FA1CB0 /* MemoryType.swift in Sources */,
+				8E6A200F275E9C1F002EA4CE /* MemoriesAction+Wrapper.swift in Sources */,
 				8E6821BA26A9E6F200B2DACB /* URLMemoryCell.swift in Sources */,
 				8E5D7D1626CC523D009024A0 /* StorageAction+GetDownloadURL.swift in Sources */,
 				8EBC051E2699C10C008B2478 /* UnverifiedEmailPage.swift in Sources */,
@@ -1831,6 +1845,7 @@
 				8EC607782688BB3E006ED3C1 /* MemoriesReducer.swift in Sources */,
 				8EC607712688BA3A006ED3C1 /* AppReducer.swift in Sources */,
 				8E776FFC26A326C400D97F52 /* MemoriesService.swift in Sources */,
+				8E6A2012275EA089002EA4CE /* MemoriesAction+RemoveTag.swift in Sources */,
 				8E15375526FF3F2400D3232F /* MemoryPageConnector.swift in Sources */,
 				8E8DF14D27024B3700CA0EBF /* AccountAction+GenerateNonce.swift in Sources */,
 			);
@@ -1844,6 +1859,7 @@
 				8E776FFA26A3257B00D97F52 /* MemoriesAction+GetAll.swift in Sources */,
 				8E9EEBA426F280C400106FCD /* MemoriesAction+Search.swift in Sources */,
 				8EA1D321271C699A0060BAA9 /* MemoriesPageConnector.swift in Sources */,
+				8E6A200D275E9733002EA4CE /* MemoriesAction+AddTag.swift in Sources */,
 				8E92A7E826A0D04100BAED7F /* AccountAction+SignIn.swift in Sources */,
 				8EBC051C2699C065008B2478 /* AnyPublisher+Empty.swift in Sources */,
 				8E3436F227089D4200FA1CB0 /* Memory+CopyWith.swift in Sources */,
@@ -1931,6 +1947,7 @@
 				8E3436F627089E7200FA1CB0 /* MemoryType.swift in Sources */,
 				8E6821BB26A9E6F200B2DACB /* URLMemoryCell.swift in Sources */,
 				8E5D7D1726CC523D009024A0 /* StorageAction+GetDownloadURL.swift in Sources */,
+				8E6A2010275E9C1F002EA4CE /* MemoriesAction+Wrapper.swift in Sources */,
 				8EBC051F2699C10C008B2478 /* UnverifiedEmailPage.swift in Sources */,
 				8E26236B27160A630092B6CE /* AccountAction+Delete.swift in Sources */,
 				8E73D70D272EE7900037DE6B /* AppConfiguration.swift in Sources */,
@@ -1942,6 +1959,7 @@
 				8EC607792688BB3E006ED3C1 /* MemoriesReducer.swift in Sources */,
 				8EC607722688BA3A006ED3C1 /* AppReducer.swift in Sources */,
 				8E776FFD26A326C400D97F52 /* MemoriesService.swift in Sources */,
+				8E6A2013275EA089002EA4CE /* MemoriesAction+RemoveTag.swift in Sources */,
 				8E15375626FF3F2400D3232F /* MemoryPageConnector.swift in Sources */,
 				8E8DF14E27024B3700CA0EBF /* AccountAction+GenerateNonce.swift in Sources */,
 			);

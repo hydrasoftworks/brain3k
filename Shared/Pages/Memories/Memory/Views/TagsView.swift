@@ -8,18 +8,30 @@ struct TagsView: View {
     private let addTagButtonId: String
     private let tags: [String]
 
-    init(tags: [String]?) {
+    private let addTag: (String) -> Void
+    private let deleteTag: (String) -> Void
+
+    init(
+        tags: [String]?,
+        addTag: @escaping (String) -> Void,
+        deleteTag: @escaping (String) -> Void
+    ) {
         addTagButtonId = UUID().uuidString
         self.tags = (tags ?? []) + [addTagButtonId]
+        self.addTag = addTag
+        self.deleteTag = deleteTag
     }
 
     var body: some View {
         VStack(alignment: .leading) {
             Text(L10n.MemoryPage.Label.tags)
                 .font(.caption)
-            AutoWrap(tags, id: \.self, vSpacing: 6, hSpacing: 6) { text in
-                if text != addTagButtonId {
-                    Tag(text: text)
+            AutoWrap(tags, id: \.self, vSpacing: 6, hSpacing: 6) { tag in
+                if tag != addTagButtonId {
+                    Tag(
+                        text: tag,
+                        deleteAction: { deleteTag(tag) }
+                    )
                 } else {
                     AddTagButton()
                 }
@@ -33,6 +45,7 @@ struct TagsView: View {
 
 private struct Tag: View {
     let text: String
+    let deleteAction: () -> Void
 
     public var body: some View {
         HStack(spacing: 4) {
@@ -44,7 +57,7 @@ private struct Tag: View {
             }
             .accessibilityLabel(text)
 
-            Button(action: {}) {
+            Button(action: deleteAction) {
                 Label(
                     L10n.MemoryPage.Button.deleteTag,
                     systemImage: "xmark.circle.fill"

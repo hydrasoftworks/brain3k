@@ -1,19 +1,25 @@
 //
-//  Created by Kamil Powałowski on 30/09/2021.
+//  Created by Kamil Powałowski on 06/12/2021.
 //
 
 import Combine
+import Foundation
 import SwiftDux
 
 extension MemoriesAction {
-    static func delete(
+    static func addTag(
         memory: Memory?,
+        tag: String,
         _ memoriesService: MemoriesService = MemoriesService()
     ) -> ActionPlan<AppState> {
         wrapper(memory: memory) { box in
-            memoriesService.delete(
+            var tags = Set(memory?.tags ?? [])
+            tags.insert(tag)
+
+            return memoriesService.update(
                 memoryWithId: box.memoryId,
-                from: box.account.id
+                withTags: tags.sorted(),
+                on: box.account.id
             )
             .mapToEmptyResult(ofType: Action.self)
             .catch { Just(MessageAction.show(.error($0.message))) }

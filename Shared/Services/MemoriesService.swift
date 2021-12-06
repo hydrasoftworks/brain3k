@@ -86,6 +86,23 @@ class MemoriesService {
         .mapToAppError()
     }
 
+    func update(
+        memoryWithId memoryId: String,
+        withTags tags: [String]?,
+        on accountId: String
+    ) -> AnyPublisher<Void, AppError> {
+        let document = collection(of: accountId).document(memoryId)
+        return Future<Void, Error> { promise in
+            document.updateData([
+                "tags": tags ?? FieldValue.delete(),
+                "updatedAt": FieldValue.serverTimestamp(),
+            ])
+            promise(.success(()))
+        }
+        .eraseToAnyPublisher()
+        .mapToAppError()
+    }
+
     func delete(memoryWithId memoryId: String, from accountId: String) -> AnyPublisher<Void, AppError> {
         let document = collection(of: accountId).document(memoryId)
         return Future<Void, Error> { promise in

@@ -106,7 +106,11 @@ struct MemoryPage: View {
     }
 
     private var tags: some View {
-        TagsView(tags: viewModel.tags)
+        TagsView(
+            tags: viewModel.tags,
+            addTag: viewModel.addTag,
+            deleteTag: viewModel.deleteTag
+        )
     }
 
     private var notes: some View {
@@ -170,6 +174,8 @@ struct MemoryPage: View {
         let refresh: () -> Void
         let getDownloadURL: () -> Void
         let updateNotes: (String) -> Void
+        let addTag: (String) -> Void
+        let deleteTag: (String) -> Void
 
         static func == (lhs: ViewModel, rhs: ViewModel) -> Bool {
             lhs.memoryExist == rhs.memoryExist

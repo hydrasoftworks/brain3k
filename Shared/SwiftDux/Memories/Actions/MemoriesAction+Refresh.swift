@@ -11,15 +11,8 @@ extension MemoriesAction {
         memory: Memory?,
         _ memoriesService: MemoriesService = MemoriesService()
     ) -> ActionPlan<AppState> {
-        ActionPlan<AppState> { store -> AnyPublisher<Action, Never> in
-            guard let memory = memory,
-                  let memoryId = memory.id,
-                  let account = store.state.accountState.account
-            else {
-                return .empty
-            }
-
-            let updatedMemory = memory
+        wrapper(memory: memory) { box in
+            let updatedMemory = box.memory
                 .copyWithNil(
                     updatedAt: true,
                     thumbnail: true,
@@ -30,9 +23,9 @@ extension MemoriesAction {
                 .copyWith(processed: false)
 
             return memoriesService.update(
-                memoryWithId: memoryId,
+                memoryWithId: box.memoryId,
                 with: updatedMemory,
-                on: account.id
+                on: box.account.id
             )
             .mapToEmptyResult(ofType: Action.self)
             .catch { Just(MessageAction.show(.error($0.message))) }

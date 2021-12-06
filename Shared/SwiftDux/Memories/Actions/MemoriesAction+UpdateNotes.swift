@@ -12,17 +12,11 @@ extension MemoriesAction {
         notes: String,
         _ memoriesService: MemoriesService = MemoriesService()
     ) -> ActionPlan<AppState> {
-        ActionPlan<AppState> { store -> AnyPublisher<Action, Never> in
-            guard let memoryId = memory?.id,
-                  let account = store.state.accountState.account
-            else {
-                return .empty
-            }
-
-            return memoriesService.update(
-                memoryWithId: memoryId,
+        wrapper(memory: memory) { box in
+            memoriesService.update(
+                memoryWithId: box.memoryId,
                 withNotes: notes.isEmpty ? nil : notes,
-                on: account.id
+                on: box.account.id
             )
             .mapToEmptyResult(ofType: Action.self)
             .catch { Just(MessageAction.show(.error($0.message))) }
