@@ -48,6 +48,7 @@
 "memory_page.label.tags" = "Tags";
 "memory_page.label.notes" = "Notes";
 "memory_page.label.notes_placeholder" = "Press to add notes";
+"memory_page.text_field.add_tag_placeholder" = "Press return to save";
 "memory_page.empty.not_selected" = "No memory selected";
 "add_memory_page.title" = "Add Memory";
 "add_memory_page.text_field.placeholder" = "Paste URL here";

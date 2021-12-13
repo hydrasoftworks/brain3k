@@ -107,6 +107,10 @@ internal enum L10n {
       /// Tags
       internal static let tags = L10n.tr("Localizable", "memory_page.label.tags")
     }
+    internal enum TextField {
+      /// Press return to save
+      internal static let addTagPlaceholder = L10n.tr("Localizable", "memory_page.text_field.add_tag_placeholder")
+    }
   }
 
   internal enum PasswordTextField {

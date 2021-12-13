@@ -7,18 +7,20 @@ import Foundation
 import SwiftDux
 
 extension MemoriesAction {
-    static func removeTag(
+    static func addTag(
         memory: Memory?,
         tag: String,
         _ memoriesService: MemoriesService = MemoriesService()
     ) -> ActionPlan<AppState> {
         wrapper(memory: memory) { box in
-            var tags = memory?.tags ?? []
-            tags.removeAll(where: { $0 == tag })
+            var tags = Set(memory?.tags ?? [])
+            tags.insert(tag)
 
             return memoriesService.update(
                 memoryWithId: box.memoryId,
-                withTags: tags.isEmpty ? nil : tags,
+                withTags: tags.sorted(by: { lhs, rhs in
+                    lhs.localizedStandardCompare(rhs) == .orderedAscending
+                }),
                 on: box.account.id
             )
             .mapToEmptyResult(ofType: Action.self)

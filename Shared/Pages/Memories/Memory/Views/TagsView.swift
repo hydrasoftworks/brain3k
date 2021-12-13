@@ -26,18 +26,25 @@ struct TagsView: View {
         VStack(alignment: .leading) {
             Text(L10n.MemoryPage.Label.tags)
                 .font(.caption)
-            AutoWrap(tags, id: \.self, vSpacing: 6, hSpacing: 6) { tag in
-                if tag != addTagButtonId {
-                    Tag(
-                        text: tag,
-                        deleteAction: { deleteTag(tag) }
-                    )
-                } else {
-                    AddTagButton()
+            FlexibleView(
+                data: tags,
+                spacing: 6,
+                alignment: .leading
+            ) { tag in
+                Group {
+                    if tag != addTagButtonId {
+                        Tag(
+                            text: tag,
+                            deleteAction: { deleteTag(tag) }
+                        )
+                    } else {
+                        AddTagButton(addTag: addTag)
+                    }
                 }
             }
             .font(.body)
         }
+        .frame(maxWidth: .infinity)
         .padding(.horizontal)
         .padding(.bottom, 8)
     }
@@ -71,23 +78,6 @@ private struct Tag: View {
         .buttonStyle(PlainButtonStyle())
         .foregroundColor(Color.brandText)
         .background(Color.brand.opacity(0.7))
-        .cornerRadius(4)
-    }
-}
-
-private struct AddTagButton: View {
-    public var body: some View {
-        Button(action: {}) {
-            HStack(spacing: 4) {
-                Image(systemName: "plus")
-                Text(L10n.MemoryPage.Button.addTag)
-            }
-            .contentShape(Rectangle())
-        }
-        .accessibilityLabel(L10n.MemoryPage.Button.addTag)
-        .buttonStyle(PlainButtonStyle())
-        .foregroundColor(Color.brand.opacity(0.7))
-        .padding(.vertical, 4)
         .cornerRadius(4)
     }
 }
