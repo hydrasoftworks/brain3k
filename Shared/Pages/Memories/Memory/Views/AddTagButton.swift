@@ -19,6 +19,7 @@ struct AddTagButton: View {
                 button
             }
         }
+        .frame(width: 160, alignment: .leading)
     }
 
     private var button: some View {
@@ -44,17 +45,27 @@ struct AddTagButton: View {
         TextField(
             L10n.MemoryPage.TextField.addTagPlaceholder,
             text: $text,
-            onCommit: handleCommit
+            onCommit: checkAndAddTag
         )
         .onReceive(Just(text)) { _ in limitText(16) }
         .focusOnStart()
         .iOS { $0.padding(.vertical, 3) }
-        .macOS { $0.padding(.vertical, 1.5) }
+        .macOS {
+            #if os(macOS)
+                $0
+                    .padding(.vertical, 1.5)
+                    .onExitCommand(perform: exit)
+            #endif
+        }
     }
 
-    private func handleCommit() {
+    private func checkAndAddTag() {
         let tag = text.trim()
         if !tag.isEmpty { addTag(tag) }
+        exit()
+    }
+
+    private func exit() {
         text = ""
         withAnimation { editMode = false }
     }
