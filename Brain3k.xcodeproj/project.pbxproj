@@ -20,6 +20,10 @@
 		8E2E27B5276778D600E33883 /* FlexibleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2E27B3276778D600E33883 /* FlexibleView.swift */; };
 		8E2E27B827677CC000E33883 /* PlatformModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2E27B727677CC000E33883 /* PlatformModifier.swift */; };
 		8E2E27B927677CC000E33883 /* PlatformModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2E27B727677CC000E33883 /* PlatformModifier.swift */; };
+		8E2E27BC2768C3F400E33883 /* RevenueCat in Frameworks */ = {isa = PBXBuildFile; productRef = 8E2E27BB2768C3F400E33883 /* RevenueCat */; };
+		8E2E27BE2768C42E00E33883 /* RevenueCat in Frameworks */ = {isa = PBXBuildFile; productRef = 8E2E27BD2768C42E00E33883 /* RevenueCat */; };
+		8E2E27C02768C44800E33883 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E2E27BF2768C44800E33883 /* StoreKit.framework */; };
+		8E2E27C22768C46100E33883 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E2E27C12768C46100E33883 /* StoreKit.framework */; };
 		8E3436F127089D4200FA1CB0 /* Memory+CopyWith.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3436F027089D4200FA1CB0 /* Memory+CopyWith.swift */; };
 		8E3436F227089D4200FA1CB0 /* Memory+CopyWith.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3436F027089D4200FA1CB0 /* Memory+CopyWith.swift */; };
 		8E3436F527089E7200FA1CB0 /* MemoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3436F427089E7200FA1CB0 /* MemoryType.swift */; };
@@ -405,6 +409,8 @@
 		8E2E27B027675F6700E33883 /* AddTagButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTagButton.swift; sourceTree = "<group>"; };
 		8E2E27B3276778D600E33883 /* FlexibleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexibleView.swift; sourceTree = "<group>"; };
 		8E2E27B727677CC000E33883 /* PlatformModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatformModifier.swift; sourceTree = "<group>"; };
+		8E2E27BF2768C44800E33883 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		8E2E27C12768C46100E33883 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.0.sdk/System/Library/Frameworks/StoreKit.framework; sourceTree = DEVELOPER_DIR; };
 		8E3436F027089D4200FA1CB0 /* Memory+CopyWith.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Memory+CopyWith.swift"; sourceTree = "<group>"; };
 		8E3436F427089E7200FA1CB0 /* MemoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryType.swift; sourceTree = "<group>"; };
 		8E3436F82708A2FA00FA1CB0 /* MemoriesAction+Refresh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MemoriesAction+Refresh.swift"; sourceTree = "<group>"; };
@@ -606,6 +612,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E79C13526961891002D2A8B /* MGFlipView in Frameworks */,
+				8E2E27C22768C46100E33883 /* StoreKit.framework in Frameworks */,
 				8EF9352826AC1B7300176AF4 /* FirebaseAuth in Frameworks */,
 				8EC607672688B86B006ED3C1 /* SwiftDux in Frameworks */,
 				8E7DEC752753D453005BE9B0 /* NukeUI in Frameworks */,
@@ -614,6 +621,7 @@
 				8E50D87026BB33E30075C08C /* IrregularGradient in Frameworks */,
 				8E9EEBAC26F2888A00106FCD /* Fuse in Frameworks */,
 				8EF9352C26AC1B7300176AF4 /* FirebaseStorageSwift-Beta in Frameworks */,
+				8E2E27BC2768C3F400E33883 /* RevenueCat in Frameworks */,
 				8E4A9CBC2752C58B007D32C9 /* CachedAsyncImage in Frameworks */,
 				8EC607862688BED5006ED3C1 /* SwiftyBeaver in Frameworks */,
 				8E628D5F2735DB9F004BC88C /* Colorful in Frameworks */,
@@ -632,8 +640,10 @@
 				8E9EEBAE26F2889500106FCD /* Fuse in Frameworks */,
 				8E79C14F269791F4002D2A8B /* ValidatedPropertyKit in Frameworks */,
 				8E628D612735DBAC004BC88C /* Colorful in Frameworks */,
+				8E2E27BE2768C42E00E33883 /* RevenueCat in Frameworks */,
 				8E7DEC772753D46D005BE9B0 /* NukeUI in Frameworks */,
 				8EC6078A2688BEE4006ED3C1 /* SwiftyBeaver in Frameworks */,
+				8E2E27C02768C44800E33883 /* StoreKit.framework in Frameworks */,
 				8E4A9CBE2752C598007D32C9 /* CachedAsyncImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1286,6 +1296,8 @@
 		8EC607622688B6C2006ED3C1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8E2E27C12768C46100E33883 /* StoreKit.framework */,
+				8E2E27BF2768C44800E33883 /* StoreKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1500,6 +1512,7 @@
 				8E628D5E2735DB9F004BC88C /* Colorful */,
 				8E4A9CBB2752C58B007D32C9 /* CachedAsyncImage */,
 				8E7DEC742753D453005BE9B0 /* NukeUI */,
+				8E2E27BB2768C3F400E33883 /* RevenueCat */,
 			);
 			productName = "Brain3k (iOS)";
 			productReference = 8EC607472688AFD1006ED3C1 /* Brain3k.app */;
@@ -1532,6 +1545,7 @@
 				8E628D602735DBAC004BC88C /* Colorful */,
 				8E4A9CBD2752C598007D32C9 /* CachedAsyncImage */,
 				8E7DEC762753D46D005BE9B0 /* NukeUI */,
+				8E2E27BD2768C42E00E33883 /* RevenueCat */,
 			);
 			productName = "Brain3k (macOS)";
 			productReference = 8EC6074D2688AFD1006ED3C1 /* Brain3k.app */;
@@ -1614,6 +1628,7 @@
 				8E628D5D2735DB9E004BC88C /* XCRemoteSwiftPackageReference "Colorful" */,
 				8E4A9CBA2752C58B007D32C9 /* XCRemoteSwiftPackageReference "SwiftUI-CachedAsyncImage" */,
 				8E7DEC732753D453005BE9B0 /* XCRemoteSwiftPackageReference "NukeUI" */,
+				8E2E27BA2768C3F400E33883 /* XCRemoteSwiftPackageReference "purchases-ios" */,
 			);
 			productRefGroup = 8EC607482688AFD1006ED3C1 /* Products */;
 			projectDirPath = "";
@@ -2552,6 +2567,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		8E2E27BA2768C3F400E33883 /* XCRemoteSwiftPackageReference "purchases-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RevenueCat/purchases-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
 		8E3810E2269CCF5800ED3851 /* XCRemoteSwiftPackageReference "Quick" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Quick/Quick";
@@ -2667,6 +2690,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		8E2E27BB2768C3F400E33883 /* RevenueCat */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8E2E27BA2768C3F400E33883 /* XCRemoteSwiftPackageReference "purchases-ios" */;
+			productName = RevenueCat;
+		};
+		8E2E27BD2768C42E00E33883 /* RevenueCat */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8E2E27BA2768C3F400E33883 /* XCRemoteSwiftPackageReference "purchases-ios" */;
+			productName = RevenueCat;
+		};
 		8E3810E3269CCF5800ED3851 /* Quick */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 8E3810E2269CCF5800ED3851 /* XCRemoteSwiftPackageReference "Quick" */;

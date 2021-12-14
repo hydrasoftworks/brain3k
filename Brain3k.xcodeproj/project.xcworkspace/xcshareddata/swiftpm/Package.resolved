@@ -200,6 +200,15 @@
         }
       },
       {
+        "package": "RevenueCat",
+        "repositoryURL": "https://github.com/RevenueCat/purchases-ios.git",
+        "state": {
+          "branch": null,
+          "revision": "05b148ee38be1f719b49de25336b7b36a90c2ef1",
+          "version": "4.0.0"
+        }
+      },
+      {
         "package": "Quick",
         "repositoryURL": "https://github.com/Quick/Quick",
         "state": {
