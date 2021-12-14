@@ -14,7 +14,14 @@ struct AddTagButton: View {
     var body: some View {
         Group {
             if editMode {
-                textField
+                #if os(macOS)
+                    textField
+                        .padding(.vertical, 1.5)
+                        .onExitCommand(perform: exit)
+                #else
+                    textField
+                        .padding(.vertical, 3)
+                #endif
             } else {
                 button
             }
@@ -49,14 +56,6 @@ struct AddTagButton: View {
         )
         .onReceive(Just(text)) { _ in limitText(16) }
         .focusOnStart()
-        .iOS { $0.padding(.vertical, 3) }
-        .macOS {
-            #if os(macOS)
-                $0
-                    .padding(.vertical, 1.5)
-                    .onExitCommand(perform: exit)
-            #endif
-        }
     }
 
     private func checkAndAddTag() {

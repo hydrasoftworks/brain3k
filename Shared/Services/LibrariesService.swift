@@ -21,7 +21,7 @@ class LibrariesService {
     func initFirebase() {
         FirebaseApp.configure()
         do {
-            try Auth.auth().useUserAccessGroup("V3QMW7D5T5.group.com.brain3k.Brain3k")
+            try Auth.auth().useUserAccessGroup("V3QMW7D5T5.com.brain3k.Brain3k.KeychainGroup")
         } catch {
             log.error("Error changing user access group: \(error)")
         }

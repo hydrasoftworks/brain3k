@@ -18,8 +18,6 @@
 		8E2E27B227675F6700E33883 /* AddTagButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2E27B027675F6700E33883 /* AddTagButton.swift */; };
 		8E2E27B4276778D600E33883 /* FlexibleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2E27B3276778D600E33883 /* FlexibleView.swift */; };
 		8E2E27B5276778D600E33883 /* FlexibleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2E27B3276778D600E33883 /* FlexibleView.swift */; };
-		8E2E27B827677CC000E33883 /* PlatformModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2E27B727677CC000E33883 /* PlatformModifier.swift */; };
-		8E2E27B927677CC000E33883 /* PlatformModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2E27B727677CC000E33883 /* PlatformModifier.swift */; };
 		8E2E27BC2768C3F400E33883 /* RevenueCat in Frameworks */ = {isa = PBXBuildFile; productRef = 8E2E27BB2768C3F400E33883 /* RevenueCat */; };
 		8E2E27BE2768C42E00E33883 /* RevenueCat in Frameworks */ = {isa = PBXBuildFile; productRef = 8E2E27BD2768C42E00E33883 /* RevenueCat */; };
 		8E2E27C02768C44800E33883 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E2E27BF2768C44800E33883 /* StoreKit.framework */; };
@@ -408,7 +406,6 @@
 		8E26236927160A630092B6CE /* AccountAction+Delete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountAction+Delete.swift"; sourceTree = "<group>"; };
 		8E2E27B027675F6700E33883 /* AddTagButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTagButton.swift; sourceTree = "<group>"; };
 		8E2E27B3276778D600E33883 /* FlexibleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexibleView.swift; sourceTree = "<group>"; };
-		8E2E27B727677CC000E33883 /* PlatformModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatformModifier.swift; sourceTree = "<group>"; };
 		8E2E27BF2768C44800E33883 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		8E2E27C12768C46100E33883 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.0.sdk/System/Library/Frameworks/StoreKit.framework; sourceTree = DEVELOPER_DIR; };
 		8E3436F027089D4200FA1CB0 /* Memory+CopyWith.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Memory+CopyWith.swift"; sourceTree = "<group>"; };
@@ -1210,7 +1207,6 @@
 				8E260FE626C2F44900715524 /* ExpandedFrame.swift */,
 				8E73D6FB272EC8A40037DE6B /* MemoryCellStyle.swift */,
 				8E58B8E3274AE399003FB391 /* FocusOnStart.swift */,
-				8E2E27B727677CC000E33883 /* PlatformModifier.swift */,
 			);
 			path = "View Modifiers";
 			sourceTree = "<group>";
@@ -1837,7 +1833,6 @@
 				8E889CF026A22D4F00F7C47C /* AccountAction+SignOut.swift in Sources */,
 				8EAAD9E826C5A3F1007C2973 /* AnyPublisher+Create.swift in Sources */,
 				8E7DEC6E2753A792005BE9B0 /* URLCache+Images.swift in Sources */,
-				8E2E27B827677CC000E33883 /* PlatformModifier.swift in Sources */,
 				8EEDD793268BCD9200F670D2 /* Account.swift in Sources */,
 				8E3927F7273D458C001DA030 /* User.swift in Sources */,
 				8E889CEB26A22A4300F7C47C /* AccountAction+SignUp.swift in Sources */,
@@ -1953,7 +1948,6 @@
 				8E73D70A272EE6940037DE6B /* JoinPage.swift in Sources */,
 				8E73D6DA272C971C0037DE6B /* SignPageBase.swift in Sources */,
 				8E7DEC6F2753A792005BE9B0 /* URLCache+Images.swift in Sources */,
-				8E2E27B927677CC000E33883 /* PlatformModifier.swift in Sources */,
 				8E3927F8273D458C001DA030 /* User.swift in Sources */,
 				8E73D703272ED3C60037DE6B /* SelectedMemoryID.swift in Sources */,
 				8E79C14426978778002D2A8B /* Message.swift in Sources */,
