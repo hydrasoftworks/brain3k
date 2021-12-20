@@ -11,6 +11,7 @@ struct User: Identifiable, Codable, Equatable {
     @ServerTimestamp var updatedAt: Date?
     let counter: Int
     let limit: Int
+    let subscription: Subscription?
 
     var canAddMemory: Bool { counter < limit }
 }

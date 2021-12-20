@@ -8,6 +8,7 @@ import SwiftUI
 struct SettingsPage: ConnectableView {
     @Environment(\.actionDispatcher) private var dispatch
     @SwiftUI.State private var confirmationIsPresented = false
+    @SwiftUI.State private var isPurchasesPresented = false
 
     private let feedbackUrl = URL(string: "https://shipright.community/brain3k")
     private let writeReviewURL = URL(string: "https://apps.apple.com/app/id1587505104?action=write-review")
@@ -16,7 +17,8 @@ struct SettingsPage: ConnectableView {
         ViewModel(
             accountStatus: state.accountState.status,
             memoriesCounter: state.accountState.user?.counter,
-            memoriesLimit: state.accountState.user?.limit
+            memoriesLimit: state.accountState.user?.limit,
+            subscription: state.accountState.user?.subscription
         )
     }
 
@@ -32,6 +34,22 @@ struct SettingsPage: ConnectableView {
             }
         }
         .navigationTitle(L10n.SettingsPage.title)
+        .sheet(
+            isPresented: $isPurchasesPresented,
+            content: { purchasedPage }
+        )
+    }
+
+    private var purchasedPage: some View {
+        #if os(iOS)
+            NavigationView {
+                PurchasesPageConnector()
+            }
+            .accentColor(Color.brand)
+        #else
+            PurchasesPageConnector()
+                .frame(width: 300)
+        #endif
     }
 
     private var accountSection: some View {
@@ -63,27 +81,25 @@ struct SettingsPage: ConnectableView {
             if let limit = viewModel.memoriesLimit {
                 Text(L10n.SettingsPage.Text.memoriesLimit(limit))
             }
-            // TODO: hide if subscription is active
-            SecondaryButton(
-                title: L10n.SettingsPage.Button.subscribe,
-                action: {
-                    // TODO: Implement action
-                }
-            )
-            // TODO: hide if subscription is active
-            SecondaryButton(
-                title: L10n.SettingsPage.Button.restoreSubscription,
-                action: {
-                    // TODO: Implement action
-                }
-            )
-            // TODO: hide if subscription is not active
-            SecondaryButton(
-                title: L10n.SettingsPage.Button.manageSubscription,
-                action: {
-                    openURL(URL(string: "https://buy.itunes.apple.com/WebObjects/MZFinance.woa/wa/manageSubscriptions"))
-                }
-            )
+            if viewModel.isSubscriptionActive {
+                SecondaryButton(
+                    title: L10n.SettingsPage.Button.manageSubscription,
+                    action: {
+                        openURL(URL(string: "https://buy.itunes.apple.com/WebObjects/MZFinance.woa/wa/manageSubscriptions"))
+                    }
+                )
+            } else {
+                SecondaryButton(
+                    title: L10n.SettingsPage.Button.subscribe,
+                    action: { isPurchasesPresented = true }
+                )
+                SecondaryButton(
+                    title: L10n.SettingsPage.Button.restoreSubscription,
+                    action: {
+                        // TODO: Implement action
+                    }
+                )
+            }
         }
     }
 
@@ -127,6 +143,7 @@ struct SettingsPage: ConnectableView {
         let accountStatus: AccountStatus
         let memoriesCounter: Int?
         let memoriesLimit: Int?
+        let subscription: Subscription?
 
         var isAuthenticated: Bool {
             switch accountStatus {
@@ -137,6 +154,10 @@ struct SettingsPage: ConnectableView {
                  .undetermined:
                 return false
             }
+        }
+
+        var isSubscriptionActive: Bool {
+            subscription == .pro
         }
     }
 }

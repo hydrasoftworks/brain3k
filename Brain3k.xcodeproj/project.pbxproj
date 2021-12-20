@@ -294,6 +294,28 @@
 		8EC607862688BED5006ED3C1 /* SwiftyBeaver in Frameworks */ = {isa = PBXBuildFile; productRef = 8EC607852688BED5006ED3C1 /* SwiftyBeaver */; };
 		8EC607882688BEE0006ED3C1 /* SwiftDux in Frameworks */ = {isa = PBXBuildFile; productRef = 8EC607872688BEE0006ED3C1 /* SwiftDux */; };
 		8EC6078A2688BEE4006ED3C1 /* SwiftyBeaver in Frameworks */ = {isa = PBXBuildFile; productRef = 8EC607892688BEE4006ED3C1 /* SwiftyBeaver */; };
+		8ECBBECF2770AF4C00A3BE40 /*  PurchasesAction+SetIdentity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECBBECE2770AF4C00A3BE40 /*  PurchasesAction+SetIdentity.swift */; };
+		8ECBBED02770AF4C00A3BE40 /*  PurchasesAction+SetIdentity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECBBECE2770AF4C00A3BE40 /*  PurchasesAction+SetIdentity.swift */; };
+		8ECBBED22770B12B00A3BE40 /* PurchasesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECBBED12770B12B00A3BE40 /* PurchasesService.swift */; };
+		8ECBBED32770B12B00A3BE40 /* PurchasesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECBBED12770B12B00A3BE40 /* PurchasesService.swift */; };
+		8ECBBED72770BBD800A3BE40 /* PurchasesAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECBBED62770BBD800A3BE40 /* PurchasesAction.swift */; };
+		8ECBBED82770BBD800A3BE40 /* PurchasesAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECBBED62770BBD800A3BE40 /* PurchasesAction.swift */; };
+		8ECBBEDA2770BC5800A3BE40 /* PurchasesReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECBBED92770BC5800A3BE40 /* PurchasesReducer.swift */; };
+		8ECBBEDB2770BC5800A3BE40 /* PurchasesReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECBBED92770BC5800A3BE40 /* PurchasesReducer.swift */; };
+		8ECBBEDD2770BC9900A3BE40 /* PurchasesState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECBBEDC2770BC9900A3BE40 /* PurchasesState.swift */; };
+		8ECBBEDE2770BC9900A3BE40 /* PurchasesState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECBBEDC2770BC9900A3BE40 /* PurchasesState.swift */; };
+		8ECBBEE02770BEFE00A3BE40 /* PurchasesAction+GetOfferings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECBBEDF2770BEFE00A3BE40 /* PurchasesAction+GetOfferings.swift */; };
+		8ECBBEE12770BEFE00A3BE40 /* PurchasesAction+GetOfferings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECBBEDF2770BEFE00A3BE40 /* PurchasesAction+GetOfferings.swift */; };
+		8ECBBEE42770C16800A3BE40 /* PurchasesPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECBBEE32770C16800A3BE40 /* PurchasesPage.swift */; };
+		8ECBBEE52770C16800A3BE40 /* PurchasesPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECBBEE32770C16800A3BE40 /* PurchasesPage.swift */; };
+		8ECBBEE72770C19800A3BE40 /* PurchasesPageConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECBBEE62770C19800A3BE40 /* PurchasesPageConnector.swift */; };
+		8ECBBEE82770C19800A3BE40 /* PurchasesPageConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECBBEE62770C19800A3BE40 /* PurchasesPageConnector.swift */; };
+		8ECBBEEA2770C2B300A3BE40 /* PurchasesAction+RestoreTransactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECBBEE92770C2B300A3BE40 /* PurchasesAction+RestoreTransactions.swift */; };
+		8ECBBEEB2770C2B300A3BE40 /* PurchasesAction+RestoreTransactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECBBEE92770C2B300A3BE40 /* PurchasesAction+RestoreTransactions.swift */; };
+		8ECBBEED2770C5E200A3BE40 /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECBBEEC2770C5E200A3BE40 /* Subscription.swift */; };
+		8ECBBEEE2770C5E200A3BE40 /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECBBEEC2770C5E200A3BE40 /* Subscription.swift */; };
+		8ECBBEEF2770C67500A3BE40 /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECBBEEC2770C5E200A3BE40 /* Subscription.swift */; };
+		8ECBBEF02770C67500A3BE40 /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECBBEEC2770C5E200A3BE40 /* Subscription.swift */; };
 		8ED381F026F74FE50003D4F3 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED381EF26F74FE50003D4F3 /* ShareViewController.swift */; };
 		8ED381F326F74FE50003D4F3 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8ED381F126F74FE50003D4F3 /* MainInterface.storyboard */; };
 		8ED381F726F74FE50003D4F3 /* ShareExtension iOS.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8ED381ED26F74FE50003D4F3 /* ShareExtension iOS.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -553,6 +575,16 @@
 		8EC6077A2688BB5B006ED3C1 /* MemoriesAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoriesAction.swift; sourceTree = "<group>"; };
 		8EC607812688BD92006ED3C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8EC6078C268A7ED9006ED3C1 /* Brain3k.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Brain3k.entitlements; sourceTree = "<group>"; };
+		8ECBBECE2770AF4C00A3BE40 /*  PurchasesAction+SetIdentity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " PurchasesAction+SetIdentity.swift"; sourceTree = "<group>"; };
+		8ECBBED12770B12B00A3BE40 /* PurchasesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasesService.swift; sourceTree = "<group>"; };
+		8ECBBED62770BBD800A3BE40 /* PurchasesAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasesAction.swift; sourceTree = "<group>"; };
+		8ECBBED92770BC5800A3BE40 /* PurchasesReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasesReducer.swift; sourceTree = "<group>"; };
+		8ECBBEDC2770BC9900A3BE40 /* PurchasesState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasesState.swift; sourceTree = "<group>"; };
+		8ECBBEDF2770BEFE00A3BE40 /* PurchasesAction+GetOfferings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PurchasesAction+GetOfferings.swift"; sourceTree = "<group>"; };
+		8ECBBEE32770C16800A3BE40 /* PurchasesPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasesPage.swift; sourceTree = "<group>"; };
+		8ECBBEE62770C19800A3BE40 /* PurchasesPageConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasesPageConnector.swift; sourceTree = "<group>"; };
+		8ECBBEE92770C2B300A3BE40 /* PurchasesAction+RestoreTransactions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PurchasesAction+RestoreTransactions.swift"; sourceTree = "<group>"; };
+		8ECBBEEC2770C5E200A3BE40 /* Subscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subscription.swift; sourceTree = "<group>"; };
 		8ED381ED26F74FE50003D4F3 /* ShareExtension iOS.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "ShareExtension iOS.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8ED381EF26F74FE50003D4F3 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		8ED381F226F74FE50003D4F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
@@ -748,6 +780,7 @@
 		8E3927FF273D53AD001DA030 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				8ECBBEE22770C15100A3BE40 /* Purchases */,
 				8EBC0535269A0585008B2478 /* SettingsPage.swift */,
 			);
 			path = Settings;
@@ -1081,6 +1114,7 @@
 				8ED3821226F767CB0003D4F3 /* LibrariesService.swift */,
 				8E3927FC273D4FAE001DA030 /* UserService.swift */,
 				8E4A9CB427528934007D32C9 /* HapticService.swift */,
+				8ECBBED12770B12B00A3BE40 /* PurchasesService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -1314,6 +1348,7 @@
 				8E79C13E269786A0002D2A8B /* Message */,
 				8EEDD788268BC03100F670D2 /* Account */,
 				8EC607732688BA80006ED3C1 /* Memories */,
+				8ECBBED42770BB8900A3BE40 /*  Purchases */,
 				8E5D7D0A26CC4FA4009024A0 /* Storage */,
 				8EC607692688B952006ED3C1 /* AppState.swift */,
 				8EC607702688BA3A006ED3C1 /* AppReducer.swift */,
@@ -1334,6 +1369,7 @@
 				8E3927F6273D458C001DA030 /* User.swift */,
 				8E79C14226978778002D2A8B /* Message.swift */,
 				8E77700226A32C6B00D97F52 /* AppError.swift */,
+				8ECBBEEC2770C5E200A3BE40 /* Subscription.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1386,6 +1422,36 @@
 				8E2E27B3276778D600E33883 /* FlexibleView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		8ECBBED42770BB8900A3BE40 /*  Purchases */ = {
+			isa = PBXGroup;
+			children = (
+				8ECBBED52770BBA000A3BE40 /* Actions */,
+				8ECBBEDC2770BC9900A3BE40 /* PurchasesState.swift */,
+				8ECBBED92770BC5800A3BE40 /* PurchasesReducer.swift */,
+				8ECBBED62770BBD800A3BE40 /* PurchasesAction.swift */,
+			);
+			path = " Purchases";
+			sourceTree = "<group>";
+		};
+		8ECBBED52770BBA000A3BE40 /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				8ECBBECE2770AF4C00A3BE40 /*  PurchasesAction+SetIdentity.swift */,
+				8ECBBEDF2770BEFE00A3BE40 /* PurchasesAction+GetOfferings.swift */,
+				8ECBBEE92770C2B300A3BE40 /* PurchasesAction+RestoreTransactions.swift */,
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
+		8ECBBEE22770C15100A3BE40 /* Purchases */ = {
+			isa = PBXGroup;
+			children = (
+				8ECBBEE62770C19800A3BE40 /* PurchasesPageConnector.swift */,
+				8ECBBEE32770C16800A3BE40 /* PurchasesPage.swift */,
+			);
+			path = Purchases;
 			sourceTree = "<group>";
 		};
 		8ED381EE26F74FE50003D4F3 /* ShareExtension iOS */ = {
@@ -1747,6 +1813,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8ECBBEF02770C67500A3BE40 /* Subscription.swift in Sources */,
 				8E73D73527304A420037DE6B /* Memory.swift in Sources */,
 				8E73D724273049BE0037DE6B /* AccountService.swift in Sources */,
 				8E73D73A27304A670037DE6B /* AnyPublisher+Create.swift in Sources */,
@@ -1771,11 +1838,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EA052D9273FED9900A4507A /* LimitExceededView.swift in Sources */,
+				8ECBBEE02770BEFE00A3BE40 /* PurchasesAction+GetOfferings.swift in Sources */,
 				8E776FF926A3257B00D97F52 /* MemoriesAction+GetAll.swift in Sources */,
 				8E9EEBA326F280C400106FCD /* MemoriesAction+Search.swift in Sources */,
 				8EA4D28126939DE100C0A037 /* EmailTextField.swift in Sources */,
 				8E6A200C275E9733002EA4CE /* MemoriesAction+RemoveTag.swift in Sources */,
 				8EA1D320271C699A0060BAA9 /* MemoriesPageConnector.swift in Sources */,
+				8ECBBED22770B12B00A3BE40 /* PurchasesService.swift in Sources */,
 				8E92A7E726A0D04100BAED7F /* AccountAction+SignIn.swift in Sources */,
 				8EBC051B2699C065008B2478 /* AnyPublisher+Empty.swift in Sources */,
 				8E3436F127089D4200FA1CB0 /* Memory+CopyWith.swift in Sources */,
@@ -1826,9 +1895,12 @@
 				8E73D6F5272EC6E00037DE6B /* MemoryCellConnector.swift in Sources */,
 				8E5D7D1326CC50D9009024A0 /* StorageAction.swift in Sources */,
 				8E79C14626978828002D2A8B /* MessageReducer.swift in Sources */,
+				8ECBBEDA2770BC5800A3BE40 /* PurchasesReducer.swift in Sources */,
 				8E776FF126A2311200D97F52 /* AccountAction+SendVerificationEmail.swift in Sources */,
 				8E15375926FF439100D3232F /* MemoryPrimaryActions.swift in Sources */,
+				8ECBBEDD2770BC9900A3BE40 /* PurchasesState.swift in Sources */,
 				8EA1D31D271C62C10060BAA9 /* Sidebar.swift in Sources */,
+				8ECBBED72770BBD800A3BE40 /* PurchasesAction.swift in Sources */,
 				8EC4BACC26BDD40D00F20EAE /* Color+Asset.swift in Sources */,
 				8E50D86C26BB30280075C08C /* ProcessingCell.swift in Sources */,
 				8EDC011126D029D300D2064A /* URLMemoryCellConnector.swift in Sources */,
@@ -1859,23 +1931,28 @@
 				8E79C14926978898002D2A8B /* MessageAction.swift in Sources */,
 				8E92A7E126A0CD2500BAED7F /* AccountAction+CheckAccountStatus.swift in Sources */,
 				8EEF35DB268CE9F40068DB58 /* HomePage.swift in Sources */,
+				8ECBBEE42770C16800A3BE40 /* PurchasesPage.swift in Sources */,
 				8E73D6E5272C9B4D0037DE6B /* URLTextField.swift in Sources */,
 				8E8835B926B08DCF00EE0234 /* AddMemoryPage.swift in Sources */,
 				8ED3821326F767CB0003D4F3 /* LibrariesService.swift in Sources */,
+				8ECBBECF2770AF4C00A3BE40 /*  PurchasesAction+SetIdentity.swift in Sources */,
 				8E3436F527089E7200FA1CB0 /* MemoryType.swift in Sources */,
 				8E6A200F275E9C1F002EA4CE /* MemoriesAction+Wrapper.swift in Sources */,
 				8E6821BA26A9E6F200B2DACB /* URLMemoryCell.swift in Sources */,
 				8E5D7D1626CC523D009024A0 /* StorageAction+GetDownloadURL.swift in Sources */,
 				8EBC051E2699C10C008B2478 /* UnverifiedEmailPage.swift in Sources */,
+				8ECBBEED2770C5E200A3BE40 /* Subscription.swift in Sources */,
 				8E58B8D8274935F3003FB391 /* MemoriesAction+UpdateNotes.swift in Sources */,
 				8E26236A27160A630092B6CE /* AccountAction+Delete.swift in Sources */,
 				8E58B8D22749342C003FB391 /* MemoryRefreshButton.swift in Sources */,
 				8E3927FD273D4FAE001DA030 /* UserService.swift in Sources */,
 				8EBC05242699C926008B2478 /* MaterialBackground.swift in Sources */,
+				8ECBBEEA2770C2B300A3BE40 /* PurchasesAction+RestoreTransactions.swift in Sources */,
 				8EC607782688BB3E006ED3C1 /* MemoriesReducer.swift in Sources */,
 				8EC607712688BA3A006ED3C1 /* AppReducer.swift in Sources */,
 				8E776FFC26A326C400D97F52 /* MemoriesService.swift in Sources */,
 				8E6A2012275EA089002EA4CE /* MemoriesAction+AddTag.swift in Sources */,
+				8ECBBEE72770C19800A3BE40 /* PurchasesPageConnector.swift in Sources */,
 				8E15375526FF3F2400D3232F /* MemoryPageConnector.swift in Sources */,
 				8E8DF14D27024B3700CA0EBF /* AccountAction+GenerateNonce.swift in Sources */,
 			);
@@ -1886,11 +1963,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EA052DA273FED9900A4507A /* LimitExceededView.swift in Sources */,
+				8ECBBEE12770BEFE00A3BE40 /* PurchasesAction+GetOfferings.swift in Sources */,
 				8E776FFA26A3257B00D97F52 /* MemoriesAction+GetAll.swift in Sources */,
 				8E9EEBA426F280C400106FCD /* MemoriesAction+Search.swift in Sources */,
 				8EA1D321271C699A0060BAA9 /* MemoriesPageConnector.swift in Sources */,
 				8E6A200D275E9733002EA4CE /* MemoriesAction+RemoveTag.swift in Sources */,
 				8E92A7E826A0D04100BAED7F /* AccountAction+SignIn.swift in Sources */,
+				8ECBBED32770B12B00A3BE40 /* PurchasesService.swift in Sources */,
 				8EBC051C2699C065008B2478 /* AnyPublisher+Empty.swift in Sources */,
 				8E3436F227089D4200FA1CB0 /* Memory+CopyWith.swift in Sources */,
 				8E5D7D0D26CC4FB8009024A0 /* StorageState.swift in Sources */,
@@ -1941,9 +2020,12 @@
 				8E73D708272EE02D0037DE6B /* TextFieldStyle.swift in Sources */,
 				8E776FF226A2311200D97F52 /* AccountAction+SendVerificationEmail.swift in Sources */,
 				8E73D6DF272C9A920037DE6B /* EmailTextField.swift in Sources */,
+				8ECBBEDB2770BC5800A3BE40 /* PurchasesReducer.swift in Sources */,
 				8EC4BACD26BDD40D00F20EAE /* Color+Asset.swift in Sources */,
 				8E50D86D26BB30280075C08C /* ProcessingCell.swift in Sources */,
+				8ECBBEDE2770BC9900A3BE40 /* PurchasesState.swift in Sources */,
 				8EDC011226D029D300D2064A /* URLMemoryCellConnector.swift in Sources */,
+				8ECBBED82770BBD800A3BE40 /* PurchasesAction.swift in Sources */,
 				8E79C13D269619C0002D2A8B /* SignInWithAppleButton.swift in Sources */,
 				8EC6077C2688BB5B006ED3C1 /* MemoriesAction.swift in Sources */,
 				8E8835BD26B0928E00EE0234 /* Validation+URL.swift in Sources */,
@@ -1974,23 +2056,28 @@
 				8E92A7E226A0CD2500BAED7F /* AccountAction+CheckAccountStatus.swift in Sources */,
 				8E73D6EA272C9BE70037DE6B /* URLTextField.swift in Sources */,
 				8E8835BA26B08DCF00EE0234 /* AddMemoryPage.swift in Sources */,
+				8ECBBEE52770C16800A3BE40 /* PurchasesPage.swift in Sources */,
 				8ED3821426F767CB0003D4F3 /* LibrariesService.swift in Sources */,
 				8E3436F627089E7200FA1CB0 /* MemoryType.swift in Sources */,
 				8E6821BB26A9E6F200B2DACB /* URLMemoryCell.swift in Sources */,
+				8ECBBED02770AF4C00A3BE40 /*  PurchasesAction+SetIdentity.swift in Sources */,
 				8E5D7D1726CC523D009024A0 /* StorageAction+GetDownloadURL.swift in Sources */,
 				8E6A2010275E9C1F002EA4CE /* MemoriesAction+Wrapper.swift in Sources */,
 				8EBC051F2699C10C008B2478 /* UnverifiedEmailPage.swift in Sources */,
 				8E26236B27160A630092B6CE /* AccountAction+Delete.swift in Sources */,
 				8E73D70D272EE7900037DE6B /* AppConfiguration.swift in Sources */,
+				8ECBBEEE2770C5E200A3BE40 /* Subscription.swift in Sources */,
 				8E58B8D9274935F3003FB391 /* MemoriesAction+UpdateNotes.swift in Sources */,
 				8EA052F12741A07800A4507A /* MemoryPrimaryActions.swift in Sources */,
 				8E58B8D32749342C003FB391 /* MemoryRefreshButton.swift in Sources */,
 				8E3927FE273D4FAE001DA030 /* UserService.swift in Sources */,
 				8EBC05252699C926008B2478 /* MaterialBackground.swift in Sources */,
+				8ECBBEEB2770C2B300A3BE40 /* PurchasesAction+RestoreTransactions.swift in Sources */,
 				8EC607792688BB3E006ED3C1 /* MemoriesReducer.swift in Sources */,
 				8EC607722688BA3A006ED3C1 /* AppReducer.swift in Sources */,
 				8E776FFD26A326C400D97F52 /* MemoriesService.swift in Sources */,
 				8E6A2013275EA089002EA4CE /* MemoriesAction+AddTag.swift in Sources */,
+				8ECBBEE82770C19800A3BE40 /* PurchasesPageConnector.swift in Sources */,
 				8E15375626FF3F2400D3232F /* MemoryPageConnector.swift in Sources */,
 				8E8DF14E27024B3700CA0EBF /* AccountAction+GenerateNonce.swift in Sources */,
 			);
@@ -2000,6 +2087,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8ECBBEEF2770C67500A3BE40 /* Subscription.swift in Sources */,
 				8ED3820A26F75D2B0003D4F3 /* Future+MapError.swift in Sources */,
 				8ED3820626F75CFD0003D4F3 /* Account.swift in Sources */,
 				8E3436F72708A14A00FA1CB0 /* MemoryType.swift in Sources */,

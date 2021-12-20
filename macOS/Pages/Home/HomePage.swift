@@ -16,9 +16,6 @@ struct HomePage: View {
                 .frame(minWidth: 300, idealWidth: 650)
         }
         .accentColor(Color.brand)
-        .onAppear(dispatch: MemoriesAction.watchAll())
-        .onAppear(dispatch: AccountAction.watchUser())
-        .environment(\.selectedMemoryID, $selectedMemoryID)
         .toolbar {
             ToolbarItem(placement: .navigation) {
                 Button(
@@ -27,6 +24,10 @@ struct HomePage: View {
                 )
             }
         }
+        .onAppear(dispatch: MemoriesAction.watchAll())
+        .onAppear(dispatch: AccountAction.watchUser())
+        .onAppear(dispatch: PurchasesAction.setIdentity())
+        .environment(\.selectedMemoryID, $selectedMemoryID)
     }
 
     private func toggleSidebar() {

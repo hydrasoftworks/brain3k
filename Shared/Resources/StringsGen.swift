@@ -49,6 +49,8 @@ internal enum L10n {
     internal enum Error {
       /// Houston, we have a problem
       internal static let title = L10n.tr("Localizable", "general.error.title")
+      /// Unknown error
+      internal static let unknown = L10n.tr("Localizable", "general.error.unknown")
     }
   }
 

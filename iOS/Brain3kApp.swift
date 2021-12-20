@@ -20,6 +20,8 @@ struct Brain3kApp: App {
         let librariesService = LibrariesService()
         librariesService.initSwiftyBeaver()
         librariesService.initFirebase()
+        let purchasesService = PurchasesService()
+        purchasesService.initRevenueCat()
     }
 
     var body: some Scene {

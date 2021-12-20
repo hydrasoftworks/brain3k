@@ -36,7 +36,7 @@ final class SignOutSpec: QuickSpec {
                 cancellable = actionPlan.run(store: storeProxy())
                     .sink(receiveValue: { actions.append($0 as? AccountAction) })
                 expect(actions).toEventually(
-                    equal(
+                    contain(
                         [
                             AccountAction.setStatus(.unauthenticated),
                             AccountAction.setUser(nil),
@@ -59,7 +59,7 @@ final class SignOutSpec: QuickSpec {
                     cancellable = actionPlan.run(store: storeProxy())
                         .sink(receiveValue: { actions.append($0 as? AccountAction) })
                     expect(actions).toEventually(
-                        equal(
+                        contain(
                             [
                                 AccountAction.setStatus(.unauthenticated),
                                 AccountAction.setUser(nil),
