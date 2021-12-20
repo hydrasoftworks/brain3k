@@ -60,7 +60,7 @@
         "repositoryURL": "https://github.com/kamilpowalowski/firebase-ios-sdk.git",
         "state": {
           "branch": "bugfix/macos-auth-extension-keychain-access",
-          "revision": "59125c6e528798194680ad820f842c613bbd4cb9",
+          "revision": "810d1570368e6019d54463216a7ca3e5f7bfb984",
           "version": null
         }
       },

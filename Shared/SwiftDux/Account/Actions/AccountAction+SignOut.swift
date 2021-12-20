@@ -13,6 +13,7 @@ extension AccountAction {
             accountService.signOut()
                 .map { AccountAction.setStatus(.unauthenticated) }
                 .catch { _ in Just(AccountAction.setStatus(.unauthenticated)) }
+                .append(AccountAction.setUser(nil))
                 .eraseToAnyPublisher()
         }
     }

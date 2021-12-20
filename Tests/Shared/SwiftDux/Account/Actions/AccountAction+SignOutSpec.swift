@@ -13,7 +13,7 @@ final class SignOutSpec: QuickSpec {
     override func spec() {
         describe("\(AccountAction.self) signOut actions") {
             var mock: MockAccountService!
-            var action: AccountAction?
+            var actions: [AccountAction?] = []
             var cancellable: AnyCancellable?
 
             beforeEach {
@@ -22,6 +22,7 @@ final class SignOutSpec: QuickSpec {
                     when(stub.signOut())
                         .thenReturn(makeCombineResult(()))
                 }
+                actions.removeAll()
             }
 
             afterEach {
@@ -29,12 +30,19 @@ final class SignOutSpec: QuickSpec {
                 cancellable = nil
             }
 
-            it("should call setStatus .unauthenticated action") {
+            it("should call setStatus(.unauthenticated) and setUser(nil) action") {
                 let actionPlan = AccountAction.signOut(mock)
 
                 cancellable = actionPlan.run(store: storeProxy())
-                    .sink(receiveValue: { action = $0 as? AccountAction })
-                expect(action).toEventually(equal(AccountAction.setStatus(.unauthenticated)))
+                    .sink(receiveValue: { actions.append($0 as? AccountAction) })
+                expect(actions).toEventually(
+                    equal(
+                        [
+                            AccountAction.setStatus(.unauthenticated),
+                            AccountAction.setUser(nil),
+                        ]
+                    )
+                )
             }
 
             context("when request returns error") {
@@ -45,12 +53,19 @@ final class SignOutSpec: QuickSpec {
                     }
                 }
 
-                it("should call setStatus .unauthenticated action as well") {
+                it("should call setStatus(.unauthenticated) and setUser(nil) action as well") {
                     let actionPlan = AccountAction.signOut(mock)
 
                     cancellable = actionPlan.run(store: storeProxy())
-                        .sink(receiveValue: { action = $0 as? AccountAction })
-                    expect(action).toEventually(equal(AccountAction.setStatus(.unauthenticated)))
+                        .sink(receiveValue: { actions.append($0 as? AccountAction) })
+                    expect(actions).toEventually(
+                        equal(
+                            [
+                                AccountAction.setStatus(.unauthenticated),
+                                AccountAction.setUser(nil),
+                            ]
+                        )
+                    )
                 }
             }
         }

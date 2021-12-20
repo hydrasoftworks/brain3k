@@ -14,6 +14,7 @@ struct SettingsPage: ConnectableView {
 
     func map(state: AppState) -> ViewModel? {
         ViewModel(
+            accountStatus: state.accountState.status,
             memoriesCounter: state.accountState.user?.counter,
             memoriesLimit: state.accountState.user?.limit
         )
@@ -21,10 +22,14 @@ struct SettingsPage: ConnectableView {
 
     func body(props viewModel: ViewModel) -> some View {
         Form {
-            subscriptionSection(viewModel)
-            accountSection
+            if viewModel.isAuthenticated {
+                subscriptionSection(viewModel)
+                accountSection
+            }
             linksSection
-            signOutSection
+            if viewModel.isAuthenticated {
+                signOutSection
+            }
         }
         .navigationTitle(L10n.SettingsPage.title)
     }
@@ -119,7 +124,19 @@ struct SettingsPage: ConnectableView {
     }
 
     struct ViewModel: Equatable {
+        let accountStatus: AccountStatus
         let memoriesCounter: Int?
         let memoriesLimit: Int?
+
+        var isAuthenticated: Bool {
+            switch accountStatus {
+            case .authenticated:
+                return true
+            case .unverifiedEmail,
+                 .unauthenticated,
+                 .undetermined:
+                return false
+            }
+        }
     }
 }
