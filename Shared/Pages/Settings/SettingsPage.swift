@@ -10,8 +10,10 @@ struct SettingsPage: ConnectableView {
     @SwiftUI.State private var confirmationIsPresented = false
     @SwiftUI.State private var isPurchasesPresented = false
 
-    private let feedbackUrl = URL(string: "https://shipright.community/brain3k")
-    private let writeReviewURL = URL(string: "https://apps.apple.com/app/id1587505104?action=write-review")
+    static let feedbackUrl = URL(string: "https://shipright.community/brain3k")
+    static let writeReviewURL = URL(string: "https://apps.apple.com/app/id1587505104?action=write-review")
+    static let privacyPolicy = URL(string: "https://brain3k.com/privacy-policy")
+    static let termsOfUse = URL(string: "https://brain3k.com/terms-of-use")
 
     func map(state: AppState) -> ViewModel? {
         ViewModel(
@@ -95,9 +97,7 @@ struct SettingsPage: ConnectableView {
                 )
                 SecondaryButton(
                     title: L10n.SettingsPage.Button.restoreSubscription,
-                    action: {
-                        // TODO: Implement action
-                    }
+                    action: { dispatch.send(PurchasesAction.restoreTransactions()) }
                 )
             }
         }
@@ -107,23 +107,19 @@ struct SettingsPage: ConnectableView {
         Section(header: Text(L10n.SettingsPage.Sections.links)) {
             SecondaryButton(
                 title: L10n.SettingsPage.Button.shareFeedback,
-                action: { openURL(feedbackUrl) }
+                action: { openURL(SettingsPage.feedbackUrl) }
             )
             SecondaryButton(
                 title: L10n.SettingsPage.Button.rate,
-                action: { openURL(writeReviewURL) }
+                action: { openURL(SettingsPage.writeReviewURL) }
             )
             SecondaryButton(
                 title: L10n.General.Legal.privacyPolicy,
-                action: {
-                    // TODO: Add Privacy policy url
-                }
+                action: { openURL(SettingsPage.privacyPolicy) }
             )
             SecondaryButton(
                 title: L10n.General.Legal.termsOfUse,
-                action: {
-                    // TODO: Add Term of use url
-                }
+                action: { openURL(SettingsPage.termsOfUse) }
             )
         }
     }
@@ -162,8 +158,6 @@ struct SettingsPage: ConnectableView {
             }
         }
 
-        var isSubscriptionActive: Bool {
-            subscription == .pro
-        }
+        var isSubscriptionActive: Bool { subscription == .pro }
     }
 }

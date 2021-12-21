@@ -15,7 +15,8 @@ extension User {
             createdAt: Date(),
             updatedAt: Date(),
             counter: counter,
-            limit: limit
+            limit: limit,
+            subscription: nil
         )
     }
 }

@@ -10,7 +10,10 @@ struct PurchasesPageConnector: ConnectableView {
 
     func map(state: AppState) -> PurchasesPage.ViewModel? {
         PurchasesPage.ViewModel(
-            offerings: state.purchasesState.offerings
+            isPurchasing: state.purchasesState.isPurchasing,
+            offering: state.purchasesState.offerings?.current,
+            subscription: state.accountState.user?.subscription,
+            purchasePackage: { dispatch.send(PurchasesAction.purchasePackage($0)) }
         )
     }
 

@@ -65,4 +65,19 @@ class PurchasesService {
         }
         .mapToAppError()
     }
+
+    func purchasePackage(_ package: Package) -> AnyPublisher<CustomerInfo?, AppError> {
+        Future<CustomerInfo?, Error> { promise in
+            Purchases.shared.purchase(package: package) { _, customerInfo, error, userCancelled in
+                if let error = error {
+                    promise(.failure(error))
+                } else if userCancelled {
+                    promise(.success(nil))
+                } else {
+                    promise(.success(customerInfo))
+                }
+            }
+        }
+        .mapToAppError()
+    }
 }

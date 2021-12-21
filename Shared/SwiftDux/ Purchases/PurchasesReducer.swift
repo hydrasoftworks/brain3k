@@ -18,6 +18,8 @@ final class PurchasesReducer: Reducer {
             } else {
                 return state.copyWithNil(customerInfo: true)
             }
+        case let .setIsPurchasing(isPurchasing):
+            return state.copyWith(isPurchasing: isPurchasing)
         }
     }
 }

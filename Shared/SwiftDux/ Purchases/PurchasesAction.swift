@@ -9,4 +9,5 @@ import SwiftDux
 enum PurchasesAction: Action, Equatable {
     case setOfferings(Offerings)
     case setCustomerInfo(CustomerInfo?)
+    case setIsPurchasing(Bool)
 }
