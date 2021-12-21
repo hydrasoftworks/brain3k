@@ -57,10 +57,10 @@
       },
       {
         "package": "Firebase",
-        "repositoryURL": "https://github.com/kamilpowalowski/firebase-ios-sdk.git",
+        "repositoryURL": "https://github.com/firebase/firebase-ios-sdk",
         "state": {
-          "branch": "bugfix/macos-auth-extension-keychain-access",
-          "revision": "810d1570368e6019d54463216a7ca3e5f7bfb984",
+          "branch": "master",
+          "revision": "480178b0871217c5f4fd3dd3c3a309c78c1d5c4c",
           "version": null
         }
       },
@@ -201,11 +201,11 @@
       },
       {
         "package": "RevenueCat",
-        "repositoryURL": "https://github.com/RevenueCat/purchases-ios.git",
+        "repositoryURL": "https://github.com/RevenueCat/purchases-ios",
         "state": {
           "branch": null,
-          "revision": "05b148ee38be1f719b49de25336b7b36a90c2ef1",
-          "version": "4.0.0"
+          "revision": "68c0ef22420b34e704f1d31c93499e4570ccc248",
+          "version": "4.0.0-beta.8"
         }
       },
       {

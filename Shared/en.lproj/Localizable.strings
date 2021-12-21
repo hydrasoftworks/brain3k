@@ -5,6 +5,8 @@
 "general.add" = "Add";
 "general.processing" = "Processing...";
 "general.loading" = "Loading...";
+"general.legal.privacy_policy" = "Privacy policy";
+"general.legal.terms_of_use" = "Terms of use";
 "general.error.title" = "Houston, we have a problem";
 "general.error.unknown" =  "Unknown error";
 "share_extension.name" = "Add to %s";
@@ -62,7 +64,6 @@
 "settings_page.button.sign_out" = "Sign out";
 "settings_page.button.delete_account" = "Delete account";
 "settings_page.button.share_feedback" = "Share feedback";
-"settings_page.button.privacy_policy" = "Privacy policy";
 "settings_page.button.rate" = "Rate on App Store";
 "settings_page.button.subscribe" = "More memories needed? Subscribe";
 "settings_page.button.restoreSubscription" = "Restore subscription";
@@ -71,3 +72,5 @@
 "settings_page.text.memories_limit" = "Available memories: %d";
 "settings_page.confirmation.delete_account" = "Do you want to delete your account?\nThis action cannot be undone.";
 "settings_page.confirmation.button.delete_account" = "Yes, delete my account";
+"purchases.labels.legal" = "• Payment will be charged to your iTunes account at confirmation of purchase and will automatically renew (at the duration/price selected) unless auto-renew is turned off at least 24 hrs before the end of the current period.\n• Account will be charged for renewal within 24-hours prior to the end of the current period.\n• Current subscription may not be cancelled during the active subscription period; however, you can manage your subscription and/or turn off auto-renewal by visiting your iTunes Account Settings after purchase.\n• Any unused portion of the free one month initial period will be forfeited when you purchases a subscription.\n• Privacy Policy and Terms of Use applied.";
+

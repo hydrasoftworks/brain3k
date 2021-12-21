@@ -114,9 +114,15 @@ struct SettingsPage: ConnectableView {
                 action: { openURL(writeReviewURL) }
             )
             SecondaryButton(
-                title: L10n.SettingsPage.Button.privacyPolicy,
+                title: L10n.General.Legal.privacyPolicy,
                 action: {
                     // TODO: Add Privacy policy url
+                }
+            )
+            SecondaryButton(
+                title: L10n.General.Legal.termsOfUse,
+                action: {
+                    // TODO: Add Term of use url
                 }
             )
         }

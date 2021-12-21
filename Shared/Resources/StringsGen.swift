@@ -52,6 +52,12 @@ internal enum L10n {
       /// Unknown error
       internal static let unknown = L10n.tr("Localizable", "general.error.unknown")
     }
+    internal enum Legal {
+      /// Privacy policy
+      internal static let privacyPolicy = L10n.tr("Localizable", "general.legal.privacy_policy")
+      /// Terms of use
+      internal static let termsOfUse = L10n.tr("Localizable", "general.legal.terms_of_use")
+    }
   }
 
   internal enum HomePage {
@@ -122,6 +128,13 @@ internal enum L10n {
     internal static let passwordPlaceholder = L10n.tr("Localizable", "password_text_field.password_placeholder")
   }
 
+  internal enum Purchases {
+    internal enum Labels {
+      /// • Payment will be charged to your iTunes account at confirmation of purchase and will automatically renew (at the duration/price selected) unless auto-renew is turned off at least 24 hrs before the end of the current period.\n• Account will be charged for renewal within 24-hours prior to the end of the current period.\n• Current subscription may not be cancelled during the active subscription period; however, you can manage your subscription and/or turn off auto-renewal by visiting your iTunes Account Settings after purchase.\n• Any unused portion of the free one month initial period will be forfeited when you purchases a subscription.\n• Privacy Policy and Terms of Use applied.
+      internal static let legal = L10n.tr("Localizable", "purchases.labels.legal")
+    }
+  }
+
   internal enum SettingsPage {
     /// Settings
     internal static let title = L10n.tr("Localizable", "settings_page.title")
@@ -130,8 +143,6 @@ internal enum L10n {
       internal static let deleteAccount = L10n.tr("Localizable", "settings_page.button.delete_account")
       /// Manage subscription
       internal static let manageSubscription = L10n.tr("Localizable", "settings_page.button.manageSubscription")
-      /// Privacy policy
-      internal static let privacyPolicy = L10n.tr("Localizable", "settings_page.button.privacy_policy")
       /// Rate on App Store
       internal static let rate = L10n.tr("Localizable", "settings_page.button.rate")
       /// Restore subscription

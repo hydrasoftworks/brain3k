@@ -6,9 +6,23 @@ import SwiftDux
 import SwiftUI
 
 struct MemoriesPage: View {
+    /*
+      I don't know why, but ActionBinding from ViewModel doesn't store current search query when button on the keyboard is pressed.
+     */
+    @SwiftUI.State private var searchQuery: String = ""
     @SwiftUI.State private var isAddMemoryPresented: Bool = false
 
     let viewModel: ViewModel
+
+    private var searchQueryBinding: Binding<String> {
+        Binding<String>(
+            get: { self.searchQuery },
+            set: {
+                self.searchQuery = $0
+                viewModel.searchForQuery($0)
+            }
+        )
+    }
 
     var body: some View {
         ScrollView {
@@ -18,7 +32,10 @@ struct MemoriesPage: View {
         }
         // Pull to Refresh doesn't work on ScrollView xD
         .refreshable { viewModel.getAllMemories() }
-        .searchable(text: viewModel.$searchQuery)
+        .searchable(
+            text: searchQueryBinding,
+            placement: searchFieldPlacement
+        )
         .navigationTitle(L10n.MemoriesPage.title)
         .toolbar {
             ToolbarItem {
@@ -54,10 +71,10 @@ struct MemoriesPage: View {
     private func grid(_ viewModel: ViewModel) -> some View {
         if viewModel.memories.isEmpty {
             EmptyListView(
-                image: viewModel.searchQuery.isEmpty
+                image: searchQuery.isEmpty
                     ? Asset.robotEmptyList
                     : Asset.robotNotFound,
-                text: viewModel.searchQuery.isEmpty
+                text: searchQuery.isEmpty
                     ? L10n.MemoriesPage.Empty.all
                     : L10n.MemoriesPage.Empty.search
             )
@@ -73,9 +90,17 @@ struct MemoriesPage: View {
         }
     }
 
+    private var searchFieldPlacement: SearchFieldPlacement {
+        #if os(iOS)
+            return .navigationBarDrawer(displayMode: .always)
+        #else
+            return .automatic
+        #endif
+    }
+
     struct ViewModel: Equatable {
         let memories: [Memory]
-        @ActionBinding var searchQuery: String
+        let searchForQuery: (String) -> Void
         let getAllMemories: () -> Void
 
         static func == (lhs: MemoriesPage.ViewModel, rhs: MemoriesPage.ViewModel) -> Bool {

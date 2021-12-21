@@ -8,12 +8,10 @@ import SwiftUI
 struct MemoriesPageConnector: ConnectableView {
     @Environment(\.actionDispatcher) private var dispatch
 
-    func map(state: AppState, binder: ActionBinder) -> MemoriesPage.ViewModel? {
+    func map(state: AppState) -> MemoriesPage.ViewModel? {
         MemoriesPage.ViewModel(
             memories: state.memoriesState.filtered ?? state.memoriesState.all,
-            searchQuery: binder.bind(state.memoriesState.searchQuery) {
-                MemoriesAction.search(for: $0)
-            },
+            searchForQuery: { dispatch.send(MemoriesAction.search(for: $0)) },
             getAllMemories: { dispatch.send(MemoriesAction.getAll()) }
         )
     }
