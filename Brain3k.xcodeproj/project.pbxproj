@@ -521,6 +521,7 @@
 		8E8D83A32771F39800E8F7D6 /* Purchase+Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Purchase+Identifiable.swift"; sourceTree = "<group>"; };
 		8E8D83A72771FDF000E8F7D6 /* PackageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageCell.swift; sourceTree = "<group>"; };
 		8E8D83AA2772028B00E8F7D6 /* PurchasesAction+PurchasePackage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PurchasesAction+PurchasePackage.swift"; sourceTree = "<group>"; };
+		8E8D83AD2773415900E8F7D6 /* Configuration.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Configuration.storekit; sourceTree = "<group>"; };
 		8E8DF149270096F500CA0EBF /* ImagesGen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagesGen.swift; sourceTree = "<group>"; };
 		8E8DF14C27024B3700CA0EBF /* AccountAction+GenerateNonce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountAction+GenerateNonce.swift"; sourceTree = "<group>"; };
 		8E92A7D526A0B59F00BAED7F /* AccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountService.swift; sourceTree = "<group>"; };
@@ -1326,6 +1327,7 @@
 		8EC6073F2688AFCF006ED3C1 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				8E8D83AD2773415900E8F7D6 /* Configuration.storekit */,
 				8EF9353726AC448300176AF4 /* GoogleService-Info.plist */,
 				8E73D70B272EE7900037DE6B /* AppConfiguration.swift */,
 				8EA4D27F26939DA600C0A037 /* Pages */,
@@ -2344,7 +2346,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MARKETING_VERSION = 0.4.7;
+				MARKETING_VERSION = 0.5.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -2401,7 +2403,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MARKETING_VERSION = 0.4.7;
+				MARKETING_VERSION = 0.5.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;

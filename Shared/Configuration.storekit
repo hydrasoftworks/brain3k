@@ -1,0 +1,49 @@
+{
+  "identifier" : "D0D9F4E6",
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+
+  ],
+  "settings" : {
+
+  },
+  "subscriptionGroups" : [
+    {
+      "id" : "C1CB83E9",
+      "localizations" : [
+
+      ],
+      "name" : "Brain3k Pro",
+      "subscriptions" : [
+        {
+          "adHocOffers" : [
+
+          ],
+          "displayPrice" : "19.99",
+          "familyShareable" : false,
+          "groupNumber" : 1,
+          "internalID" : "462821E7",
+          "introductoryOffer" : null,
+          "localizations" : [
+            {
+              "description" : "All features access. 5000 memories available.",
+              "displayName" : "Pro Access (StoreKit Tests)",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "com.brain3k.Brain3k.ProAnnual",
+          "recurringSubscriptionPeriod" : "P1Y",
+          "referenceName" : "Pro Annual",
+          "subscriptionGroupID" : "C1CB83E9",
+          "type" : "RecurringSubscription"
+        }
+      ]
+    }
+  ],
+  "version" : {
+    "major" : 1,
+    "minor" : 1
+  }
+}

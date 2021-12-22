@@ -42,10 +42,8 @@ struct PurchasesPage: View {
                 )
             }
         }
-        .onChange(of: viewModel.isSubscriptionActive) { _ in
-            if viewModel.isSubscriptionActive {
-                presentationMode.wrappedValue.dismiss()
-            }
+        .onChange(of: viewModel.isSubscriptionActive) { newValue in
+            if newValue { presentationMode.wrappedValue.dismiss() }
         }
     }
 
