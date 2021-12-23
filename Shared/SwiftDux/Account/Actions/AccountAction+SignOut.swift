@@ -14,7 +14,7 @@ extension AccountAction {
                 .map { AccountAction.setStatus(.unauthenticated) }
                 .catch { _ in Just(AccountAction.setStatus(.unauthenticated)) }
                 .append(AccountAction.setUser(nil))
-                .append(PurchasesAction.setIdentity())
+                .append(SubscriptionAction.setIdentity())
                 .eraseToAnyPublisher()
         }
     }

@@ -6,17 +6,17 @@ import Combine
 import RevenueCat
 import SwiftDux
 
-extension PurchasesAction {
+extension SubscriptionAction {
     static func purchasePackage(
         _ package: Package,
-        _ purchasesService: PurchasesService = PurchasesService()
+        _ subscriptionService: SubscriptionService = SubscriptionService()
     ) -> ActionPlan<AppState> {
         ActionPlan<AppState> { _ -> AnyPublisher<Action, Never> in
-            purchasesService.purchasePackage(package)
+            subscriptionService.purchasePackage(package)
                 .mapToEmptyResult(ofType: Action.self)
-                .prepend(PurchasesAction.setIsPurchasing(true))
-                .catch { Just(MessageAction.show(.error($0.message))) }
-                .append(PurchasesAction.setIsPurchasing(false))
+                .prepend(SubscriptionAction.setIsPurchasing(true))
+                .catch { Just(MessageAction.show(.purchase($0.message))) }
+                .append(SubscriptionAction.setIsPurchasing(false))
                 .eraseToAnyPublisher()
         }
     }

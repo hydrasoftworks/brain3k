@@ -7,7 +7,7 @@ import SwiftDux
 final class AppReducer: Reducer {
     private let messageReducer = MessageReducer()
     private let accountReducer = AccountReducer()
-    private let purchasesReducer = PurchasesReducer()
+    private let subscriptionReducer = SubscriptionReducer()
     private let memoriesReducer = MemoriesReducer()
     private let storageReducer = StorageReducer()
 
@@ -15,7 +15,7 @@ final class AppReducer: Reducer {
         AppState(
             messageState: messageReducer.reduceAny(state: state.messageState, action: action),
             accountState: accountReducer.reduceAny(state: state.accountState, action: action),
-            purchasesState: purchasesReducer.reduceAny(state: state.purchasesState, action: action),
+            subscriptionState: subscriptionReducer.reduceAny(state: state.subscriptionState, action: action),
             memoriesState: memoriesReducer.reduceAny(state: state.memoriesState, action: action),
             storageState: storageReducer.reduceAny(state: state.storageState, action: action)
         )

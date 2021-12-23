@@ -6,7 +6,7 @@ import Combine
 import Foundation
 import RevenueCat
 
-class PurchasesService {
+class SubscriptionService {
     func initRevenueCat() {
         #if Debug
             Purchases.logLevel = .debug

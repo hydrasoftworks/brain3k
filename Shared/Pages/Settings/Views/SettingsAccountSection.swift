@@ -12,7 +12,7 @@ struct SettingsAccountSection: View {
 
     @ViewBuilder
     var body: some View {
-        Section(header: Text(L10n.SettingsPage.Sections.account)) {
+        Section(header: header) {
             SecondaryButton(
                 title: L10n.SettingsPage.Button.deleteAccount,
                 role: .destructive,
@@ -34,5 +34,14 @@ struct SettingsAccountSection: View {
                 action: onSignOut
             )
         }
+    }
+
+    private var header: some View {
+        #if os(macOS)
+            Text(L10n.SettingsPage.Sections.account)
+                .font(.title2)
+        #else
+            Text(L10n.SettingsPage.Sections.account)
+        #endif
     }
 }

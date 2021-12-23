@@ -138,27 +138,6 @@ internal enum L10n {
     internal static let passwordPlaceholder = L10n.tr("Localizable", "password_text_field.password_placeholder")
   }
 
-  internal enum PurchasesPage {
-    /// %@ Pro
-    internal static func title(_ p1: Any) -> String {
-      return L10n.tr("Localizable", "purchases_page.title", String(describing: p1))
-    }
-    internal enum Labels {
-      /// • Payment will be charged to your iTunes account at confirmation of purchase and will automatically renew (at the duration/price selected) unless auto-renew is turned off at least 24 hrs before the end of the current period.
-      internal static let legal1 = L10n.tr("Localizable", "purchases_page.labels.legal1")
-      /// • Account will be charged for renewal within 24-hours prior to the end of the current period.
-      internal static let legal2 = L10n.tr("Localizable", "purchases_page.labels.legal2")
-      /// • Current subscription may not be cancelled during the active subscription period; however, you can manage your subscription and/or turn off auto-renewal by visiting your iTunes Account Settings after purchase.
-      internal static let legal3 = L10n.tr("Localizable", "purchases_page.labels.legal3")
-      /// • Any unused portion of the free one month initial period will be forfeited when you purchases a subscription.
-      internal static let legal4 = L10n.tr("Localizable", "purchases_page.labels.legal4")
-      /// • [Privacy Policy](%@) and [Terms of Use](%@) applied.
-      internal static func legal5(_ p1: Any, _ p2: Any) -> String {
-        return L10n.tr("Localizable", "purchases_page.labels.legal5", String(describing: p1), String(describing: p2))
-      }
-    }
-  }
-
   internal enum SettingsPage {
     /// Settings
     internal static let title = L10n.tr("Localizable", "settings_page.title")
@@ -257,6 +236,27 @@ internal enum L10n {
       internal static let signIn = L10n.tr("Localizable", "sign_up_page.button.sign_in")
       /// Sign up with e-mail
       internal static let signUp = L10n.tr("Localizable", "sign_up_page.button.sign_up")
+    }
+  }
+
+  internal enum SubscriptionsPage {
+    /// %@ Pro
+    internal static func title(_ p1: Any) -> String {
+      return L10n.tr("Localizable", "subscriptions_page.title", String(describing: p1))
+    }
+    internal enum Labels {
+      /// • Payment will be charged to your iTunes account at confirmation of purchase and will automatically renew (at the duration/price selected) unless auto-renew is turned off at least 24 hrs before the end of the current period.
+      internal static let legal1 = L10n.tr("Localizable", "subscriptions_page.labels.legal1")
+      /// • Account will be charged for renewal within 24-hours prior to the end of the current period.
+      internal static let legal2 = L10n.tr("Localizable", "subscriptions_page.labels.legal2")
+      /// • Current subscription may not be cancelled during the active subscription period; however, you can manage your subscription and/or turn off auto-renewal by visiting your iTunes Account Settings after purchase.
+      internal static let legal3 = L10n.tr("Localizable", "subscriptions_page.labels.legal3")
+      /// • Any unused portion of the free one month initial period will be forfeited when you purchases a subscription.
+      internal static let legal4 = L10n.tr("Localizable", "subscriptions_page.labels.legal4")
+      /// • [Privacy Policy](%@) and [Terms of Use](%@) applied.
+      internal static func legal5(_ p1: Any, _ p2: Any) -> String {
+        return L10n.tr("Localizable", "subscriptions_page.labels.legal5", String(describing: p1), String(describing: p2))
+      }
     }
   }
 

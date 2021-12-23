@@ -6,7 +6,7 @@ import Foundation
 import RevenueCat
 import SwiftDux
 
-struct PurchasesState: StateType {
+struct SubscriptionState: StateType {
     let isPurchasing: Bool
     let offerings: Offerings?
     let customerInfo: CustomerInfo?
@@ -25,8 +25,8 @@ struct PurchasesState: StateType {
         isPurchasing: Bool? = nil,
         offerings: Offerings? = nil,
         customerInfo: CustomerInfo? = nil
-    ) -> PurchasesState {
-        PurchasesState(
+    ) -> SubscriptionState {
+        SubscriptionState(
             isPurchasing: isPurchasing ?? self.isPurchasing,
             offerings: offerings ?? self.offerings,
             customerInfo: customerInfo ?? self.customerInfo
@@ -35,8 +35,8 @@ struct PurchasesState: StateType {
 
     func copyWithNil(
         customerInfo: Bool = false
-    ) -> PurchasesState {
-        PurchasesState(
+    ) -> SubscriptionState {
+        SubscriptionState(
             isPurchasing: isPurchasing,
             offerings: offerings,
             customerInfo: customerInfo ? nil : self.customerInfo

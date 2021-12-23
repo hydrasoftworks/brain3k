@@ -6,13 +6,13 @@ import Combine
 import Foundation
 import SwiftDux
 
-extension PurchasesAction {
+extension SubscriptionAction {
     static func getOfferings(
-        _ purchasesService: PurchasesService = PurchasesService()
+        _ subscriptionService: SubscriptionService = SubscriptionService()
     ) -> ActionPlan<AppState> {
         ActionPlan<AppState> { _ -> AnyPublisher<Action, Never> in
-            purchasesService.getOfferings()
-                .map(PurchasesAction.setOfferings)
+            subscriptionService.getOfferings()
+                .map(SubscriptionAction.setOfferings)
                 .catch { Just(MessageAction.show(.error($0.message))) }
                 .eraseToAnyPublisher()
         }

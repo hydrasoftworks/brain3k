@@ -28,6 +28,24 @@ struct PackageCell: View {
                 .font(.title3)
                 .bold()
         }
+        .modifier(PackageCellStyle())
+        .contentShape(Rectangle())
         .onTapGesture { onSelection(package) }
+    }
+}
+
+private struct PackageCellStyle: ViewModifier {
+    func body(content: Content) -> some View {
+        #if os(macOS)
+            content
+                .padding(.horizontal, 8)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 8)
+                        .stroke(Color.brand, lineWidth: 2)
+                )
+                .padding(.horizontal, 8)
+        #else
+            content
+        #endif
     }
 }

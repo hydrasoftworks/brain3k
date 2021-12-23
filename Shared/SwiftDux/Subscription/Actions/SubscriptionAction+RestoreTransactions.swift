@@ -6,13 +6,13 @@ import Combine
 import Foundation
 import SwiftDux
 
-extension PurchasesAction {
+extension SubscriptionAction {
     static func restoreTransactions(
-        _ purchasesService: PurchasesService = PurchasesService()
+        _ subscriptionService: SubscriptionService = SubscriptionService()
     ) -> ActionPlan<AppState> {
         ActionPlan<AppState> { _ -> AnyPublisher<Action, Never> in
-            purchasesService.restoreTransactions()
-                .map(PurchasesAction.setCustomerInfo)
+            subscriptionService.restoreTransactions()
+                .map(SubscriptionAction.setCustomerInfo)
                 .catch { Just(MessageAction.show(.error($0.message))) }
                 .eraseToAnyPublisher()
         }

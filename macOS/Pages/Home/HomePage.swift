@@ -26,7 +26,7 @@ struct HomePage: View {
         }
         .onAppear(dispatch: MemoriesAction.watchAll())
         .onAppear(dispatch: AccountAction.watchUser())
-        .onAppear(dispatch: PurchasesAction.setIdentity())
+        .onAppear(dispatch: SubscriptionAction.setIdentity())
         .environment(\.selectedMemoryID, $selectedMemoryID)
     }
 

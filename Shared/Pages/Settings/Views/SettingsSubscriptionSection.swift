@@ -5,7 +5,7 @@
 import SwiftUI
 
 struct SettingsSubscriptionSection: View {
-    @SwiftUI.State private var isPurchasesPresented = false
+    @SwiftUI.State private var isSubscriptionsPresented = false
 
     let memoriesCounter: Int?
     let memoriesLimit: Int?
@@ -13,7 +13,7 @@ struct SettingsSubscriptionSection: View {
     let onRestoreTransactions: () -> Void
 
     var body: some View {
-        Section(header: Text(L10n.SettingsPage.Sections.subscription)) {
+        Section(header: header) {
             if let counter = memoriesCounter {
                 Text(L10n.SettingsPage.Text.memoriesCurrent(counter))
             }
@@ -28,7 +28,7 @@ struct SettingsSubscriptionSection: View {
             } else {
                 SecondaryButton(
                     title: L10n.SettingsPage.Button.subscribe,
-                    action: { isPurchasesPresented = true }
+                    action: { isSubscriptionsPresented = true }
                 )
                 SecondaryButton(
                     title: L10n.SettingsPage.Button.restoreSubscription,
@@ -37,20 +37,29 @@ struct SettingsSubscriptionSection: View {
             }
         }
         .sheet(
-            isPresented: $isPurchasesPresented,
-            content: { purchasedPage }
+            isPresented: $isSubscriptionsPresented,
+            content: { subscriptionsPage }
         )
     }
 
-    private var purchasedPage: some View {
+    private var subscriptionsPage: some View {
         #if os(iOS)
             NavigationView {
-                PurchasesPageConnector()
+                SubscriptionsPageConnector()
             }
             .accentColor(Color.brand)
         #else
-            PurchasesPageConnector()
-                .frame(width: 300)
+            SubscriptionsPageConnector()
+                .frame(width: 360, height: 360)
+        #endif
+    }
+
+    private var header: some View {
+        #if os(macOS)
+            Text(L10n.SettingsPage.Sections.subscription)
+                .font(.title2)
+        #else
+            Text(L10n.SettingsPage.Sections.subscription)
         #endif
     }
 }

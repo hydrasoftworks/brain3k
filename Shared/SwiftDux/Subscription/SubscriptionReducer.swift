@@ -4,11 +4,11 @@
 
 import SwiftDux
 
-final class PurchasesReducer: Reducer {
+final class SubscriptionReducer: Reducer {
     func reduce(
-        state: PurchasesState,
-        action: PurchasesAction
-    ) -> PurchasesState {
+        state: SubscriptionState,
+        action: SubscriptionAction
+    ) -> SubscriptionState {
         switch action {
         case let .setOfferings(offerings):
             return state.copyWith(offerings: offerings)

@@ -20,7 +20,7 @@ struct Brain3kApp: App {
         let librariesService = LibrariesService()
         librariesService.initSwiftyBeaver()
         librariesService.initFirebase()
-        let purchasesService = PurchasesService()
+        let purchasesService = SubscriptionService()
         purchasesService.initRevenueCat()
     }
 
@@ -43,7 +43,7 @@ struct Brain3kApp: App {
             SettingsPageConnector()
                 .padding()
                 .frame(
-                    minWidth: 300, idealWidth: 300, maxWidth: 300,
+                    minWidth: 400, idealWidth: 400, maxWidth: 400,
                     minHeight: 400, idealHeight: 400, maxHeight: 600,
                     alignment: .topLeading
                 )

@@ -77,10 +77,10 @@
 "settings_page.text.memories_limit" = "Available memories: %d";
 "settings_page.confirmation.delete_account" = "Do you want to delete your account?\nThis action cannot be undone.";
 "settings_page.confirmation.button.delete_account" = "Yes, delete my account";
-"purchases_page.title" = "%@ Pro";
-"purchases_page.labels.legal1" = "• Payment will be charged to your iTunes account at confirmation of purchase and will automatically renew (at the duration/price selected) unless auto-renew is turned off at least 24 hrs before the end of the current period.";
-"purchases_page.labels.legal2" = "• Account will be charged for renewal within 24-hours prior to the end of the current period.";
-"purchases_page.labels.legal3" = "• Current subscription may not be cancelled during the active subscription period; however, you can manage your subscription and/or turn off auto-renewal by visiting your iTunes Account Settings after purchase.";
-"purchases_page.labels.legal4" = "• Any unused portion of the free one month initial period will be forfeited when you purchases a subscription.";
-"purchases_page.labels.legal5" = "• [Privacy Policy](%@) and [Terms of Use](%@) applied.";
+"subscriptions_page.title" = "%@ Pro";
+"subscriptions_page.labels.legal1" = "• Payment will be charged to your iTunes account at confirmation of purchase and will automatically renew (at the duration/price selected) unless auto-renew is turned off at least 24 hrs before the end of the current period.";
+"subscriptions_page.labels.legal2" = "• Account will be charged for renewal within 24-hours prior to the end of the current period.";
+"subscriptions_page.labels.legal3" = "• Current subscription may not be cancelled during the active subscription period; however, you can manage your subscription and/or turn off auto-renewal by visiting your iTunes Account Settings after purchase.";
+"subscriptions_page.labels.legal4" = "• Any unused portion of the free one month initial period will be forfeited when you purchases a subscription.";
+"subscriptions_page.labels.legal5" = "• [Privacy Policy](%@) and [Terms of Use](%@) applied.";
 

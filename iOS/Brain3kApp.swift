@@ -20,7 +20,7 @@ struct Brain3kApp: App {
         let librariesService = LibrariesService()
         librariesService.initSwiftyBeaver()
         librariesService.initFirebase()
-        let purchasesService = PurchasesService()
+        let purchasesService = SubscriptionService()
         purchasesService.initRevenueCat()
     }
 

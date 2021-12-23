@@ -6,7 +6,7 @@ import SwiftUI
 
 struct SettingsLinksSection: View {
     var body: some View {
-        Section(header: Text(L10n.SettingsPage.Sections.links)) {
+        Section(header: header) {
             SecondaryButton(
                 title: L10n.SettingsPage.Button.shareFeedback,
                 action: { openURL(SettingsPage.feedbackUrl) }
@@ -24,5 +24,14 @@ struct SettingsLinksSection: View {
                 action: { openURL(SettingsPage.termsOfUse) }
             )
         }
+    }
+
+    private var header: some View {
+        #if os(macOS)
+            Text(L10n.SettingsPage.Sections.links)
+                .font(.title2)
+        #else
+            Text(L10n.SettingsPage.Sections.links)
+        #endif
     }
 }

@@ -3,9 +3,10 @@
 //
 
 import RevenueCat
+import SwiftDux
 import SwiftUI
 
-struct PurchasesPage: View {
+struct SubscriptionsPage: View {
     @Environment(\.presentationMode) private var presentationMode
 
     let viewModel: ViewModel
@@ -13,11 +14,10 @@ struct PurchasesPage: View {
     var body: some View {
         ZStack {
             List {
-                #if os(macOS)
-                    Text(L10n.PurchasesPage.title(L10n.appName))
-                        .font(.title)
-                #endif
-                Section(footer: footer) {
+                Section(
+                    header: header,
+                    footer: footer
+                ) {
                     ForEach(viewModel.offering?.availablePackages ?? []) { package in
                         PackageCell(
                             package: package,
@@ -32,10 +32,10 @@ struct PurchasesPage: View {
             /// - Display an overlay during a purchase
             Rectangle()
                 .foregroundColor(Color.black)
-                .opacity(viewModel.isPurchasing ? 0.5 : 0.0)
+                .opacity(viewModel.isPurchasing ? 0.3 : 0.0)
                 .edgesIgnoringSafeArea(.all)
         }
-        .navigationTitle(L10n.PurchasesPage.title(L10n.appName))
+        .navigationTitle(L10n.SubscriptionsPage.title(L10n.appName))
         .toolbar {
             ToolbarItem(placement: cancelButtonPlacement) {
                 Button(
@@ -45,6 +45,15 @@ struct PurchasesPage: View {
                 )
             }
         }
+        .alert(
+            L10n.General.Error.title,
+            isPresented: viewModel.$hasPurchaseMessage,
+            presenting: viewModel.message,
+            actions: { _ in
+                Button(L10n.General.ok, role: .cancel, action: {})
+            },
+            message: { Text($0.text) }
+        )
         .onChange(of: viewModel.isSubscriptionActive) { newValue in
             if newValue { presentationMode.wrappedValue.dismiss() }
         }
@@ -58,14 +67,23 @@ struct PurchasesPage: View {
         #endif
     }
 
+    private var header: some View {
+        #if os(macOS)
+            Text(L10n.SubscriptionsPage.title(L10n.appName))
+                .font(.title3)
+        #else
+            EmptyView()
+        #endif
+    }
+
     private var footer: some View {
         VStack {
-            footerLine(L10n.PurchasesPage.Labels.legal1)
-            footerLine(L10n.PurchasesPage.Labels.legal2)
-            footerLine(L10n.PurchasesPage.Labels.legal3)
-            footerLine(L10n.PurchasesPage.Labels.legal4)
+            footerLine(L10n.SubscriptionsPage.Labels.legal1)
+            footerLine(L10n.SubscriptionsPage.Labels.legal2)
+            footerLine(L10n.SubscriptionsPage.Labels.legal3)
+            footerLine(L10n.SubscriptionsPage.Labels.legal4)
             footerLine(
-                L10n.PurchasesPage.Labels.legal5(
+                L10n.SubscriptionsPage.Labels.legal5(
                     SettingsPage.privacyPolicy?.absoluteString ?? "",
                     SettingsPage.termsOfUse?.absoluteString ?? ""
                 )
@@ -91,14 +109,17 @@ struct PurchasesPage: View {
         let isPurchasing: Bool
         let offering: Offering?
         let subscription: Subscription?
+        @ActionBinding var hasPurchaseMessage: Bool
+        let message: Message?
         let purchasePackage: (Package) -> Void
 
         var isSubscriptionActive: Bool { subscription == .pro }
 
-        static func == (lhs: PurchasesPage.ViewModel, rhs: PurchasesPage.ViewModel) -> Bool {
+        static func == (lhs: SubscriptionsPage.ViewModel, rhs: SubscriptionsPage.ViewModel) -> Bool {
             lhs.isPurchasing == rhs.isPurchasing
                 && lhs.offering == rhs.offering
                 && lhs.subscription == rhs.subscription
+                && lhs.message == rhs.message
         }
     }
 }

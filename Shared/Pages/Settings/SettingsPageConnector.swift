@@ -15,7 +15,7 @@ struct SettingsPageConnector: ConnectableView {
             memoriesLimit: state.accountState.user?.limit,
             subscription: state.accountState.user?.subscription,
             onDeleteAccount: { dispatch.send(AccountAction.delete()) },
-            onRestoreTransactions: { dispatch.send(PurchasesAction.restoreTransactions()) },
+            onRestoreTransactions: { dispatch.send(SubscriptionAction.restoreTransactions()) },
             onSignOut: { dispatch.send(AccountAction.signOut()) }
         )
     }

@@ -17,7 +17,7 @@ struct HomePage: View {
             .accentColor(Color.brand)
             .onAppear(dispatch: MemoriesAction.watchAll())
             .onAppear(dispatch: AccountAction.watchUser())
-            .onAppear(dispatch: PurchasesAction.setIdentity())
+            .onAppear(dispatch: SubscriptionAction.setIdentity())
     }
 
     @ViewBuilder

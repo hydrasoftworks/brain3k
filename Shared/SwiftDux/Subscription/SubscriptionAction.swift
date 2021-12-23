@@ -6,7 +6,7 @@ import Foundation
 import RevenueCat
 import SwiftDux
 
-enum PurchasesAction: Action, Equatable {
+enum SubscriptionAction: Action, Equatable {
     case setOfferings(Offerings)
     case setCustomerInfo(CustomerInfo?)
     case setIsPurchasing(Bool)
