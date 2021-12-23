@@ -22,7 +22,12 @@ struct SecondaryButton: View {
     var body: some View {
         Button(title, role: role, action: action)
             .buttonStyle(buttonStyle)
-            .foregroundColor(Color.brand)
+            .foregroundColor(color)
+    }
+
+    private var color: Color {
+        if role == .destructive { return Color.red }
+        return Color.brand
     }
 
     private var buttonStyle: some PrimitiveButtonStyle {

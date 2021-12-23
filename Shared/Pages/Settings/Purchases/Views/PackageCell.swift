@@ -11,7 +11,7 @@ struct PackageCell: View {
 
     var body: some View {
         HStack {
-            VStack(spacing: 8) {
+            VStack(alignment: .leading, spacing: 8) {
                 Text("\(package.product.localizedTitle) (\(package.period))")
                     .font(.title3)
                     .bold()

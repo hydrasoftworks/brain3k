@@ -60,7 +60,7 @@
         "repositoryURL": "https://github.com/firebase/firebase-ios-sdk",
         "state": {
           "branch": "master",
-          "revision": "480178b0871217c5f4fd3dd3c3a309c78c1d5c4c",
+          "revision": "a7a35f003c572091a776a23727da664faabb94cc",
           "version": null
         }
       },
@@ -186,7 +186,7 @@
         "repositoryURL": "https://github.com/kean/NukeUI",
         "state": {
           "branch": "main",
-          "revision": "d3cddddbae808ae7ff1b6659fe0ce0eb6471f36e",
+          "revision": "593ad30b9098b1227353bdc878221df78b025dd1",
           "version": null
         }
       },
