@@ -13,6 +13,10 @@ struct PurchasesPage: View {
     var body: some View {
         ZStack {
             List {
+                #if os(macOS)
+                    Text(L10n.PurchasesPage.title(L10n.appName))
+                        .font(.title)
+                #endif
                 Section(footer: footer) {
                     ForEach(viewModel.offering?.availablePackages ?? []) { package in
                         PackageCell(
@@ -22,7 +26,7 @@ struct PurchasesPage: View {
                     }
                 }
             }
-            .listStyle(InsetGroupedListStyle())
+            .listStyle(listStyle)
             .frame(maxWidth: .infinity, maxHeight: .infinity)
 
             /// - Display an overlay during a purchase
@@ -31,8 +35,7 @@ struct PurchasesPage: View {
                 .opacity(viewModel.isPurchasing ? 0.5 : 0.0)
                 .edgesIgnoringSafeArea(.all)
         }
-        .navigationBarTitle(L10n.PurchasesPage.title(L10n.appName))
-        .navigationBarTitleDisplayMode(.inline)
+        .navigationTitle(L10n.PurchasesPage.title(L10n.appName))
         .toolbar {
             ToolbarItem(placement: cancelButtonPlacement) {
                 Button(
@@ -45,6 +48,14 @@ struct PurchasesPage: View {
         .onChange(of: viewModel.isSubscriptionActive) { newValue in
             if newValue { presentationMode.wrappedValue.dismiss() }
         }
+    }
+
+    private var listStyle: some ListStyle {
+        #if os(macOS)
+            return InsetListStyle()
+        #else
+            return InsetGroupedListStyle()
+        #endif
     }
 
     private var footer: some View {

@@ -5,8 +5,7 @@
 import SwiftDux
 import SwiftUI
 
-struct SettingsPage: ConnectableView {
-    @Environment(\.actionDispatcher) private var dispatch
+struct SettingsPage: View {
     @SwiftUI.State private var confirmationIsPresented = false
     @SwiftUI.State private var isPurchasesPresented = false
 
@@ -14,17 +13,11 @@ struct SettingsPage: ConnectableView {
     static let writeReviewURL = URL(string: "https://apps.apple.com/app/id1587505104?action=write-review")
     static let privacyPolicy = URL(string: "https://brain3k.com/privacy-policy")
     static let termsOfUse = URL(string: "https://brain3k.com/terms-of-use")
+    static let manageSubscriptions = URL(string: "https://buy.itunes.apple.com/WebObjects/MZFinance.woa/wa/manageSubscriptions")
 
-    func map(state: AppState) -> ViewModel? {
-        ViewModel(
-            accountStatus: state.accountState.status,
-            memoriesCounter: state.accountState.user?.counter,
-            memoriesLimit: state.accountState.user?.limit,
-            subscription: state.accountState.user?.subscription
-        )
-    }
+    let viewModel: ViewModel
 
-    func body(props viewModel: ViewModel) -> some View {
+    var body: some View {
         Form {
             if viewModel.isAuthenticated {
                 subscriptionSection(viewModel)
@@ -69,7 +62,7 @@ struct SettingsPage: ConnectableView {
                 Button(
                     L10n.SettingsPage.Confirmation.Button.deleteAccount,
                     role: .destructive,
-                    action: { dispatch.send(AccountAction.delete()) }
+                    action: viewModel.onDeleteAccount
                 )
             }
         }
@@ -86,9 +79,7 @@ struct SettingsPage: ConnectableView {
             if viewModel.isSubscriptionActive {
                 SecondaryButton(
                     title: L10n.SettingsPage.Button.manageSubscription,
-                    action: {
-                        openURL(URL(string: "https://buy.itunes.apple.com/WebObjects/MZFinance.woa/wa/manageSubscriptions"))
-                    }
+                    action: { openURL(SettingsPage.manageSubscriptions) }
                 )
             } else {
                 SecondaryButton(
@@ -97,7 +88,7 @@ struct SettingsPage: ConnectableView {
                 )
                 SecondaryButton(
                     title: L10n.SettingsPage.Button.restoreSubscription,
-                    action: { dispatch.send(PurchasesAction.restoreTransactions()) }
+                    action: viewModel.onRestoreTransactions
                 )
             }
         }
@@ -126,10 +117,9 @@ struct SettingsPage: ConnectableView {
 
     private var signOutSection: some View {
         SecondaryButton(
-            title: L10n.SettingsPage.Button.signOut
-        ) {
-            dispatch.send(AccountAction.signOut())
-        }
+            title: L10n.SettingsPage.Button.signOut,
+            action: viewModel.onSignOut
+        )
     }
 
     private func openURL(_ url: URL?) {
@@ -147,6 +137,10 @@ struct SettingsPage: ConnectableView {
         let memoriesLimit: Int?
         let subscription: Subscription?
 
+        let onDeleteAccount: () -> Void
+        let onRestoreTransactions: () -> Void
+        let onSignOut: () -> Void
+
         var isAuthenticated: Bool {
             switch accountStatus {
             case .authenticated:
@@ -159,5 +153,12 @@ struct SettingsPage: ConnectableView {
         }
 
         var isSubscriptionActive: Bool { subscription == .pro }
+
+        static func == (lhs: SettingsPage.ViewModel, rhs: SettingsPage.ViewModel) -> Bool {
+            lhs.accountStatus == rhs.accountStatus
+                && lhs.memoriesCounter == rhs.memoriesCounter
+                && lhs.memoriesLimit == rhs.memoriesLimit
+                && lhs.subscription == rhs.subscription
+        }
     }
 }

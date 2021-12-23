@@ -26,7 +26,7 @@ struct Sidebar: View {
             NavigationLink(
                 tag: Option.settings,
                 selection: $selected,
-                destination: { SettingsPage() }
+                destination: { SettingsPageConnector() }
             ) {
                 Label(
                     L10n.SettingsPage.title,

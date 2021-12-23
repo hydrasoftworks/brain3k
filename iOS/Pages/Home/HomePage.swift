@@ -51,7 +51,7 @@ struct HomePage: View {
                 )
             }
             NavigationView {
-                SettingsPage()
+                SettingsPageConnector()
             }
             .tabItem {
                 Label(

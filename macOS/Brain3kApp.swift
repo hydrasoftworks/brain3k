@@ -40,7 +40,7 @@ struct Brain3kApp: App {
         }
 
         Settings {
-            SettingsPage()
+            SettingsPageConnector()
                 .padding()
                 .frame(
                     minWidth: 300, idealWidth: 300, maxWidth: 300,
