@@ -61,7 +61,7 @@ struct SignInPage: ConnectableView {
     private var goToSignUpButton: some View {
         SecondaryButton(
             title: L10n.SignInPage.Button.signUp,
-            action: { flipped = true }
+            action: { flipped.toggle() }
         )
     }
 

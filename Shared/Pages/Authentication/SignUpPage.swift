@@ -70,7 +70,7 @@ struct SignUpPage: ConnectableView {
     private var goToSignInButton: some View {
         SecondaryButton(
             title: L10n.SignUpPage.Button.signIn,
-            action: { flipped = false }
+            action: { flipped.toggle() }
         )
     }
 

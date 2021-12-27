@@ -11,9 +11,9 @@ struct JoinPage: View {
         ZStack {
             Background()
             if flipped {
-                SignUpPage(flipped: $flipped)
-            } else {
                 SignInPage(flipped: $flipped)
+            } else {
+                SignUpPage(flipped: $flipped)
             }
         }
         .onAppear(dispatch: AccountAction.generateNonce())
