@@ -63,9 +63,9 @@ internal enum L10n {
       internal static let unknown = L10n.tr("Localizable", "general.error.unknown")
     }
     internal enum Legal {
-      /// Privacy policy
+      /// Privacy Policy
       internal static let privacyPolicy = L10n.tr("Localizable", "general.legal.privacy_policy")
-      /// Terms of use
+      /// Terms and Conditions
       internal static let termsOfUse = L10n.tr("Localizable", "general.legal.terms_of_use")
     }
   }
@@ -253,7 +253,7 @@ internal enum L10n {
       internal static let legal3 = L10n.tr("Localizable", "subscriptions_page.labels.legal3")
       /// • Any unused portion of the free one month initial period will be forfeited when you purchases a subscription.
       internal static let legal4 = L10n.tr("Localizable", "subscriptions_page.labels.legal4")
-      /// • [Privacy Policy](%@) and [Terms of Use](%@) applied.
+      /// • [Privacy Policy](%@) and [Terms and Conditions](%@) applied.
       internal static func legal5(_ p1: Any, _ p2: Any) -> String {
         return L10n.tr("Localizable", "subscriptions_page.labels.legal5", String(describing: p1), String(describing: p2))
       }

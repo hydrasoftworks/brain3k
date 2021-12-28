@@ -25,6 +25,7 @@ internal enum Asset {
   internal static let brainIcon = ImageAsset(name: "BrainIcon")
   internal static let brandColor = ColorAsset(name: "BrandColor")
   internal static let brandTextColor = ColorAsset(name: "BrandTextColor")
+  internal static let logo = ImageAsset(name: "Logo")
   internal static let placeholder = ImageAsset(name: "Placeholder")
   internal static let robotEmptyList = ImageAsset(name: "RobotEmptyList")
   internal static let robotNotFound = ImageAsset(name: "RobotNotFound")
