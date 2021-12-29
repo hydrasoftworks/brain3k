@@ -8,7 +8,7 @@ extension SettingsPage {
     static let feedbackUrl = URL(string: "https://shipright.community/brain3k")
     static let writeReviewURL = URL(string: "https://apps.apple.com/app/id1587505104?action=write-review")
     static let privacyPolicy = URL(string: "https://brain3k.com/privacy-policy")
-    static let termsOfUse = URL(string: "https://brain3k.com/terms-of-use")
+    static let termsAndConditions = URL(string: "https://brain3k.com/terms-and-conditions")
     static let manageSubscriptions = URL(string: "https://buy.itunes.apple.com/WebObjects/MZFinance.woa/wa/manageSubscriptions")
 
     struct ViewModel: Equatable {

@@ -85,7 +85,7 @@ struct SubscriptionsPage: View {
             footerLine(
                 L10n.SubscriptionsPage.Labels.legal5(
                     SettingsPage.privacyPolicy?.absoluteString ?? "",
-                    SettingsPage.termsOfUse?.absoluteString ?? ""
+                    SettingsPage.termsAndConditions?.absoluteString ?? ""
                 )
             )
         }

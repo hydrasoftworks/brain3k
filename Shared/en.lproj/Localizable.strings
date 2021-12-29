@@ -11,7 +11,7 @@
 "general.processing" = "Processing...";
 "general.loading" = "Loading...";
 "general.legal.privacy_policy" = "Privacy Policy";
-"general.legal.terms_of_use" = "Terms and Conditions";
+"general.legal.terms_and_conditions" = "Terms and Conditions";
 "general.error.title" = "Houston, we have a problem";
 "general.error.unknown" =  "Unknown error";
 "share_extension.name" = "Add to %s";

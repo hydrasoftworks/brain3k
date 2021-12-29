@@ -20,8 +20,8 @@ struct SettingsLinksSection: View {
                 action: { openURL(SettingsPage.privacyPolicy) }
             )
             SecondaryButton(
-                title: L10n.General.Legal.termsOfUse,
-                action: { openURL(SettingsPage.termsOfUse) }
+                title: L10n.General.Legal.termsAndConditions,
+                action: { openURL(SettingsPage.termsAndConditions) }
             )
         }
     }

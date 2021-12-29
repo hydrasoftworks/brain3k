@@ -66,7 +66,7 @@ internal enum L10n {
       /// Privacy Policy
       internal static let privacyPolicy = L10n.tr("Localizable", "general.legal.privacy_policy")
       /// Terms and Conditions
-      internal static let termsOfUse = L10n.tr("Localizable", "general.legal.terms_of_use")
+      internal static let termsAndConditions = L10n.tr("Localizable", "general.legal.terms_and_conditions")
     }
   }
 
