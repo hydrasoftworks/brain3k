@@ -34,7 +34,7 @@
 "sign_up_page.button.sign_in" = "Already have an account? Sign in now.";
 "unverified_email_page.title" = "Email address verification needed";
 "unverified_email_page.description1" = "Go to your %s inbox and confirm message from %s. After that, press button below.";
-"unverified_email_page.description2" = "Didn't received verification email?";
+"unverified_email_page.description2" = "Didn't you receive a verification e-mail?";
 "unverified_email_page.description3" = "or";
 "unverified_email_page.button.verified" = "Email verified";
 "unverified_email_page.button.send" = "Send verification email";
@@ -43,7 +43,7 @@
 "memories_page.title" = "Memories";
 "memories_page.button.add" = "Add memory";
 "memories_page.empty.all" = "Add your first memory using the + button above or by sharing the URL from any app.";
-"memories_page.empty.search" = "Didn't find memories matching provided search query.";
+"memories_page.empty.search" = "No memories matching provided search query.";
 "memory_page.not_found" = "Memory not found";
 "memory_page.title" = "Memory";
 "memory_page.button.menu" = "Actions";

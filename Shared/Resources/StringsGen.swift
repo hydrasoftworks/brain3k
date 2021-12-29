@@ -87,7 +87,7 @@ internal enum L10n {
     internal enum Empty {
       /// Add your first memory using the + button above or by sharing the URL from any app.
       internal static let all = L10n.tr("Localizable", "memories_page.empty.all")
-      /// Didn't find memories matching provided search query.
+      /// No memories matching provided search query.
       internal static let search = L10n.tr("Localizable", "memories_page.empty.search")
     }
   }
@@ -265,7 +265,7 @@ internal enum L10n {
     internal static func description1(_ p1: UnsafePointer<CChar>, _ p2: UnsafePointer<CChar>) -> String {
       return L10n.tr("Localizable", "unverified_email_page.description1", p1, p2)
     }
-    /// Didn't received verification email?
+    /// Didn't you receive a verification e-mail?
     internal static let description2 = L10n.tr("Localizable", "unverified_email_page.description2")
     /// or
     internal static let description3 = L10n.tr("Localizable", "unverified_email_page.description3")
