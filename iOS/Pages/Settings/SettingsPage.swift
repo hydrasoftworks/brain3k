@@ -17,7 +17,9 @@ struct SettingsPage: View {
                     onRestoreTransactions: viewModel.onRestoreTransactions
                 )
             }
-            SettingsLinksSection()
+            SettingsLinksSection(
+                email: viewModel.email
+            )
             if viewModel.isAuthenticated {
                 SettingsAccountSection(
                     onDeleteAccount: viewModel.onDeleteAccount,

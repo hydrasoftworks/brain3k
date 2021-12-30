@@ -142,6 +142,8 @@ internal enum L10n {
     /// Settings
     internal static let title = L10n.tr("Localizable", "settings_page.title")
     internal enum Button {
+      /// Contact support
+      internal static let contactSupport = L10n.tr("Localizable", "settings_page.button.contact_support")
       /// Delete account
       internal static let deleteAccount = L10n.tr("Localizable", "settings_page.button.delete_account")
       /// Manage subscription

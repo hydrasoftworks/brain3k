@@ -60,7 +60,7 @@
         "repositoryURL": "https://github.com/firebase/firebase-ios-sdk",
         "state": {
           "branch": "master",
-          "revision": "a7a35f003c572091a776a23727da664faabb94cc",
+          "revision": "902adf8b5bfd9c0b4032b155f083a8666dedf81e",
           "version": null
         }
       },
@@ -178,7 +178,7 @@
         "state": {
           "branch": null,
           "revision": "6be3e778f1663b16dd645b7e8a0a01f73b5ed7f3",
-          "version": "10.5.2"
+          "version": "10.6.1"
         }
       },
       {
@@ -267,8 +267,8 @@
         "repositoryURL": "https://github.com/nalexn/ViewInspector",
         "state": {
           "branch": null,
-          "revision": "0d546878902bdde8c4682141f848a9dc44e04ba6",
-          "version": "0.9.0"
+          "revision": "6b88c4ec1fa20cf38f2138052e63c8e79df5d76e",
+          "version": "0.9.1"
         }
       }
     ]

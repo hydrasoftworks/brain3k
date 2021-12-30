@@ -11,6 +11,7 @@ struct SettingsPageConnector: ConnectableView {
     func map(state: AppState) -> SettingsPage.ViewModel? {
         SettingsPage.ViewModel(
             accountStatus: state.accountState.status,
+            email: state.accountState.account?.email,
             memoriesCounter: state.accountState.user?.counter,
             memoriesLimit: state.accountState.user?.limit,
             subscription: state.accountState.user?.subscription,

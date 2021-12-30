@@ -26,7 +26,9 @@ struct SettingsPage: View {
                 }
             }
             Form {
-                SettingsLinksSection()
+                SettingsLinksSection(
+                    email: viewModel.email
+                )
             }
             .tabItem {
                 Label(
