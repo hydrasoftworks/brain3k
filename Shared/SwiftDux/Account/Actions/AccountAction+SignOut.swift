@@ -11,9 +11,8 @@ extension AccountAction {
     ) -> ActionPlan<AppState> {
         ActionPlan<AppState> { _ -> AnyPublisher<Action, Never> in
             accountService.signOut()
-                .map { AccountAction.setStatus(.unauthenticated) }
-                .catch { _ in Just(AccountAction.setStatus(.unauthenticated)) }
-                .append(AccountAction.setUser(nil))
+                .map { StoreAction.reset(state: AppState()) }
+                .catch { _ in Just(StoreAction.reset(state: AppState())) }
                 .append(SubscriptionAction.setIdentity())
                 .eraseToAnyPublisher()
         }

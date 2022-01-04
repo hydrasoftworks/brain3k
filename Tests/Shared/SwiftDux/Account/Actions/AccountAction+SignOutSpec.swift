@@ -9,11 +9,21 @@ import Nimble
 import Quick
 import SwiftDux
 
+extension StoreAction: Equatable where State == AppState {
+    public static func == (lhs: StoreAction, rhs: StoreAction) -> Bool {
+        switch (lhs, rhs) {
+        case (.prepare, .prepare): return true
+        case let (.reset(lhsState), .reset(rhsState)): return lhsState == rhsState
+        default: return false
+        }
+    }
+}
+
 final class SignOutSpec: QuickSpec {
     override func spec() {
         describe("\(AccountAction.self) signOut actions") {
             var mock: MockAccountService!
-            var actions: [AccountAction?] = []
+            var actions: [StoreAction<AppState>?] = []
             var cancellable: AnyCancellable?
 
             beforeEach {
@@ -30,18 +40,13 @@ final class SignOutSpec: QuickSpec {
                 cancellable = nil
             }
 
-            it("should call setStatus(.unauthenticated) and setUser(nil) action") {
+            it("should clean state") {
                 let actionPlan = AccountAction.signOut(mock)
 
                 cancellable = actionPlan.run(store: storeProxy())
-                    .sink(receiveValue: { actions.append($0 as? AccountAction) })
+                    .sink(receiveValue: { actions.append($0 as? StoreAction<AppState>) })
                 expect(actions).toEventually(
-                    contain(
-                        [
-                            AccountAction.setStatus(.unauthenticated),
-                            AccountAction.setUser(nil),
-                        ]
-                    )
+                    contain(StoreAction.reset(state: AppState()))
                 )
             }
 
@@ -53,18 +58,13 @@ final class SignOutSpec: QuickSpec {
                     }
                 }
 
-                it("should call setStatus(.unauthenticated) and setUser(nil) action as well") {
+                it("should clean state as well") {
                     let actionPlan = AccountAction.signOut(mock)
 
                     cancellable = actionPlan.run(store: storeProxy())
-                        .sink(receiveValue: { actions.append($0 as? AccountAction) })
+                        .sink(receiveValue: { actions.append($0 as? StoreAction<AppState>) })
                     expect(actions).toEventually(
-                        contain(
-                            [
-                                AccountAction.setStatus(.unauthenticated),
-                                AccountAction.setUser(nil),
-                            ]
-                        )
+                        contain(StoreAction.reset(state: AppState()))
                     )
                 }
             }
