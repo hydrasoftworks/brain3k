@@ -1,89 +1,777 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en">
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/8.9.0/firebase-app.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/8.9.0/firebase-auth.js"></script>
-    <script defer src="/__/firebase/8.9.0/firebase-database.js"></script>
-    <script defer src="/__/firebase/8.9.0/firebase-firestore.js"></script>
-    <script defer src="/__/firebase/8.9.0/firebase-functions.js"></script>
-    <script defer src="/__/firebase/8.9.0/firebase-messaging.js"></script>
-    <script defer src="/__/firebase/8.9.0/firebase-storage.js"></script>
-    <script defer src="/__/firebase/8.9.0/firebase-analytics.js"></script>
-    <script defer src="/__/firebase/8.9.0/firebase-remote-config.js"></script>
-    <script defer src="/__/firebase/8.9.0/firebase-performance.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="description" content="Brain3k - Collect memories not bookmarks" />
+	<meta name="keywords"
+		content="Memories collection, Bookmark manager, Artificial intelligence, Mobile App, Desktop App">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- SITE TITLE -->
+	<title>Brain3k - Collect memories not bookmarks</title>
+	<!-- FAVICON AND TOUCH ICONS -->
+	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" sizes="57x57" href="images/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="images/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="images/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="images/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="images/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon-180x180.png">
+	<link rel="apple-touch-icon" sizes="167x167" href="images/apple-touch-icon-167x167.png">
+	<link rel="icon" href="images/apple-touch-icon-72x72.png" type="image/x-icon">
+	<!-- GOOGLE FONTS -->
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+		rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@300;400;500;700;900&display=swap"
+		rel="stylesheet">
+	<!-- BOOTSTRAP CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<!-- FONT ICONS -->
+	<link href="css/flaticon.css" rel="stylesheet">
+	<!-- PLUGINS STYLESHEET -->
+	<link href="css/menu.css" rel="stylesheet">
+	<link id="effect" href="css/dropdown-effects/fade-down.css" media="all" rel="stylesheet">
+	<link href="css/magnific-popup.css" rel="stylesheet">
+	<link href="css/owl.carousel.min.css" rel="stylesheet">
+	<link href="css/flexslider.css" rel="stylesheet">
+	<link href="css/owl.theme.default.min.css" rel="stylesheet">
+	<!-- TEMPLATE CSS -->
+	<link href="css/style.css" rel="stylesheet">
+	<!-- ON SCROLL ANIMATION -->
+	<link href="css/animate.css" rel="stylesheet">
+	<!-- RESPONSIVE CSS -->
+	<link href="css/responsive.css" rel="stylesheet">
+</head>
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
-    </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+<body>
+	<!-- PRELOADER SPINNER
+		============================================= -->
+	<div id="loader-wrapper">
+		<div id="loading">
+			<span class="cssload-loader"><span class="cssload-loader-inner"></span></span>
+		</div>
+	</div>
+	<!-- PAGE CONTENT
+		============================================= -->
+	<div id="page" class="page">
+		<!-- HEADER
+			============================================= -->
+		<header id="header" class="header tra-menu navbar-light">
+			<div class="header-wrapper">
+				<!-- MOBILE HEADER -->
+				<div class="wsmobileheader clearfix">
+					<span class="smllogo"><img src="images/logo.png" alt="mobile-logo" /></span>
+					<a id="wsnavtoggle" class="wsanimated-arrow"><span></span></a>
+				</div>
+				<!-- NAVIGATION MENU -->
+				<div class="wsmainfull menu clearfix">
+					<div class="wsmainwp clearfix">
+						<!-- HEADER LOGO -->
+						<div class="desktoplogo"><a href="/" class="logo-black"><img src="images/logo.png"
+									alt="header-logo"></a></div>
+						<div class="desktoplogo"><a href="/" class="logo-white"><img src="images/logo-white.png"
+									alt="header-logo"></a></div>
+						<!-- MAIN MENU -->
+						<nav class="wsmenu clearfix">
+							<ul class="wsmenu-list nav-skyblue-hover">
+								<!-- SIMPLE NAVIGATION LINK -->
+								<li class="nl-simple" aria-haspopup="true"><a href="#features-3">Features</a></li>
+								<!-- SIMPLE NAVIGATION LINK -->
+								<li class="nl-simple" aria-haspopup="true"><a href="#pricing">Pricing</a></li>
+								<!-- SIMPLE NAVIGATION LINK -->
+								<li class="nl-simple" aria-haspopup="true"><a href="#faqs">FAQs & Contact</a></li>
+								<!-- DROPDOWN MENU -->
+								<li aria-haspopup="true"><a href="#">Links <span class="wsarrow"></span></a>
+									<ul class="sub-menu">
+										<li aria-haspopup="true"><a href="privacy-policy">Privacy Policy</a></li>
+										<li aria-haspopup="true"><a href="terms-and-conditions">Terms and Conditions</a>
+										</li>
+									</ul>
+								</li>
+								<!-- APPSTORE BADGE -->
+								<li class="nl-simple" aria-haspopup="true">
+									<a href="https://apps.apple.com/app/brain3k/id1587505104" class="store header-store">
+										<img class="appstore-header" src="images/appstore.svg"
+											alt="Download on the App Store">
+									</a>
+								</li>
+								<!-- MAC APPSTORE BADGE -->
+								<li class="nl-simple" aria-haspopup="true">
+									<a href="https://apps.apple.com/app/brain3k/id1587505104" class="store header-store">
+										<img class="macstore-header" src="images/macstore.svg"
+											alt="Download on the Mac App Store">
+									</a>
+								</li>
+							</ul>
+						</nav> <!-- END MAIN MENU -->
+					</div>
+				</div> <!-- END NAVIGATION MENU -->
+			</div> <!-- End header-wrapper -->
+		</header> <!-- END HEADER -->
+		<!-- HERO-11
+			============================================= -->
+		<section id="hero-11" class="bg_shape_01 hero-section division">
+			<div class="container white-color">
+				<div class="row d-flex align-items-center">
+					<!-- HERO TEXT -->
+					<div class="col">
+						<div class="hero-11-txt text-center">
+							<!-- Title -->
+							<h2 class="h2-lg">Collect memories instead of bookmarks</h2>
+							<!-- Text -->
+							<p>Native iOS, iPadOS, and macOS applications that replace your browser bookmarks (and more)
+								with a beautiful and searchable collection.</p>
+							<!-- HERO IMAGE -->
+							<div class="hero-11-img">
+								<img class="img-fluid" src="images/hero-11-img.png" alt="video-preview">
+							</div>
+						</div>
+					</div> <!-- END HERO TEXT -->
+				</div> <!-- End row -->
+			</div> <!-- End container -->
+			<!-- SECTION OVERLAY -->
+			<div class="bg_fixed wave_overlay"></div>
+		</section> <!-- END HERO-11 -->
+		<!-- FEATURES-3
+			============================================= -->
+		<section id="features-3" class="pt-100 features-section division">
+			<div class="container">
+				<!-- SECTION TITLE -->
+				<div class="row">
+					<div class="col-lg-10 offset-lg-1">
+						<div class="section-title text-center mb-70">
+							<!-- Title -->
+							<h2 class="h2-md">Ready to Try Brain3k?</h2>
+							<!-- Text -->
+							<p class="p-xl">Life is too short for managing bookmarks. Brain3k makes that procedure a
+								past. Add an URL from any app using search features and let robots do the rest. Each
+								item is analyzed, and you can find it using the search feature.</p>
+						</div>
+					</div>
+				</div>
+				<!-- FEATURES-3 WRAPPER -->
+				<div class="fbox-3-wrapper">
+					<div class="row">
+						<!-- FEATURE BOX #1 -->
+						<div id="fb-3-1" class="col-md-6 col-lg-3">
+							<div class="fbox-3 bg_white wow fadeInUp" data-wow-delay="0.4s">
+								<!-- Icon -->
+								<div class="fbox-3-ico stateblue-color ico-65"><span class="flaticon-browser-1"></span>
+								</div>
+								<!-- Title -->
+								<h5 class="h5-sm">Collect</h5>
+								<!-- Text -->
+								<p class="p-md">Create memories directly in your browser using iOS and macOS share
+									extensions.</p>
+							</div>
+						</div>
+						<!-- FEATURE BOX #2 -->
+						<div id="fb-3-2" class="col-md-6 col-lg-3">
+							<div class="fbox-3 bg_white wow fadeInUp" data-wow-delay="0.6s">
+								<!-- Icon -->
+								<div class="fbox-3-ico stateblue-color ico-65"><span class="flaticon-picture"></span>
+								</div>
+								<!-- Title -->
+								<h5 class="h5-sm">Browse</h5>
+								<!-- Text -->
+								<p class="p-md">Display a list of memories and enjoy beautiful graphics for each of
+									them.</p>
+							</div>
+						</div>
+						<!-- FEATURE BOX #3 -->
+						<div id="fb-3-3" class="col-md-6 col-lg-3">
+							<div class="fbox-3 bg_white wow fadeInUp" data-wow-delay="0.8s">
+								<!-- Icon -->
+								<div class="fbox-3-ico stateblue-color ico-65"><span class="flaticon-robot"></span>
+								</div>
+								<!-- Title -->
+								<h5 class="h5-sm">Search</h5>
+								<!-- Text -->
+								<p class="p-md">Each memory is analyzed for its content. Search with related text to
+									quickly find it.</p>
+							</div>
+						</div>
+						<!-- FEATURE BOX #4 -->
+						<div id="fb-3-4" class="col-md-6 col-lg-3">
+							<div class="fbox-3 bg_white wow fadeInUp" data-wow-delay="1s">
+								<!-- Icon -->
+								<div class="fbox-3-ico stateblue-color ico-65"><span class="flaticon-sync"></span></div>
+								<!-- Title -->
+								<h5 class="h5-sm">Sync</h5>
+								<!-- Text -->
+								<p class="p-md">Build-in real-time synchronization. See the same data on iOS, iPadOS,
+									and macOS.</p>
+							</div>
+						</div>
+					</div> <!-- End row -->
+				</div> <!-- END FEATURES-3 WRAPPER -->
+			</div> <!-- End container -->
+		</section> <!-- END FEATURES-3 -->
+		<!-- CONTENT-3
+			============================================= -->
+		<section id="content-3" class="wide-60 content-section division">
+			<div class="container">
+				<!-- CONTENT BOX-1 -->
+				<div id="cb-1-1" class="cbox-1 pb-25">
+					<div class="row d-flex align-items-center">
+						<!-- IMAGE BLOCK -->
+						<div class="col-md-5 col-lg-6">
+							<div class="img-block left-column pc-25 mb-40 wow fadeInRight" data-wow-delay="0.6s">
+								<img class="img-fluid" src="images/img-02.png" alt="content-image">
+							</div>
+						</div>
+						<!-- TEXT BLOCK -->
+						<div class="col-md-7 col-lg-6">
+							<div class="txt-block right-column pc-30 mb-40 wow fadeInLeft" data-wow-delay="0.6s">
+								<!-- Section ID -->
+								<span class="section-id grey-color">Technology to save your time</span>
+								<!-- Title -->
+								<h2 class="h2-md">Rework how you collect bookmarks</h2>
+								<!-- Text -->
+								<p class="p-lg">Take a look at your browser bookmarks. You probably will be surprised
+									seeing directories and items that you added there years ago. Brain3k offers a
+									quicker approach. Don't waste your time on managing bookmarks anymore. Put URLs in
+									the app (directly from a web browser using a share extension) and let the algorithms
+									do the rest. Brain3k will analyze provided URL and use title, description, keywords
+									and more to provide correct search results.</p>
+							</div>
+						</div> <!-- END TEXT BLOCK -->
+					</div> <!-- End row -->
+				</div> <!-- END CONTENT BOX-1 -->
+				<!-- CONTENT BOX-2 -->
+				<div id="cb-1-2" class="cbox-1">
+					<div class="row d-flex align-items-center m-row">
+						<!-- TEXT BLOCK -->
+						<div class="col-md-7 col-lg-6 m-bottom">
+							<div class="txt-block left-column mb-40 wow fadeInRight" data-wow-delay="0.6s">
+								<!-- Section ID -->
+								<span class="section-id grey-color">Technology adjusted to you</span>
+								<!-- Title -->
+								<h2 class="h2-md">Rework how you search</h2>
+								<!-- List -->
+								<ul class="simple-list">
+									<li class="list-item">
+										<p class="p-lg">You don't have to remember the correct domain name to find the
+											bookmark you are looking for. When searching for memories, type what you
+											remember. Each memory is analyzed, and Brain3k provides you highest matching
+											results.</p>
+									</li>
+									<li class="list-item">
+										<p class="p-lg">You can improve search results by adding your notes and tags.
+										</p>
+									</li>
+								</ul>
+								<!-- Icons List -->
+								<ul class="txt-block-ico-list ico-60 stateblue-color">
+									<li><span class="flaticon-robot"></span></li>
+									<li><span class="flaticon-suitcase"></span></li>
+									<li><span class="flaticon-browser-3"></span></li>
+									<li><span class="flaticon-dial"></span></li>
+								</ul>
+							</div>
+						</div> <!-- END TEXT BLOCK -->
+						<!-- IMAGE BLOCK -->
+						<div class="col-md-5 col-lg-6 m-top">
+							<div class="img-block right-column pc-15 mb-40 wow fadeInLeft" data-wow-delay="0.6s">
+								<img class="img-fluid" src="images/img-10.png" alt="content-image">
+							</div>
+						</div>
+					</div> <!-- End row -->
+				</div> <!-- END CONTENT BOX-2 -->
+			</div> <!-- End container -->
+		</section> <!-- END CONTENT-3 -->
+		<!-- CONTENT-5
+			============================================= -->
+		<section id="content-5" class="pb-80 content-section">
+			<div class="bg-inner bg_whitesmoke pt-100 division">
+				<div class="container">
+					<div class="row d-flex align-items-center">
+						<!-- IMAGE BLOCK -->
+						<div class="col-md-5 col-lg-6">
+							<div class="content-5-img right-column pc-20 text-center wow fadeInRight"
+								data-wow-delay="0.6s">
+								<img class="img-fluid" src="images/img-08.png" alt="content-image">
+							</div>
+						</div>
+						<!-- TEXT BLOCK -->
+						<div class="col-md-7 col-lg-6">
+							<div class="txt-block left-column mb-40 wow fadeInLeft" data-wow-delay="0.6s">
+								<!-- CONTENT BOX #1 -->
+								<div class="cbox mb-30">
+									<!-- Icon -->
+									<div class="cbox-ico ico-65 stateblue-color"><span class="flaticon-suitcase"></span>
+									</div>
+									<!-- Text -->
+									<div class="cbox-txt">
+										<h5 class="h5-sm">Add Tags</h5>
+										<p class="p-lg">With tags, you can add additional information that will simplify
+											searching. Use them to group your memories based on the project, purpose, or
+											mood.</p>
+									</div>
+								</div>
+								<!-- CONTENT BOX #2 -->
+								<div class="cbox mb-30">
+									<!-- Icon -->
+									<div class="cbox-ico ico-65 stateblue-color"><span class="flaticon-notes"></span>
+									</div>
+									<!-- Text -->
+									<div class="cbox-txt">
+										<h5 class="h5-sm">Add Notes</h5>
+										<p class="p-lg">Not everything can be added in short tags. It is where the notes
+											section shines. Your notes will be used for search as well.</p>
+									</div>
+								</div>
+								<!-- CONTENT BOX #3 -->
+								<div class="cbox">
+									<!-- Icon -->
+									<div class="cbox-ico ico-65 stateblue-color"><span class="flaticon-image"></span>
+									</div>
+									<!-- Text -->
+									<div class="cbox-txt">
+										<h5 class="h5-sm">Share Memories</h5>
+										<p class="p-lg">Brain3k is a private experience. Only you have access to your
+											collection. But with the share button, you can quickly copy or share
+											particular memory outside.</p>
+									</div>
+								</div>
+							</div>
+						</div> <!-- END CONTENT TXT -->
+					</div> <!-- End row -->
+				</div> <!-- End container -->
+			</div> <!-- End Inner Background -->
+		</section> <!-- END CONTENT-5 -->
+		<!-- FEATURES-6
+			============================================= -->
+		<section id="features-6" class="wide-50 features-section division">
+			<div class="container">
+				<!-- SECTION TITLE -->
+				<div class="row">
+					<div class="col-lg-10 offset-lg-1">
+						<div class="section-title text-center mb-70">
+							<!-- Title -->
+							<h2 class="h2-md">What to Expect?</h2>
+							<!-- Text -->
+							<p class="p-xl">Brain3k changes how you collect data. At first, it may be an overwhelming
+								experience, but if you give the app some time, you will find it more useful and quicker
+								than usual bookmarks management.</p>
+						</div>
+					</div>
+				</div>
+				<!-- FEATURES-6 WRAPPER -->
+				<div class="fbox-6-wrapper">
+					<div class="row">
+						<!-- FEATURE BOX #1 -->
+						<div id="fb-6-1" class="col-md-6 col-lg-4">
+							<div class="fbox-6 pc-15 mb-50 wow fadeInUp" data-wow-delay="0.4s">
+								<!-- Icon & Title -->
+								<div class="fbox-6-title ico-40 clearfix">
+									<span class="flaticon-user stateblue-color"></span>
+									<h5 class="h5-sm">Personal Experience</h5>
+								</div>
+								<!-- Text -->
+								<p class="p-lg">Memories stored in Brain3k are yours only. No social features, no
+									selling data for advertisers.</p>
+							</div>
+						</div>
+						<!-- FEATURE BOX #2 -->
+						<div id="fb-6-2" class="col-md-6 col-lg-4">
+							<div class="fbox-6 pc-15 mb-50 wow fadeInUp" data-wow-delay="0.6s">
+								<!-- Icon & Title -->
+								<div class="fbox-6-title ico-40 clearfix">
+									<span class="flaticon-picture stateblue-color"></span>
+									<h5 class="h5-sm">Beautiful Design</h5>
+								</div>
+								<!-- Text -->
+								<p class="p-lg">Dark mode, memory preview, and multitasking support. Using Brain3k is a
+									pleasure.</p>
+							</div>
+						</div>
+						<!-- FEATURE BOX #3 -->
+						<div id="fb-6-3" class="col-md-6 col-lg-4">
+							<div class="fbox-6 pc-15 mb-50 wow fadeInUp" data-wow-delay="0.8s">
+								<!-- Icon & Title -->
+								<div class="fbox-6-title ico-40 clearfix">
+									<span class="flaticon-robot stateblue-color"></span>
+									<h5 class="h5-sm">Powerful Search</h5>
+								</div>
+								<!-- Text -->
+								<p class="p-lg">Each memory is analyzed. The search uses pages' titles, keywords, and
+									summaries.</p>
+							</div>
+						</div>
+						<!-- FEATURE BOX #4 -->
+						<div id="fb-6-4" class="col-md-6 col-lg-4">
+							<div class="fbox-6 pc-15 mb-50 wow fadeInUp" data-wow-delay="1s">
+								<!-- Icon & Title -->
+								<div class="fbox-6-title ico-40 clearfix">
+									<span class="flaticon-suitcase stateblue-color"></span>
+									<h5 class="h5-sm">Notes & Tags</h5>
+								</div>
+								<!-- Text -->
+								<p class="p-lg">Extend URL analyzed data with your tags and notes. Search memories even
+									faster.</p>
+							</div>
+						</div>
+						<!-- FEATURE BOX #5 -->
+						<div id="fb-6-5" class="col-md-6 col-lg-4">
+							<div class="fbox-6 pc-15 mb-50 wow fadeInUp" data-wow-delay="1.2s">
+								<!-- Icon & Title -->
+								<div class="fbox-6-title ico-40 clearfix">
+									<span class="flaticon-browser-1 stateblue-color"></span>
+									<h5 class="h5-sm">Share Extension</h5>
+								</div>
+								<!-- Text -->
+								<p class="p-lg">You don't have to open Brain3k to add new memory. Use iOS, iPadOS, and
+									macOS share view instead.</p>
+							</div>
+						</div>
+						<!-- FEATURE BOX #6 -->
+						<div id="fb-6-6" class="col-md-6 col-lg-4">
+							<div class="fbox-6 pc-15 mb-50 wow fadeInUp" data-wow-delay="1.4s">
+								<!-- Icon & Title -->
+								<div class="fbox-6-title ico-40 clearfix">
+									<span class="flaticon-sync stateblue-color"></span>
+									<h5 class="h5-sm">Cross-platform sync</h5>
+								</div>
+								<!-- Text -->
+								<p class="p-lg">Data synchronized in real-time on all platforms. Add memories on mobile
+									and use them on the desktop.</p>
+							</div>
+						</div>
+					</div> <!-- End row -->
+				</div> <!-- END FEATURES-6 WRAPPER -->
+			</div> <!-- End container -->
+		</section> <!-- END FEATURES-6 -->
+		<!-- CONTENT-13
+			============================================= -->
+		<section id="content-13" class="rel crocus_gradient bg_shape_02 wide-60 content-section division">
+			<div class="container white-color">
+				<div class="row d-flex align-items-center">
+					<!-- TEXT BLOCK -->
+					<div class="col-md-6 col-xl-6">
+						<div class="txt-block left-column mb-40 wow fadeInLeft" data-wow-delay="0.6s">
+							<!-- Section ID -->
+							<span class="section-id">Totally Optimized</span>
+							<!-- Title -->
+							<h2 class="h2-xs">Native experience on every platform</h2>
+							<!-- Subtitle -->
+							<p class="p-md">Brain3k contains two separate applications. The iOS one for iPhones and iPad
+								and macOS for MacBooks, Mac Minis, and iMacs. Each application adjusts to a specific
+								platform idiom.</p>
+							<!-- List -->
+							<ul class="simple-list">
+								<li class="list-item">
+									<p class="p-lg">Portrait and landscape mode for iOS</p>
+								</li>
+								<li class="list-item">
+									<p class="p-lg">Multitasking support for iPadOS</p>
+								</li>
+								<li class="list-item">
+									<p class="p-lg">Share extension on all platforms</p>
+								</li>
+								<li class="list-item">
+									<p class="p-lg">Dark mode on all platforms</p>
+								</li>
+							</ul>
+						</div>
+					</div> <!-- END TEXT BLOCK -->
+					<!-- IMAGE BLOCK -->
+					<div class="col-md-6 col-xl-6">
+						<div class="content-13-img wow fadeInRight" data-wow-delay="0.6s">
+							<img class="img-fluid" src="images/tablet.png" alt="content-image">
+						</div>
+					</div>
+				</div> <!-- End row -->
+			</div> <!-- End container -->
+		</section> <!-- END CONTENT-13 -->
+		<!-- PRICING-2
+			============================================= -->
+		<section id="pricing" class="wide-100 pricing-section division">
+			<div class="container">
+				<!-- SECTION TITLE -->
+				<div class="row">
+					<div class="col-lg-10 offset-lg-1">
+						<div class="section-title text-center mb-70">
+							<!-- Title -->
+							<h2 class="h2-md">Simple Pricing</h2>
+							<!-- Text -->
+							<p class="p-xl">Brain3k offers 100 memories for each account. If you are satisfied with the
+								app, you can switch to Pro, which exceeds the limit to 5000 memories.</p>
+						</div>
+					</div>
+				</div>
+				<!-- PRICING TABLES -->
+				<div class="row pricing-row">
+					<!-- FREE PLAN -->
+					<div class="col-md-4 offset-md-2">
+						<div class="pricing-table mb-40 wow fadeInUp" data-wow-delay="0.4s">
+							<!-- Plan Price  -->
+							<div class="pricing-plan bg_white">
+								<h5 class="h5-xs">Brain3k Free</h5>
+								<sup class="dark-color">$</sup>
+								<span class="dark-color">0</span>
+								<sup class="validity dark-color"><span>.00</span> / forever</sup>
+								<p class="p-sm">100 memories are always free. When you exceed the limit, you can switch
+									to Pro or remove old elements.</p>
+							</div>
+						</div>
+					</div> <!-- END FREE PLAN -->
+					<!-- ANNUAL PLAN -->
+					<div class="col-md-4">
+						<div class="pricing-table mb-40 wow fadeInUp" data-wow-delay="0.6s">
+							<!-- Plan Price  -->
+							<div class="pricing-plan bg_white">
+								<h5 class="h5-xs">Brain3k Pro</h5>
+								<sup class="dark-color">$</sup>
+								<span class="dark-color">19</span>
+								<sup class="validity dark-color"><span>.99</span> / year</sup>
+								<p class="p-sm">You get a total of 5000 memories available. When you cancel your
+									subscription, nothing will be lost. Additional benefits will be added.</p>
+							</div>
+						</div>
+					</div> <!-- END ANNUAL PLAN  -->
+				</div> <!-- END PRICING TABLES -->
+			</div> <!-- End container -->
+		</section> <!-- END PRICING-2 -->
+		<!-- DOWNLOAD-3
+			============================================= -->
+		<section id="download-3" class="bg_purple_img download-section division">
+			<div class="container">
+				<div class="row">
+					<!-- DOWNLOAD TXT -->
+					<div class="col-md-10 col-lg-8 offset-md-1 offset-lg-2">
+						<div class="download-3-txt pc-25 text-center">
+							<!-- Title -->
+							<h2 class="h2-sm white-color">Start using it right now. 100 memories are always free.</h2>
+							<div class="stores-badge">
+								<!-- AppStore -->
+								<a href="https://apps.apple.com/app/brain3k/id1587505104" class="store">
+									<img class="appstore" src="images/appstore-white.svg"
+										alt="Download on the App Store" />
+								</a>
+								<!-- Google Play -->
+								<a href="https://apps.apple.com/app/brain3k/id1587505104" class="store">
+									<img class="macstore" src="images/macstore-white.svg"
+										alt="Download on the Mac App Store" />
+								</a>
+							</div>
+							<!-- Small Text -->
+							<p class="p-md white-color">Available for iOS, iPadOS and macOS</p>
+						</div>
+					</div> <!-- END DOWNLOAD TXT -->
+				</div> <!-- End row -->
+			</div> <!-- End container -->
+		</section> <!-- END DOWNLOAD-3 -->
+		<!-- FAQs
+			============================================= -->
+		<section id="faqs" class="bg_whitesmoke faqs-section division">
+			<div class="container">
+				<div class="row">
+					<!-- FAQs TITLE -->
+					<div class="col-lg-4">
+						<div class="faqs-title pc-10">
+							<!-- Section ID -->
+							<span class="section-id grey-color">FAQs & Contact</span>
+							<!-- Title -->
+							<h2 class="h2-md mb-20">Common Questions</h2>
+							<!-- Text -->
+							<p class="p-lg">Check already answered questions, submit feedback, or contact support.</p>
+						</div>
+					</div>
+					<!-- QUESTIONS ACCORDION -->
+					<div class="col-lg-8">
+						<div id="accordion" role="tablist" class="pc-20">
+							<!-- QUESTION #1 -->
+							<div class="card grey-color">
+								<!-- Question -->
+								<div class="card-header" role="tab" id="headingOne">
+									<h5 class="h5-sm">
+										<a class="collapsed" data-toggle="collapse" href="#collapseOne" role="button"
+											aria-expanded="false" aria-controls="collapseOne">I added more memories that
+											were available. Is that ok?</a>
+									</h5>
+								</div>
+								<!-- Answer -->
+								<div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne"
+									data-parent="#accordion">
+									<div class="card-body">
+										<!-- Text -->
+										<p class="p-lg">That's all right. I decided not to be strict about this. It
+											doesn't matter if you can add 100 or 102 memories. That two additionals
+											probably won't convince you to go with a pro subscription if you didn't
+											decide to that moment. Enjoy. And a note: if you don't want to go with a
+											subscription, but you find Brain3k helpful if you have slightly more
+											memories (like 120 or 140), don't hesitate to write to me. I'm able to
+											change that manually.</p>
+									</div>
+								</div>
+							</div> <!-- END QUESTION #1 -->
+							<!-- QUESTION #2 -->
+							<div class="card grey-color">
+								<!-- Question -->
+								<div class="card-header" role="tab" id="headingTwo">
+									<h5 class="h5-sm">
+										<a class="collapsed" data-toggle="collapse" href="#collapseTwo" role="button"
+											aria-expanded="false" aria-controls="collapseTwo">If my subscription will
+											end, did my memories disappear?</a>
+									</h5>
+								</div>
+								<!-- Answer -->
+								<div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo"
+									data-parent="#accordion">
+									<div class="card-body">
+										<!-- Text -->
+										<p class="p-lg">No, don't worry. When the subscription ends, available memories
+											are set to 100. But the number of current memories stays as it is. What does
+											that mean? If you already have more than 100 memories, you won't be able to
+											add the next one. Nothing that you already added will be lost.</p>
+									</div>
+								</div>
+							</div> <!-- END QUESTION #2 -->
+							<!-- QUESTION #3 -->
+							<div class="card grey-color">
+								<!-- Question -->
+								<div class="card-header" role="tab" id="headingThree">
+									<h5 class="h5-sm">
+										<a class="collapsed" data-toggle="collapse" href="#collapseThree" role="button"
+											aria-expanded="false" aria-controls="collapseThree">What can I do if memory
+											is stuck in the processing phase?</a>
+									</h5>
+								</div>
+								<!-- Answer -->
+								<div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree"
+									data-parent="#accordion">
+									<div class="card-body">
+										<!-- Text -->
+										<p class="p-lg">Processing each URL can take around 2 minutes. If the operation
+											takes more than that, you can refresh memory using the actions menu. If that
+											doesn't help, you can report a memory using the actions menu. </p>
+									</div>
+								</div>
+							</div> <!-- END QUESTION #3 -->
+							<!-- QUESTION #4 -->
+							<div class="card grey-color">
+								<!-- Question -->
+								<div class="card-header" role="tab" id="headingFour">
+									<h5 class="h5-sm">
+										<a class="collapsed" data-toggle="collapse" href="#collapseFour" role="button"
+											aria-expanded="false" aria-controls="collapseFour">What can I do if memory
+											returns a generic result?</a>
+									</h5>
+								</div>
+								<!-- Answer -->
+								<div id="collapseFour" class="collapse" role="tabpanel" aria-labelledby="headingFour"
+									data-parent="#accordion">
+									<div class="card-body">
+										<!-- Text -->
+										<p class="p-lg">You can refresh memory using the actions menu. If that doesn't
+											help, you can report a memory using the actions menu. Please remember that
+											Brain3k can't process memories that require authentication.</p>
+									</div>
+								</div>
+							</div> <!-- END QUESTION #4 -->
+						</div> <!-- END ACCORDION -->
+						<!-- SUBMIT IDEA BUTTON -->
+						<div class="more-questions pc-20 mt-35">
+							<h5 class="h5-sm"><span class="flaticon-star-1"></span> Have a new idea? <a
+									href="https://shipright.community/brain3k" class="skyblue-color">Submit it here</a>
+							</h5>
+						</div>
+						<!-- MORE QUESTIONS BUTTON -->
+						<div class="more-questions pc-20 mt-35">
+							<h5 class="h5-sm"><span class="flaticon-check"></span> Have more questions? <a
+									href="https://go.crisp.chat/chat/embed/?website_id=d83eece3-1942-4c5a-9412-219940e99ae3"
+									target="_blank" class="skyblue-color">Contact support</a>
+							</h5>
+						</div>
+					</div> <!-- End col-x -->
+				</div> <!-- End row -->
+			</div> <!-- End container -->
+		</section> <!-- END FAQs -->
+		<!-- FOOTER-4
+			============================================= -->
+		<footer id="footer-4" class="footer division">
+			<div class="container">
+				<!-- FOOTER CONTENT -->
+				<div class="row">
+					<!-- FOOTER LINKS -->
+					<div class="col-sm-6 col-md-8 col-lg-10">
+						<div class="footer-links mb-40">
+							<!-- Title -->
+							<h5 class="h5-xs">Useful Links</h5>
+							<!-- Footer Links -->
+							<ul class="clearfix">
+								<li>
+									<p class="p-md"><a href="privacy-policy">Privacy Policy</a></p>
+								</li>
+								<li>
+									<p class="p-md"><a href="terms-and-conditions">Terms and Conditions</a></p>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- FOOTER STORE BADGES -->
+					<div class="col-sm-6 col-md-4 col-lg-2">
+						<div class="footer-store-badges text-right mb-40">
+							<!-- AppStore -->
+							<a href="https://apps.apple.com/app/brain3k/id1587505104" class="store">
+								<img class="appstore-original" src="images/appstore.svg"
+									alt="Download on the App Store" />
+							</a>
+							<!-- Mac AppStore -->
+							<a href="https://apps.apple.com/app/brain3k/id1587505104" class="store">
+								<img class="mac-appstore" src="images/macstore.svg"
+									alt="Download on the Mac App Store" />
+							</a>
+						</div>
+					</div> <!-- END FOOTER STORE BADGES -->
+				</div> <!-- END FOOTER CONTENT -->
+				<!-- BOTTOM FOOTER -->
+				<div class="bottom-footer">
+					<div class="row d-flex align-items-center">
+						<!-- FOOTER COPYRIGHT -->
+						<div class="col-md-6">
+							<div class="footer-copyright">
+								<p>&copy; 2022 Kamil Powalowski - Hydra Softworks. All Rights Reserved</p>
+							</div>
+						</div>
+						<!-- BOTTOM FOOTER LINKS -->
+						<div class="col-md-6">
+							<ul class="bottom-footer-list text-right clearfix">
+								<li class="first-li last-li"><a href="https://twitter.com/brain3k">Twitter</a></li>
+							</ul>
+						</div>
+					</div> <!-- End row -->
+				</div> <!-- END BOTTOM FOOTER -->
+			</div> <!-- End container -->
+		</footer> <!-- END FOOTER-4 -->
+	</div> <!-- END PAGE CONTENT -->
+	<!-- EXTERNAL SCRIPTS
+		============================================= -->
+	<script src="js/jquery-3.5.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/modernizr.custom.js"></script>
+	<script src="js/jquery.easing.js"></script>
+	<script src="js/jquery.appear.js"></script>
+	<script src="js/jquery.scrollto.js"></script>
+	<script src="js/menu.js"></script>
+	<script src="js/jquery.flexslider.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/jquery.validate.min.js"></script>
+	<script src="js/jquery.ajaxchimp.min.js"></script>
+	<script src="js/wow.js"></script>
+	<!-- Custom Script -->
+	<script src="js/custom.js"></script>
+</body>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
-  </body>
 </html>

@@ -9,7 +9,7 @@
     "node": "14"
   },
   "devDependencies": {
-    "firebase-tools": "^9.22.0"
+    "firebase-tools": "^10.0.1"
   },
   "private": true
 }
