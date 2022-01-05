@@ -8,11 +8,11 @@ import Social
 import UniformTypeIdentifiers
 
 class ShareViewController: SLComposeServiceViewController {
-    private let accountService = AccountService()
-    private let memoriesService = MemoriesService()
-    private let userService = UserService()
+    let accountService = AccountService()
+    let memoriesService = MemoriesService()
+    let userService = UserService()
 
-    private var cancellable: AnyCancellable?
+    var cancellable: AnyCancellable?
 
     private var notes: String? {
         contentText?.isEmpty == false ? contentText : nil
@@ -36,15 +36,7 @@ class ShareViewController: SLComposeServiceViewController {
 
     override func presentationAnimationDidFinish() {
         super.presentationAnimationDidFinish()
-        let librariesService = LibrariesService()
-        librariesService.initSwiftyBeaver()
-        librariesService.initFirebase()
-
-        if let account = accountService.getCurrentAccount() {
-            checkMemoryLimit(for: account.id)
-        } else {
-            lockFormWithMessage(L10n.ShareExtension.unsignedMessage(L10n.appName))
-        }
+        setupPresentationAnimationDidFinish()
     }
 
     override func isContentValid() -> Bool { true }
@@ -78,41 +70,18 @@ class ShareViewController: SLComposeServiceViewController {
         }
     }
 
-    private func addURLMemory(_ url: URL, notes: String?, completion: @escaping () -> Void) {
-        guard let account = accountService.getCurrentAccount() else { return }
-        _ = memoriesService.add(
-            memory: Memory(
-                type: .url,
-                value: url.absoluteString,
-                notes: notes
-            ),
-            to: account.id
-        )
-        .sink(receiveCompletion: { _ in completion() }, receiveValue: {})
-    }
-
     private func sendButton() -> NSButton? {
         for subview in view.subviews {
-            if let button = subview as? NSButton {
-                if button.action?.description.contains("_send:") ?? false {
-                    return button
-                }
+            if let button = subview as? NSButton,
+               button.action?.description.contains("_send:") ?? false
+            {
+                return button
             }
         }
         return nil
     }
 
-    private func checkMemoryLimit(for accountId: String) {
-        cancellable = userService.get(for: accountId)
-            .sink(
-                receiveCompletion: { _ in },
-                receiveValue: { [weak self] user in
-                    if user?.canAddMemory == false { self?.lockFormWithMessage(L10n.ShareExtension.limitExceeded(L10n.appName)) }
-                }
-            )
-    }
-
-    private func lockFormWithMessage(_: String) {
+    func lockFormWithMessage(_: String) {
         placeholder = nil
         textView.isEditable = false
         textView.isSelectable = false

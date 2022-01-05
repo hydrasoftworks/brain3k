@@ -368,6 +368,8 @@
 		8ED8A9D62785AE420054F96B /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED8A9D22785AE3B0054F96B /* Report.swift */; };
 		8ED8A9D82785B17C0054F96B /* MemoryReportButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED8A9D72785B17C0054F96B /* MemoryReportButton.swift */; };
 		8ED8A9D92785B17C0054F96B /* MemoryReportButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED8A9D72785B17C0054F96B /* MemoryReportButton.swift */; };
+		8ED8A9DB2785D20A0054F96B /* ShareViewController+Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED8A9DA2785D20A0054F96B /* ShareViewController+Common.swift */; };
+		8ED8A9DC2785D20A0054F96B /* ShareViewController+Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED8A9DA2785D20A0054F96B /* ShareViewController+Common.swift */; };
 		8EDC011126D029D300D2064A /* URLMemoryCellConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDC011026D029D300D2064A /* URLMemoryCellConnector.swift */; };
 		8EDC011226D029D300D2064A /* URLMemoryCellConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDC011026D029D300D2064A /* URLMemoryCellConnector.swift */; };
 		8EDC011626D02F6600D2064A /* StorageAction+GetDownloadURLSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDC011526D02F6600D2064A /* StorageAction+GetDownloadURLSpec.swift */; };
@@ -637,6 +639,7 @@
 		8ED8A9CF2785AC3E0054F96B /* MemoriesAction+Report.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MemoriesAction+Report.swift"; sourceTree = "<group>"; };
 		8ED8A9D22785AE3B0054F96B /* Report.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Report.swift; sourceTree = "<group>"; };
 		8ED8A9D72785B17C0054F96B /* MemoryReportButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryReportButton.swift; sourceTree = "<group>"; };
+		8ED8A9DA2785D20A0054F96B /* ShareViewController+Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShareViewController+Common.swift"; sourceTree = "<group>"; };
 		8EDC011026D029D300D2064A /* URLMemoryCellConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLMemoryCellConnector.swift; sourceTree = "<group>"; };
 		8EDC011526D02F6600D2064A /* StorageAction+GetDownloadURLSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StorageAction+GetDownloadURLSpec.swift"; sourceTree = "<group>"; };
 		8EDC011726D0359400D2064A /* StorageReducerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageReducerSpec.swift; sourceTree = "<group>"; };
@@ -847,6 +850,7 @@
 			isa = PBXGroup;
 			children = (
 				8E56EAEA276951810087B0EE /* GoogleService-Info.plist */,
+				8ED8A9DA2785D20A0054F96B /* ShareViewController+Common.swift */,
 			);
 			path = "ShareExtension Shared";
 			sourceTree = "<group>";
@@ -1908,6 +1912,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8ECBBEF02770C67500A3BE40 /* Subscription.swift in Sources */,
+				8ED8A9DC2785D20A0054F96B /* ShareViewController+Common.swift in Sources */,
 				8E73D73527304A420037DE6B /* Memory.swift in Sources */,
 				8E73D724273049BE0037DE6B /* AccountService.swift in Sources */,
 				8E73D73A27304A670037DE6B /* AnyPublisher+Create.swift in Sources */,
@@ -2209,6 +2214,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8ECBBEEF2770C67500A3BE40 /* Subscription.swift in Sources */,
+				8ED8A9DB2785D20A0054F96B /* ShareViewController+Common.swift in Sources */,
 				8ED3820A26F75D2B0003D4F3 /* Future+MapError.swift in Sources */,
 				8ED3820626F75CFD0003D4F3 /* Account.swift in Sources */,
 				8E3436F72708A14A00FA1CB0 /* MemoryType.swift in Sources */,
@@ -2434,7 +2440,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.2.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -2491,7 +2497,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.2.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;

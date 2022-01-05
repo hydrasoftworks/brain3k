@@ -2,9 +2,8 @@
 //  Created by Kamil Powałowski on 11/11/2021.
 //
 
-import Foundation
-
 import Combine
+import Foundation
 import SwiftDux
 
 extension AccountAction {
