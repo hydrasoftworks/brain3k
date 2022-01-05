@@ -46,15 +46,7 @@ async function readHTMLFromURL(url) {
   try {
     const { data } = await axios.post(
       "https://api.scrapingrobot.com",
-      {
-        url,
-        module: "HtmlChromeScraper",
-        render: true,
-        waitUntil: "networkiddle2",
-        noImages: false,
-        noFonts: false,
-        noCss: false,
-      },
+      scrapingRobotConfig(url),
       {
         headers: { "Content-Type": "application/json" },
         params: { token: apiKey },
@@ -71,6 +63,18 @@ async function readHTMLFromURL(url) {
     console.error(`Scraping Robot error: ${errorText}`);
     return defaultHTML(errorText);
   }
+}
+
+function scrapingRobotConfig(url) {
+  return {
+    url,
+    module: "HtmlChromeScraper",
+    render: true,
+    waitUntil: "networkiddle2",
+    noImages: false,
+    noFonts: false,
+    noCss: false,
+  };
 }
 
 function defaultHTML(message) {
