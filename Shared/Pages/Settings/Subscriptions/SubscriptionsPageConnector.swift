@@ -13,6 +13,7 @@ struct SubscriptionsPageConnector: ConnectableView {
             switch state.messageState.message {
             case .purchase: return true
             case .error,
+                 .info,
                  .none:
                 return false
             }

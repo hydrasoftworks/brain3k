@@ -9,9 +9,9 @@ struct SplashPage: ConnectableView {
     @Environment(\.actionDispatcher) private var dispatch
 
     func map(state: AppState, binder: ActionBinder) -> ViewModel? {
-        let hasErrorMessage: Bool = {
+        let hasMessage: Bool = {
             switch state.messageState.message {
-            case .error: return true
+            case .error, .info: return true
             case .purchase,
                  .none:
                 return false
@@ -19,7 +19,7 @@ struct SplashPage: ConnectableView {
         }()
         return ViewModel(
             status: state.accountState.status,
-            hasErrorMessage: binder.bind(hasErrorMessage) { _ in MessageAction.clear },
+            hasMessage: binder.bind(hasMessage) { _ in MessageAction.clear },
             message: state.messageState.message
         )
     }
@@ -35,8 +35,8 @@ struct SplashPage: ConnectableView {
             }
         }
         .alert(
-            L10n.General.Error.title,
-            isPresented: viewModel.$hasErrorMessage,
+            viewModel.alertTitle,
+            isPresented: viewModel.$hasMessage,
             presenting: viewModel.message,
             actions: { _ in
                 Button(L10n.General.ok, role: .cancel, action: {})
@@ -47,7 +47,15 @@ struct SplashPage: ConnectableView {
 
     struct ViewModel: Equatable {
         let status: AccountStatus
-        @ActionBinding var hasErrorMessage: Bool
+        @ActionBinding var hasMessage: Bool
         let message: Message?
+
+        var alertTitle: String {
+            switch message {
+            case .error: return L10n.Alerts.Error.title
+            case .info: return L10n.Alerts.Info.title
+            case .purchase, .none: return ""
+            }
+        }
     }
 }

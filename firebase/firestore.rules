@@ -1,11 +1,15 @@
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
-    match /users/{uid} {
-      allow get: if request.auth.uid == uid;
-      match /memories/{memory} {
-        allow read, write: if request.auth.uid == uid;
+    match /users/{userId} {
+      allow get: if request.auth.uid == userId;
+      match /memories/{memoryId} {
+        allow read, write: if request.auth.uid == userId;
       }
+    }
+    match /reports/{memoryId} {
+      allow create: if request.auth.uid == request.resource.data.reportedBy 
+        && exists(/databases/$(database)/documents/users/$(request.auth.uid)/memories/$(memoryId));
     }
     match /{document=**} {
       allow read, write: if false;

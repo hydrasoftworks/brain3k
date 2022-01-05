@@ -360,6 +360,14 @@
 		8ED3821526F767CB0003D4F3 /* LibrariesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED3821226F767CB0003D4F3 /* LibrariesService.swift */; };
 		8ED3821626F76CCE0003D4F3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8EC4BAD326BDD79F00F20EAE /* Localizable.strings */; };
 		8ED3821726F76CD40003D4F3 /* StringsGen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC4BAD726BDD7E000F20EAE /* StringsGen.swift */; };
+		8ED8A9D02785AC3F0054F96B /* MemoriesAction+Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED8A9CF2785AC3E0054F96B /* MemoriesAction+Report.swift */; };
+		8ED8A9D12785AC3F0054F96B /* MemoriesAction+Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED8A9CF2785AC3E0054F96B /* MemoriesAction+Report.swift */; };
+		8ED8A9D32785AE3B0054F96B /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED8A9D22785AE3B0054F96B /* Report.swift */; };
+		8ED8A9D42785AE3B0054F96B /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED8A9D22785AE3B0054F96B /* Report.swift */; };
+		8ED8A9D52785AE420054F96B /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED8A9D22785AE3B0054F96B /* Report.swift */; };
+		8ED8A9D62785AE420054F96B /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED8A9D22785AE3B0054F96B /* Report.swift */; };
+		8ED8A9D82785B17C0054F96B /* MemoryReportButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED8A9D72785B17C0054F96B /* MemoryReportButton.swift */; };
+		8ED8A9D92785B17C0054F96B /* MemoryReportButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED8A9D72785B17C0054F96B /* MemoryReportButton.swift */; };
 		8EDC011126D029D300D2064A /* URLMemoryCellConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDC011026D029D300D2064A /* URLMemoryCellConnector.swift */; };
 		8EDC011226D029D300D2064A /* URLMemoryCellConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDC011026D029D300D2064A /* URLMemoryCellConnector.swift */; };
 		8EDC011626D02F6600D2064A /* StorageAction+GetDownloadURLSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDC011526D02F6600D2064A /* StorageAction+GetDownloadURLSpec.swift */; };
@@ -626,6 +634,9 @@
 		8ED3821126F765E50003D4F3 /* ShareExtension_iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShareExtension_iOS.entitlements; sourceTree = "<group>"; };
 		8ED3821226F767CB0003D4F3 /* LibrariesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibrariesService.swift; sourceTree = "<group>"; };
 		8ED712912737EDB600B0BA22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8ED8A9CF2785AC3E0054F96B /* MemoriesAction+Report.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MemoriesAction+Report.swift"; sourceTree = "<group>"; };
+		8ED8A9D22785AE3B0054F96B /* Report.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Report.swift; sourceTree = "<group>"; };
+		8ED8A9D72785B17C0054F96B /* MemoryReportButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryReportButton.swift; sourceTree = "<group>"; };
 		8EDC011026D029D300D2064A /* URLMemoryCellConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLMemoryCellConnector.swift; sourceTree = "<group>"; };
 		8EDC011526D02F6600D2064A /* StorageAction+GetDownloadURLSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StorageAction+GetDownloadURLSpec.swift"; sourceTree = "<group>"; };
 		8EDC011726D0359400D2064A /* StorageReducerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageReducerSpec.swift; sourceTree = "<group>"; };
@@ -746,6 +757,7 @@
 				8E58B8CA27492587003FB391 /* NotesField.swift */,
 				8E58B8D12749342C003FB391 /* MemoryRefreshButton.swift */,
 				8E58B8D42749349C003FB391 /* MemoryDeleteButton.swift */,
+				8ED8A9D72785B17C0054F96B /* MemoryReportButton.swift */,
 				8EBDE4DE274C28FF00FA6280 /* TagsView.swift */,
 				8E2E27B027675F6700E33883 /* AddTagButton.swift */,
 			);
@@ -1111,6 +1123,7 @@
 				8E58B8D7274935F3003FB391 /* MemoriesAction+UpdateNotes.swift */,
 				8E6A200B275E9733002EA4CE /* MemoriesAction+RemoveTag.swift */,
 				8E6A2011275EA089002EA4CE /* MemoriesAction+AddTag.swift */,
+				8ED8A9CF2785AC3E0054F96B /* MemoriesAction+Report.swift */,
 			);
 			path = Actions;
 			sourceTree = "<group>";
@@ -1442,6 +1455,7 @@
 				8E79C14226978778002D2A8B /* Message.swift */,
 				8E77700226A32C6B00D97F52 /* AppError.swift */,
 				8ECBBEEC2770C5E200A3BE40 /* Subscription.swift */,
+				8ED8A9D22785AE3B0054F96B /* Report.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1898,6 +1912,7 @@
 				8E73D724273049BE0037DE6B /* AccountService.swift in Sources */,
 				8E73D73A27304A670037DE6B /* AnyPublisher+Create.swift in Sources */,
 				8E73D727273049CA0037DE6B /* LibrariesService.swift in Sources */,
+				8ED8A9D62785AE420054F96B /* Report.swift in Sources */,
 				8EA052D2273FDE3000A4507A /* User.swift in Sources */,
 				8E73D73427304A3F0037DE6B /* MemoryType.swift in Sources */,
 				8E73D73727304A4B0037DE6B /* Account.swift in Sources */,
@@ -1925,6 +1940,8 @@
 				8E9EEBA326F280C400106FCD /* MemoriesAction+Search.swift in Sources */,
 				8EA4D28126939DE100C0A037 /* EmailTextField.swift in Sources */,
 				8E6A200C275E9733002EA4CE /* MemoriesAction+RemoveTag.swift in Sources */,
+				8ED8A9D02785AC3F0054F96B /* MemoriesAction+Report.swift in Sources */,
+				8ED8A9D82785B17C0054F96B /* MemoryReportButton.swift in Sources */,
 				8EA1D320271C699A0060BAA9 /* MemoriesPageConnector.swift in Sources */,
 				8ECBBED22770B12B00A3BE40 /* SubscriptionService.swift in Sources */,
 				8E92A7E726A0D04100BAED7F /* AccountAction+SignIn.swift in Sources */,
@@ -1947,6 +1964,7 @@
 				8EEF35DE268CEA500068DB58 /* SplashPage.swift in Sources */,
 				8EEDD790268BC2AF00F670D2 /* AccountAction.swift in Sources */,
 				8EEDD78D268BC1F600F670D2 /* AccountReducer.swift in Sources */,
+				8ED8A9D32785AE3B0054F96B /* Report.swift in Sources */,
 				8EEF35E1268CED570068DB58 /* AccountStatus.swift in Sources */,
 				8EC6076E2688B993006ED3C1 /* StateType.swift in Sources */,
 				8E7DEC712753ADE2005BE9B0 /* AppAsyncImage.swift in Sources */,
@@ -2060,6 +2078,8 @@
 				8E9EEBA426F280C400106FCD /* MemoriesAction+Search.swift in Sources */,
 				8EA1D321271C699A0060BAA9 /* MemoriesPageConnector.swift in Sources */,
 				8E6A200D275E9733002EA4CE /* MemoriesAction+RemoveTag.swift in Sources */,
+				8ED8A9D12785AC3F0054F96B /* MemoriesAction+Report.swift in Sources */,
+				8ED8A9D92785B17C0054F96B /* MemoryReportButton.swift in Sources */,
 				8E92A7E826A0D04100BAED7F /* AccountAction+SignIn.swift in Sources */,
 				8ECBBED32770B12B00A3BE40 /* SubscriptionService.swift in Sources */,
 				8EBC051C2699C065008B2478 /* AnyPublisher+Empty.swift in Sources */,
@@ -2082,6 +2102,7 @@
 				8EEDD791268BC2AF00F670D2 /* AccountAction.swift in Sources */,
 				8EEDD78E268BC1F600F670D2 /* AccountReducer.swift in Sources */,
 				8EEF35E2268CED570068DB58 /* AccountStatus.swift in Sources */,
+				8ED8A9D42785AE3B0054F96B /* Report.swift in Sources */,
 				8EC6076F2688B993006ED3C1 /* StateType.swift in Sources */,
 				8EC4BAD926BDD7E000F20EAE /* StringsGen.swift in Sources */,
 				8E7DEC722753ADE2005BE9B0 /* AppAsyncImage.swift in Sources */,
@@ -2192,6 +2213,7 @@
 				8ED3820626F75CFD0003D4F3 /* Account.swift in Sources */,
 				8E3436F72708A14A00FA1CB0 /* MemoryType.swift in Sources */,
 				8ED3820926F75D200003D4F3 /* AnyPublisher+Create.swift in Sources */,
+				8ED8A9D52785AE420054F96B /* Report.swift in Sources */,
 				8EA052D1273FDE2F00A4507A /* User.swift in Sources */,
 				8ED3820526F75CFA0003D4F3 /* Memory.swift in Sources */,
 				8ED3821526F767CB0003D4F3 /* LibrariesService.swift in Sources */,

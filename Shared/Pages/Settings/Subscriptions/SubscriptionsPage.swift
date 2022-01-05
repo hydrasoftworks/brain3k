@@ -46,7 +46,7 @@ struct SubscriptionsPage: View {
             }
         }
         .alert(
-            L10n.General.Error.title,
+            L10n.Alerts.Error.title,
             isPresented: viewModel.$hasPurchaseMessage,
             presenting: viewModel.message,
             actions: { _ in

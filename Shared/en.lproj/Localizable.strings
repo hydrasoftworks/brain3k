@@ -12,8 +12,10 @@
 "general.loading" = "Loading...";
 "general.legal.privacy_policy" = "Privacy Policy";
 "general.legal.terms_and_conditions" = "Terms and Conditions";
-"general.error.title" = "Houston, we have a problem";
-"general.error.unknown" =  "Unknown error";
+"alerts.error.title" = "Houston, we have a problem.";
+"alerts.error.unknown" =  "Unknown error";
+"alerts.info.title" = "Good news, everyone!";
+"alerts.info.memory_reported" = "Memory reported";
 "share_extension.name" = "Add to %s";
 "share_extension.unsigned_message" = "Go to the %s app and sign in to perform this operation.";
 "share_extension.limit_exceeded" = "The subscription is required to add more memories. Go to the %s app settings to subscribe.";
@@ -49,6 +51,7 @@
 "memory_page.button.menu" = "Actions";
 "memory_page.button.refresh" = "Refresh memory";
 "memory_page.button.delete" = "Delete memory";
+"memory_page.button.report" = "Report memory";
 "memory_page.button.open" = "Open memory";
 "memory_page.button.share" = "Open memory";
 "memory_page.button.add_tag" = "Add tag";
@@ -58,6 +61,9 @@
 "memory_page.label.notes_placeholder" = "Press to add notes";
 "memory_page.text_field.add_tag_placeholder" = "Press return to save";
 "memory_page.empty.not_selected" = "No memory selected";
+"memory_page.confirmation.report_memory_title" = "Do you want to report this memory?";
+"memory_page.confirmation.report_memory_message" = "Processing memory can take up to 2 minutes. If it gives you a generic result, try to refresh your memory first. If that doesn't help, report it to us.";
+"memory_page.confirmation.button.report_memory" = "Yes, report this memory";
 "add_memory_page.title" = "Add Memory";
 "add_memory_page.text_field.placeholder" = "Paste URL here";
 "add_memory_page.limit_exceeded.title" = "Limit Exceeded";
@@ -67,6 +73,7 @@
 "settings_page.sections.links" = "Links";
 "settings_page.sections.subscription" = "Subscription";
 "settings_page.button.sign_out" = "Sign out";
+"settings_page.button.danger_zone" = "Danger zone (press to reveal)";
 "settings_page.button.delete_account" = "Delete account";
 "settings_page.button.share_feedback" = "Share feedback";
 "settings_page.button.contact_support" = "Contact support";
@@ -76,7 +83,8 @@
 "settings_page.button.manageSubscription" = "Manage subscription";
 "settings_page.text.memories_current" = "Current memories: %d";
 "settings_page.text.memories_limit" = "Available memories: %d";
-"settings_page.confirmation.delete_account" = "Do you want to delete your account?\nThis action cannot be undone.";
+"settings_page.confirmation.delete_account_title" = "Do you want to delete your account?";
+"settings_page.confirmation.delete_account_message" = "This action cannot be undone.\nThe unused subscription period will be lost.";
 "settings_page.confirmation.button.delete_account" = "Yes, delete my account";
 "subscriptions_page.title" = "%@ Pro";
 "subscriptions_page.labels.legal1" = "• Payment will be charged to your iTunes account at confirmation of purchase and will automatically renew (at the duration/price selected) unless auto-renew is turned off at least 24 hrs before the end of the current period.";

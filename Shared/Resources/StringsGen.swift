@@ -28,6 +28,21 @@ internal enum L10n {
     }
   }
 
+  internal enum Alerts {
+    internal enum Error {
+      /// Houston, we have a problem.
+      internal static let title = L10n.tr("Localizable", "alerts.error.title")
+      /// Unknown error
+      internal static let unknown = L10n.tr("Localizable", "alerts.error.unknown")
+    }
+    internal enum Info {
+      /// Memory reported
+      internal static let memoryReported = L10n.tr("Localizable", "alerts.info.memory_reported")
+      /// Good news, everyone!
+      internal static let title = L10n.tr("Localizable", "alerts.info.title")
+    }
+  }
+
   internal enum EmailTextField {
     /// e-mail
     internal static let placeholder = L10n.tr("Localizable", "email_text_field.placeholder")
@@ -56,12 +71,6 @@ internal enum L10n {
     internal static let week = L10n.tr("Localizable", "general.week")
     /// year
     internal static let year = L10n.tr("Localizable", "general.year")
-    internal enum Error {
-      /// Houston, we have a problem
-      internal static let title = L10n.tr("Localizable", "general.error.title")
-      /// Unknown error
-      internal static let unknown = L10n.tr("Localizable", "general.error.unknown")
-    }
     internal enum Legal {
       /// Privacy Policy
       internal static let privacyPolicy = L10n.tr("Localizable", "general.legal.privacy_policy")
@@ -110,8 +119,20 @@ internal enum L10n {
       internal static let `open` = L10n.tr("Localizable", "memory_page.button.open")
       /// Refresh memory
       internal static let refresh = L10n.tr("Localizable", "memory_page.button.refresh")
+      /// Report memory
+      internal static let report = L10n.tr("Localizable", "memory_page.button.report")
       /// Open memory
       internal static let share = L10n.tr("Localizable", "memory_page.button.share")
+    }
+    internal enum Confirmation {
+      /// Processing memory can take up to 2 minutes. If it gives you a generic result, try to refresh your memory first. If that doesn't help, report it to us.
+      internal static let reportMemoryMessage = L10n.tr("Localizable", "memory_page.confirmation.report_memory_message")
+      /// Do you want to report this memory?
+      internal static let reportMemoryTitle = L10n.tr("Localizable", "memory_page.confirmation.report_memory_title")
+      internal enum Button {
+        /// Yes, report this memory
+        internal static let reportMemory = L10n.tr("Localizable", "memory_page.confirmation.button.report_memory")
+      }
     }
     internal enum Empty {
       /// No memory selected
@@ -144,6 +165,8 @@ internal enum L10n {
     internal enum Button {
       /// Contact support
       internal static let contactSupport = L10n.tr("Localizable", "settings_page.button.contact_support")
+      /// Danger zone (press to reveal)
+      internal static let dangerZone = L10n.tr("Localizable", "settings_page.button.danger_zone")
       /// Delete account
       internal static let deleteAccount = L10n.tr("Localizable", "settings_page.button.delete_account")
       /// Manage subscription
@@ -160,8 +183,10 @@ internal enum L10n {
       internal static let subscribe = L10n.tr("Localizable", "settings_page.button.subscribe")
     }
     internal enum Confirmation {
-      /// Do you want to delete your account?\nThis action cannot be undone.
-      internal static let deleteAccount = L10n.tr("Localizable", "settings_page.confirmation.delete_account")
+      /// This action cannot be undone.\nThe unused subscription period will be lost.
+      internal static let deleteAccountMessage = L10n.tr("Localizable", "settings_page.confirmation.delete_account_message")
+      /// Do you want to delete your account?
+      internal static let deleteAccountTitle = L10n.tr("Localizable", "settings_page.confirmation.delete_account_title")
       internal enum Button {
         /// Yes, delete my account
         internal static let deleteAccount = L10n.tr("Localizable", "settings_page.confirmation.button.delete_account")

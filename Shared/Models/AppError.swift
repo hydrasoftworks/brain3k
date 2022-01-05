@@ -6,7 +6,7 @@ import FirebaseAuth
 import Foundation
 
 struct AppError: Error {
-    static let unknown = AppError(message: L10n.General.Error.unknown)
+    static let unknown = AppError(message: L10n.Alerts.Error.unknown)
 
     let message: String
 

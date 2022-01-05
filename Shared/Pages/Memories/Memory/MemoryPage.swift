@@ -6,6 +6,7 @@ import SwiftDux
 import SwiftUI
 
 struct MemoryPage: View {
+    @SwiftUI.State private var isReportConfirmationPresented = false
     @Environment(\.dismiss) var dismiss
 
     #if os(iOS)
@@ -47,6 +48,7 @@ struct MemoryPage: View {
             ToolbarItem {
                 Menu(content: {
                     refreshButton
+                    reportButton
                     deleteButton
                 }) {
                     Label(
@@ -56,6 +58,22 @@ struct MemoryPage: View {
                 }
             }
         }
+        .confirmationDialog(
+            L10n.MemoryPage.Confirmation.reportMemoryTitle,
+            isPresented: $isReportConfirmationPresented,
+            titleVisibility: .visible,
+            actions: {
+                Button(
+                    L10n.MemoryPage.Confirmation.Button.reportMemory,
+                    action: {
+                        viewModel.report()
+                        HapticService.notificationOccurred(.success)
+                    }
+                )
+            }, message: {
+                Text(L10n.MemoryPage.Confirmation.reportMemoryMessage)
+            }
+        )
     }
 
     private var portrait: some View {
@@ -129,6 +147,12 @@ struct MemoryPage: View {
         )
     }
 
+    private var reportButton: some View {
+        MemoryReportButton(
+            action: { isReportConfirmationPresented = true }
+        )
+    }
+
     private var deleteButton: some View {
         MemoryDeleteButton(
             action: {
@@ -170,8 +194,10 @@ struct MemoryPage: View {
         let domain: String?
         let notes: String?
         let tags: [String]?
+
         let delete: () -> Void
         let refresh: () -> Void
+        let report: () -> Void
         let getDownloadURL: () -> Void
         let updateNotes: (String) -> Void
         let addTag: (String) -> Void

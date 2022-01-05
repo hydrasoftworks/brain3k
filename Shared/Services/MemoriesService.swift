@@ -9,7 +9,7 @@ import Fuse
 
 class MemoriesService {
     func watchAll(for accountId: String) -> AnyPublisher<[Memory], AppError> {
-        let collection = collection(of: accountId)
+        let collection = memoriesCollection(of: accountId)
         return AnyPublisher<QuerySnapshot, Error>.create { observer in
             let registration = collection
                 .order(by: "createdAt", descending: true)
@@ -27,7 +27,7 @@ class MemoriesService {
     }
 
     func getAll(for accountId: String) -> AnyPublisher<[Memory], AppError> {
-        let collection = collection(of: accountId)
+        let collection = memoriesCollection(of: accountId)
         return Future<QuerySnapshot, Error> { promise in
             collection
                 .order(by: "createdAt", descending: true)
@@ -38,7 +38,7 @@ class MemoriesService {
     }
 
     func add(memory: Memory, to accountId: String) -> AnyPublisher<Void, AppError> {
-        let collection = collection(of: accountId)
+        let collection = memoriesCollection(of: accountId)
         return Future<Void, Error> { promise in
             do {
                 _ = try collection.addDocument(from: memory)
@@ -56,7 +56,7 @@ class MemoriesService {
         with memory: Memory,
         on accountId: String
     ) -> AnyPublisher<Void, AppError> {
-        let document = collection(of: accountId).document(memoryId)
+        let document = memoriesCollection(of: accountId).document(memoryId)
         return Future<Void, Error> { promise in
             do {
                 try document.setData(from: memory)
@@ -74,7 +74,7 @@ class MemoriesService {
         withNotes notes: String?,
         on accountId: String
     ) -> AnyPublisher<Void, AppError> {
-        let document = collection(of: accountId).document(memoryId)
+        let document = memoriesCollection(of: accountId).document(memoryId)
         return Future<Void, Error> { promise in
             document.updateData([
                 "notes": notes ?? FieldValue.delete(),
@@ -91,7 +91,7 @@ class MemoriesService {
         withTags tags: [String]?,
         on accountId: String
     ) -> AnyPublisher<Void, AppError> {
-        let document = collection(of: accountId).document(memoryId)
+        let document = memoriesCollection(of: accountId).document(memoryId)
         return Future<Void, Error> { promise in
             document.updateData([
                 "tags": tags ?? FieldValue.delete(),
@@ -104,7 +104,7 @@ class MemoriesService {
     }
 
     func delete(memoryWithId memoryId: String, from accountId: String) -> AnyPublisher<Void, AppError> {
-        let document = collection(of: accountId).document(memoryId)
+        let document = memoriesCollection(of: accountId).document(memoryId)
         return Future<Void, Error> { promise in
             document.delete()
             promise(.success(()))
@@ -126,7 +126,29 @@ class MemoriesService {
         }
     }
 
-    private func collection(of accountId: String) -> CollectionReference {
+    func report(
+        memoryWithId memoryId: String,
+        with memory: Memory,
+        from accountId: String
+    ) -> AnyPublisher<Void, AppError> {
+        let report = Report(memory: memory, accountId: accountId)
+        let document = Firestore.firestore()
+            .collection("reports")
+            .document(memoryId)
+
+        return Future<Void, Error> { promise in
+            do {
+                _ = try document.setData(from: report)
+                promise(.success(()))
+            } catch {
+                promise(.failure(error))
+            }
+        }
+        .eraseToAnyPublisher()
+        .mapToAppError()
+    }
+
+    private func memoriesCollection(of accountId: String) -> CollectionReference {
         Firestore.firestore()
             .collection("users")
             .document(accountId)
