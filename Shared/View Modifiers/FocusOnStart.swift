@@ -17,7 +17,7 @@ private struct FocusOnStart: ViewModifier {
         content
             .focused($isFocused)
             .onAppear {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                     self.isFocused = true
                 }
             }
