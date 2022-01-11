@@ -101,7 +101,7 @@ struct SubscriptionsPage: View {
     }
 
     private func footerLine(_ text: String) -> some View {
-        Text((try? AttributedString(markdown: text)) ?? AttributedString(text))
+        MarkdownText(text: text)
             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
     }
 

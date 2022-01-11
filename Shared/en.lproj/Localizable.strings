@@ -24,6 +24,7 @@
 "email_text_field.placeholder" = "e-mail";
 "password_text_field.password_placeholder" = "password";
 "password_text_field.new_password_placeholder" = "password (min. 8 characters)";
+"join_page.label.terms" = "By joining, you are accepting [Terms and Conditions](%@).";
 "sign_in_page.title" = "Welcome back";
 "sign_in_page.description1" = "Log back to your digital brain.";
 "sign_in_page.description2" = "or sign in using email and password";

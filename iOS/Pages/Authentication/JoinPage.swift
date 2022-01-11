@@ -11,12 +11,23 @@ struct JoinPage: View {
     var body: some View {
         ZStack {
             Background()
-            FlipView(
-                frontView: { SignUpPage(flipped: $flipped) },
-                backView: { SignInPage(flipped: $flipped) },
-                flipped: $flipped,
-                flipAxis: .y
-            )
+            VStack {
+                Spacer()
+                FlipView(
+                    frontView: { SignUpPage(flipped: $flipped) },
+                    backView: { SignInPage(flipped: $flipped) },
+                    flipped: $flipped,
+                    flipAxis: .y
+                )
+                Spacer()
+                MarkdownText(
+                    text: L10n.JoinPage.Label.terms(
+                        SettingsPage.termsAndConditions?.absoluteString ?? ""
+                    )
+                )
+                .font(.footnote)
+                .padding(.bottom)
+            }
         }
         .onAppear(dispatch: AccountAction.generateNonce())
     }

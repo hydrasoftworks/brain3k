@@ -10,10 +10,18 @@ struct JoinPage: View {
     var body: some View {
         ZStack {
             Background()
-            if flipped {
-                SignInPage(flipped: $flipped)
-            } else {
-                SignUpPage(flipped: $flipped)
+            VStack {
+                if flipped {
+                    SignInPage(flipped: $flipped)
+                } else {
+                    SignUpPage(flipped: $flipped)
+                }
+                MarkdownText(
+                    text: L10n.JoinPage.Label.terms(
+                        SettingsPage.termsAndConditions?.absoluteString ?? ""
+                    )
+                )
+                .font(.footnote)
             }
         }
         .onAppear(dispatch: AccountAction.generateNonce())

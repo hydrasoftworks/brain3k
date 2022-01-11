@@ -86,6 +86,15 @@ internal enum L10n {
     }
   }
 
+  internal enum JoinPage {
+    internal enum Label {
+      /// By joining, you are accepting [Terms and Conditions](%@).
+      internal static func terms(_ p1: Any) -> String {
+        return L10n.tr("Localizable", "join_page.label.terms", String(describing: p1))
+      }
+    }
+  }
+
   internal enum MemoriesPage {
     /// Memories
     internal static let title = L10n.tr("Localizable", "memories_page.title")
