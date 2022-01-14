@@ -68,7 +68,6 @@ async function readHTMLFromURL(url) {
 function scrapingRobotConfig(url) {
   return {
     url,
-    module: "HtmlChromeScraper",
     render: true,
     waitUntil: "networkiddle2",
     noImages: false,
