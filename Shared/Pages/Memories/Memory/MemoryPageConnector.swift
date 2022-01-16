@@ -25,6 +25,7 @@ struct MemoryPageConnector: ConnectableView {
             imageToDisplay: state.storageState.downloadURL(for: memory?.thumbnailURL),
             title: title,
             description: memory?.description ?? memory?.value,
+            summary: memory?.summary,
             valueURL: memory?.valueURL,
             domain: domain,
             notes: memory?.notes,

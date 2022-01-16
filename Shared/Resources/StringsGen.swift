@@ -152,6 +152,8 @@ internal enum L10n {
       internal static let notes = L10n.tr("Localizable", "memory_page.label.notes")
       /// Press to add notes
       internal static let notesPlaceholder = L10n.tr("Localizable", "memory_page.label.notes_placeholder")
+      /// Summary
+      internal static let summary = L10n.tr("Localizable", "memory_page.label.summary")
       /// Tags
       internal static let tags = L10n.tr("Localizable", "memory_page.label.tags")
     }

@@ -41,6 +41,7 @@ extension Memory {
         title: Bool = false,
         notes: Bool = false,
         description: Bool = false,
+        summary: Bool = false,
         tags: Bool = false
     ) -> Memory {
         Memory(
@@ -53,6 +54,7 @@ extension Memory {
             title: title ? nil : self.title,
             notes: notes ? nil : self.notes,
             description: description ? nil : self.description,
+            summary: summary ? nil : self.summary,
             tags: tags ? nil : self.tags,
             processed: processed
         )

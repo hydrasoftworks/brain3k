@@ -8,8 +8,9 @@ extension Memory: Fuseable {
     var properties: [FuseProperty] {
         let properties = [
             FuseProperty(name: title ?? "", weight: 0.15),
-            FuseProperty(name: description ?? "", weight: 0.15),
-            FuseProperty(name: notes ?? "", weight: 0.2),
+            FuseProperty(name: description ?? "", weight: 0.1),
+            FuseProperty(name: summary ?? "", weight: 0.1),
+            FuseProperty(name: notes ?? "", weight: 0.15),
             FuseProperty(name: value, weight: 0.05),
         ]
         let neuronWeight = 0.2 / Double(neurons?.count ?? 1)

@@ -4,7 +4,7 @@
 
 import SwiftUI
 
-struct TagsView: View {
+struct MemoryTagsView: View {
     private let addTagButtonId: String
     private let tags: [String]
 
@@ -38,7 +38,7 @@ struct TagsView: View {
                             deleteAction: { deleteTag(tag) }
                         )
                     } else {
-                        AddTagButton(addTag: addTag)
+                        MemoryAddTagButton(addTag: addTag)
                     }
                 }
             }

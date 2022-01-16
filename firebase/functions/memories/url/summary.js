@@ -11,7 +11,7 @@ export default async function (url) {
     if (data.sm_api_content !== undefined) {
       return JSON.parse(
         JSON.stringify({
-          summary: data.sm_api_content.replace(/\[BREAK\]/g, "\\n"),
+          summary: data.sm_api_content.replace(/\[BREAK\]\s?/g, "\n\n"),
           neurons: data.sm_api_keyword_array,
           title: data.sm_api_title.length === 0 ? undefined : data.sm_api_title,
         }),

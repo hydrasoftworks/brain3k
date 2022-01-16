@@ -18,6 +18,7 @@ extension MemoriesAction {
                     thumbnail: true,
                     title: true,
                     description: true,
+                    summary: true,
                     tags: true
                 )
                 .copyWith(processed: false)

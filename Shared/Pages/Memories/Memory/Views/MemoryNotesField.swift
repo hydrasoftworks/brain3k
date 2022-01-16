@@ -4,7 +4,7 @@
 
 import SwiftUI
 
-struct NotesField: View {
+struct MemoryNotesField: View {
     @State private var editorPresented = false
 
     let notes: String?

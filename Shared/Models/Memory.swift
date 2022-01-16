@@ -16,6 +16,7 @@ struct Memory: Identifiable, Codable, Equatable {
     let title: String?
     let notes: String?
     let description: String?
+    let summary: String?
     let neurons: [String]?
     let tags: [String]?
     let processed: Bool
@@ -37,6 +38,7 @@ struct Memory: Identifiable, Codable, Equatable {
         title: String? = nil,
         notes: String? = nil,
         description: String? = nil,
+        summary: String? = nil,
         neurons: [String]? = nil,
         tags: [String]? = nil,
         processed: Bool = false
@@ -50,6 +52,7 @@ struct Memory: Identifiable, Codable, Equatable {
         self.title = title
         self.notes = notes
         self.description = description
+        self.summary = summary
         self.neurons = neurons
         self.tags = tags
         self.processed = processed

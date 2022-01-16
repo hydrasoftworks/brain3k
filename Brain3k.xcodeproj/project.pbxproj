@@ -15,8 +15,8 @@
 		8E260FE826C2F44900715524 /* ExpandedFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E260FE626C2F44900715524 /* ExpandedFrame.swift */; };
 		8E26236A27160A630092B6CE /* AccountAction+Delete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E26236927160A630092B6CE /* AccountAction+Delete.swift */; };
 		8E26236B27160A630092B6CE /* AccountAction+Delete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E26236927160A630092B6CE /* AccountAction+Delete.swift */; };
-		8E2E27B127675F6700E33883 /* AddTagButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2E27B027675F6700E33883 /* AddTagButton.swift */; };
-		8E2E27B227675F6700E33883 /* AddTagButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2E27B027675F6700E33883 /* AddTagButton.swift */; };
+		8E2E27B127675F6700E33883 /* MemoryAddTagButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2E27B027675F6700E33883 /* MemoryAddTagButton.swift */; };
+		8E2E27B227675F6700E33883 /* MemoryAddTagButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2E27B027675F6700E33883 /* MemoryAddTagButton.swift */; };
 		8E2E27B4276778D600E33883 /* FlexibleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2E27B3276778D600E33883 /* FlexibleView.swift */; };
 		8E2E27B5276778D600E33883 /* FlexibleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2E27B3276778D600E33883 /* FlexibleView.swift */; };
 		8E2E27BC2768C3F400E33883 /* RevenueCat in Frameworks */ = {isa = PBXBuildFile; productRef = 8E2E27BB2768C3F400E33883 /* RevenueCat */; };
@@ -56,8 +56,8 @@
 		8E50D87526BB40320075C08C /* MemorySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E50D87426BB40320075C08C /* MemorySpec.swift */; };
 		8E56EAEB276951810087B0EE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E56EAEA276951810087B0EE /* GoogleService-Info.plist */; };
 		8E56EAEC276951810087B0EE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E56EAEA276951810087B0EE /* GoogleService-Info.plist */; };
-		8E58B8CB27492587003FB391 /* NotesField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E58B8CA27492587003FB391 /* NotesField.swift */; };
-		8E58B8CC27492587003FB391 /* NotesField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E58B8CA27492587003FB391 /* NotesField.swift */; };
+		8E58B8CB27492587003FB391 /* MemoryNotesField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E58B8CA27492587003FB391 /* MemoryNotesField.swift */; };
+		8E58B8CC27492587003FB391 /* MemoryNotesField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E58B8CA27492587003FB391 /* MemoryNotesField.swift */; };
 		8E58B8CE27493029003FB391 /* NotesEditorPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E58B8CD27493029003FB391 /* NotesEditorPage.swift */; };
 		8E58B8CF27493029003FB391 /* NotesEditorPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E58B8CD27493029003FB391 /* NotesEditorPage.swift */; };
 		8E58B8D22749342C003FB391 /* MemoryRefreshButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E58B8D12749342C003FB391 /* MemoryRefreshButton.swift */; };
@@ -220,6 +220,8 @@
 		8E92A7E826A0D04100BAED7F /* AccountAction+SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E92A7E626A0D04100BAED7F /* AccountAction+SignIn.swift */; };
 		8E92A7EA26A0D27A00BAED7F /* AccountAction+SignInSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E92A7E926A0D27A00BAED7F /* AccountAction+SignInSpec.swift */; };
 		8E92A7EC26A0D4D300BAED7F /* CombineResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E92A7EB26A0D4D300BAED7F /* CombineResult.swift */; };
+		8E96D36F2794591800864D5A /* MemorySummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E96D36E2794591700864D5A /* MemorySummaryView.swift */; };
+		8E96D3702794591800864D5A /* MemorySummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E96D36E2794591700864D5A /* MemorySummaryView.swift */; };
 		8E9EEBA326F280C400106FCD /* MemoriesAction+Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9EEBA226F280C400106FCD /* MemoriesAction+Search.swift */; };
 		8E9EEBA426F280C400106FCD /* MemoriesAction+Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9EEBA226F280C400106FCD /* MemoriesAction+Search.swift */; };
 		8E9EEBA626F2813600106FCD /* MemoriesState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9EEBA526F2813600106FCD /* MemoriesState.swift */; };
@@ -282,8 +284,8 @@
 		8EBC0541269A0B8D008B2478 /* SecondaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBC053F269A0B8D008B2478 /* SecondaryButton.swift */; };
 		8EBC0543269A1B76008B2478 /* String+Trim.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBC0542269A1B76008B2478 /* String+Trim.swift */; };
 		8EBC0544269A1B76008B2478 /* String+Trim.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBC0542269A1B76008B2478 /* String+Trim.swift */; };
-		8EBDE4DF274C28FF00FA6280 /* TagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBDE4DE274C28FF00FA6280 /* TagsView.swift */; };
-		8EBDE4E0274C28FF00FA6280 /* TagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBDE4DE274C28FF00FA6280 /* TagsView.swift */; };
+		8EBDE4DF274C28FF00FA6280 /* MemoryTagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBDE4DE274C28FF00FA6280 /* MemoryTagsView.swift */; };
+		8EBDE4E0274C28FF00FA6280 /* MemoryTagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBDE4DE274C28FF00FA6280 /* MemoryTagsView.swift */; };
 		8EBF94BB2709CA690045B33E /* EmptyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBF94BA2709CA690045B33E /* EmptyListView.swift */; };
 		8EBF94BC2709CA690045B33E /* EmptyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBF94BA2709CA690045B33E /* EmptyListView.swift */; };
 		8EC49D7F274ED25400E0FE61 /* Memory+Fuseable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC49D7E274ED25400E0FE61 /* Memory+Fuseable.swift */; };
@@ -460,7 +462,7 @@
 		8E15375826FF439100D3232F /* MemoryPrimaryActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryPrimaryActions.swift; sourceTree = "<group>"; };
 		8E260FE626C2F44900715524 /* ExpandedFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandedFrame.swift; sourceTree = "<group>"; };
 		8E26236927160A630092B6CE /* AccountAction+Delete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountAction+Delete.swift"; sourceTree = "<group>"; };
-		8E2E27B027675F6700E33883 /* AddTagButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTagButton.swift; sourceTree = "<group>"; };
+		8E2E27B027675F6700E33883 /* MemoryAddTagButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryAddTagButton.swift; sourceTree = "<group>"; };
 		8E2E27B3276778D600E33883 /* FlexibleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexibleView.swift; sourceTree = "<group>"; };
 		8E2E27BF2768C44800E33883 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		8E2E27C12768C46100E33883 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.0.sdk/System/Library/Frameworks/StoreKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -479,7 +481,7 @@
 		8E50D86B26BB30280075C08C /* ProcessingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessingCell.swift; sourceTree = "<group>"; };
 		8E50D87426BB40320075C08C /* MemorySpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemorySpec.swift; sourceTree = "<group>"; };
 		8E56EAEA276951810087B0EE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		8E58B8CA27492587003FB391 /* NotesField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesField.swift; sourceTree = "<group>"; };
+		8E58B8CA27492587003FB391 /* MemoryNotesField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryNotesField.swift; sourceTree = "<group>"; };
 		8E58B8CD27493029003FB391 /* NotesEditorPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesEditorPage.swift; sourceTree = "<group>"; };
 		8E58B8D12749342C003FB391 /* MemoryRefreshButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryRefreshButton.swift; sourceTree = "<group>"; };
 		8E58B8D42749349C003FB391 /* MemoryDeleteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryDeleteButton.swift; sourceTree = "<group>"; };
@@ -566,6 +568,7 @@
 		8E92A7E626A0D04100BAED7F /* AccountAction+SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountAction+SignIn.swift"; sourceTree = "<group>"; };
 		8E92A7E926A0D27A00BAED7F /* AccountAction+SignInSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountAction+SignInSpec.swift"; sourceTree = "<group>"; };
 		8E92A7EB26A0D4D300BAED7F /* CombineResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineResult.swift; sourceTree = "<group>"; };
+		8E96D36E2794591700864D5A /* MemorySummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemorySummaryView.swift; sourceTree = "<group>"; };
 		8E9EEBA226F280C400106FCD /* MemoriesAction+Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MemoriesAction+Search.swift"; sourceTree = "<group>"; };
 		8E9EEBA526F2813600106FCD /* MemoriesState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoriesState.swift; sourceTree = "<group>"; };
 		8E9EEBA826F2830700106FCD /* MemoriesStateSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoriesStateSpec.swift; sourceTree = "<group>"; };
@@ -602,7 +605,7 @@
 		8EBC053C269A0A8A008B2478 /* MemoryPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryPage.swift; sourceTree = "<group>"; };
 		8EBC053F269A0B8D008B2478 /* SecondaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryButton.swift; sourceTree = "<group>"; };
 		8EBC0542269A1B76008B2478 /* String+Trim.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Trim.swift"; sourceTree = "<group>"; };
-		8EBDE4DE274C28FF00FA6280 /* TagsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsView.swift; sourceTree = "<group>"; };
+		8EBDE4DE274C28FF00FA6280 /* MemoryTagsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryTagsView.swift; sourceTree = "<group>"; };
 		8EBF94BA2709CA690045B33E /* EmptyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyListView.swift; sourceTree = "<group>"; };
 		8EC49D7E274ED25400E0FE61 /* Memory+Fuseable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Memory+Fuseable.swift"; sourceTree = "<group>"; };
 		8EC4BACB26BDD40D00F20EAE /* Color+Asset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Asset.swift"; sourceTree = "<group>"; };
@@ -760,12 +763,13 @@
 			isa = PBXGroup;
 			children = (
 				8E58D148271B0F350033B02A /* MemoryImage.swift */,
-				8E58B8CA27492587003FB391 /* NotesField.swift */,
+				8E58B8CA27492587003FB391 /* MemoryNotesField.swift */,
+				8E96D36E2794591700864D5A /* MemorySummaryView.swift */,
 				8E58B8D12749342C003FB391 /* MemoryRefreshButton.swift */,
 				8E58B8D42749349C003FB391 /* MemoryDeleteButton.swift */,
 				8ED8A9D72785B17C0054F96B /* MemoryReportButton.swift */,
-				8EBDE4DE274C28FF00FA6280 /* TagsView.swift */,
-				8E2E27B027675F6700E33883 /* AddTagButton.swift */,
+				8EBDE4DE274C28FF00FA6280 /* MemoryTagsView.swift */,
+				8E2E27B027675F6700E33883 /* MemoryAddTagButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1958,13 +1962,13 @@
 				8E6826192774B22800936951 /* SettingsLinksSection.swift in Sources */,
 				8E3436F127089D4200FA1CB0 /* Memory+CopyWith.swift in Sources */,
 				8E5D7D0C26CC4FB8009024A0 /* StorageState.swift in Sources */,
-				8E2E27B127675F6700E33883 /* AddTagButton.swift in Sources */,
+				8E2E27B127675F6700E33883 /* MemoryAddTagButton.swift in Sources */,
 				8E2E27B4276778D600E33883 /* FlexibleView.swift in Sources */,
 				8EBC0543269A1B76008B2478 /* String+Trim.swift in Sources */,
 				8EC6076A2688B952006ED3C1 /* AppState.swift in Sources */,
 				8EC49D7F274ED25400E0FE61 /* Memory+Fuseable.swift in Sources */,
 				8E77700626A32D5600D97F52 /* Future+MapError.swift in Sources */,
-				8E58B8CB27492587003FB391 /* NotesField.swift in Sources */,
+				8E58B8CB27492587003FB391 /* MemoryNotesField.swift in Sources */,
 				8E5D7D1026CC504E009024A0 /* StorageReducer.swift in Sources */,
 				8EA4D28426939E6400C0A037 /* PasswordTextField.swift in Sources */,
 				8EAAD9EB26C5A525007C2973 /* MemoriesAction+WatchAll.swift in Sources */,
@@ -2022,6 +2026,7 @@
 				8E73D70C272EE7900037DE6B /* AppConfiguration.swift in Sources */,
 				8E8835BC26B0928E00EE0234 /* Validation+URL.swift in Sources */,
 				8E889CF526A22F9500F7C47C /* AccountAction+Refresh.swift in Sources */,
+				8E96D36F2794591800864D5A /* MemorySummaryView.swift in Sources */,
 				8EB7470B2706588B004F4F18 /* MemoriesAction+Delete.swift in Sources */,
 				8EBC053A269A0A7E008B2478 /* MemoriesPage.swift in Sources */,
 				8E58D14F271B2D590033B02A /* SignPageBase.swift in Sources */,
@@ -2033,7 +2038,7 @@
 				8E889CEB26A22A4300F7C47C /* AccountAction+SignUp.swift in Sources */,
 				8E79C14326978778002D2A8B /* Message.swift in Sources */,
 				8E8D83A82771FDF000E8F7D6 /* PackageCell.swift in Sources */,
-				8EBDE4DF274C28FF00FA6280 /* TagsView.swift in Sources */,
+				8EBDE4DF274C28FF00FA6280 /* MemoryTagsView.swift in Sources */,
 				8E59137E278E0F9500CEC38E /* MarkdownText.swift in Sources */,
 				8E3436F92708A2FA00FA1CB0 /* MemoriesAction+Refresh.swift in Sources */,
 				8E58B8E4274AE399003FB391 /* FocusOnStart.swift in Sources */,
@@ -2097,13 +2102,13 @@
 				8E68261A2774B22800936951 /* SettingsLinksSection.swift in Sources */,
 				8E5D7D0D26CC4FB8009024A0 /* StorageState.swift in Sources */,
 				8EBC0544269A1B76008B2478 /* String+Trim.swift in Sources */,
-				8E2E27B227675F6700E33883 /* AddTagButton.swift in Sources */,
+				8E2E27B227675F6700E33883 /* MemoryAddTagButton.swift in Sources */,
 				8E2E27B5276778D600E33883 /* FlexibleView.swift in Sources */,
 				8EC6076B2688B952006ED3C1 /* AppState.swift in Sources */,
 				8E77700726A32D5600D97F52 /* Future+MapError.swift in Sources */,
 				8EC49D80274ED25400E0FE61 /* Memory+Fuseable.swift in Sources */,
 				8E5D7D1126CC504E009024A0 /* StorageReducer.swift in Sources */,
-				8E58B8CC27492587003FB391 /* NotesField.swift in Sources */,
+				8E58B8CC27492587003FB391 /* MemoryNotesField.swift in Sources */,
 				8EA4D28526939E6400C0A037 /* PasswordTextField.swift in Sources */,
 				8EAAD9EC26C5A525007C2973 /* MemoriesAction+WatchAll.swift in Sources */,
 				8EEDD78B268BC05D00F670D2 /* AccountState.swift in Sources */,
@@ -2161,6 +2166,7 @@
 				8E6826202774B34700936951 /* SettingsSubscriptionSection.swift in Sources */,
 				8E889CF126A22D4F00F7C47C /* AccountAction+SignOut.swift in Sources */,
 				8EAAD9E926C5A3F1007C2973 /* AnyPublisher+Create.swift in Sources */,
+				8E96D3702794591800864D5A /* MemorySummaryView.swift in Sources */,
 				8EEDD794268BCD9200F670D2 /* Account.swift in Sources */,
 				8E889CEC26A22A4300F7C47C /* AccountAction+SignUp.swift in Sources */,
 				8E73D70A272EE6940037DE6B /* JoinPage.swift in Sources */,
@@ -2172,7 +2178,7 @@
 				8E3436FA2708A2FA00FA1CB0 /* MemoriesAction+Refresh.swift in Sources */,
 				8E6826122774971000936951 /* SettingsPageConnector.swift in Sources */,
 				8E8D83A92771FDF000E8F7D6 /* PackageCell.swift in Sources */,
-				8EBDE4E0274C28FF00FA6280 /* TagsView.swift in Sources */,
+				8EBDE4E0274C28FF00FA6280 /* MemoryTagsView.swift in Sources */,
 				8E59137F278E0F9500CEC38E /* MarkdownText.swift in Sources */,
 				8EA4D2882693A22A00C0A037 /* SignUpPage.swift in Sources */,
 				8E58B8E5274AE399003FB391 /* FocusOnStart.swift in Sources */,
@@ -2446,7 +2452,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MARKETING_VERSION = 1.1.8;
+				MARKETING_VERSION = 1.4.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -2503,7 +2509,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MARKETING_VERSION = 1.1.8;
+				MARKETING_VERSION = 1.4.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;

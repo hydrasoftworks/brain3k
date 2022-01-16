@@ -91,6 +91,7 @@ struct MemoryPage: View {
                 if let text = viewModel.title { title(text) }
                 if let text = viewModel.description { description(text) }
                 tags
+                if let text = viewModel.summary { MemorySummaryView(text) }
                 notes
             }
             if let url = viewModel.valueURL {
@@ -114,6 +115,7 @@ struct MemoryPage: View {
                     if let text = viewModel.title { title(text) }
                     if let text = viewModel.description { description(text) }
                     tags
+                    if let text = viewModel.summary { MemorySummaryView(text) }
                     notes
                 }
                 if let url = viewModel.valueURL {
@@ -124,7 +126,7 @@ struct MemoryPage: View {
     }
 
     private var tags: some View {
-        TagsView(
+        MemoryTagsView(
             tags: viewModel.tags,
             addTag: viewModel.addTag,
             deleteTag: viewModel.deleteTag
@@ -132,7 +134,7 @@ struct MemoryPage: View {
     }
 
     private var notes: some View {
-        NotesField(
+        MemoryNotesField(
             notes: viewModel.notes,
             updateNotes: viewModel.updateNotes
         )
@@ -190,6 +192,7 @@ struct MemoryPage: View {
         var hasImage: Bool { image != nil }
         let title: String?
         let description: String?
+        let summary: String?
         let valueURL: URL?
         let domain: String?
         let notes: String?
@@ -209,6 +212,7 @@ struct MemoryPage: View {
                 && lhs.imageToDisplay == rhs.imageToDisplay
                 && lhs.title == rhs.title
                 && lhs.description == rhs.description
+                && lhs.summary == rhs.summary
                 && lhs.valueURL == rhs.valueURL
                 && lhs.domain == rhs.domain
                 && lhs.notes == rhs.notes

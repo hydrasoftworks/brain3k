@@ -5,7 +5,7 @@
 import Combine
 import SwiftUI
 
-struct AddTagButton: View {
+struct MemoryAddTagButton: View {
     @State private var editMode: Bool = false
     @State private var text: String = ""
 
