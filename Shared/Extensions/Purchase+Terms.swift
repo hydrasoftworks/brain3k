@@ -7,19 +7,19 @@ import StoreKit
 
 extension Package {
     var period: String {
-        if let intro = product.introductoryPrice {
+        if let intro = storeProduct.introductoryPrice {
             if intro.price == 0 {
                 return "\(intro.subscriptionPeriod.periodTitle()) free trial"
             } else {
-                return "\(localizedIntroductoryPriceString) for \(intro.subscriptionPeriod.periodTitle())"
+                return "\(localizedIntroductoryPriceString ?? L10n.General.unknown) for \(intro.subscriptionPeriod.periodTitle())"
             }
         } else {
-            return product.subscriptionPeriod?.periodTitle() ?? ""
+            return storeProduct.subscriptionPeriod?.periodTitle() ?? ""
         }
     }
 }
 
-private extension SKProductSubscriptionPeriod {
+private extension SubscriptionPeriod {
     var durationTitle: String {
         switch unit {
         case .day: return L10n.General.day
@@ -31,8 +31,8 @@ private extension SKProductSubscriptionPeriod {
     }
 
     func periodTitle() -> String {
-        let periodString = "\(numberOfUnits) \(durationTitle)"
-        let pluralized = numberOfUnits > 1 ? periodString + "s" : periodString
+        let periodString = "\(value) \(durationTitle)"
+        let pluralized = value > 1 ? periodString + "s" : periodString
         return pluralized
     }
 }

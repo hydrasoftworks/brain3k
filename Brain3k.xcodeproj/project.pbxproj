@@ -2452,7 +2452,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MARKETING_VERSION = 1.4.0;
+				MARKETING_VERSION = 1.4.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -2509,7 +2509,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MARKETING_VERSION = 1.4.0;
+				MARKETING_VERSION = 1.4.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -2806,7 +2806,7 @@
 			repositoryURL = "https://github.com/RevenueCat/purchases-ios";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = "4.0.0-beta.8";
+				minimumVersion = "4.0.0-beta.10";
 			};
 		};
 		8E3810E2269CCF5800ED3851 /* XCRemoteSwiftPackageReference "Quick" */ = {
@@ -2854,7 +2854,7 @@
 			repositoryURL = "https://github.com/Zaprogramiacz/MGFlipView";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
+				minimumVersion = 1.1.0;
 			};
 		};
 		8E79C14B269791EA002D2A8B /* XCRemoteSwiftPackageReference "ValidatedPropertyKit" */ = {
@@ -2894,7 +2894,7 @@
 			repositoryURL = "https://github.com/StevenLambion/SwiftDux";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.0;
+				minimumVersion = 2.0.1;
 			};
 		};
 		8EC607842688BED5006ED3C1 /* XCRemoteSwiftPackageReference "SwiftyBeaver" */ = {
@@ -2909,8 +2909,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
 			requirement = {
-				branch = master;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.11.0;
 			};
 		};
 		8EF9353A26AC464200176AF4 /* XCRemoteSwiftPackageReference "ViewInspector" */ = {

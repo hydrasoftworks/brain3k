@@ -12,10 +12,10 @@ struct PackageCell: View {
     var body: some View {
         HStack {
             VStack(alignment: .leading, spacing: 8) {
-                Text("\(package.product.localizedTitle) (\(package.period))")
+                Text("\(package.storeProduct.localizedTitle) (\(package.period))")
                     .font(.title3)
                     .bold()
-                Text(package.product.localizedDescription)
+                Text(package.storeProduct.localizedDescription)
                     .font(.subheadline)
                     .foregroundColor(.secondary)
             }
