@@ -7,7 +7,7 @@ import StoreKit
 
 extension Package {
     var period: String {
-        if let intro = storeProduct.introductoryPrice {
+        if let intro = storeProduct.introductoryDiscount {
             if intro.price == 0 {
                 return "\(intro.subscriptionPeriod.periodTitle()) free trial"
             } else {

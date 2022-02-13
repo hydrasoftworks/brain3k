@@ -16,6 +16,7 @@ struct MemorySummaryView: View {
             Text(L10n.MemoryPage.Label.summary)
                 .font(.caption)
             Text(summary)
+                .textSelection(.enabled)
         }
         .font(.body)
         .multilineTextAlignment(.leading)

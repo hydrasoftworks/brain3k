@@ -55,7 +55,7 @@ class SubscriptionService {
 
     func restoreTransactions() -> AnyPublisher<CustomerInfo, AppError> {
         Future<CustomerInfo, Error> { promise in
-            Purchases.shared.restoreTransactions { customerInfo, error in
+            Purchases.shared.restorePurchases { customerInfo, error in
                 if let customerInfo = customerInfo {
                     promise(.success(customerInfo))
                 } else {

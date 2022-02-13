@@ -60,8 +60,8 @@
         "repositoryURL": "https://github.com/firebase/firebase-ios-sdk",
         "state": {
           "branch": null,
-          "revision": "5344857522053b5d4403ec8173ec0d23200a97ea",
-          "version": "8.11.0"
+          "revision": "78f7087fd5d48eb7c36e299f330b6dddccd647b2",
+          "version": "8.12.1"
         }
       },
       {
@@ -87,8 +87,8 @@
         "repositoryURL": "https://github.com/google/GoogleAppMeasurement.git",
         "state": {
           "branch": null,
-          "revision": "9b2f6aca5b4685c45f9f5481f19bee8e7982c538",
-          "version": "8.9.1"
+          "revision": "6cc2991c11872510a5314bc112cc7558dd9d046a",
+          "version": "8.12.0"
         }
       },
       {
@@ -177,8 +177,8 @@
         "repositoryURL": "https://github.com/kean/Nuke.git",
         "state": {
           "branch": null,
-          "revision": "6f7c6adb11a8d22587b2995b3f7d9554682ad122",
-          "version": "10.7.0"
+          "revision": "78fa963b8491fc520791d8c2a509f1b8593d8aae",
+          "version": "10.7.1"
         }
       },
       {
@@ -186,7 +186,7 @@
         "repositoryURL": "https://github.com/kean/NukeUI",
         "state": {
           "branch": "main",
-          "revision": "70407c6ac8d11ed16ae7a1813fbaa56d6db310de",
+          "revision": "a047a62d558f928bfda4b7b9d4c2cd2dc86c7d66",
           "version": null
         }
       },
@@ -204,8 +204,8 @@
         "repositoryURL": "https://github.com/RevenueCat/purchases-ios",
         "state": {
           "branch": null,
-          "revision": "102aa68c51587e3d9b7ba97a4c2a470cff92cf2b",
-          "version": "4.0.0-beta.10"
+          "revision": "09c9d4d2ceb41c471d5e3110ac1a97e3de9defb4",
+          "version": "4.0.0-rc.2"
         }
       },
       {
@@ -240,8 +240,8 @@
         "repositoryURL": "https://github.com/lorenzofiamingo/SwiftUI-CachedAsyncImage",
         "state": {
           "branch": null,
-          "revision": "248bedf022db6202ea9ff18f4d74be36443b2586",
-          "version": "1.10.0"
+          "revision": "22e0873d0b0ac9a7b932839cdb9fabd018185cda",
+          "version": "1.10.1"
         }
       },
       {

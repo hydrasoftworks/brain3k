@@ -174,6 +174,7 @@ struct MemoryPage: View {
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(.horizontal)
             .padding(.bottom, 4)
+            .textSelection(.enabled)
     }
 
     private func description(_ text: String) -> some View {
@@ -183,6 +184,7 @@ struct MemoryPage: View {
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(.horizontal)
             .padding(.bottom, 8)
+            .textSelection(.enabled)
     }
 
     struct ViewModel: Equatable {
