@@ -65,6 +65,7 @@ bundle exec fastlane match_get
 ```
 
 To refresh certificates and provisioning profiles call
+
 ```bash
 bundle exec fastlane match_refresh
 ```
