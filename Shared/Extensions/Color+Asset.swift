@@ -5,8 +5,8 @@
 import SwiftUI
 
 extension Color {
-    static let brand = Color(Asset.brandColor.name)
-    static let brandText = Color(Asset.brandTextColor.name)
+    static let brand = Asset.brandColor.swiftUIColor
+    static let brandText = Asset.brandTextColor.swiftUIColor
 
     static func gradient(_ colorScheme: ColorScheme) -> [Color] {
         if colorScheme == .dark {

@@ -21,8 +21,8 @@ struct URLMemoryCell: View {
         }
     }
 
-    private func image(_ url: URL?) -> some View {
-        LazyImage(source: url) { state in
+    @MainActor private func image(_ url: URL?) -> some View {
+        LazyImage(url: url) { state in
             if let image = state.image {
                 image
                     .scaledToFill()
