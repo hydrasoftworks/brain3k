@@ -5,14 +5,13 @@
 import Foundation
 
 extension SettingsPage {
-    static let feedbackUrl: URL? = URL(string: "https://shipright.community/brain3k")
     static let writeReviewURL: URL? = URL(string: "https://apps.apple.com/app/id1587505104?action=write-review")
     static let privacyPolicy: URL? = URL(string: "https://brain3k.com/privacy-policy")
     static let termsAndConditions: URL? = URL(string: "https://brain3k.com/terms-and-conditions")
     static let manageSubscriptions: URL? = URL(string: "https://buy.itunes.apple.com/WebObjects/MZFinance.woa/wa/manageSubscriptions")
 
     static func supportUrl(_ email: String?) -> URL? {
-        let baseUrl = "https://go.crisp.chat/chat/embed/?website_id=d83eece3-1942-4c5a-9412-219940e99ae3"
+        let baseUrl = "https://go.crisp.chat/chat/embed/?website_id=3fcfedbc-9895-4645-9dea-a489739d451d"
         if let email = email {
             return URL(string: "\(baseUrl)&user_email=\(email)")
         }

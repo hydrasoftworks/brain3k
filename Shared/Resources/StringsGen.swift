@@ -186,8 +186,6 @@ internal enum L10n {
       internal static let rate = L10n.tr("Localizable", "settings_page.button.rate")
       /// Restore subscription
       internal static let restoreSubscription = L10n.tr("Localizable", "settings_page.button.restoreSubscription")
-      /// Share feedback
-      internal static let shareFeedback = L10n.tr("Localizable", "settings_page.button.share_feedback")
       /// Sign out
       internal static let signOut = L10n.tr("Localizable", "settings_page.button.sign_out")
       /// More memories needed? Subscribe

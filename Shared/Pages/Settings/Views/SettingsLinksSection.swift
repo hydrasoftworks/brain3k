@@ -10,10 +10,6 @@ struct SettingsLinksSection: View {
     var body: some View {
         Section(header: header) {
             SecondaryButton(
-                title: L10n.SettingsPage.Button.shareFeedback,
-                action: { openURL(SettingsPage.feedbackUrl) }
-            )
-            SecondaryButton(
                 title: L10n.SettingsPage.Button.contactSupport,
                 action: { openURL(SettingsPage.supportUrl(email)) }
             )
