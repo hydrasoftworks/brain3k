@@ -9,10 +9,6 @@ import SwiftDux
 import SwiftUI
 import ViewInspector
 
-extension ProcessingCell: Inspectable {}
-extension MemoryCell: Inspectable {}
-extension URLMemoryCellConnector: Inspectable {}
-
 final class MemoryCellSpec: QuickSpec {
     override func spec() {
         describe("\(MemoryCellSpec.self)") {

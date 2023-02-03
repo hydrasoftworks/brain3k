@@ -8,8 +8,6 @@ import Quick
 import SwiftUI
 import ViewInspector
 
-extension SecondaryButton: Inspectable {}
-
 final class SecondaryButtonSpec: QuickSpec {
     override func spec() {
         describe("\(SecondaryButton.self)") {

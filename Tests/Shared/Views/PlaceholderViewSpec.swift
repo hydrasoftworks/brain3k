@@ -8,8 +8,6 @@ import Quick
 import SwiftUI
 import ViewInspector
 
-extension PlaceholderView: Inspectable {}
-
 final class PlaceholderViewSpec: QuickSpec {
     override func spec() {
         var sut: PlaceholderView!

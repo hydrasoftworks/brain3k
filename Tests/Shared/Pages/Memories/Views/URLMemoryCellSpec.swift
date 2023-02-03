@@ -8,8 +8,6 @@ import Quick
 import SwiftUI
 import ViewInspector
 
-extension URLMemoryCell: Inspectable {}
-
 final class URLMemoryCellSpec: QuickSpec {
     override func spec() {
         describe("\(URLMemoryCell.self)") {

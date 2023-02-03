@@ -130,7 +130,7 @@
 		8E73D70C272EE7900037DE6B /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E73D70B272EE7900037DE6B /* AppConfiguration.swift */; };
 		8E73D70D272EE7900037DE6B /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E73D70B272EE7900037DE6B /* AppConfiguration.swift */; };
 		8E73D717273042900037DE6B /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E73D716273042900037DE6B /* ShareViewController.swift */; };
-		8E73D71C273042900037DE6B /* ShareExtension macOS.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8E73D712273042900037DE6B /* ShareExtension macOS.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8E73D71C273042900037DE6B /* ShareExtension macOS.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 8E73D712273042900037DE6B /* ShareExtension macOS.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		8E73D721273043C40037DE6B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8EC4BAD326BDD79F00F20EAE /* Localizable.strings */; };
 		8E73D722273043D30037DE6B /* StringsGen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC4BAD726BDD7E000F20EAE /* StringsGen.swift */; };
 		8E73D724273049BE0037DE6B /* AccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E92A7D526A0B59F00BAED7F /* AccountService.swift */; };
@@ -196,8 +196,6 @@
 		8E889CF626A22F9500F7C47C /* AccountAction+Refresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E889CF426A22F9500F7C47C /* AccountAction+Refresh.swift */; };
 		8E8D83A12771F2E900E8F7D6 /* Purchase+Terms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8D83A02771F2E900E8F7D6 /* Purchase+Terms.swift */; };
 		8E8D83A22771F2EA00E8F7D6 /* Purchase+Terms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8D83A02771F2E900E8F7D6 /* Purchase+Terms.swift */; };
-		8E8D83A42771F39800E8F7D6 /* Purchase+Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8D83A32771F39800E8F7D6 /* Purchase+Identifiable.swift */; };
-		8E8D83A52771F39800E8F7D6 /* Purchase+Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8D83A32771F39800E8F7D6 /* Purchase+Identifiable.swift */; };
 		8E8D83A82771FDF000E8F7D6 /* PackageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8D83A72771FDF000E8F7D6 /* PackageCell.swift */; };
 		8E8D83A92771FDF000E8F7D6 /* PackageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8D83A72771FDF000E8F7D6 /* PackageCell.swift */; };
 		8E8D83AB2772028B00E8F7D6 /* SubscriptionAction+PurchasePackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8D83AA2772028B00E8F7D6 /* SubscriptionAction+PurchasePackage.swift */; };
@@ -347,7 +345,7 @@
 		8ECBBEF02770C67500A3BE40 /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECBBEEC2770C5E200A3BE40 /* Subscription.swift */; };
 		8ED381F026F74FE50003D4F3 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED381EF26F74FE50003D4F3 /* ShareViewController.swift */; };
 		8ED381F326F74FE50003D4F3 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8ED381F126F74FE50003D4F3 /* MainInterface.storyboard */; };
-		8ED381F726F74FE50003D4F3 /* ShareExtension iOS.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8ED381ED26F74FE50003D4F3 /* ShareExtension iOS.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8ED381F726F74FE50003D4F3 /* ShareExtension iOS.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 8ED381ED26F74FE50003D4F3 /* ShareExtension iOS.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		8ED381FB26F75CB00003D4F3 /* AccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E92A7D526A0B59F00BAED7F /* AccountService.swift */; };
 		8ED381FC26F75CB90003D4F3 /* MemoriesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E776FFB26A326C400D97F52 /* MemoriesService.swift */; };
 		8ED381FE26F75CE60003D4F3 /* SwiftDux in Frameworks */ = {isa = PBXBuildFile; productRef = 8ED381FD26F75CE60003D4F3 /* SwiftDux */; };
@@ -436,26 +434,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		8E73D71D273042900037DE6B /* Embed App Extensions */ = {
+		8E73D71D273042900037DE6B /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				8E73D71C273042900037DE6B /* ShareExtension macOS.appex in Embed App Extensions */,
+				8E73D71C273042900037DE6B /* ShareExtension macOS.appex in Embed Foundation Extensions */,
 			);
-			name = "Embed App Extensions";
+			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8ED381D326F74B5E0003D4F3 /* Embed App Extensions */ = {
+		8ED381D326F74B5E0003D4F3 /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				8ED381F726F74FE50003D4F3 /* ShareExtension iOS.appex in Embed App Extensions */,
+				8ED381F726F74FE50003D4F3 /* ShareExtension iOS.appex in Embed Foundation Extensions */,
 			);
-			name = "Embed App Extensions";
+			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -558,7 +556,6 @@
 		8E889CF226A22DE200F7C47C /* AccountAction+SignOutSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountAction+SignOutSpec.swift"; sourceTree = "<group>"; };
 		8E889CF426A22F9500F7C47C /* AccountAction+Refresh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountAction+Refresh.swift"; sourceTree = "<group>"; };
 		8E8D83A02771F2E900E8F7D6 /* Purchase+Terms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Purchase+Terms.swift"; sourceTree = "<group>"; };
-		8E8D83A32771F39800E8F7D6 /* Purchase+Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Purchase+Identifiable.swift"; sourceTree = "<group>"; };
 		8E8D83A72771FDF000E8F7D6 /* PackageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageCell.swift; sourceTree = "<group>"; };
 		8E8D83AA2772028B00E8F7D6 /* SubscriptionAction+PurchasePackage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SubscriptionAction+PurchasePackage.swift"; sourceTree = "<group>"; };
 		8E8D83AD2773415900E8F7D6 /* Configuration.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Configuration.storekit; sourceTree = "<group>"; };
@@ -1502,7 +1499,6 @@
 				8EAAD9E726C5A3F1007C2973 /* AnyPublisher+Create.swift */,
 				8E7DEC6D2753A792005BE9B0 /* URLCache+Images.swift */,
 				8E8D83A02771F2E900E8F7D6 /* Purchase+Terms.swift */,
-				8E8D83A32771F39800E8F7D6 /* Purchase+Identifiable.swift */,
 				8E6826212774B41600936951 /* View+OpenURL.swift */,
 			);
 			path = Extensions;
@@ -1676,7 +1672,7 @@
 				8EC607432688AFD1006ED3C1 /* Sources */,
 				8EC607442688AFD1006ED3C1 /* Frameworks */,
 				8EC607452688AFD1006ED3C1 /* Resources */,
-				8ED381D326F74B5E0003D4F3 /* Embed App Extensions */,
+				8ED381D326F74B5E0003D4F3 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
@@ -1712,7 +1708,7 @@
 				8EC607492688AFD1006ED3C1 /* Sources */,
 				8EC6074A2688AFD1006ED3C1 /* Frameworks */,
 				8EC6074B2688AFD1006ED3C1 /* Resources */,
-				8E73D71D273042900037DE6B /* Embed App Extensions */,
+				8E73D71D273042900037DE6B /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
@@ -1773,7 +1769,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1310;
-				LastUpgradeCheck = 1310;
+				LastUpgradeCheck = 1420;
 				TargetAttributes = {
 					8E3810D8269CCDC800ED3851 = {
 						CreatedOnToolsVersion = 13.0;
@@ -1961,7 +1957,6 @@
 				8ECBBEE02770BEFE00A3BE40 /* SubscriptionAction+GetOfferings.swift in Sources */,
 				8E776FF926A3257B00D97F52 /* MemoriesAction+GetAll.swift in Sources */,
 				8E8D83A12771F2E900E8F7D6 /* Purchase+Terms.swift in Sources */,
-				8E8D83A42771F39800E8F7D6 /* Purchase+Identifiable.swift in Sources */,
 				8E9EEBA326F280C400106FCD /* MemoriesAction+Search.swift in Sources */,
 				8EA4D28126939DE100C0A037 /* EmailTextField.swift in Sources */,
 				8E6A200C275E9733002EA4CE /* MemoriesAction+RemoveTag.swift in Sources */,
@@ -2101,7 +2096,6 @@
 				8ECBBEE12770BEFE00A3BE40 /* SubscriptionAction+GetOfferings.swift in Sources */,
 				8E776FFA26A3257B00D97F52 /* MemoriesAction+GetAll.swift in Sources */,
 				8E8D83A22771F2EA00E8F7D6 /* Purchase+Terms.swift in Sources */,
-				8E8D83A52771F39800E8F7D6 /* Purchase+Identifiable.swift in Sources */,
 				8E9EEBA426F280C400106FCD /* MemoriesAction+Search.swift in Sources */,
 				8EA1D321271C699A0060BAA9 /* MemoriesPageConnector.swift in Sources */,
 				8E6A200D275E9733002EA4CE /* MemoriesAction+RemoveTag.swift in Sources */,
@@ -2358,7 +2352,9 @@
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = "$(inherited)";
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = V3QMW7D5T5;
+				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "ShareExtension macOS/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Add to Brain3k";
@@ -2390,6 +2386,7 @@
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = "$(inherited)";
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = V3QMW7D5T5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "ShareExtension macOS/Info.plist";
@@ -2447,6 +2444,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -2510,6 +2508,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -2624,6 +2623,7 @@
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = "$(inherited)";
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = V3QMW7D5T5;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -2663,6 +2663,7 @@
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = "$(inherited)";
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = V3QMW7D5T5;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_PREVIEWS = YES;
@@ -2818,7 +2819,7 @@
 			repositoryURL = "https://github.com/RevenueCat/purchases-ios";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = "4.0.0-beta.10";
+				minimumVersion = 4.17.4;
 			};
 		};
 		8E3810E2269CCF5800ED3851 /* XCRemoteSwiftPackageReference "Quick" */ = {
