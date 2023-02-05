@@ -6,8 +6,9 @@ import SwiftDux
 import SwiftUI
 
 struct MemoryPage: View {
-    @SwiftUI.State private var isReportConfirmationPresented = false
     @Environment(\.dismiss) var dismiss
+
+    @SwiftUI.State private var isReportConfirmationPresented = false
 
     #if os(iOS)
         @Environment(\.verticalSizeClass) private var verticalSizeClass
@@ -58,21 +59,9 @@ struct MemoryPage: View {
                 }
             }
         }
-        .confirmationDialog(
-            L10n.MemoryPage.Confirmation.reportMemoryTitle,
+        .reportConfirmationDialog(
             isPresented: $isReportConfirmationPresented,
-            titleVisibility: .visible,
-            actions: {
-                Button(
-                    L10n.MemoryPage.Confirmation.Button.reportMemory,
-                    action: {
-                        viewModel.report()
-                        HapticService.notificationOccurred(.success)
-                    }
-                )
-            }, message: {
-                Text(L10n.MemoryPage.Confirmation.reportMemoryMessage)
-            }
+            action: { viewModel.report() }
         )
     }
 

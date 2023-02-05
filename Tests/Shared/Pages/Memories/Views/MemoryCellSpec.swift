@@ -15,10 +15,12 @@ final class MemoryCellSpec: QuickSpec {
             context("unprocessed cell") {
                 it("Should return ProcessingCell for memory type url") {
                     let sut = MemoryCell(
-                        memory: Memory.test(
-                            type: .url,
-                            value: "https://example.com",
-                            processed: false
+                        viewModel: self.viewModel(
+                            Memory.test(
+                                type: .url,
+                                value: "https://example.com",
+                                processed: false
+                            )
                         )
                     )
                     let view = try sut.inspect().find(ProcessingCell.self)
@@ -29,12 +31,26 @@ final class MemoryCellSpec: QuickSpec {
             context("processed cell") {
                 it("Should return URLMemoryCellConnector for memory type url") {
                     let sut = MemoryCell(
-                        memory: Memory.test(type: .url, value: "https://example.com")
+                        viewModel: self.viewModel(
+                            Memory.test(
+                                type: .url,
+                                value: "https://example.com"
+                            )
+                        )
                     )
                     let view = try sut.inspect().find(URLMemoryCellConnector.self)
                     expect(view).toNot(beNil())
                 }
             }
         }
+    }
+
+    private func viewModel(_ memory: Memory) -> MemoryCell.ViewModel {
+        MemoryCell.ViewModel(
+            memory: memory,
+            delete: {},
+            refresh: {},
+            report: {}
+        )
     }
 }

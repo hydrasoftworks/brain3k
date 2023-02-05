@@ -63,9 +63,9 @@
 "memory_page.label.notes_placeholder" = "Press to add notes";
 "memory_page.text_field.add_tag_placeholder" = "Press return to save";
 "memory_page.empty.not_selected" = "No memory selected";
-"memory_page.confirmation.report_memory_title" = "Do you want to report this memory?";
-"memory_page.confirmation.report_memory_message" = "Processing memory can take up to 2 minutes. If it gives you a generic result, try to refresh your memory first. If that doesn't help, report it to us.";
-"memory_page.confirmation.button.report_memory" = "Yes, report this memory";
+"report_memory_confirmation.report_memory_title" = "Do you want to report this memory?";
+"report_memory_confirmation.report_memory_message" = "Processing memory can take up to 2 minutes. If it gives you a generic result, try to refresh your memory first. If that doesn't help, report it to us.";
+"report_memory_confirmation.button.report_memory" = "Yes, report this memory";
 "add_memory_page.title" = "Add Memory";
 "add_memory_page.text_field.placeholder" = "Paste URL here";
 "add_memory_page.limit_exceeded.title" = "Limit Exceeded";

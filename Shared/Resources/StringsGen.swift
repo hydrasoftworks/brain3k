@@ -125,16 +125,6 @@ internal enum L10n {
       /// Open memory
       internal static let share = L10n.tr("Localizable", "memory_page.button.share", fallback: "Open memory")
     }
-    internal enum Confirmation {
-      /// Processing memory can take up to 2 minutes. If it gives you a generic result, try to refresh your memory first. If that doesn't help, report it to us.
-      internal static let reportMemoryMessage = L10n.tr("Localizable", "memory_page.confirmation.report_memory_message", fallback: "Processing memory can take up to 2 minutes. If it gives you a generic result, try to refresh your memory first. If that doesn't help, report it to us.")
-      /// Do you want to report this memory?
-      internal static let reportMemoryTitle = L10n.tr("Localizable", "memory_page.confirmation.report_memory_title", fallback: "Do you want to report this memory?")
-      internal enum Button {
-        /// Yes, report this memory
-        internal static let reportMemory = L10n.tr("Localizable", "memory_page.confirmation.button.report_memory", fallback: "Yes, report this memory")
-      }
-    }
     internal enum Empty {
       /// No memory selected
       internal static let notSelected = L10n.tr("Localizable", "memory_page.empty.not_selected", fallback: "No memory selected")
@@ -159,6 +149,16 @@ internal enum L10n {
     internal static let newPasswordPlaceholder = L10n.tr("Localizable", "password_text_field.new_password_placeholder", fallback: "password (min. 8 characters)")
     /// password
     internal static let passwordPlaceholder = L10n.tr("Localizable", "password_text_field.password_placeholder", fallback: "password")
+  }
+  internal enum ReportMemoryConfirmation {
+    /// Processing memory can take up to 2 minutes. If it gives you a generic result, try to refresh your memory first. If that doesn't help, report it to us.
+    internal static let reportMemoryMessage = L10n.tr("Localizable", "report_memory_confirmation.report_memory_message", fallback: "Processing memory can take up to 2 minutes. If it gives you a generic result, try to refresh your memory first. If that doesn't help, report it to us.")
+    /// Do you want to report this memory?
+    internal static let reportMemoryTitle = L10n.tr("Localizable", "report_memory_confirmation.report_memory_title", fallback: "Do you want to report this memory?")
+    internal enum Button {
+      /// Yes, report this memory
+      internal static let reportMemory = L10n.tr("Localizable", "report_memory_confirmation.button.report_memory", fallback: "Yes, report this memory")
+    }
   }
   internal enum SettingsPage {
     /// Settings
