@@ -2,6 +2,7 @@
 //  Created by Kamil Powałowski on 16/10/2021.
 //
 
+import NukeUI
 import SwiftUI
 
 struct MemoryImage: View {
@@ -29,21 +30,17 @@ struct MemoryImage: View {
     }
 
     var body: some View {
-        AppAsyncImage(
-            url: url,
-            transaction: .init(animation: .none),
-            image: { image in
+        LazyImage(url: url) { state in
+            if let image = state.image {
                 image
-                    .resizable()
                     .scaledToFill()
-            },
-
-            placeholder: {
+            } else if state.error != nil {
+                domainView
+            } else {
                 PlaceholderView(color: .primary)
                     .onAppear(perform: onAppear)
-            },
-            error: { domainView }
-        )
+            }
+        }
         .frame(
             minWidth: width ?? 0, maxWidth: width ?? .infinity,
             minHeight: height ?? 0, maxHeight: height ?? .infinity
@@ -70,7 +67,6 @@ struct MemoryImage: View {
                         .multilineTextAlignment(.center)
                         .padding()
                 }
-
         } else {
             EmptyView()
         }

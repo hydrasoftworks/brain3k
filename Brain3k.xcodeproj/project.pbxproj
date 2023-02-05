@@ -180,8 +180,6 @@
 		8E79C14F269791F4002D2A8B /* ValidatedPropertyKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8E79C14E269791F4002D2A8B /* ValidatedPropertyKit */; };
 		8E7DEC6E2753A792005BE9B0 /* URLCache+Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7DEC6D2753A792005BE9B0 /* URLCache+Images.swift */; };
 		8E7DEC6F2753A792005BE9B0 /* URLCache+Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7DEC6D2753A792005BE9B0 /* URLCache+Images.swift */; };
-		8E7DEC712753ADE2005BE9B0 /* AppAsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7DEC702753ADE2005BE9B0 /* AppAsyncImage.swift */; };
-		8E7DEC722753ADE2005BE9B0 /* AppAsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7DEC702753ADE2005BE9B0 /* AppAsyncImage.swift */; };
 		8E8835B926B08DCF00EE0234 /* AddMemoryPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8835B826B08DCF00EE0234 /* AddMemoryPage.swift */; };
 		8E8835BA26B08DCF00EE0234 /* AddMemoryPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8835B826B08DCF00EE0234 /* AddMemoryPage.swift */; };
 		8E8835BC26B0928E00EE0234 /* Validation+URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8835BB26B0928E00EE0234 /* Validation+URL.swift */; };
@@ -547,7 +545,6 @@
 		8E79C14526978828002D2A8B /* MessageReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageReducer.swift; sourceTree = "<group>"; };
 		8E79C14826978898002D2A8B /* MessageAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageAction.swift; sourceTree = "<group>"; };
 		8E7DEC6D2753A792005BE9B0 /* URLCache+Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLCache+Images.swift"; sourceTree = "<group>"; };
-		8E7DEC702753ADE2005BE9B0 /* AppAsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAsyncImage.swift; sourceTree = "<group>"; };
 		8E8835B826B08DCF00EE0234 /* AddMemoryPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMemoryPage.swift; sourceTree = "<group>"; };
 		8E8835BB26B0928E00EE0234 /* Validation+URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Validation+URL.swift"; sourceTree = "<group>"; };
 		8E889CEA26A22A4300F7C47C /* AccountAction+SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountAction+SignUp.swift"; sourceTree = "<group>"; };
@@ -1524,7 +1521,6 @@
 				8E6821B626A9E43800B2DACB /* PlaceholderView.swift */,
 				8EBC052C2699CB52008B2478 /* PrimaryButton.swift */,
 				8EBC053F269A0B8D008B2478 /* SecondaryButton.swift */,
-				8E7DEC702753ADE2005BE9B0 /* AppAsyncImage.swift */,
 				8E2E27B3276778D600E33883 /* FlexibleView.swift */,
 				8E59137D278E0F9500CEC38E /* MarkdownText.swift */,
 			);
@@ -1987,7 +1983,6 @@
 				8ED8A9D32785AE3B0054F96B /* Report.swift in Sources */,
 				8EEF35E1268CED570068DB58 /* AccountStatus.swift in Sources */,
 				8EC6076E2688B993006ED3C1 /* StateType.swift in Sources */,
-				8E7DEC712753ADE2005BE9B0 /* AppAsyncImage.swift in Sources */,
 				8EC4BAD826BDD7E000F20EAE /* StringsGen.swift in Sources */,
 				8EDC011C26D03E9600D2064A /* CompletionHandler.swift in Sources */,
 				8EBF94BB2709CA690045B33E /* EmptyListView.swift in Sources */,
@@ -2126,7 +2121,6 @@
 				8ED8A9D42785AE3B0054F96B /* Report.swift in Sources */,
 				8EC6076F2688B993006ED3C1 /* StateType.swift in Sources */,
 				8EC4BAD926BDD7E000F20EAE /* StringsGen.swift in Sources */,
-				8E7DEC722753ADE2005BE9B0 /* AppAsyncImage.swift in Sources */,
 				8EDC011D26D03E9600D2064A /* CompletionHandler.swift in Sources */,
 				8EBF94BC2709CA690045B33E /* EmptyListView.swift in Sources */,
 				8EBC0541269A0B8D008B2478 /* SecondaryButton.swift in Sources */,
@@ -2365,7 +2359,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 1.5.0;
+				MARKETING_VERSION = 1.5.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.brain3k.Brain3k.ShareExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "match Development com.brain3k.Brain3k.ShareExtension macos";
@@ -2398,7 +2392,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 1.5.0;
+				MARKETING_VERSION = 1.5.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.brain3k.Brain3k.ShareExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.brain3k.Brain3k.ShareExtension macos";
@@ -2558,7 +2552,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5.0;
+				MARKETING_VERSION = 1.5.1;
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.brain3k.Brain3k;
 				PRODUCT_NAME = Brain3k;
@@ -2599,7 +2593,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5.0;
+				MARKETING_VERSION = 1.5.1;
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.brain3k.Brain3k;
 				PRODUCT_NAME = Brain3k;
@@ -2641,7 +2635,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 1.5.0;
+				MARKETING_VERSION = 1.5.1;
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.brain3k.Brain3k;
 				PRODUCT_NAME = Brain3k;
@@ -2680,7 +2674,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 1.5.0;
+				MARKETING_VERSION = 1.5.1;
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.brain3k.Brain3k;
 				PRODUCT_NAME = Brain3k;
@@ -2710,7 +2704,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.5.0;
+				MARKETING_VERSION = 1.5.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.brain3k.Brain3k.ShareExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "match Development com.brain3k.Brain3k.ShareExtension";
@@ -2741,7 +2735,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.5.0;
+				MARKETING_VERSION = 1.5.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.brain3k.Brain3k.ShareExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.brain3k.Brain3k.ShareExtension";
