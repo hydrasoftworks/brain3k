@@ -1,0 +1,21 @@
+#!/usr/bin/env sh
+
+regex='build|ci|docs|feat|fix|perf|refactor|style|test|chore|revert'
+
+message=$(head -1 $1)
+
+if [[ ! $message =~ $regex ]]; then
+  echo "ERROR: Commit message should start with one of the following:
+    * build: Changes that affect the build system like gulp, npm, etc
+    * ci: Changes made to the CI configuration like Travis, Circle, Actions
+    * docs: Documentation only changes
+    * feat: A new feature
+    * fix: Fixed a bug
+    * perf: Code changes that improve performance
+    * refactor: A code change that's not particularly a bug or new feature
+    * style: Changes to styling like white-space, formatting, semi-colons)
+    * test: Add or fix tests
+    * chore: Other changes that don't modify src or test files
+    * revert: Revert a previous commit"
+  exit 1
+fi

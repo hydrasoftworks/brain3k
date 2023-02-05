@@ -69,3 +69,16 @@ To refresh certificates and provisioning profiles call
 ```bash
 bundle exec fastlane match_refresh
 ```
+
+## Git setup
+
+We are using [conventional commits](https://h.daily-dev-tips.com/git-basics-conventional-commits) to keep commits well organized.
+[Git hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks) are used to ensure that the commit message have proper syntax.
+
+Please run following commands from root of this repository to set it up:
+
+```bash
+git config core.hooksPath .githooks/  # To change default .git hooks directory
+chmod ug+x .githooks/commit-msg  # To allow execution in commit-msg file
+```
+
