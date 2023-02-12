@@ -115,7 +115,7 @@ class MemoriesService {
 
     func search(for query: String, in memories: [Memory]) -> AnyPublisher<[Memory], AppError> {
         AnyPublisher<[Memory], AppError>.create { observer in
-            let fuse = Fuse(threshold: 0.3, tokenize: true)
+            let fuse = Fuse(distance: 5000, threshold: 0.2, tokenize: true)
             fuse.search(query, in: memories) { results in
                 let filtered = results.map { memories[$0.index] }
                 observer.onNext(filtered)
